@@ -1,0 +1,120 @@
+blueprint:
+  name: Blinds - 5 button switch (open/close/tilt/My)
+  description: >
+    Controls one or more blinds (covers) from a single 5-button switch using MQTT
+    device triggers (domain: mqtt, type: action). Intended for one switch per room;
+    a room may have multiple blinds - the switch will control them all at once.
+  domain: automation
+  source_url: ""
+
+  input:
+    remote_device:
+      name: Switch device (MQTT)
+      description: The 5-button switch device that emits MQTT device actions.
+      selector:
+        device:
+          integration: mqtt
+
+    covers:
+      name: Blinds (covers) to control
+      description: One or more cover entities controlled together.
+      selector:
+        entity:
+          domain: cover
+          multiple: true
+
+    my_buttons:
+      name: "My buttons (optional)"
+      description: >
+        Optional list of button entities to press for the "My" action
+        (domain: button, service: button.press).
+      default: []
+      selector:
+        entity:
+          domain: button
+          multiple: true
+
+mode: single
+
+variables:
+  my_buttons: !input my_buttons
+
+trigger:
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: arrow_right_click
+    id: open
+
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: arrow_left_click
+    id: close
+
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "on"
+    id: close_tilt
+
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: "off"
+    id: open_tilt
+
+  - platform: device
+    domain: mqtt
+    device_id: !input remote_device
+    type: action
+    subtype: brightness_move_up
+    id: my
+
+action:
+  - choose:
+      - conditions:
+          - condition: trigger
+            id: open
+        sequence:
+          - service: cover.open_cover
+            target:
+              entity_id: !input covers
+
+      - conditions:
+          - condition: trigger
+            id: close
+        sequence:
+          - service: cover.close_cover
+            target:
+              entity_id: !input covers
+
+      - conditions:
+          - condition: trigger
+            id: open_tilt
+        sequence:
+          - service: cover.open_cover_tilt
+            target:
+              entity_id: !input covers
+
+      - conditions:
+          - condition: trigger
+            id: close_tilt
+        sequence:
+          - service: cover.close_cover_tilt
+            target:
+              entity_id: !input covers
+
+      - conditions:
+          - condition: trigger
+            id: my
+          - condition: template
+            value_template: "{{ my_buttons | count > 0 }}"
+        sequence:
+          - service: button.press
+            target:
+              entity_id: !input my_buttons

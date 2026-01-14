@@ -1,0 +1,848 @@
+{
+  "name": "Britons",
+  "mainStrongUnits": [
+    "Longbowman",
+    "Crossbowman",
+    "Arbalest",
+    "Trebuchet",
+    "Halberdier"
+  ],
+  "civilizations": [
+    {
+      "name": "Aztecs",
+      "strengths": "Strong Eagle Warriors with extra HP, excellent Monks, powerful infantry with Garland Wars",
+      "mainWeaknesses": "No cavalry, no gunpowder, Eagles are countered by massed archers",
+      "mainCounterUnits": [
+        {
+          "name": "Eagle Warrior",
+          "defense": "Mass Crossbowmen with good micro, add Pikemen to screen, use buildings and walls to create choke points"
+        },
+        {
+          "name": "Monk",
+          "defense": "Keep Longbowmen spread out, snipe Monks from maximum range, research Heresy if gold permits"
+        },
+        {
+          "name": "Jaguar Warrior",
+          "defense": "Kite with Longbowmen, never engage in melee, focus fire before they close distance"
+        }
+      ]
+    },
+    {
+      "name": "Bengalis",
+      "strengths": "Powerful Elephant Archer with extra armor, Ratha unique unit with ranged/melee switch, strong navy",
+      "mainWeaknesses": "Slow units, weak early game cavalry, vulnerable to hit-and-run tactics",
+      "mainCounterUnits": [
+        {
+          "name": "Elephant Archer",
+          "defense": "Mass Halberdiers mixed with Longbowmen, use superior range to kite, avoid clumping against splash damage"
+        },
+        {
+          "name": "Ratha",
+          "defense": "Keep distance with Crossbowmen, add Pikemen to deter melee mode, wall and defend with range advantage"
+        },
+        {
+          "name": "Battle Elephant",
+          "defense": "Halberdiers with Longbowman support, kite around buildings, use Monks for conversion"
+        }
+      ]
+    },
+    {
+      "name": "Berbers",
+      "strengths": "Cheap cavalry, fast Camel Archers that counter archers, Genitours as trash anti-archer",
+      "mainWeaknesses": "Infantry not exceptional, late game options limited, relies on mobility",
+      "mainCounterUnits": [
+        {
+          "name": "Camel Archer",
+          "defense": "Mix Skirmishers with Longbowmen, use walls and chokepoints, research Thumb Ring for better hit rate"
+        },
+        {
+          "name": "Hussar",
+          "defense": "Halberdiers in front, Crossbowmen behind, keep army near Castles for protection"
+        },
+        {
+          "name": "Genitour",
+          "defense": "Avoid pure archer play, add Light Cavalry to raid, use Longbowmen range advantage to outrange"
+        }
+      ]
+    },
+    {
+      "name": "Bohemians",
+      "strengths": "Powerful Houfnice siege, Hussite Wagon protects units, strong gunpowder with Chemistry free",
+      "mainWeaknesses": "Weak cavalry, no Hussars, slow army composition",
+      "mainCounterUnits": [
+        {
+          "name": "Hussite Wagon",
+          "defense": "Focus fire with Longbowmen from max range, use Trebuchets to outrange, avoid fighting under wagons"
+        },
+        {
+          "name": "Houfnice",
+          "defense": "Snipe with Trebuchets, raid with Light Cavalry, never clump units together"
+        },
+        {
+          "name": "Hand Cannoneer",
+          "defense": "Use Longbowmen superior range, kite backwards, add Skirmishers as meat shield"
+        }
+      ]
+    },
+    {
+      "name": "Bulgarians",
+      "strengths": "Cheap Krepost castles, powerful Konnik cavalry, strong Two-Handed Swordsman rush, free Militia upgrades",
+      "mainWeaknesses": "Weak archers, limited navy, no gunpowder",
+      "mainCounterUnits": [
+        {
+          "name": "Konnik",
+          "defense": "Halberdiers to counter mounted form, Crossbowmen for dismounted form, kill twice before it dies"
+        },
+        {
+          "name": "Two-Handed Swordsman",
+          "defense": "Kite with Crossbowmen, never engage in melee, use walls and buildings to delay"
+        },
+        {
+          "name": "Hussar",
+          "defense": "Halberdiers with archer support, garrison villagers in Town Centers, build Houses to block raids"
+        }
+      ]
+    },
+    {
+      "name": "Burgundians",
+      "strengths": "Early Cavalier upgrade, strong Coustillier charge attack, powerful economy with early Paladin",
+      "mainWeaknesses": "Weak archers, expensive unique unit, reliance on cavalry can be countered",
+      "mainCounterUnits": [
+        {
+          "name": "Coustillier",
+          "defense": "Spread Crossbowmen to minimize charge damage, Halberdiers in front, avoid clumping"
+        },
+        {
+          "name": "Cavalier",
+          "defense": "Mass Halberdiers, support with Longbowmen, use terrain chokepoints"
+        },
+        {
+          "name": "Flemish Militia",
+          "defense": "Kite with all archers, use Longbowmen range, never engage in melee combat"
+        }
+      ]
+    },
+    {
+      "name": "Burmese",
+      "strengths": "Strong infantry with extra attack, Arambai with high burst damage, powerful Battle Elephants",
+      "mainWeaknesses": "Weak archers (no Arbalest, Thumb Ring), slow army, predictable strategies",
+      "mainCounterUnits": [
+        {
+          "name": "Arambai",
+          "defense": "Skirmishers mixed with Longbowmen, use buildings as cover, micro away from burst damage"
+        },
+        {
+          "name": "Battle Elephant",
+          "defense": "Halberdiers are essential, Longbowmen support from behind, use Monks for conversion"
+        },
+        {
+          "name": "Two-Handed Swordsman",
+          "defense": "Pure archer play works well, maintain distance, use Longbowmen range bonus"
+        }
+      ]
+    },
+    {
+      "name": "Byzantines",
+      "strengths": "Cheap counter units (Skirmishers, Pikemen), Cataphract ignores anti-cavalry bonus, strong defense",
+      "mainWeaknesses": "No strong offensive bonus, mediocre economy, expensive Cataphracts",
+      "mainCounterUnits": [
+        {
+          "name": "Cataphract",
+          "defense": "Mass archers since they resist anti-cavalry, add Halberdiers anyway, kite with Longbowmen"
+        },
+        {
+          "name": "Skirmisher",
+          "defense": "Add Light Cavalry to raid, use Longbowmen to outrange, siege with Trebuchets"
+        },
+        {
+          "name": "Camel Rider",
+          "defense": "Crossbowmen focus fire, Halberdiers support, avoid cavalry vs their camels"
+        }
+      ]
+    },
+    {
+      "name": "Celts",
+      "strengths": "Fast infantry with Woad Raiders, powerful siege weapons, strong economy with faster lumberjacks",
+      "mainWeaknesses": "Weak archers, no gunpowder, infantry vulnerable to ranged units",
+      "mainCounterUnits": [
+        {
+          "name": "Woad Raider",
+          "defense": "Mass Crossbowmen, micro backwards, use walls and buildings to create distance"
+        },
+        {
+          "name": "Siege Onager",
+          "defense": "Spread archers wide, use Trebuchets to snipe siege, raid with Light Cavalry"
+        },
+        {
+          "name": "Siege Ram",
+          "defense": "Halberdiers to destroy rams, keep Longbowmen away from rams, use Mangonels if needed"
+        }
+      ]
+    },
+    {
+      "name": "Chinese",
+      "strengths": "Strong start with extra villagers, Chu Ko Nu with multiple arrows, good all-around tech tree",
+      "mainWeaknesses": "Weak early Dark Age food, expensive Chu Ko Nu, no strong late game unique bonus",
+      "mainCounterUnits": [
+        {
+          "name": "Chu Ko Nu",
+          "defense": "Skirmishers are cost-effective, Longbowmen outrange them, add siege to push"
+        },
+        {
+          "name": "Cavalier",
+          "defense": "Standard Halberdier and Crossbowman composition, focus fire cavalry"
+        },
+        {
+          "name": "Scorpion",
+          "defense": "Spread archers to avoid line damage, use Trebuchets to outrange, flank with Light Cavalry"
+        }
+      ]
+    },
+    {
+      "name": "Cumans",
+      "strengths": "Second Town Center in Feudal Age, fast Kipchak cavalry archers, Steppe Lancers with reach",
+      "mainWeaknesses": "Weak late game siege, limited gunpowder, strategies can be predictable",
+      "mainCounterUnits": [
+        {
+          "name": "Kipchak",
+          "defense": "Skirmishers are essential, use walls to limit mobility, Longbowmen with micro"
+        },
+        {
+          "name": "Steppe Lancer",
+          "defense": "Halberdiers negate their reach advantage, Crossbowmen focus fire, use walls"
+        },
+        {
+          "name": "Hussar",
+          "defense": "Halberdiers with archer support, protect economy with buildings, tower key resources"
+        }
+      ]
+    },
+    {
+      "name": "Dravidians",
+      "strengths": "Strong Urumi Swordsman with area damage, powerful navy, Medical Corps heals elephants",
+      "mainWeaknesses": "No cavalry, weak to mobile armies, limited options on open maps",
+      "mainCounterUnits": [
+        {
+          "name": "Urumi Swordsman",
+          "defense": "Kite with Longbowmen, never let them close distance, use walls and choke points"
+        },
+        {
+          "name": "Elephant Archer",
+          "defense": "Halberdiers mixed with Longbowmen, focus fire elephants, maintain distance"
+        },
+        {
+          "name": "Thirisadai",
+          "defense": "Build superior navy, avoid water fights if behind, use land dominance to win"
+        }
+      ]
+    },
+    {
+      "name": "Ethiopians",
+      "strengths": "Free Pikeman and Halberdier upgrades, strong archers with faster firing, Shotel Warriors are fast",
+      "mainWeaknesses": "Weak cavalry, limited mobility, archers can be countered by siege",
+      "mainCounterUnits": [
+        {
+          "name": "Shotel Warrior",
+          "defense": "Mass Crossbowmen, they die fast to arrows, keep distance with micro"
+        },
+        {
+          "name": "Arbalest",
+          "defense": "Mirror matchup favor Britons range, add Skirmishers, use Longbowmen advantage"
+        },
+        {
+          "name": "Halberdier",
+          "defense": "Kite with archers, use Longbowmen from max range, avoid cavalry"
+        }
+      ]
+    },
+    {
+      "name": "Franks",
+      "strengths": "Powerful Paladin with extra HP, cheap Castles, strong Throwing Axeman against buildings",
+      "mainWeaknesses": "Weak archers, no Arbalest, predictable cavalry strategy",
+      "mainCounterUnits": [
+        {
+          "name": "Paladin",
+          "defense": "Halberdiers are critical, Longbowmen support behind, use Monks for conversion"
+        },
+        {
+          "name": "Throwing Axeman",
+          "defense": "Crossbowmen outrange them, kite backwards, avoid letting them hit buildings"
+        },
+        {
+          "name": "Knight",
+          "defense": "Early Pikemen pressure, transition to Crossbowmen, control with walls"
+        }
+      ]
+    },
+    {
+      "name": "Georgians",
+      "strengths": "Strong Monaspa cavalry that heals, mountain bonus for defense, powerful Cavalier line",
+      "mainWeaknesses": "No strong archers, limited siege options, expensive unique unit",
+      "mainCounterUnits": [
+        {
+          "name": "Monaspa",
+          "defense": "Halberdiers to prevent healing, focus fire with Longbowmen, kill quickly before regeneration"
+        },
+        {
+          "name": "Cavalier",
+          "defense": "Standard Halberdier and archer composition, use Longbowmen range advantage"
+        },
+        {
+          "name": "Hussar",
+          "defense": "Halberdiers with Crossbowman support, protect villagers, use buildings defensively"
+        }
+      ]
+    },
+    {
+      "name": "Goths",
+      "strengths": "Cheap and fast-training infantry, Huskarl resists archer damage, powerful late game spam",
+      "mainWeaknesses": "Weak early game, no strong cavalry or archers, predictable infantry flood",
+      "mainCounterUnits": [
+        {
+          "name": "Huskarl",
+          "defense": "Champions are necessary, avoid pure archers, use Hand Cannoneers if available"
+        },
+        {
+          "name": "Two-Handed Swordsman",
+          "defense": "Mass Crossbowmen work early, transition to Champions later, use walls to delay"
+        },
+        {
+          "name": "Halberdier",
+          "defense": "Use Longbowmen from range, kite backwards, add Champions in late game"
+        }
+      ]
+    },
+    {
+      "name": "Gurjaras",
+      "strengths": "Powerful Shrivamsha Rider that dodges arrows, strong Chakram Thrower, camel bonuses",
+      "mainWeaknesses": "No Knight line, expensive unique units, vulnerable to infantry",
+      "mainCounterUnits": [
+        {
+          "name": "Shrivamsha Rider",
+          "defense": "Use Halberdiers as primary counter, massed Longbowmen can overwhelm shield, walls slow them"
+        },
+        {
+          "name": "Chakram Thrower",
+          "defense": "Longbowmen outrange them, focus fire quickly, add Skirmishers for support"
+        },
+        {
+          "name": "Camel Rider",
+          "defense": "Crossbowmen focus fire, add Halberdiers, avoid cavalry battles"
+        }
+      ]
+    },
+    {
+      "name": "Hindustanis",
+      "strengths": "Strong Ghulam anti-archer unit, powerful Imperial Camel, excellent gunpowder",
+      "mainWeaknesses": "No Knight line, expensive unique units, relies on gold-heavy army",
+      "mainCounterUnits": [
+        {
+          "name": "Ghulam",
+          "defense": "Avoid pure archers, add Champions or Hand Cannoneers, use Halberdiers to screen"
+        },
+        {
+          "name": "Imperial Camel Rider",
+          "defense": "Crossbowmen are effective, mass archers work well, add Halberdiers"
+        },
+        {
+          "name": "Hand Cannoneer",
+          "defense": "Use Longbowmen superior range, kite backwards, snipe from maximum distance"
+        }
+      ]
+    },
+    {
+      "name": "Huns",
+      "strengths": "No Houses needed, cheap Cavalry Archers, powerful Tarkan raids, strong early aggression",
+      "mainWeaknesses": "Weak infantry, no gunpowder, limited defensive options",
+      "mainCounterUnits": [
+        {
+          "name": "Cavalry Archer",
+          "defense": "Skirmishers are cost-effective, add Pikemen to screen, use walls to limit mobility"
+        },
+        {
+          "name": "Tarkan",
+          "defense": "Halberdiers to protect buildings, Crossbowmen focus fire, wall important structures"
+        },
+        {
+          "name": "Hussar",
+          "defense": "Halberdiers with archer support, tower key resources, protect economy"
+        }
+      ]
+    },
+    {
+      "name": "Incas",
+      "strengths": "Strong Eagle Warrior with extra armor, Slinger counters infantry, Kamayuk has reach",
+      "mainWeaknesses": "No cavalry, no gunpowder, vulnerable to massed archers",
+      "mainCounterUnits": [
+        {
+          "name": "Eagle Warrior",
+          "defense": "Mass Crossbowmen, focus fire Eagles, use Longbowmen range advantage"
+        },
+        {
+          "name": "Kamayuk",
+          "defense": "Pure archer play works well, kite from range, never engage in melee"
+        },
+        {
+          "name": "Slinger",
+          "defense": "Avoid infantry, use pure archers, Longbowmen outrange Slingers easily"
+        }
+      ]
+    },
+    {
+      "name": "Italians",
+      "strengths": "Cheap gunpowder, strong Genoese Crossbowman anti-cavalry, excellent navy",
+      "mainWeaknesses": "Weak cavalry, limited infantry options, expensive Condottiero",
+      "mainCounterUnits": [
+        {
+          "name": "Genoese Crossbowman",
+          "defense": "Longbowmen outrange them, add Skirmishers, avoid cavalry in this matchup"
+        },
+        {
+          "name": "Condottiero",
+          "defense": "Kite with Crossbowmen, keep distance, use Longbowmen range advantage"
+        },
+        {
+          "name": "Hussar",
+          "defense": "Halberdiers with archer support, standard defensive positioning"
+        }
+      ]
+    },
+    {
+      "name": "Japanese",
+      "strengths": "Fast attacking infantry, strong Samurai anti-unique unit, excellent fishing bonus",
+      "mainWeaknesses": "No strong cavalry, limited options against archers, expensive Samurai",
+      "mainCounterUnits": [
+        {
+          "name": "Samurai",
+          "defense": "Kite with Crossbowmen, avoid using Longbowmen as they are unique units, maintain range"
+        },
+        {
+          "name": "Two-Handed Swordsman",
+          "defense": "Mass Crossbowmen, simple kiting works, use range advantage"
+        },
+        {
+          "name": "Cavalry Archer",
+          "defense": "Skirmishers mixed with Crossbowmen, use walls to control space"
+        }
+      ]
+    },
+    {
+      "name": "Khmer",
+      "strengths": "No building requirements, powerful Ballista Elephant, fast Battle Elephants",
+      "mainWeaknesses": "Slow army, expensive units, vulnerable to hit-and-run",
+      "mainCounterUnits": [
+        {
+          "name": "Ballista Elephant",
+          "defense": "Halberdiers are essential, Longbowmen support, focus fire quickly"
+        },
+        {
+          "name": "Battle Elephant",
+          "defense": "Mass Halberdiers, add Monks for conversion, use Longbowmen from behind"
+        },
+        {
+          "name": "Scorpion",
+          "defense": "Spread archers wide, use Trebuchets to snipe, raid with Light Cavalry"
+        }
+      ]
+    },
+    {
+      "name": "Koreans",
+      "strengths": "Long-range siege with Onagers, War Wagon is tanky, excellent towers and defenses",
+      "mainWeaknesses": "Slow army, expensive units, vulnerable to fast raids",
+      "mainCounterUnits": [
+        {
+          "name": "War Wagon",
+          "defense": "Halberdiers are key, Longbowmen can kite, use Monks for conversion"
+        },
+        {
+          "name": "Siege Onager",
+          "defense": "Spread archers wide, use Trebuchets, raid with Light Cavalry before they mass siege"
+        },
+        {
+          "name": "Hwacha",
+          "defense": "Trebuchets outrange them, avoid clumping archers, use mobility to flank"
+        }
+      ]
+    },
+    {
+      "name": "Lithuanians",
+      "strengths": "Relic bonus for cavalry attack, strong Leitis ignores armor, fast Skirmishers",
+      "mainWeaknesses": "Needs Relics for power spike, weak siege, limited late game options",
+      "mainCounterUnits": [
+        {
+          "name": "Leitis",
+          "defense": "Halberdiers still effective (bonus damage), Crossbowmen focus fire, protect Relics"
+        },
+        {
+          "name": "Paladin",
+          "defense": "Halberdiers are critical, Longbowmen support, deny Relics early"
+        },
+        {
+          "name": "Hussar",
+          "defense": "Halberdiers with archer support, wall key areas, tower resources"
+        }
+      ]
+    },
+    {
+      "name": "Magyars",
+      "strengths": "Free attack upgrades, cheap Hussars, powerful Magyar Huszar",
+      "mainWeaknesses": "Weak infantry, limited siege, one-dimensional cavalry focus",
+      "mainCounterUnits": [
+        {
+          "name": "Magyar Huszar",
+          "defense": "Halberdiers counter effectively, Crossbowmen behind, wall and tower"
+        },
+        {
+          "name": "Cavalry Archer",
+          "defense": "Skirmishers are cost-effective, add Pikemen screen, use walls"
+        },
+        {
+          "name": "Hussar",
+          "defense": "Halberdiers with Longbowmen support, protect economy, defensive buildings"
+        }
+      ]
+    },
+    {
+      "name": "Malay",
+      "strengths": "Cheap and fast Battle Elephants, Karambit Warrior spawns fast, strong navy",
+      "mainWeaknesses": "Elephants lack last armor, weak on open maps, limited cavalry",
+      "mainCounterUnits": [
+        {
+          "name": "Battle Elephant",
+          "defense": "Halberdiers destroy them easily, Longbowmen support, use mobility advantage"
+        },
+        {
+          "name": "Karambit Warrior",
+          "defense": "Mass Crossbowmen, they die fast to arrows, kite and maintain distance"
+        },
+        {
+          "name": "Two-Handed Swordsman",
+          "defense": "Archer play works well, use Longbowmen range, avoid melee engagements"
+        }
+      ]
+    },
+    {
+      "name": "Malians",
+      "strengths": "Extra pierce armor on infantry, Gbeto throws javelins, strong Farimba cavalry",
+      "mainWeaknesses": "No Arbalest, limited gunpowder, infantry still dies to massed archers",
+      "mainCounterUnits": [
+        {
+          "name": "Gbeto",
+          "defense": "Longbowmen outrange them, focus fire quickly, add Skirmishers"
+        },
+        {
+          "name": "Cavalier",
+          "defense": "Halberdiers with Crossbowman support, standard anti-cavalry composition"
+        },
+        {
+          "name": "Champskarls",
+          "defense": "Mass Crossbowmen, pierce armor is overcome with numbers, use Longbowmen range"
+        }
+      ]
+    },
+    {
+      "name": "Mayans",
+      "strengths": "Extra resources last longer, powerful Plumed Archer, strong Eagle Warriors",
+      "mainWeaknesses": "No cavalry, limited siege, predictable archer and Eagle play",
+      "mainCounterUnits": [
+        {
+          "name": "Plumed Archer",
+          "defense": "Skirmishers counter well, Longbowmen can trade if managed, add siege"
+        },
+        {
+          "name": "Eagle Warrior",
+          "defense": "Mass Crossbowmen, focus fire Eagles, use Longbowmen range advantage"
+        },
+        {
+          "name": "Arbalest",
+          "defense": "Range advantage with Longbowmen, add Skirmishers, use siege to push"
+        }
+      ]
+    },
+    {
+      "name": "Mongols",
+      "strengths": "Fast Cavalry Archers and Mangudai, strong Siege, excellent Hunt bonus",
+      "mainWeaknesses": "Weak infantry, limited late game, vulnerable to massed Skirmishers",
+      "mainCounterUnits": [
+        {
+          "name": "Mangudai",
+          "defense": "Mass Skirmishers, add Pikemen screen, use walls to limit kiting space"
+        },
+        {
+          "name": "Cavalry Archer",
+          "defense": "Skirmishers are cost-effective, use terrain and walls, add Pikemen"
+        },
+        {
+          "name": "Hussar",
+          "defense": "Halberdiers with archer support, protect economy, defensive structures"
+        }
+      ]
+    },
+    {
+      "name": "Persians",
+      "strengths": "Strong War Elephants, faster TC and Dock work rate, powerful Paladin",
+      "mainWeaknesses": "Slow elephants, limited archers, predictable strategies",
+      "mainCounterUnits": [
+        {
+          "name": "War Elephant",
+          "defense": "Mass Halberdiers are essential, add Monks for conversion, kite with Longbowmen"
+        },
+        {
+          "name": "Paladin",
+          "defense": "Halberdiers with Crossbowman support, use Longbowmen range advantage"
+        },
+        {
+          "name": "Hussar",
+          "defense": "Halberdiers protect economy, add archers behind, tower key resources"
+        }
+      ]
+    },
+    {
+      "name": "Poles",
+      "strengths": "Stone from gold mines, powerful Obuch strips armor, cheap Knights",
+      "mainWeaknesses": "No strong archers, limited late game options, reliant on cavalry",
+      "mainCounterUnits": [
+        {
+          "name": "Obuch",
+          "defense": "Kite with Crossbowmen, avoid melee engagements, use Longbowmen range"
+        },
+        {
+          "name": "Knight",
+          "defense": "Halberdiers with Crossbowman support, standard anti-cavalry composition"
+        },
+        {
+          "name": "Hussar",
+          "defense": "Halberdiers with archer support, protect villagers, wall and tower"
+        }
+      ]
+    },
+    {
+      "name": "Portuguese",
+      "strengths": "All units cost less gold, strong Organ Gun, excellent navy with Carrack",
+      "mainWeaknesses": "Weak cavalry, slow Organ Gun, limited mobility",
+      "mainCounterUnits": [
+        {
+          "name": "Organ Gun",
+          "defense": "Spread Longbowmen, use Trebuchets to snipe, flank with Light Cavalry"
+        },
+        {
+          "name": "Arbalest",
+          "defense": "Longbowmen outrange them, add Skirmishers, siege for pushing"
+        },
+        {
+          "name": "Bombard Cannon",
+          "defense": "Use Light Cavalry raids, Trebuchets to counter-siege, avoid clumping"
+        }
+      ]
+    },
+    {
+      "name": "Romans",
+      "strengths": "Strong Centurion with charge, Legionary infantry bonus, scorpion ballistics free",
+      "mainWeaknesses": "Limited cavalry options, expensive unique units, no strong late game bonus",
+      "mainCounterUnits": [
+        {
+          "name": "Centurion",
+          "defense": "Kite with Longbowmen, Halberdiers help, avoid cavalry for conversion targets"
+        },
+        {
+          "name": "Legionary",
+          "defense": "Mass Crossbowmen, maintain distance, use Longbowmen range advantage"
+        },
+        {
+          "name": "Scorpion",
+          "defense": "Spread archers to avoid line damage, Trebuchets to snipe, raid with Light Cavalry"
+        }
+      ]
+    },
+    {
+      "name": "Saracens",
+      "strengths": "Strong Mameluke anti-cavalry, market bonus, excellent siege and archers",
+      "mainWeaknesses": "No strong economy bonus, expensive units, limited early game power",
+      "mainCounterUnits": [
+        {
+          "name": "Mameluke",
+          "defense": "Mass archers focus fire, Halberdiers support, they are expensive to replace"
+        },
+        {
+          "name": "Cavalry Archer",
+          "defense": "Skirmishers are cost-effective, add Pikemen screen, use walls"
+        },
+        {
+          "name": "Siege Onager",
+          "defense": "Spread Longbowmen, Trebuchets to snipe, raid siege with Light Cavalry"
+        }
+      ]
+    },
+    {
+      "name": "Sicilians",
+      "strengths": "Reduced bonus damage taken, strong Serjeant builds Donjons, First Crusade tech",
+      "mainWeaknesses": "Limited archer options, expensive unique bonuses, predictable strategies",
+      "mainCounterUnits": [
+        {
+          "name": "Serjeant",
+          "defense": "Mass Crossbowmen, bonus damage reduction means more arrows needed, kite well"
+        },
+        {
+          "name": "Cavalier",
+          "defense": "Halberdiers still work despite bonus reduction, mass archers help"
+        },
+        {
+          "name": "Hauberk Cavalier",
+          "defense": "Halberdiers essential, Longbowmen support from behind, focus fire"
+        }
+      ]
+    },
+    {
+      "name": "Slavs",
+      "strengths": "Strong Boyar with high armor, cheaper siege, excellent Farming bonus",
+      "mainWeaknesses": "Weak archers, limited navy, expensive Boyar",
+      "mainCounterUnits": [
+        {
+          "name": "Boyar",
+          "defense": "Halberdiers pierce armor with bonus, Longbowmen whittle them down, focus fire"
+        },
+        {
+          "name": "Siege Ram",
+          "defense": "Halberdiers destroy rams quickly, keep Longbowmen at distance"
+        },
+        {
+          "name": "Druzhinnik",
+          "defense": "Halberdiers counter, Longbowmen support, avoid clumping against splash"
+        }
+      ]
+    },
+    {
+      "name": "Spanish",
+      "strengths": "Powerful Conquistador, fast building, strong Paladin, excellent gunpowder",
+      "mainWeaknesses": "Weak archers (no Crossbow), limited options against massed archers",
+      "mainCounterUnits": [
+        {
+          "name": "Conquistador",
+          "defense": "Skirmishers counter well, Longbowmen can trade with micro, add Pikemen"
+        },
+        {
+          "name": "Paladin",
+          "defense": "Halberdiers are critical, Longbowmen support, use Monks for conversion"
+        },
+        {
+          "name": "Missionary",
+          "defense": "Snipe with Longbowmen, keep archers spread, research Heresy if needed"
+        }
+      ]
+    },
+    {
+      "name": "Tatars",
+      "strengths": "Bonus damage from elevation, strong Keshik generates gold, excellent Cavalry Archers",
+      "mainWeaknesses": "Weak infantry, limited defensive options, reliant on cavalry",
+      "mainCounterUnits": [
+        {
+          "name": "Keshik",
+          "defense": "Halberdiers with Crossbowman support, deny gold generation by killing fast"
+        },
+        {
+          "name": "Cavalry Archer",
+          "defense": "Skirmishers are essential, add Pikemen screen, use walls"
+        },
+        {
+          "name": "Hussar",
+          "defense": "Halberdiers with archer support, protect economy with buildings"
+        }
+      ]
+    },
+    {
+      "name": "Teutons",
+      "strengths": "Extra armor on units, powerful Teutonic Knight, strong siege and Monks",
+      "mainWeaknesses": "Slow units, weak archers, vulnerable to kiting",
+      "mainCounterUnits": [
+        {
+          "name": "Teutonic Knight",
+          "defense": "Kite forever with Longbowmen, never engage, they cannot catch archers"
+        },
+        {
+          "name": "Paladin",
+          "defense": "Halberdiers work despite extra armor, add Longbowmen support"
+        },
+        {
+          "name": "Siege Onager",
+          "defense": "Spread Longbowmen, Trebuchets to snipe, raid with Light Cavalry"
+        }
+      ]
+    },
+    {
+      "name": "Turks",
+      "strengths": "Free Chemistry and extra gunpowder HP, strong Janissary, excellent siege",
+      "mainWeaknesses": "Weak late game trash (no Pikeman), limited options without gold",
+      "mainCounterUnits": [
+        {
+          "name": "Janissary",
+          "defense": "Longbowmen outrange them, kite backwards, focus fire from max range"
+        },
+        {
+          "name": "Cavalry Archer",
+          "defense": "Skirmishers counter well, add Pikemen screen, use walls"
+        },
+        {
+          "name": "Bombard Cannon",
+          "defense": "Light Cavalry raids, Trebuchets to counter-siege, never clump units"
+        }
+      ]
+    },
+    {
+      "name": "Vietnamese",
+      "strengths": "Extra HP on archers, Rattan Archer resists missiles, reveal enemy TC at start",
+      "mainWeaknesses": "Slow economy start, limited cavalry, predictable archer play",
+      "mainCounterUnits": [
+        {
+          "name": "Rattan Archer",
+          "defense": "Longbowmen can trade with range, add Skirmishers, siege to push"
+        },
+        {
+          "name": "Elephant Archer",
+          "defense": "Halberdiers mixed with Longbowmen, focus fire elephants, maintain distance"
+        },
+        {
+          "name": "Arbalest",
+          "defense": "Longbowmen outrange them, use range advantage, add Skirmishers"
+        }
+      ]
+    },
+    {
+      "name": "Vikings",
+      "strengths": "Free Wheelbarrow and Hand Cart, strong Berserks with regeneration, excellent navy",
+      "mainWeaknesses": "Weak cavalry (no Paladin), limited late game options, no gunpowder",
+      "mainCounterUnits": [
+        {
+          "name": "Berserk",
+          "defense": "Kite with Crossbowmen, kill before regeneration matters, use Longbowmen range"
+        },
+        {
+          "name": "Arbalest",
+          "defense": "Longbowmen outrange them, add Skirmishers, use siege to push"
+        },
+        {
+          "name": "Huskarl",
+          "defense": "Champions are needed, avoid pure archers late game, add Hand Cannoneers"
+        }
+      ]
+    },
+    {
+      "name": "Armenians",
+      "strengths": "Composite Bowman with good stats, Warrior Priest heals and fights, strong fortifications",
+      "mainWeaknesses": "Limited cavalry options, expensive unique units, predictable strategies",
+      "mainCounterUnits": [
+        {
+          "name": "Composite Bowman",
+          "defense": "Longbowmen have superior range, add Skirmishers, use siege to push"
+        },
+        {
+          "name": "Warrior Priest",
+          "defense": "Focus fire with archers, keep distance, snipe from max range"
+        },
+        {
+          "name": "Cavalier",
+          "defense": "Halberdiers with Crossbowman support, standard anti-cavalry approach"
+        }
+      ]
+    }
+  ]
+}
