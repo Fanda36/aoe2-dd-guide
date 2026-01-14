@@ -9,6 +9,25 @@
   ],
   "civilizations": [
     {
+      "name": "Armenians",
+      "strengths": "Composite Bowman with good stats, Warrior Priest heals and fights, strong fortifications",
+      "mainWeaknesses": "Limited cavalry options, expensive unique units, predictable strategies",
+      "mainCounterUnits": [
+        {
+          "name": "Composite Bowman",
+          "defense": "Longbowmen have superior range, add Skirmishers, use siege to push"
+        },
+        {
+          "name": "Warrior Priest",
+          "defense": "Focus fire with archers, keep distance, snipe from max range"
+        },
+        {
+          "name": "Cavalier",
+          "defense": "Halberdiers with Crossbowman support, standard anti-cavalry approach"
+        }
+      ]
+    },
+    {
       "name": "Aztecs",
       "strengths": "Strong Eagle Warriors with extra HP, excellent Monks, powerful infantry with Garland Wars",
       "mainWeaknesses": "No cavalry, no gunpowder, Eagles are countered by massed archers",
@@ -674,6 +693,25 @@
       ]
     },
     {
+      "name": "Shu",
+      "strengths": "Strong Zhuge Nu repeating crossbow, powerful cavalry with Qiang synergy, excellent economy bonuses",
+      "mainWeaknesses": "Limited late game siege options, expensive unique units, relies on timing attacks",
+      "mainCounterUnits": [
+        {
+          "name": "Zhuge Nu",
+          "defense": "Longbowmen outrange them easily, use Skirmishers mixed in, maintain maximum distance"
+        },
+        {
+          "name": "Qiang Cavalry",
+          "defense": "Halberdiers are essential, Crossbowmen focus fire, use walls to slow charges"
+        },
+        {
+          "name": "Cavalier",
+          "defense": "Standard Halberdier and Crossbowman composition, focus fire cavalry"
+        }
+      ]
+    },
+    {
       "name": "Sicilians",
       "strengths": "Reduced bonus damage taken, strong Serjeant builds Donjons, First Crusade tech",
       "mainWeaknesses": "Limited archer options, expensive unique bonuses, predictable strategies",
@@ -826,21 +864,40 @@
       ]
     },
     {
-      "name": "Armenians",
-      "strengths": "Composite Bowman with good stats, Warrior Priest heals and fights, strong fortifications",
-      "mainWeaknesses": "Limited cavalry options, expensive unique units, predictable strategies",
+      "name": "Wei",
+      "strengths": "Strong heavy cavalry with Iron Cavalry, disciplined infantry, powerful economy with production bonuses",
+      "mainWeaknesses": "Weak archers, limited naval options, expensive elite units",
       "mainCounterUnits": [
         {
-          "name": "Composite Bowman",
-          "defense": "Longbowmen have superior range, add Skirmishers, use siege to push"
+          "name": "Iron Cavalry",
+          "defense": "Mass Halberdiers, add Longbowmen support from behind, use Monks for conversion"
         },
         {
-          "name": "Warrior Priest",
-          "defense": "Focus fire with archers, keep distance, snipe from max range"
+          "name": "Tiger Knight",
+          "defense": "Halberdiers with Crossbowman backup, focus fire quickly, wall to slow aggression"
         },
         {
-          "name": "Cavalier",
-          "defense": "Halberdiers with Crossbowman support, standard anti-cavalry approach"
+          "name": "Two-Handed Swordsman",
+          "defense": "Kite with Longbowmen, maintain distance, use range advantage"
+        }
+      ]
+    },
+    {
+      "name": "Wu",
+      "strengths": "Excellent navy with Fire Ship bonuses, strong Rattan Crossbowmen, River Admiral unique unit",
+      "mainWeaknesses": "Weaker on land maps, limited cavalry, predictable water-focused strategy",
+      "mainCounterUnits": [
+        {
+          "name": "Rattan Crossbowman",
+          "defense": "Longbowmen outrange them, add Skirmishers for support, siege to push"
+        },
+        {
+          "name": "River Admiral",
+          "defense": "Avoid water engagements, use land superiority, Longbowmen on shorelines"
+        },
+        {
+          "name": "Hussar",
+          "defense": "Halberdiers with archer support, protect economy, defensive towers"
         }
       ]
     }

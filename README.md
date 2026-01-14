@@ -2,39 +2,7 @@
 
 A quick-reference web app for AoE2 players to check opponent civilization matchups during match loading and early game. Designed for speed and usability when every second counts.
 
-🎮 **[View Live Demo](https://yourusername.github.io/aoe2/)** *(Update with your GitHub Pages URL)*
-
-## Features
-
-- **Quick Civ Picker**: Select your civilization to see relevant matchup data
-- **Opponent Grid**: Browse all opponent civilizations at a glance
-- **Search Filter**: Instantly find the opponent you're facing
-- **Detailed Counter Strategies**: Modal view with:
-  - Opponent strengths to watch out for
-  - Exploitable weaknesses
-  - Key enemy units and how to counter them
-- **Mobile Friendly**: Works on phone if you need a quick check
-- **Fast Loading**: Minimal dependencies for quick access
-
-## Screenshot
-
-The interface features a medieval-themed dark design with gold accents, optimized for quick scanning during matches.
-
-## GitHub Pages Deployment
-
-### Quick Setup
-
-1. Push this repository to GitHub
-2. Go to your repository **Settings** → **Pages**
-3. Under "Source", select **Deploy from a branch**
-4. Select **main** branch and **/ (root)** folder
-5. Click **Save**
-6. Your site will be live at `https://yourusername.github.io/aoe2/`
-
-### Manual Build
-
-No build step required! This is a static site with vanilla HTML, CSS, and JavaScript.
-
+🎮 **[View Live Demo](https://fanda36.github.io/aoe2-dd-guide/)**
 ## Project Structure
 
 ```
@@ -110,7 +78,7 @@ To add a new civilization:
 
 ## Civilizations Covered
 
-The database includes all 45 civilizations from Age of Empires 2: Definitive Edition:
+The database includes all 48 civilizations from Age of Empires 2: Definitive Edition:
 
 - **Base Game**: Britons, Byzantines, Celts, Chinese, Franks, Goths, Japanese, Mongols, Persians, Saracens, Teutons, Turks, Vikings
 - **The Conquerors**: Aztecs, Huns, Koreans, Mayans, Spanish
@@ -123,6 +91,7 @@ The database includes all 45 civilizations from Age of Empires 2: Definitive Edi
 - **Dynasties of India**: Bengalis, Dravidians, Gurjaras, Hindustanis
 - **Return of Rome**: Romans
 - **The Mountain Royals**: Armenians, Georgians
+- **Chronicles: Three Kingdoms**: Shu, Wei, Wu
 
 ## Naming Convention
 
