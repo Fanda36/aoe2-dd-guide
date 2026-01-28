@@ -1,29 +1,33 @@
 {
-  "generatedAt": "2026-01-28T21:05:18.619Z",
-  "civilization": "Britons",
+  "generatedAt": "2026-01-28T21:05:18.831Z",
+  "civilization": "Turks",
   "bonuses": [
-    "Shepherds work +25% faster",
-    "Town Centers cost -50% wood starting in Castle Age",
-    "Foot Archers +1/+2 range in Castle/Imperial Age",
-    "Team: Archery Ranges work +10% faster"
+    "Gold miners work +25% faster",
+    "Scout Cavalry-line +1 pierce armor and upgrades free",
+    "Chemistry free; Gunpowder technologies costs -50%",
+    "Gunpowder Units +25% HP",
+    "Team: Gunpowder Units train +25% faster"
   ],
-  "uniqueUnit": "Longbowman",
-  "uniqueUnitElite": "Elite Longbowman",
+  "uniqueUnit": "Janissary",
+  "uniqueUnitElite": "Elite Janissary",
   "uniqueTechs": {
-    "castle": "Yeomen",
-    "imperial": "Warwolf"
+    "castle": "Sipahi",
+    "imperial": "Artillery"
   },
   "availableUnits": [
     "Archer",
     "Battering Ram",
+    "Bombard Cannon",
+    "Camel Rider",
     "Cannon Galleon",
     "Cavalry Archer",
     "Demolition Raft",
     "Fire Galley",
     "Fishing Ship",
     "Galley",
+    "Hand Cannoneer",
+    "Janissary",
     "Knight",
-    "Longbowman",
     "Mangonel",
     "Militia",
     "Monk",
@@ -94,11 +98,11 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age with full upgrades",
         "keyTiming": "Apply pressure in Castle Age"
       },
-      "strategy": "Archers destroy infantry. Keep distance and micro. Watch for siege support - have cavalry ready to snipe Mangonels."
+      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
     },
     "Aztecs": {
       "difficulty": "Even",
@@ -159,22 +163,22 @@
           "reason": "High damage, mobility advantage"
         },
         {
-          "use": "Knight",
-          "against": "Eagle Warrior",
-          "reason": "High damage output"
+          "use": "Hand Cannoneer",
+          "against": "Jaguar Warrior",
+          "reason": "+10 bonus vs infantry"
         },
         {
           "use": "Knight",
-          "against": "Militia",
-          "reason": "High damage, mobility advantage"
+          "against": "Eagle Warrior",
+          "reason": "High damage output"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age when Eagles are fully upgraded (+4 armor, +60 HP)",
         "keyTiming": "End game before Imperial or have infantry ready"
       },
-      "strategy": "CRITICAL: Eagles counter archers in Imperial. Win early with Crossbow mass or add Champion/Knights. Avoid late game archer-only composition."
+      "strategy": "Eagles are their cavalry. Have anti-infantry ready (Champions, Hand Cannoneers). Win before Imperial or prepare infantry counters."
     },
     "Bengalis": {
       "difficulty": "Even",
@@ -214,17 +218,27 @@
           "reason": "+15 bonus damage, very cost-efficient"
         },
         {
+          "use": "Camel",
+          "against": "Ratha",
+          "reason": "Can catch cavalry archers"
+        },
+        {
+          "use": "Camel",
+          "against": "Knight",
+          "reason": "+9 bonus damage, mobile counter"
+        },
+        {
           "use": "Monk",
           "against": "Knight",
           "reason": "Convert expensive units"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age with full upgrades",
         "keyTiming": "Apply pressure in Castle Age"
       },
-      "strategy": "Mass Crossbows with Spearman support. Use +1/+2 range to kite Knights. Keep Monks behind to convert expensive cavalry."
+      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
     },
     "Berbers": {
       "difficulty": "Even",
@@ -271,27 +285,27 @@
           "reason": "+3/+4 bonus damage, cheap trash counter"
         },
         {
+          "use": "Camel",
+          "against": "Camel Archer",
+          "reason": "Can catch cavalry archers"
+        },
+        {
+          "use": "Camel",
+          "against": "Knight",
+          "reason": "+9 bonus damage, mobile counter"
+        },
+        {
           "use": "Monk",
           "against": "Knight",
           "reason": "Convert expensive units"
-        },
-        {
-          "use": "Mangonel",
-          "against": "Archer",
-          "reason": "Area damage destroys archer masses"
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Castle Age Knight rush and Imperial Paladin timing",
         "keyTiming": "Have Spearmen ready by minute 18-20"
       },
-      "strategy": "Mass Crossbows with Spearman support. Use +1/+2 range to kite Knights. Keep Monks behind to convert expensive cavalry."
+      "strategy": "Wall early, have Spearmen ready. Monks are excellent for converting expensive cavalry. Camels if available."
     },
     "Bohemians": {
       "difficulty": "Even",
@@ -347,11 +361,69 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age with Hand Cannoneers/Bombard Cannons",
         "keyTiming": "Pressure early, dont let them boom to Imperial"
       },
-      "strategy": "Pressure early before Hand Cannoneers arrive. Your archers outrange them. Avoid prolonged Imperial Age fights."
+      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
+    },
+    "Britons": {
+      "difficulty": "Even",
+      "keyBonuses": [
+        "Shepherds work +25% faster",
+        "Town Centers cost -50% wood starting in Castle Age",
+        "Foot Archers +1/+2 range in Castle/Imperial Age"
+      ],
+      "allBonuses": [
+        "Shepherds work +25% faster",
+        "Town Centers cost -50% wood starting in Castle Age",
+        "Foot Archers +1/+2 range in Castle/Imperial Age",
+        "Team: Archery Ranges work +10% faster"
+      ],
+      "opponentUniqueUnit": "Longbowman",
+      "opponentStrengths": [
+        {
+          "unit": "Longbowman",
+          "reason": "Unique Unit"
+        },
+        {
+          "unit": "Archer",
+          "reason": "Archer civilization"
+        }
+      ],
+      "counters": [
+        {
+          "use": "Skirmisher",
+          "against": "Longbowman",
+          "reason": "+3/+4 bonus damage, cheap trash counter"
+        },
+        {
+          "use": "Skirmisher",
+          "against": "Archer",
+          "reason": "+3/+4 bonus damage, cheap trash counter"
+        },
+        {
+          "use": "Mangonel",
+          "against": "Longbowman",
+          "reason": "Area damage destroys archer masses"
+        },
+        {
+          "use": "Scout Cavalry",
+          "against": "Longbowman",
+          "reason": "Fast raiding, forces archer retreat"
+        },
+        {
+          "use": "Mangonel",
+          "against": "Archer",
+          "reason": "Area damage destroys archer masses"
+        }
+      ],
+      "timingWindows": {
+        "yourStrength": "Castle Age power spike with unique units",
+        "opponentStrength": "Imperial Age with full upgrades",
+        "keyTiming": "Apply pressure in Castle Age"
+      },
+      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
     },
     "Bulgarians": {
       "difficulty": "Even",
@@ -399,27 +471,27 @@
           "reason": "Kites slow infantry easily"
         },
         {
+          "use": "Camel",
+          "against": "Konnik",
+          "reason": "+9 bonus damage, mobile counter"
+        },
+        {
           "use": "Monk",
           "against": "Konnik",
           "reason": "Convert expensive units"
         },
         {
-          "use": "Monk",
+          "use": "Camel",
           "against": "Knight",
-          "reason": "Convert expensive units"
-        },
-        {
-          "use": "Knight",
-          "against": "Militia",
-          "reason": "High damage, mobility advantage"
+          "reason": "+9 bonus damage, mobile counter"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Castle Age Knight rush and Imperial Paladin timing",
         "keyTiming": "Have Spearmen ready by minute 18-20"
       },
-      "strategy": "Mass Crossbows with Spearman support. Use +1/+2 range to kite Knights. Keep Monks behind to convert expensive cavalry."
+      "strategy": "Wall early, have Spearmen ready. Monks are excellent for converting expensive cavalry. Camels if available."
     },
     "Burgundians": {
       "difficulty": "Even",
@@ -458,22 +530,27 @@
           "reason": "+15 bonus damage, very cost-efficient"
         },
         {
+          "use": "Camel",
+          "against": "Coustillier",
+          "reason": "+9 bonus damage, mobile counter"
+        },
+        {
           "use": "Monk",
           "against": "Coustillier",
           "reason": "Convert expensive units"
         },
         {
-          "use": "Monk",
+          "use": "Camel",
           "against": "Knight",
-          "reason": "Convert expensive units"
+          "reason": "+9 bonus damage, mobile counter"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Castle Age Knight rush and Imperial Paladin timing",
         "keyTiming": "Have Spearmen ready by minute 18-20"
       },
-      "strategy": "Mass Crossbows with Spearman support. Use +1/+2 range to kite Knights. Keep Monks behind to convert expensive cavalry."
+      "strategy": "Wall early, have Spearmen ready. Monks are excellent for converting expensive cavalry. Camels if available."
     },
     "Burmese": {
       "difficulty": "Even",
@@ -529,14 +606,19 @@
           "use": "Knight",
           "against": "Militia",
           "reason": "High damage, mobility advantage"
+        },
+        {
+          "use": "Hand Cannoneer",
+          "against": "Militia",
+          "reason": "+10 bonus vs infantry"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age with Champion spam or unique infantry",
         "keyTiming": "Maintain archer mass and mobility"
       },
-      "strategy": "Archers destroy infantry. Keep distance and micro. Watch for siege support - have cavalry ready to snipe Mangonels."
+      "strategy": "Archers and cavalry destroy infantry. Maintain mobility and range advantage."
     },
     "Byzantines": {
       "difficulty": "Even",
@@ -576,20 +658,25 @@
           "reason": "Fast, cheap, kills monks quickly"
         },
         {
+          "use": "Camel",
+          "against": "Cataphract",
+          "reason": "+9 bonus damage, mobile counter"
+        },
+        {
           "use": "Monk",
           "against": "Cataphract",
           "reason": "Convert expensive units"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age with full upgrades",
         "keyTiming": "Apply pressure in Castle Age"
       },
-      "strategy": "Monks threaten your Knights. Use archers to kill Monks from range. Light Cavalry is cheap and hard to convert."
+      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
     },
     "Celts": {
-      "difficulty": "Hard",
+      "difficulty": "Even",
       "keyBonuses": [
         "Lumberjacks work +15% faster",
         "Infantry moves +5/10/15/20% faster in Dark/Feudal/ Castle/Imperial Age",
@@ -639,22 +726,22 @@
           "reason": "High damage, mobility advantage"
         },
         {
+          "use": "Hand Cannoneer",
+          "against": "Woad Raider",
+          "reason": "+10 bonus vs infantry"
+        },
+        {
           "use": "Knight",
           "against": "Militia",
           "reason": "High damage, mobility advantage"
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Mangonel",
-          "reason": "Fast, snipes siege quickly"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age with Champion spam or unique infantry",
         "keyTiming": "Maintain archer mass and mobility"
       },
-      "strategy": "Archers destroy infantry. Keep distance and micro. Watch for siege support - have cavalry ready to snipe Mangonels."
+      "strategy": "Archers and cavalry destroy infantry. Maintain mobility and range advantage."
     },
     "Chinese": {
       "difficulty": "Even",
@@ -708,11 +795,11 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age with full upgrades",
         "keyTiming": "Apply pressure in Castle Age"
       },
-      "strategy": "Archer mirror - your +1/+2 range wins fights. Add Skirmishers to trade efficiently. Get Longbowmen for max range."
+      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
     },
     "Cumans": {
       "difficulty": "Even",
@@ -760,27 +847,27 @@
           "reason": "+3/+4 bonus damage, cheap trash counter"
         },
         {
+          "use": "Camel",
+          "against": "Kipchak",
+          "reason": "Can catch cavalry archers"
+        },
+        {
+          "use": "Camel",
+          "against": "Knight",
+          "reason": "+9 bonus damage, mobile counter"
+        },
+        {
           "use": "Monk",
           "against": "Knight",
           "reason": "Convert expensive units"
-        },
-        {
-          "use": "Mangonel",
-          "against": "Archer",
-          "reason": "Area damage destroys archer masses"
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Castle Age Knight rush and Imperial Paladin timing",
         "keyTiming": "Have Spearmen ready by minute 18-20"
       },
-      "strategy": "Mass Crossbows with Spearman support. Use +1/+2 range to kite Knights. Keep Monks behind to convert expensive cavalry."
+      "strategy": "Wall early, have Spearmen ready. Monks are excellent for converting expensive cavalry. Camels if available."
     },
     "Dravidians": {
       "difficulty": "Even",
@@ -834,22 +921,22 @@
           "reason": "High damage, mobility advantage"
         },
         {
+          "use": "Hand Cannoneer",
+          "against": "Urumi Swordsman",
+          "reason": "+10 bonus vs infantry"
+        },
+        {
           "use": "Mangonel",
           "against": "Archer",
           "reason": "Area damage destroys archer masses"
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age with full upgrades",
         "keyTiming": "Apply pressure in Castle Age"
       },
-      "strategy": "Archers destroy infantry. Keep distance and micro. Watch for siege support - have cavalry ready to snipe Mangonels."
+      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
     },
     "Ethiopians": {
       "difficulty": "Even",
@@ -901,25 +988,25 @@
           "reason": "High damage, mobility advantage"
         },
         {
+          "use": "Hand Cannoneer",
+          "against": "Shotel Warrior",
+          "reason": "+10 bonus vs infantry"
+        },
+        {
           "use": "Mangonel",
           "against": "Archer",
           "reason": "Area damage destroys archer masses"
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Castle Age Mangonel timing and Imperial Siege Onagers",
         "keyTiming": "Split archers vs siege, have cavalry ready to snipe"
       },
-      "strategy": "DANGER: Siege counters archers. Keep Knights/Light Cav to snipe siege. Split archers to minimize Mangonel damage."
+      "strategy": "Have mobile units (cavalry) ready to snipe siege. Dont clump units against Mangonels."
     },
     "Franks": {
-      "difficulty": "Favorable",
+      "difficulty": "Even",
       "keyBonuses": [
         "Foragers work +15% faster",
         "Mill technologies free",
@@ -960,17 +1047,22 @@
           "reason": "High damage, mobility advantage"
         },
         {
-          "use": "Monk",
+          "use": "Hand Cannoneer",
+          "against": "Throwing Axeman",
+          "reason": "+10 bonus vs infantry"
+        },
+        {
+          "use": "Camel",
           "against": "Knight",
-          "reason": "Convert expensive units"
+          "reason": "+9 bonus damage, mobile counter"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Castle Age Knight rush and Imperial Paladin timing",
         "keyTiming": "Have Spearmen ready by minute 18-20"
       },
-      "strategy": "Mass Crossbows with Spearman support. Use +1/+2 range to kite Knights. Keep Monks behind to convert expensive cavalry."
+      "strategy": "Wall early, have Spearmen ready. Monks are excellent for converting expensive cavalry. Camels if available."
     },
     "Georgians": {
       "difficulty": "Even",
@@ -1000,20 +1092,25 @@
           "reason": "+15 bonus damage, very cost-efficient"
         },
         {
+          "use": "Camel",
+          "against": "Monaspa",
+          "reason": "+9 bonus damage, mobile counter"
+        },
+        {
           "use": "Monk",
           "against": "Monaspa",
           "reason": "Convert expensive units"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age with full upgrades",
         "keyTiming": "Apply pressure in Castle Age"
       },
-      "strategy": "Standard Crossbow play in Castle Age. Get +1/+2 range bonus. Transition to Longbowmen. Control with range advantage."
+      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
     },
     "Goths": {
-      "difficulty": "Hard",
+      "difficulty": "Even",
       "keyBonuses": [
         "Infantry costs -15/20/25/30% in Dark/Feudal/Castle/ Imperial Age",
         "Infantry +1/+2/+3 attack vs. buildings in Feudal/ Castle/Imperial Age",
@@ -1055,22 +1152,22 @@
           "reason": "Infantry vs infantry, cost-efficient"
         },
         {
+          "use": "Hand Cannoneer",
+          "against": "Huskarl",
+          "reason": "+10 bonus vs infantry, bypasses pierce armor"
+        },
+        {
           "use": "Scorpion",
           "against": "Huskarl",
           "reason": "Pass-through damage kills groups"
-        },
-        {
-          "use": "Knight",
-          "against": "Militia",
-          "reason": "High damage, mobility advantage"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age with Champion spam or unique infantry",
         "keyTiming": "Maintain archer mass and mobility"
       },
-      "strategy": "Archers destroy infantry. Keep distance and micro. Watch for siege support - have cavalry ready to snipe Mangonels."
+      "strategy": "Archers and cavalry destroy infantry. Maintain mobility and range advantage."
     },
     "Gurjaras": {
       "difficulty": "Even",
@@ -1113,17 +1210,22 @@
           "reason": "Fast, snipes siege quickly"
         },
         {
+          "use": "Camel",
+          "against": "Knight",
+          "reason": "+9 bonus damage, mobile counter"
+        },
+        {
           "use": "Monk",
           "against": "Knight",
           "reason": "Convert expensive units"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Castle Age Knight rush and Imperial Paladin timing",
         "keyTiming": "Have Spearmen ready by minute 18-20"
       },
-      "strategy": "Mass Crossbows with Spearman support. Use +1/+2 range to kite Knights. Keep Monks behind to convert expensive cavalry."
+      "strategy": "Wall early, have Spearmen ready. Monks are excellent for converting expensive cavalry. Camels if available."
     },
     "Hindustanis": {
       "difficulty": "Even",
@@ -1167,25 +1269,25 @@
           "reason": "Infantry vs infantry, cost-efficient"
         },
         {
+          "use": "Hand Cannoneer",
+          "against": "Ghulam",
+          "reason": "+10 bonus vs infantry, bypasses pierce armor"
+        },
+        {
           "use": "Scorpion",
           "against": "Ghulam",
           "reason": "Pass-through damage kills groups"
-        },
-        {
-          "use": "Monk",
-          "against": "Knight",
-          "reason": "Convert expensive units"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Castle Age Knight rush and Imperial Paladin timing",
         "keyTiming": "Have Spearmen ready by minute 18-20"
       },
-      "strategy": "Mass Crossbows with Spearman support. Use +1/+2 range to kite Knights. Keep Monks behind to convert expensive cavalry."
+      "strategy": "Wall early, have Spearmen ready. Monks are excellent for converting expensive cavalry. Camels if available."
     },
     "Huns": {
-      "difficulty": "Favorable",
+      "difficulty": "Even",
       "keyBonuses": [
         "Cavalry Archers cost -10/20% in Castle/Imperial Age",
         "On Nomadic maps, the first Town Center spawns a scouting Horse",
@@ -1221,22 +1323,27 @@
           "reason": "+15 bonus damage, very cost-efficient"
         },
         {
+          "use": "Camel",
+          "against": "Tarkan",
+          "reason": "+9 bonus damage, mobile counter"
+        },
+        {
           "use": "Monk",
           "against": "Tarkan",
           "reason": "Convert expensive units"
         },
         {
-          "use": "Monk",
+          "use": "Camel",
           "against": "Knight",
-          "reason": "Convert expensive units"
+          "reason": "+9 bonus damage, mobile counter"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Castle Age Knight rush and Imperial Paladin timing",
         "keyTiming": "Have Spearmen ready by minute 18-20"
       },
-      "strategy": "Mass Crossbows with Spearman support. Use +1/+2 range to kite Knights. Keep Monks behind to convert expensive cavalry."
+      "strategy": "Wall early, have Spearmen ready. Monks are excellent for converting expensive cavalry. Camels if available."
     },
     "Incas": {
       "difficulty": "Even",
@@ -1300,11 +1407,11 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age when Eagles are fully upgraded (+4 armor, +60 HP)",
         "keyTiming": "End game before Imperial or have infantry ready"
       },
-      "strategy": "CRITICAL: Eagles counter archers in Imperial. Win early with Crossbow mass or add Champion/Knights. Avoid late game archer-only composition."
+      "strategy": "Eagles are their cavalry. Have anti-infantry ready (Champions, Hand Cannoneers). Win before Imperial or prepare infantry counters."
     },
     "Italians": {
       "difficulty": "Even",
@@ -1378,11 +1485,11 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age with Hand Cannoneers/Bombard Cannons",
         "keyTiming": "Pressure early, dont let them boom to Imperial"
       },
-      "strategy": "Archers destroy infantry. Keep distance and micro. Watch for siege support - have cavalry ready to snipe Mangonels."
+      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
     },
     "Japanese": {
       "difficulty": "Even",
@@ -1435,22 +1542,22 @@
           "reason": "High damage, mobility advantage"
         },
         {
+          "use": "Hand Cannoneer",
+          "against": "Samurai",
+          "reason": "+10 bonus vs infantry"
+        },
+        {
           "use": "Knight",
           "against": "Militia",
           "reason": "High damage, mobility advantage"
-        },
-        {
-          "use": "Monk",
-          "against": "Knight",
-          "reason": "Convert expensive units"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age with Champion spam or unique infantry",
         "keyTiming": "Maintain archer mass and mobility"
       },
-      "strategy": "Mass Crossbows with Spearman support. Use +1/+2 range to kite Knights. Keep Monks behind to convert expensive cavalry."
+      "strategy": "Archers and cavalry destroy infantry. Maintain mobility and range advantage."
     },
     "Jurchens": {
       "difficulty": "Even",
@@ -1481,17 +1588,22 @@
           "reason": "+15 bonus damage, very cost-efficient"
         },
         {
+          "use": "Camel",
+          "against": "Iron Pagoda",
+          "reason": "+9 bonus damage, mobile counter"
+        },
+        {
           "use": "Monk",
           "against": "Iron Pagoda",
           "reason": "Convert expensive units"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age with full upgrades",
         "keyTiming": "Apply pressure in Castle Age"
       },
-      "strategy": "Standard Crossbow play in Castle Age. Get +1/+2 range bonus. Transition to Longbowmen. Control with range advantage."
+      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
     },
     "Khitans": {
       "difficulty": "Even",
@@ -1544,22 +1656,22 @@
           "reason": "High damage, mobility advantage"
         },
         {
-          "use": "Monk",
-          "against": "Knight",
-          "reason": "Convert expensive units"
+          "use": "Hand Cannoneer",
+          "against": "Liao Dao",
+          "reason": "+10 bonus vs infantry"
         },
         {
-          "use": "Knight",
-          "against": "Militia",
-          "reason": "High damage, mobility advantage"
+          "use": "Camel",
+          "against": "Knight",
+          "reason": "+9 bonus damage, mobile counter"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age with full upgrades",
         "keyTiming": "Apply pressure in Castle Age"
       },
-      "strategy": "Mass Crossbows with Spearman support. Use +1/+2 range to kite Knights. Keep Monks behind to convert expensive cavalry."
+      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
     },
     "Khmer": {
       "difficulty": "Even",
@@ -1608,11 +1720,11 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Castle Age Mangonel timing and Imperial Siege Onagers",
         "keyTiming": "Split archers vs siege, have cavalry ready to snipe"
       },
-      "strategy": "DANGER: Siege counters archers. Keep Knights/Light Cav to snipe siege. Split archers to minimize Mangonel damage."
+      "strategy": "Have mobile units (cavalry) ready to snipe siege. Dont clump units against Mangonels."
     },
     "Koreans": {
       "difficulty": "Even",
@@ -1669,6 +1781,11 @@
           "reason": "Kites slow infantry easily"
         },
         {
+          "use": "Camel",
+          "against": "War Wagon",
+          "reason": "Can catch cavalry archers"
+        },
+        {
           "use": "Mangonel",
           "against": "Archer",
           "reason": "Area damage destroys archer masses"
@@ -1677,19 +1794,14 @@
           "use": "Scout Cavalry",
           "against": "Archer",
           "reason": "Fast raiding, forces archer retreat"
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Mangonel",
-          "reason": "Fast, snipes siege quickly"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Castle Age Mangonel timing and Imperial Siege Onagers",
         "keyTiming": "Split archers vs siege, have cavalry ready to snipe"
       },
-      "strategy": "Archers destroy infantry. Keep distance and micro. Watch for siege support - have cavalry ready to snipe Mangonels."
+      "strategy": "Have mobile units (cavalry) ready to snipe siege. Dont clump units against Mangonels."
     },
     "Lithuanians": {
       "difficulty": "Even",
@@ -1727,22 +1839,27 @@
           "reason": "+15 bonus damage, very cost-efficient"
         },
         {
+          "use": "Camel",
+          "against": "Leitis",
+          "reason": "+9 bonus damage, mobile counter"
+        },
+        {
           "use": "Monk",
           "against": "Leitis",
           "reason": "Convert expensive units"
         },
         {
-          "use": "Monk",
+          "use": "Camel",
           "against": "Knight",
-          "reason": "Convert expensive units"
+          "reason": "+9 bonus damage, mobile counter"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Castle Age Knight rush and Imperial Paladin timing",
         "keyTiming": "Have Spearmen ready by minute 18-20"
       },
-      "strategy": "Mass Crossbows with Spearman support. Use +1/+2 range to kite Knights. Keep Monks behind to convert expensive cavalry."
+      "strategy": "Wall early, have Spearmen ready. Monks are excellent for converting expensive cavalry. Camels if available."
     },
     "Magyars": {
       "difficulty": "Even",
@@ -1789,27 +1906,27 @@
           "reason": "+3/+4 bonus damage, cheap trash counter"
         },
         {
+          "use": "Camel",
+          "against": "Magyar Huszar",
+          "reason": "+9 bonus damage, mobile counter"
+        },
+        {
           "use": "Monk",
           "against": "Magyar Huszar",
           "reason": "Convert expensive units"
         },
         {
-          "use": "Monk",
+          "use": "Camel",
           "against": "Knight",
-          "reason": "Convert expensive units"
-        },
-        {
-          "use": "Mangonel",
-          "against": "Archer",
-          "reason": "Area damage destroys archer masses"
+          "reason": "+9 bonus damage, mobile counter"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Castle Age Knight rush and Imperial Paladin timing",
         "keyTiming": "Have Spearmen ready by minute 18-20"
       },
-      "strategy": "Mass Crossbows with Spearman support. Use +1/+2 range to kite Knights. Keep Monks behind to convert expensive cavalry."
+      "strategy": "Wall early, have Spearmen ready. Monks are excellent for converting expensive cavalry. Camels if available."
     },
     "Malay": {
       "difficulty": "Even",
@@ -1853,17 +1970,22 @@
           "reason": "High damage, mobility advantage"
         },
         {
+          "use": "Hand Cannoneer",
+          "against": "Karambit Warrior",
+          "reason": "+10 bonus vs infantry"
+        },
+        {
           "use": "Knight",
           "against": "Militia",
           "reason": "High damage, mobility advantage"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age with full upgrades",
         "keyTiming": "Apply pressure in Castle Age"
       },
-      "strategy": "Archers destroy infantry. Keep distance and micro. Watch for siege support - have cavalry ready to snipe Mangonels."
+      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
     },
     "Malians": {
       "difficulty": "Even",
@@ -1906,17 +2028,22 @@
           "reason": "High damage, mobility advantage"
         },
         {
+          "use": "Hand Cannoneer",
+          "against": "Gbeto",
+          "reason": "+10 bonus vs infantry"
+        },
+        {
           "use": "Knight",
           "against": "Militia",
           "reason": "High damage, mobility advantage"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age with Champion spam or unique infantry",
         "keyTiming": "Maintain archer mass and mobility"
       },
-      "strategy": "Archers destroy infantry. Keep distance and micro. Watch for siege support - have cavalry ready to snipe Mangonels."
+      "strategy": "Archers and cavalry destroy infantry. Maintain mobility and range advantage."
     },
     "Mayans": {
       "difficulty": "Even",
@@ -1978,14 +2105,14 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age when Eagles are fully upgraded (+4 armor, +60 HP)",
         "keyTiming": "End game before Imperial or have infantry ready"
       },
-      "strategy": "CRITICAL: Eagles counter archers in Imperial. Win early with Crossbow mass or add Champion/Knights. Avoid late game archer-only composition."
+      "strategy": "Eagles are their cavalry. Have anti-infantry ready (Champions, Hand Cannoneers). Win before Imperial or prepare infantry counters."
     },
     "Mongols": {
-      "difficulty": "Hard",
+      "difficulty": "Even",
       "keyBonuses": [
         "Hunters work +40% faster",
         "Cavalry Archers attack +25% faster",
@@ -2029,25 +2156,30 @@
           "reason": "Fast, high damage vs slow siege"
         },
         {
+          "use": "Camel",
+          "against": "Mangudai",
+          "reason": "Can catch cavalry archers"
+        },
+        {
+          "use": "Camel",
+          "against": "Knight",
+          "reason": "+9 bonus damage, mobile counter"
+        },
+        {
           "use": "Monk",
           "against": "Knight",
           "reason": "Convert expensive units"
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Mangonel",
-          "reason": "Fast, snipes siege quickly"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Castle Age Knight rush and Imperial Paladin timing",
         "keyTiming": "Have Spearmen ready by minute 18-20"
       },
-      "strategy": "Mass Crossbows with Spearman support. Use +1/+2 range to kite Knights. Keep Monks behind to convert expensive cavalry."
+      "strategy": "Wall early, have Spearmen ready. Monks are excellent for converting expensive cavalry. Camels if available."
     },
     "Persians": {
-      "difficulty": "Favorable",
+      "difficulty": "Even",
       "keyBonuses": [
         "Town Centers and Docks +100% HP and work +5/10/15/20% faster in Dark/Feudal/Castle/Imperial Age",
         "Parthian Tactics available in Castle Age",
@@ -2088,22 +2220,22 @@
           "reason": "Huge bonus damage vs elephants"
         },
         {
+          "use": "Camel",
+          "against": "War Elephant",
+          "reason": "Bonus damage vs elephants"
+        },
+        {
           "use": "Scorpion",
           "against": "War Elephant",
           "reason": "High damage per shot vs slow targets"
-        },
-        {
-          "use": "Monk",
-          "against": "Knight",
-          "reason": "Convert expensive units"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Castle Age Knight rush and Imperial Paladin timing",
         "keyTiming": "Have Spearmen ready by minute 18-20"
       },
-      "strategy": "Mass Crossbows with Spearman support. Use +1/+2 range to kite Knights. Keep Monks behind to convert expensive cavalry."
+      "strategy": "Wall early, have Spearmen ready. Monks are excellent for converting expensive cavalry. Camels if available."
     },
     "Poles": {
       "difficulty": "Even",
@@ -2147,17 +2279,22 @@
           "reason": "High damage, mobility advantage"
         },
         {
-          "use": "Monk",
+          "use": "Hand Cannoneer",
+          "against": "Obuch",
+          "reason": "+10 bonus vs infantry"
+        },
+        {
+          "use": "Camel",
           "against": "Knight",
-          "reason": "Convert expensive units"
+          "reason": "+9 bonus damage, mobile counter"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Castle Age Knight rush and Imperial Paladin timing",
         "keyTiming": "Have Spearmen ready by minute 18-20"
       },
-      "strategy": "Mass Crossbows with Spearman support. Use +1/+2 range to kite Knights. Keep Monks behind to convert expensive cavalry."
+      "strategy": "Wall early, have Spearmen ready. Monks are excellent for converting expensive cavalry. Camels if available."
     },
     "Portuguese": {
       "difficulty": "Even",
@@ -2212,11 +2349,11 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age with Hand Cannoneers/Bombard Cannons",
         "keyTiming": "Pressure early, dont let them boom to Imperial"
       },
-      "strategy": "Pressure early before Hand Cannoneers arrive. Your archers outrange them. Avoid prolonged Imperial Age fights."
+      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
     },
     "Romans": {
       "difficulty": "Even",
@@ -2260,17 +2397,22 @@
           "reason": "High damage, mobility advantage"
         },
         {
+          "use": "Hand Cannoneer",
+          "against": "Centurion",
+          "reason": "+10 bonus vs infantry"
+        },
+        {
           "use": "Knight",
           "against": "Militia",
           "reason": "High damage, mobility advantage"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age with full upgrades",
         "keyTiming": "Apply pressure in Castle Age"
       },
-      "strategy": "Archers destroy infantry. Keep distance and micro. Watch for siege support - have cavalry ready to snipe Mangonels."
+      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
     },
     "Saracens": {
       "difficulty": "Even",
@@ -2325,11 +2467,11 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age with full upgrades",
         "keyTiming": "Apply pressure in Castle Age"
       },
-      "strategy": "Archer mirror - your +1/+2 range wins fights. Add Skirmishers to trade efficiently. Get Longbowmen for max range."
+      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
     },
     "Shu": {
       "difficulty": "Even",
@@ -2372,22 +2514,22 @@
           "reason": "High damage, mobility advantage"
         },
         {
+          "use": "Hand Cannoneer",
+          "against": "White Feather Guard",
+          "reason": "+10 bonus vs infantry"
+        },
+        {
           "use": "Mangonel",
           "against": "Archer",
           "reason": "Area damage destroys archer masses"
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age with full upgrades",
         "keyTiming": "Apply pressure in Castle Age"
       },
-      "strategy": "Archer mirror - your +1/+2 range wins fights. Add Skirmishers to trade efficiently. Get Longbowmen for max range."
+      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
     },
     "Sicilians": {
       "difficulty": "Even",
@@ -2421,17 +2563,22 @@
           "use": "Knight",
           "against": "Serjeant",
           "reason": "High damage, mobility advantage"
+        },
+        {
+          "use": "Hand Cannoneer",
+          "against": "Serjeant",
+          "reason": "+10 bonus vs infantry"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age with full upgrades",
         "keyTiming": "Apply pressure in Castle Age"
       },
-      "strategy": "Standard Crossbow play in Castle Age. Get +1/+2 range bonus. Transition to Longbowmen. Control with range advantage."
+      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
     },
     "Slavs": {
-      "difficulty": "Hard",
+      "difficulty": "Even",
       "keyBonuses": [
         "Farmers work +15% faster",
         "Arson, Gambesons free",
@@ -2485,6 +2632,11 @@
           "reason": "Fast, cheap, kills monks quickly"
         },
         {
+          "use": "Camel",
+          "against": "Boyar",
+          "reason": "+9 bonus damage, mobile counter"
+        },
+        {
           "use": "Monk",
           "against": "Boyar",
           "reason": "Convert expensive units"
@@ -2493,19 +2645,14 @@
           "use": "Knight",
           "against": "Militia",
           "reason": "High damage, mobility advantage"
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Mangonel",
-          "reason": "Fast, snipes siege quickly"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age with Champion spam or unique infantry",
         "keyTiming": "Maintain archer mass and mobility"
       },
-      "strategy": "Archers destroy infantry. Keep distance and micro. Watch for siege support - have cavalry ready to snipe Mangonels."
+      "strategy": "Archers and cavalry destroy infantry. Maintain mobility and range advantage."
     },
     "Spanish": {
       "difficulty": "Even",
@@ -2570,11 +2717,11 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age with Hand Cannoneers/Bombard Cannons",
         "keyTiming": "Pressure early, dont let them boom to Imperial"
       },
-      "strategy": "Monks threaten your Knights. Use archers to kill Monks from range. Light Cavalry is cheap and hard to convert."
+      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
     },
     "Tatars": {
       "difficulty": "Even",
@@ -2613,6 +2760,11 @@
           "reason": "+3/+4 bonus damage, cheap trash counter"
         },
         {
+          "use": "Camel",
+          "against": "Keshik",
+          "reason": "+9 bonus damage, mobile counter"
+        },
+        {
           "use": "Monk",
           "against": "Keshik",
           "reason": "Convert expensive units"
@@ -2621,19 +2773,14 @@
           "use": "Mangonel",
           "against": "Archer",
           "reason": "Area damage destroys archer masses"
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age with full upgrades",
         "keyTiming": "Apply pressure in Castle Age"
       },
-      "strategy": "Archer mirror - your +1/+2 range wins fights. Add Skirmishers to trade efficiently. Get Longbowmen for max range."
+      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
     },
     "Teutons": {
       "difficulty": "Even",
@@ -2696,90 +2843,22 @@
           "reason": "High damage, mobility advantage"
         },
         {
+          "use": "Hand Cannoneer",
+          "against": "Teutonic Knight",
+          "reason": "+10 bonus vs infantry"
+        },
+        {
           "use": "Knight",
           "against": "Militia",
           "reason": "High damage, mobility advantage"
-        },
-        {
-          "use": "Monk",
-          "against": "Knight",
-          "reason": "Convert expensive units"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age with Champion spam or unique infantry",
         "keyTiming": "Maintain archer mass and mobility"
       },
-      "strategy": "Mass Crossbows with Spearman support. Use +1/+2 range to kite Knights. Keep Monks behind to convert expensive cavalry."
-    },
-    "Turks": {
-      "difficulty": "Even",
-      "keyBonuses": [
-        "Gold miners work +25% faster",
-        "Scout Cavalry-line +1 pierce armor and upgrades free",
-        "Chemistry free; Gunpowder technologies costs -50%"
-      ],
-      "allBonuses": [
-        "Gold miners work +25% faster",
-        "Scout Cavalry-line +1 pierce armor and upgrades free",
-        "Chemistry free; Gunpowder technologies costs -50%",
-        "Gunpowder Units +25% HP",
-        "Team: Gunpowder Units train +25% faster"
-      ],
-      "opponentUniqueUnit": "Janissary",
-      "opponentStrengths": [
-        {
-          "unit": "Janissary",
-          "reason": "Unique Unit"
-        },
-        {
-          "unit": "Hand Cannoneer",
-          "reason": "Gunpowder civilization"
-        },
-        {
-          "unit": "Knight",
-          "reason": "Bonus-enhanced"
-        }
-      ],
-      "counters": [
-        {
-          "use": "Mangonel",
-          "against": "Janissary",
-          "reason": "Area damage, outranges hand cannons"
-        },
-        {
-          "use": "Mangonel",
-          "against": "Hand Cannoneer",
-          "reason": "Area damage, outranges hand cannons"
-        },
-        {
-          "use": "Spearman",
-          "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient"
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Janissary",
-          "reason": "Fast closing, dodges shots"
-        },
-        {
-          "use": "Skirmisher",
-          "against": "Janissary",
-          "reason": "Cheap ranged, high numbers"
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Hand Cannoneer",
-          "reason": "Fast closing, dodges shots"
-        }
-      ],
-      "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
-        "opponentStrength": "Imperial Age with Hand Cannoneers/Bombard Cannons",
-        "keyTiming": "Pressure early, dont let them boom to Imperial"
-      },
-      "strategy": "Mass Crossbows with Spearman support. Use +1/+2 range to kite Knights. Keep Monks behind to convert expensive cavalry."
+      "strategy": "Archers and cavalry destroy infantry. Maintain mobility and range advantage."
     },
     "Vietnamese": {
       "difficulty": "Even",
@@ -2834,11 +2913,11 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age with full upgrades",
         "keyTiming": "Apply pressure in Castle Age"
       },
-      "strategy": "Archer mirror - your +1/+2 range wins fights. Add Skirmishers to trade efficiently. Get Longbowmen for max range."
+      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
     },
     "Vikings": {
       "difficulty": "Even",
@@ -2881,17 +2960,22 @@
           "reason": "High damage, mobility advantage"
         },
         {
+          "use": "Hand Cannoneer",
+          "against": "Berserk",
+          "reason": "+10 bonus vs infantry"
+        },
+        {
           "use": "Knight",
           "against": "Militia",
           "reason": "High damage, mobility advantage"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age with Champion spam or unique infantry",
         "keyTiming": "Maintain archer mass and mobility"
       },
-      "strategy": "Archers destroy infantry. Keep distance and micro. Watch for siege support - have cavalry ready to snipe Mangonels."
+      "strategy": "Archers and cavalry destroy infantry. Maintain mobility and range advantage."
     },
     "Wei": {
       "difficulty": "Even",
@@ -2929,22 +3013,27 @@
           "reason": "+15 bonus damage, very cost-efficient"
         },
         {
+          "use": "Camel",
+          "against": "Tiger Cavalry",
+          "reason": "+9 bonus damage, mobile counter"
+        },
+        {
           "use": "Monk",
           "against": "Tiger Cavalry",
           "reason": "Convert expensive units"
         },
         {
-          "use": "Monk",
+          "use": "Camel",
           "against": "Knight",
-          "reason": "Convert expensive units"
+          "reason": "+9 bonus damage, mobile counter"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age with full upgrades",
         "keyTiming": "Apply pressure in Castle Age"
       },
-      "strategy": "Mass Crossbows with Spearman support. Use +1/+2 range to kite Knights. Keep Monks behind to convert expensive cavalry."
+      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
     },
     "Wu": {
       "difficulty": "Even",
@@ -3002,17 +3091,17 @@
           "reason": "Fast raiding, forces archer retreat"
         },
         {
-          "use": "Monk",
+          "use": "Camel",
           "against": "Knight",
-          "reason": "Convert expensive units"
+          "reason": "+9 bonus damage, mobile counter"
         }
       ],
       "timingWindows": {
-        "yourStrength": "Castle Age with Crossbow mass (+1 range). Longbowmen in late Castle.",
+        "yourStrength": "Castle Age power spike with unique units",
         "opponentStrength": "Imperial Age with full upgrades",
         "keyTiming": "Apply pressure in Castle Age"
       },
-      "strategy": "Mass Crossbows with Spearman support. Use +1/+2 range to kite Knights. Keep Monks behind to convert expensive cavalry."
+      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
     }
   }
 }

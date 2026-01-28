@@ -1,0 +1,19 @@
+{
+  "name": "aoe2-matchup-kb",
+  "version": "1.0.0",
+  "description": "AoE2 Definitive Edition matchup knowledge base for players",
+  "scripts": {
+    "extract": "node extract-land-units.js",
+    "matchups": "node generate-matchups.js",
+    "bundle": "node build-data.js",
+    "build": "npm run extract && npm run matchups && npm run bundle",
+    "serve": "npx serve ."
+  },
+  "keywords": [
+    "aoe2",
+    "age-of-empires",
+    "strategy",
+    "matchups"
+  ],
+  "license": "MIT"
+}

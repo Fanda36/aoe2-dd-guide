@@ -1,95 +1,688 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AoE2 Matchup Guide</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚔️</text></svg>">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AoE2 Matchup KB</title>
+  <style>
+    :root {
+      --bg-primary: #1a1a2e;
+      --bg-secondary: #16213e;
+      --bg-card: #0f3460;
+      --accent: #e94560;
+      --accent-hover: #ff6b6b;
+      --text-primary: #eee;
+      --text-secondary: #aaa;
+      --text-muted: #777;
+      --border: #2a3f5f;
+      --success: #4ade80;
+      --warning: #fbbf24;
+      --danger: #f87171;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+
+    /* Header */
+    header {
+      background: var(--bg-secondary);
+      padding: 1rem 2rem;
+      border-bottom: 2px solid var(--accent);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-content {
+      max-width: 1800px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    .civ-selectors {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      flex: 1;
+    }
+
+    .selector-group {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .selector-group label {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      white-space: nowrap;
+    }
+
+    select, input[type="text"] {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      min-width: 180px;
+    }
+
+    select:focus, input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+    }
+
+    .btn-secondary {
+      background: var(--border);
+      color: var(--text-primary);
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-card);
+    }
+
+    /* Main content */
+    main {
+      max-width: 1800px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 4rem 2rem;
+      color: var(--text-muted);
+    }
+
+    .empty-state h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .keyboard-hint {
+      margin-top: 1rem;
+      font-size: 0.875rem;
+    }
+
+    kbd {
+      background: var(--bg-card);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      font-family: monospace;
+    }
+
+    /* Matchup cards grid */
+    .matchups-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 2000px) {
+      .matchups-grid {
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+      }
+    }
+
+    /* Matchup card */
+    .matchup-card {
+      background: var(--bg-card);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.25rem;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .card-header h3 {
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .difficulty-badge {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .difficulty-easy { background: var(--success); color: #000; }
+    .difficulty-even { background: var(--warning); color: #000; }
+    .difficulty-hard { background: var(--danger); color: #000; }
+
+    .close-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.5rem;
+      cursor: pointer;
+      line-height: 1;
+      padding: 0.25rem;
+    }
+
+    .close-btn:hover {
+      color: var(--accent);
+    }
+
+    .card-body {
+      padding: 1.25rem;
+    }
+
+    .section {
+      margin-bottom: 1.25rem;
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .section-content {
+      font-size: 0.9375rem;
+    }
+
+    /* Bonuses list */
+    .bonus-list {
+      list-style: none;
+    }
+
+    .bonus-list li {
+      padding: 0.25rem 0;
+      padding-left: 1.25rem;
+      position: relative;
+    }
+
+    .bonus-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    /* Strengths */
+    .strength-item {
+      display: flex;
+      gap: 0.5rem;
+      padding: 0.375rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .strength-item:last-child {
+      border-bottom: none;
+    }
+
+    .strength-unit {
+      font-weight: 600;
+      color: var(--text-primary);
+      min-width: 140px;
+    }
+
+    .strength-reason {
+      color: var(--text-secondary);
+    }
+
+    /* Counters */
+    .counter-item {
+      background: var(--bg-secondary);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .counter-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .counter-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .counter-against {
+      font-weight: 600;
+      color: var(--danger);
+    }
+
+    .counter-arrow {
+      color: var(--text-muted);
+    }
+
+    .counter-use {
+      font-weight: 600;
+      color: var(--success);
+    }
+
+    .counter-reason {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    /* Timing windows */
+    .timing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    .timing-item {
+      background: var(--bg-secondary);
+      border-radius: 8px;
+      padding: 0.75rem;
+    }
+
+    .timing-item.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .timing-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+
+    .timing-value {
+      font-size: 0.875rem;
+    }
+
+    .timing-value.highlight {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* Strategy */
+    .strategy-text {
+      background: var(--bg-secondary);
+      border-left: 3px solid var(--accent);
+      padding: 0.75rem 1rem;
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+    }
+
+    /* Unique unit info */
+    .unique-unit {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--bg-secondary);
+      padding: 0.375rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.875rem;
+    }
+
+    .unique-unit-label {
+      color: var(--text-muted);
+    }
+
+    .unique-unit-name {
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        padding: 1rem;
+      }
+
+      .header-content {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .civ-selectors {
+        flex-direction: column;
+      }
+
+      .selector-group {
+        width: 100%;
+      }
+
+      select, input[type="text"] {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .matchups-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .timing-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Scrollbar styling */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg-primary);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--accent);
+    }
+  </style>
 </head>
 <body>
-    <div class="page-background"></div>
-    
-    <header class="site-header">
-        <div class="header-content">
-            <div class="logo">
-                <span class="logo-icon">⚔️</span>
-                <h1>AoE2 Matchup Guide</h1>
-            </div>
-            <p class="tagline">Know your enemy, win the battle</p>
+  <header>
+    <div class="header-content">
+      <h1>AoE2 Matchup KB</h1>
+      <div class="civ-selectors">
+        <div class="selector-group">
+          <label for="your-civ">Your Civ:</label>
+          <select id="your-civ">
+            <option value="">Select your civilization...</option>
+          </select>
         </div>
-    </header>
-
-    <main class="main-content">
-        <!-- Civ Picker Section -->
-        <section class="civ-picker-section">
-            <div class="section-header">
-                <h2>Your Civilization</h2>
-                <p>Select your civ to see matchup strategies</p>
-            </div>
-            <div class="civ-picker">
-                <div class="civ-selector">
-                    <select id="your-civ-select" class="civ-select">
-                        <option value="">-- Select Your Civ --</option>
-                    </select>
-                </div>
-                <div id="your-civ-info" class="your-civ-info hidden">
-                    <h3 id="your-civ-name"></h3>
-                    <div class="strong-units">
-                        <span class="label">Your Key Units:</span>
-                        <div id="your-strong-units" class="unit-tags"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Search Opponents -->
-        <section class="opponent-search-section hidden" id="opponent-section">
-            <div class="section-header">
-                <h2>Opponent Civilizations</h2>
-                <p>Quick reference during match loading</p>
-            </div>
-            <div class="search-box">
-                <input type="text" id="opponent-search" placeholder="🔍 Search opponent civ..." autocomplete="off">
-            </div>
-        </section>
-
-        <!-- Opponent Cards Grid -->
-        <section class="opponents-grid" id="opponents-grid"></section>
-
-        <!-- Opponent Detail Modal -->
-        <div id="opponent-modal" class="modal hidden">
-            <div class="modal-overlay"></div>
-            <div class="modal-content">
-                <button class="modal-close" aria-label="Close">&times;</button>
-                <div class="modal-header">
-                    <h2 id="modal-civ-name"></h2>
-                </div>
-                <div class="modal-body">
-                    <div class="info-block strengths-block">
-                        <h3>🛡️ Their Strengths</h3>
-                        <p id="modal-strengths"></p>
-                    </div>
-                    <div class="info-block weaknesses-block">
-                        <h3>⚡ Their Weaknesses</h3>
-                        <p id="modal-weaknesses"></p>
-                    </div>
-                    <div class="counter-units-section">
-                        <h3>⚔️ Counter Their Key Units</h3>
-                        <div id="modal-counter-units"></div>
-                    </div>
-                </div>
-            </div>
+        <div class="selector-group">
+          <label for="opponent-civ">Add Opponent:</label>
+          <select id="opponent-civ">
+            <option value="">Select opponent...</option>
+          </select>
         </div>
-    </main>
+        <button class="btn btn-secondary" id="clear-all">Clear All</button>
+      </div>
+    </div>
+  </header>
 
-    <footer class="site-footer">
-        <p>Made for AoE2 players • <a href="https://github.com" target="_blank">View on GitHub</a></p>
-    </footer>
+  <main>
+    <div id="empty-state" class="empty-state">
+      <h2>Select your civilization and add opponents</h2>
+      <p>Choose your civ above, then add opponent civs to see matchup information.</p>
+      <div class="keyboard-hint">
+        <p>Keyboard shortcuts: <kbd>/</kbd> focus search &nbsp; <kbd>Esc</kbd> clear selection</p>
+      </div>
+    </div>
+    <div id="matchups-container" class="matchups-grid"></div>
+  </main>
 
-    <script src="js/app.js"></script>
+  <script src="civs-data.js"></script>
+  <script>
+    // State
+    let selectedYourCiv = localStorage.getItem('yourCiv') || '';
+    let selectedOpponents = JSON.parse(localStorage.getItem('opponents') || '[]');
+
+    // DOM elements
+    const yourCivSelect = document.getElementById('your-civ');
+    const opponentCivSelect = document.getElementById('opponent-civ');
+    const clearAllBtn = document.getElementById('clear-all');
+    const emptyState = document.getElementById('empty-state');
+    const matchupsContainer = document.getElementById('matchups-container');
+
+    // Initialize
+    function init() {
+      populateCivDropdowns();
+      restoreState();
+      renderMatchups();
+      setupEventListeners();
+    }
+
+    function populateCivDropdowns() {
+      const options = CIV_NAMES.map(name => `<option value="${name}">${name}</option>`).join('');
+      yourCivSelect.innerHTML = '<option value="">Select your civilization...</option>' + options;
+      opponentCivSelect.innerHTML = '<option value="">Select opponent...</option>' + options;
+    }
+
+    function restoreState() {
+      if (selectedYourCiv) {
+        yourCivSelect.value = selectedYourCiv;
+      }
+    }
+
+    function setupEventListeners() {
+      yourCivSelect.addEventListener('change', (e) => {
+        selectedYourCiv = e.target.value;
+        localStorage.setItem('yourCiv', selectedYourCiv);
+        renderMatchups();
+      });
+
+      opponentCivSelect.addEventListener('change', (e) => {
+        if (e.target.value) {
+          addOpponent();
+        }
+      });
+
+      clearAllBtn.addEventListener('click', () => {
+        selectedOpponents = [];
+        localStorage.setItem('opponents', '[]');
+        renderMatchups();
+      });
+
+      // Keyboard shortcuts
+      document.addEventListener('keydown', (e) => {
+        if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'SELECT') {
+          e.preventDefault();
+          opponentCivSelect.focus();
+        }
+        if (e.key === 'Escape') {
+          opponentCivSelect.value = '';
+          opponentCivSelect.blur();
+        }
+      });
+    }
+
+    function addOpponent() {
+      const opponent = opponentCivSelect.value;
+      if (opponent && !selectedOpponents.includes(opponent)) {
+        selectedOpponents.push(opponent);
+        localStorage.setItem('opponents', JSON.stringify(selectedOpponents));
+        renderMatchups();
+      }
+      opponentCivSelect.value = '';
+    }
+
+    function removeOpponent(civName) {
+      selectedOpponents = selectedOpponents.filter(c => c !== civName);
+      localStorage.setItem('opponents', JSON.stringify(selectedOpponents));
+      renderMatchups();
+    }
+
+    function renderMatchups() {
+      if (!selectedYourCiv || selectedOpponents.length === 0) {
+        emptyState.style.display = 'block';
+        matchupsContainer.innerHTML = '';
+        return;
+      }
+
+      emptyState.style.display = 'none';
+      
+      const yourCivData = CIVS_DATA[selectedYourCiv.toLowerCase()];
+      if (!yourCivData) {
+        matchupsContainer.innerHTML = '<p>Error: Could not find your civ data.</p>';
+        return;
+      }
+
+      matchupsContainer.innerHTML = selectedOpponents
+        .map(opponent => renderMatchupCard(yourCivData, opponent))
+        .join('');
+
+      // Attach close button handlers
+      document.querySelectorAll('.close-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          removeOpponent(btn.dataset.civ);
+        });
+      });
+    }
+
+    function renderMatchupCard(yourCivData, opponentName) {
+      const matchup = yourCivData.matchups[opponentName];
+      if (!matchup) {
+        return `
+          <div class="matchup-card">
+            <div class="card-header">
+              <h3>${opponentName}</h3>
+              <button class="close-btn" data-civ="${opponentName}">&times;</button>
+            </div>
+            <div class="card-body">
+              <p>No matchup data available.</p>
+            </div>
+          </div>
+        `;
+      }
+
+      const difficultyClass = `difficulty-${matchup.difficulty.toLowerCase()}`;
+
+      return `
+        <div class="matchup-card">
+          <div class="card-header">
+            <h3>
+              ${opponentName}
+              <span class="difficulty-badge ${difficultyClass}">${matchup.difficulty}</span>
+            </h3>
+            <button class="close-btn" data-civ="${opponentName}">&times;</button>
+          </div>
+          <div class="card-body">
+            ${matchup.opponentUniqueUnit ? `
+              <div class="section">
+                <span class="unique-unit">
+                  <span class="unique-unit-label">Unique Unit:</span>
+                  <span class="unique-unit-name">${matchup.opponentUniqueUnit}</span>
+                </span>
+              </div>
+            ` : ''}
+
+            <div class="section">
+              <div class="section-title">Key Bonuses</div>
+              <ul class="bonus-list">
+                ${matchup.keyBonuses.map(b => `<li>${b}</li>`).join('')}
+              </ul>
+            </div>
+
+            ${matchup.opponentStrengths && matchup.opponentStrengths.length > 0 ? `
+              <div class="section">
+                <div class="section-title">Their Strengths</div>
+                ${matchup.opponentStrengths.map(s => `
+                  <div class="strength-item">
+                    <span class="strength-unit">${s.unit}</span>
+                    <span class="strength-reason">${s.reason}</span>
+                  </div>
+                `).join('')}
+              </div>
+            ` : ''}
+
+            ${matchup.counters && matchup.counters.length > 0 ? `
+              <div class="section">
+                <div class="section-title">Your Counters</div>
+                ${matchup.counters.slice(0, 5).map(c => `
+                  <div class="counter-item">
+                    <div class="counter-header">
+                      <span class="counter-against">${c.against}</span>
+                      <span class="counter-arrow">←</span>
+                      <span class="counter-use">${c.use}</span>
+                    </div>
+                    <div class="counter-reason">${c.reason}</div>
+                  </div>
+                `).join('')}
+              </div>
+            ` : ''}
+
+            ${matchup.timingWindows ? `
+              <div class="section">
+                <div class="section-title">Timing Windows</div>
+                <div class="timing-grid">
+                  <div class="timing-item">
+                    <div class="timing-label">Your Strength</div>
+                    <div class="timing-value">${matchup.timingWindows.yourStrength}</div>
+                  </div>
+                  <div class="timing-item">
+                    <div class="timing-label">Their Strength</div>
+                    <div class="timing-value">${matchup.timingWindows.opponentStrength}</div>
+                  </div>
+                  <div class="timing-item full-width">
+                    <div class="timing-label">Key Timing</div>
+                    <div class="timing-value highlight">${matchup.timingWindows.keyTiming}</div>
+                  </div>
+                </div>
+              </div>
+            ` : ''}
+
+            ${matchup.strategy ? `
+              <div class="section">
+                <div class="section-title">Strategy</div>
+                <div class="strategy-text">${matchup.strategy}</div>
+              </div>
+            ` : ''}
+          </div>
+        </div>
+      `;
+    }
+
+    // Initialize when DOM is ready
+    document.addEventListener('DOMContentLoaded', init);
+  </script>
 </body>
 </html>
