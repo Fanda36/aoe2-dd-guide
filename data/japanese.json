@@ -1,14 +1,36 @@
 {
-  "generatedAt": "2026-01-28T21:05:18.659Z",
+  "generatedAt": "2026-01-29T22:28:00.673Z",
   "civilization": "Japanese",
+  "civDescription": {
+    "type": "Infantry",
+    "tags": [
+      "Infantry",
+      "Fast Attack",
+      "Samurai"
+    ]
+  },
   "bonuses": [
-    "Mills, Lumber- and Mining Camps cost -50%",
+    "Fishing Ships work +5/10/15/20% faster in Dark/Feudal/Castle/Imperial Age; +100% HP and +2 pierce armor",
     "Infantry attacks +33% faster starting in Feudal Age",
     "Cavalry Archers +2 attack vs. Ranged Soldiers (except Skirmishers)",
-    "Fishing Ships work +5/10/15/20% faster in Dark/Feudal/Castle/Imperial Age; +100% HP and +2 pierce armor",
+    "Mills, Lumber- and Mining Camps cost -50%",
     "Team: Galley-line +4 line of sight"
   ],
   "uniqueUnit": "Samurai",
+  "uniqueUnitCategories": {
+    "type": "Infantry",
+    "categories": [
+      "anti-unique-unit",
+      "fast-attack",
+      "versatile"
+    ],
+    "counters": [
+      "Archer",
+      "Knight",
+      "Hand Cannoneer"
+    ],
+    "description": "Bonus vs all unique units"
+  },
   "uniqueUnitElite": "Elite Samurai",
   "uniqueTechs": {
     "castle": "Yasama",
@@ -44,20 +66,48 @@
   "matchups": {
     "Armenians": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Infantry/Cavalry",
+        "tags": [
+          "Infantry",
+          "Cavalry",
+          "Composite Bowman",
+          "Mule Cart"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "Earlier infantry upgrades",
+        "warning": "Their infantry upgrades come earlier than expected"
+      },
       "keyBonuses": [
         "Mule Carts cost -25%",
-        "Spearman- and Militia-line upgrades (except Man-at-Arms) available one age earlier",
-        "First Fortified Church receives a free Relic"
-      ],
-      "allBonuses": [
-        "Mule Carts cost -25%",
-        "Mule Cart technologies are +40% more effective",
-        "Spearman- and Militia-line upgrades (except Man-at-Arms) available one age earlier",
         "First Fortified Church receives a free Relic",
-        "Galley-line and Dromons fire an additional projectile",
         "Team: Infantry +2 line of sight"
       ],
+      "allBonuses": [
+        "Mule Cart technologies are +40% more effective",
+        "Mule Carts cost -25%",
+        "First Fortified Church receives a free Relic",
+        "Team: Infantry +2 line of sight",
+        "Spearman- and Militia-line upgrades (except Man-at-Arms) available one age earlier",
+        "Galley-line and Dromons fire an additional projectile"
+      ],
       "opponentUniqueUnit": "Composite Bowman",
+      "opponentUniqueUnitCategories": {
+        "type": "Archer",
+        "categories": [
+          "ranged",
+          "anti-cavalry",
+          "anti-infantry"
+        ],
+        "counters": [
+          "Skirmisher",
+          "Mangonel",
+          "Scout Cavalry"
+        ],
+        "description": "Versatile archer with bonus vs cavalry"
+      },
       "opponentStrengths": [
         {
           "unit": "Composite Bowman",
@@ -72,50 +122,94 @@
         {
           "use": "Skirmisher",
           "against": "Composite Bowman",
-          "reason": "+3/+4 bonus damage, cheap trash counter"
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Mangonel",
           "against": "Composite Bowman",
-          "reason": "Area damage destroys archer masses"
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Composite Bowman",
-          "reason": "Fast raiding, forces archer retreat"
+          "reason": "Fast raiding, forces archer retreat",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "Militia",
-          "reason": "High damage, mobility advantage"
+          "reason": "High damage, mobility advantage",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with full upgrades",
-        "keyTiming": "Apply pressure in Castle Age"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle Age - Early upgrades and Composite Bowmen",
+        "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Earlier infantry upgrades",
+          "Castle Age Composite Bowmen",
+          "Imperial Fereters healing"
+        ]
       },
-      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
+      "strategy": "ADVANTAGE: Your infantry attacks 33% faster. Samurai bonus vs unique units."
     },
     "Aztecs": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Infantry/Monk",
+        "tags": [
+          "Infantry",
+          "Monk",
+          "Eagles",
+          "Relic Gold",
+          "Military Creation"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Imperial",
+        "timing": "Garland Wars Eagles (+4 attack) + fast production",
+        "warning": "Imperial Eagles are devastating vs archers"
+      },
       "keyBonuses": [
         "Military Units train +15% faster",
         "Monks gain +5 HP for each researched Monastery technology"
       ],
       "allBonuses": [
-        "Start with +50 gold",
-        "Villagers carry +3",
         "Military Units train +15% faster",
+        "Team: Relics generate +33% gold",
         "Monks gain +5 HP for each researched Monastery technology",
-        "Team: Relics generate +33% gold"
+        "Start with +50 gold",
+        "Villagers carry +3"
       ],
       "opponentUniqueUnit": "Jaguar Warrior",
+      "opponentUniqueUnitCategories": {
+        "type": "Infantry",
+        "categories": [
+          "anti-infantry",
+          "anti-eagle",
+          "melee"
+        ],
+        "counters": [
+          "Archer",
+          "Knight",
+          "Hand Cannoneer"
+        ],
+        "description": "Destroys other infantry units"
+      },
       "opponentStrengths": [
         {
           "unit": "Jaguar Warrior",
@@ -138,62 +232,106 @@
         {
           "use": "Archer",
           "against": "Jaguar Warrior",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Militia",
           "against": "Eagle Warrior",
-          "reason": "+6 bonus damage vs eagles"
+          "reason": "+6 bonus damage vs eagles (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Monk",
-          "reason": "Fast, cheap, kills monks quickly"
+          "reason": "Fast, cheap, kills monks quickly",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "Jaguar Warrior",
-          "reason": "High damage, mobility advantage"
+          "reason": "High damage, mobility advantage",
+          "civBonus": false
         },
         {
           "use": "Hand Cannoneer",
           "against": "Jaguar Warrior",
-          "reason": "+10 bonus vs infantry"
+          "reason": "+10 bonus vs infantry",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "Eagle Warrior",
-          "reason": "High damage output"
+          "reason": "High damage output",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age when Eagles are fully upgraded (+4 armor, +60 HP)",
-        "keyTiming": "End game before Imperial or have infantry ready"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle/Imperial Age - Relic gold and military creation speed",
+        "keyTiming": "Apply Castle Age pressure before they peak",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Faster military production",
+          "Castle Age Eagles + Monks",
+          "Imperial Garland Wars Eagles (+4 attack)"
+        ]
       },
-      "strategy": "Eagles are their cavalry. Have anti-infantry ready (Champions, Hand Cannoneers). Win before Imperial or prepare infantry counters."
+      "strategy": "Samurai vs Eagles. Your attack speed wins infantry fights."
     },
     "Bengalis": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Elephant",
+        "tags": [
+          "Elephant",
+          "Ratha",
+          "Resist Conversion"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "Rathas (ranged/melee switch)",
+        "warning": "Rathas are versatile - hard to counter"
+      },
       "keyBonuses": [
-        "Cavalry +2 attack vs. Skirmishers",
         "Elephant Units receive -25% bonus damage and are more resistant to conversion",
+        "Cavalry +2 attack vs. Skirmishers",
         "Monks +3 melee/+3 pierce armor"
       ],
       "allBonuses": [
-        "Town Centers spawn 2 Villagers when the next Age is reached",
-        "Cavalry +2 attack vs. Skirmishers",
         "Elephant Units receive -25% bonus damage and are more resistant to conversion",
+        "Cavalry +2 attack vs. Skirmishers",
+        "Team: Trade Units generate +10% food in addition to gold",
         "Monks +3 melee/+3 pierce armor",
         "Ships regenerate 15 HP per minute",
-        "Team: Trade Units generate +10% food in addition to gold"
+        "Town Centers spawn 2 Villagers when the next Age is reached"
       ],
       "opponentUniqueUnit": "Ratha",
+      "opponentUniqueUnitCategories": {
+        "type": "CavalryArcher",
+        "categories": [
+          "mounted-ranged",
+          "switchable",
+          "versatile"
+        ],
+        "counters": [
+          "Halberdier",
+          "Monk",
+          "Camel"
+        ],
+        "description": "Can switch between melee and ranged"
+      },
       "opponentStrengths": [
         {
           "unit": "Ratha",
@@ -208,40 +346,81 @@
         {
           "use": "Skirmisher",
           "against": "Ratha",
-          "reason": "Bonus vs archers, cheap"
+          "reason": "Bonus vs archers, cheap",
+          "civBonus": false
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Monk",
           "against": "Knight",
-          "reason": "Convert expensive units"
+          "reason": "Convert expensive units",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with full upgrades",
-        "keyTiming": "Apply pressure in Castle Age"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle/Imperial Age - Ratha flexibility and elephant resistance",
+        "keyTiming": "Apply Castle Age pressure before they peak",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Castle Age Rathas (ranged/melee switch)",
+          "Elephants resist conversion",
+          "Imperial Paiks Rathas"
+        ]
       },
-      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
+      "strategy": "33% faster attacking infantry shreds cavalry. Add Pikemen, micro Samurai vs unique cavalry."
     },
     "Berbers": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Cavalry",
+        "tags": [
+          "Cavalry",
+          "Camel",
+          "Cheap Cavalry",
+          "Genitours"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "Cheap cavalry flood",
+        "warning": "They produce cavalry faster due to discount"
+      },
       "keyBonuses": [
         "Villagers move +5% faster in Dark Age, +10% faster starting in Feudal Age",
-        "Stable Units cost -15/20% in Castle/Imperial Age",
-        "Ships move +10% faster"
+        "Ships move +10% faster",
+        "Stable Units cost -15/20% in Castle/Imperial Age"
       ],
       "allBonuses": [
         "Villagers move +5% faster in Dark Age, +10% faster starting in Feudal Age",
-        "Stable Units cost -15/20% in Castle/Imperial Age",
         "Ships move +10% faster",
+        "Stable Units cost -15/20% in Castle/Imperial Age",
         "Team: Genitour available at the Archery Range starting in Castle Age"
       ],
       "opponentUniqueUnit": "Camel Archer",
+      "opponentUniqueUnitCategories": {
+        "type": "CavalryArcher",
+        "categories": [
+          "mounted-ranged",
+          "anti-cavalry-archer",
+          "mobile"
+        ],
+        "counters": [
+          "Skirmisher",
+          "Camel",
+          "Eagle Warrior"
+        ],
+        "description": "Mobile CA that counters other cavalry archers"
+      },
       "opponentStrengths": [
         {
           "unit": "Camel Archer",
@@ -260,57 +439,100 @@
         {
           "use": "Skirmisher",
           "against": "Camel Archer",
-          "reason": "Bonus vs archers, cheap"
+          "reason": "Bonus vs archers, cheap",
+          "civBonus": false
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Skirmisher",
           "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter"
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Monk",
           "against": "Knight",
-          "reason": "Convert expensive units"
+          "reason": "Convert expensive units",
+          "civBonus": false
         },
         {
           "use": "Mangonel",
           "against": "Archer",
-          "reason": "Area damage destroys archer masses"
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat"
+          "reason": "Fast raiding, forces archer retreat",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Castle Age Knight rush and Imperial Paladin timing",
-        "keyTiming": "Have Spearmen ready by minute 18-20"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle Age - Cheap cavalry and Camel Archers",
+        "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Cheap Stable units (15-20% discount)",
+          "Castle Age Camel Archers",
+          "Imperial Genitour support"
+        ]
       },
-      "strategy": "Wall early, have Spearmen ready. Monks are excellent for converting expensive cavalry. Camels if available."
+      "strategy": "33% faster attacking infantry shreds cavalry. Add Pikemen, micro Samurai vs unique cavalry."
     },
     "Bohemians": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Gunpowder/Monk",
+        "tags": [
+          "Gunpowder",
+          "Monk",
+          "Hussite Wagons"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle/Imperial",
+        "timing": "Hussite Wagons protect archers, Houfnice late",
+        "warning": "Snipe wagons with cavalry, avoid prolonged siege fights"
+      },
       "keyBonuses": [
-        "Mining Camp technologies free",
-        "Blacksmiths and Universities cost -100 wood",
-        "Spearman-line deals +25% bonus damage"
+        "Spearman-line deals +25% bonus damage",
+        "Team: Markets work +80% faster",
+        "Mining Camp technologies free"
       ],
       "allBonuses": [
+        "Spearman-line deals +25% bonus damage",
+        "Team: Markets work +80% faster",
         "Mining Camp technologies free",
         "Blacksmiths and Universities cost -100 wood",
-        "Spearman-line deals +25% bonus damage",
         "Fervor and Sanctity affect Villagers",
-        "Chemistry and Hand Cannoneer available in Castle Age",
-        "Team: Markets work +80% faster"
+        "Chemistry and Hand Cannoneer available in Castle Age"
       ],
       "opponentUniqueUnit": "Hussite Wagon",
+      "opponentUniqueUnitCategories": {
+        "type": "SiegeWeapon",
+        "categories": [
+          "ranged-siege",
+          "anti-archer",
+          "protection"
+        ],
+        "counters": [
+          "Knight",
+          "Bombard Cannon",
+          "Onager"
+        ],
+        "description": "Mobile protection for archers"
+      },
       "opponentStrengths": [
         {
           "unit": "Hussite Wagon",
@@ -325,50 +547,92 @@
         {
           "use": "Knight",
           "against": "Hussite Wagon",
-          "reason": "Fast, high damage vs slow siege"
+          "reason": "Fast, high damage vs slow siege",
+          "civBonus": false
         },
         {
           "use": "Mangonel",
           "against": "Hand Cannoneer",
-          "reason": "Area damage, outranges hand cannons"
+          "reason": "Area damage, outranges hand cannons",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Hussite Wagon",
-          "reason": "Fast, snipes siege quickly"
+          "reason": "Fast, snipes siege quickly",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Hand Cannoneer",
-          "reason": "Fast closing, dodges shots"
+          "reason": "Fast closing, dodges shots",
+          "civBonus": false
         },
         {
           "use": "Skirmisher",
           "against": "Hand Cannoneer",
-          "reason": "Cheap ranged, high numbers"
+          "reason": "Cheap ranged, high numbers",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with Hand Cannoneers/Bombard Cannons",
-        "keyTiming": "Pressure early, dont let them boom to Imperial"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle/Imperial Age - Castle Age Hussite Wagons, Houfnice in Imperial",
+        "keyTiming": "Apply Castle Age pressure before they peak",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Castle Age Hussite Wagon deathball",
+          "Imperial Houfnice (better BBC)",
+          "Monk + wagon composition"
+        ]
       },
-      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
+      "strategy": "Close fast with infantry. Use Yasama towers for defense."
     },
     "Britons": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Archer",
+        "tags": [
+          "Archer",
+          "Defensive",
+          "Long Range"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "Castle Age Crossbow mass with +1/+2 range",
+        "warning": "Dont fight archers head-on without Skirmishers or siege"
+      },
       "keyBonuses": [
+        "Team: Archery Ranges work +10% faster",
         "Shepherds work +25% faster",
-        "Town Centers cost -50% wood starting in Castle Age",
         "Foot Archers +1/+2 range in Castle/Imperial Age"
       ],
       "allBonuses": [
+        "Team: Archery Ranges work +10% faster",
         "Shepherds work +25% faster",
-        "Town Centers cost -50% wood starting in Castle Age",
         "Foot Archers +1/+2 range in Castle/Imperial Age",
-        "Team: Archery Ranges work +10% faster"
+        "Town Centers cost -50% wood starting in Castle Age"
       ],
       "opponentUniqueUnit": "Longbowman",
+      "opponentUniqueUnitCategories": {
+        "type": "Archer",
+        "categories": [
+          "ranged",
+          "long-range",
+          "anti-infantry"
+        ],
+        "counters": [
+          "Skirmisher",
+          "Mangonel",
+          "Huskarl"
+        ],
+        "description": "Extreme range archer, excels at kiting"
+      },
       "opponentStrengths": [
         {
           "unit": "Longbowman",
@@ -383,51 +647,93 @@
         {
           "use": "Skirmisher",
           "against": "Longbowman",
-          "reason": "+3/+4 bonus damage, cheap trash counter"
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Skirmisher",
           "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter"
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Mangonel",
           "against": "Longbowman",
-          "reason": "Area damage destroys archer masses"
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Longbowman",
-          "reason": "Fast raiding, forces archer retreat"
+          "reason": "Fast raiding, forces archer retreat",
+          "civBonus": false
         },
         {
           "use": "Mangonel",
           "against": "Archer",
-          "reason": "Area damage destroys archer masses"
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with full upgrades",
-        "keyTiming": "Apply pressure in Castle Age"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle Age - Castle Age Crossbow mass with +1/+2 range bonus",
+        "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Feudal Archer harass",
+          "Castle Age +1 range Crossbows",
+          "Imperial Longbowmen with Yeomen (+1 range)"
+        ]
       },
-      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
+      "strategy": "Close with fast-attacking infantry. Samurai are decent, add siege support."
     },
     "Bulgarians": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Cavalry",
+        "tags": [
+          "Cavalry",
+          "Krepost",
+          "Cheap Blacksmith"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "Krepost + Stirrups Knights",
+        "warning": "Expect forward Krepost with Konniks"
+      },
       "keyBonuses": [
-        "Militia-line upgrades free",
+        "Team: Blacksmiths work +80% faster",
         "Blacksmith and Siege Workshop technologies cost -50% food",
-        "Town Centers cost -50% stone"
+        "Militia-line upgrades free"
       ],
       "allBonuses": [
-        "Militia-line upgrades free",
+        "Team: Blacksmiths work +80% faster",
         "Blacksmith and Siege Workshop technologies cost -50% food",
+        "Militia-line upgrades free",
         "Town Centers cost -50% stone",
-        "Can build Krepost in Castle Age",
-        "Team: Blacksmiths work +80% faster"
+        "Can build Krepost in Castle Age"
       ],
       "opponentUniqueUnit": "Konnik",
+      "opponentUniqueUnitCategories": {
+        "type": "Cavalry",
+        "categories": [
+          "dismounts",
+          "versatile",
+          "value"
+        ],
+        "counters": [
+          "Halberdier",
+          "Archer",
+          "Monk"
+        ],
+        "description": "Dismounts as infantry when killed"
+      },
       "opponentStrengths": [
         {
           "unit": "Konnik",
@@ -446,56 +752,99 @@
         {
           "use": "Spearman",
           "against": "Konnik",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Monk",
           "against": "Konnik",
-          "reason": "Convert expensive units"
+          "reason": "Convert expensive units",
+          "civBonus": false
         },
         {
           "use": "Monk",
           "against": "Knight",
-          "reason": "Convert expensive units"
+          "reason": "Convert expensive units",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "Militia",
-          "reason": "High damage, mobility advantage"
+          "reason": "High damage, mobility advantage",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Castle Age Knight rush and Imperial Paladin timing",
-        "keyTiming": "Have Spearmen ready by minute 18-20"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle Age - Cheap Blacksmith into Konnik spam",
+        "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Krepost forward with Konniks",
+          "Castle Age Stirrups Knights",
+          "Imperial Konnik army"
+        ]
       },
-      "strategy": "Wall early, have Spearmen ready. Monks are excellent for converting expensive cavalry. Camels if available."
+      "strategy": "33% faster attacking infantry shreds cavalry. Add Pikemen, micro Samurai vs unique cavalry."
     },
     "Burgundians": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Cavalry",
+        "tags": [
+          "Cavalry",
+          "Economy",
+          "Early Knights"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "Early Cavalier (one age earlier)",
+        "warning": "Expect Castle Age Cavalier timing around minute 25"
+      },
       "keyBonuses": [
-        "Economic upgrades available one age earlier and cost -33% food",
+        "Gunpowder Units +25% attack",
         "Stable technologies cost -50%",
-        "Cavalier upgrade available in Castle Age"
+        "Economic upgrades available one age earlier and cost -33% food"
       ],
       "allBonuses": [
-        "Economic upgrades available one age earlier and cost -33% food",
-        "Stable technologies cost -50%",
-        "Cavalier upgrade available in Castle Age",
         "Gunpowder Units +25% attack",
+        "Stable technologies cost -50%",
+        "Economic upgrades available one age earlier and cost -33% food",
+        "Cavalier upgrade available in Castle Age",
         "Team: Relics generate food in addition to gold"
       ],
       "opponentUniqueUnit": "Coustillier",
+      "opponentUniqueUnitCategories": {
+        "type": "Cavalry",
+        "categories": [
+          "charge-attack",
+          "burst-damage",
+          "hit-and-run"
+        ],
+        "counters": [
+          "Halberdier",
+          "Camel",
+          "Monk"
+        ],
+        "description": "Devastating charge attack"
+      },
       "opponentStrengths": [
         {
           "unit": "Coustillier",
@@ -510,46 +859,75 @@
         {
           "use": "Spearman",
           "against": "Coustillier",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Monk",
           "against": "Coustillier",
-          "reason": "Convert expensive units"
+          "reason": "Convert expensive units",
+          "civBonus": false
         },
         {
           "use": "Monk",
           "against": "Knight",
-          "reason": "Convert expensive units"
+          "reason": "Convert expensive units",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Castle Age Knight rush and Imperial Paladin timing",
-        "keyTiming": "Have Spearmen ready by minute 18-20"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle/Early Imperial Age - Early Cavalier timing with economic upgrades",
+        "keyTiming": "Pressure in Castle Age or prepare for early Imperial timing",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Early economic upgrades",
+          "Castle Age Cavalier (one age earlier)",
+          "Imperial Coustillier charge"
+        ]
       },
-      "strategy": "Wall early, have Spearmen ready. Monks are excellent for converting expensive cavalry. Camels if available."
+      "strategy": "33% faster attacking infantry shreds cavalry. Add Pikemen, micro Samurai vs unique cavalry."
     },
     "Burmese": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Infantry/Monk",
+        "tags": [
+          "Infantry",
+          "Monk",
+          "Elephant",
+          "Reveal Relics"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "Arambai raids",
+        "warning": "Arambai are devastating in small numbers - protect villagers"
+      },
       "keyBonuses": [
-        "Lumber Camp technologies free",
         "Infantry +1/+2/+3 attack in Feudal/Castle/Imperial Age",
-        "Battle Elephants +1 melee/+1 pierce armor"
+        "Battle Elephants +1 melee/+1 pierce armor",
+        "Monastery technologies cost -50%"
       ],
       "allBonuses": [
-        "Lumber Camp technologies free",
         "Infantry +1/+2/+3 attack in Feudal/Castle/Imperial Age",
         "Battle Elephants +1 melee/+1 pierce armor",
         "Monastery technologies cost -50%",
+        "Lumber Camp technologies free",
         "Team: Relics visible on the map at the start of the game"
       ],
       "opponentUniqueUnit": "Arambai",
+      "opponentUniqueUnitCategories": null,
       "opponentStrengths": [
         {
           "unit": "Arambai",
@@ -568,57 +946,101 @@
         {
           "use": "Knight",
           "against": "Arambai",
-          "reason": "Fast, high damage vs slow siege"
+          "reason": "Fast, high damage vs slow siege",
+          "civBonus": false
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Monk",
-          "reason": "Fast, cheap, kills monks quickly"
+          "reason": "Fast, cheap, kills monks quickly",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Arambai",
-          "reason": "Fast, snipes siege quickly"
+          "reason": "Fast, snipes siege quickly",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "Militia",
-          "reason": "High damage, mobility advantage"
+          "reason": "High damage, mobility advantage",
+          "civBonus": false
         },
         {
           "use": "Hand Cannoneer",
           "against": "Militia",
-          "reason": "+10 bonus vs infantry"
+          "reason": "+10 bonus vs infantry",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with Champion spam or unique infantry",
-        "keyTiming": "Maintain archer mass and mobility"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle Age - Free Lumber Camp upgrades into Arambai",
+        "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Free lumber upgrades economy",
+          "Castle Age Arambai",
+          "Imperial Manipur Cavalry (+6 vs archers)"
+        ]
       },
-      "strategy": "Archers and cavalry destroy infantry. Maintain mobility and range advantage."
+      "strategy": "ADVANTAGE: Your infantry attacks 33% faster. Samurai bonus vs unique units."
     },
     "Byzantines": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Defensive",
+        "tags": [
+          "Defensive",
+          "Trash Units",
+          "Counter Civ",
+          "Camels"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Imperial",
+        "timing": "Cheap trash and Cataphracts",
+        "warning": "Win before trash war, or have better late game eco"
+      },
       "keyBonuses": [
-        "Buildings +10/20/30/40% HP in Dark/Feudal/Castle/Imperial Age",
-        "Camel Riders, Skirmishers and Spearman-line cost -25%",
-        "Town Watch, Town Patrol free"
-      ],
-      "allBonuses": [
-        "Buildings +10/20/30/40% HP in Dark/Feudal/Castle/Imperial Age",
-        "Camel Riders, Skirmishers and Spearman-line cost -25%",
-        "Town Watch, Town Patrol free",
-        "Advancing to Imperial Age costs -33%",
         "Fire Ships and Dromons attack +25% faster",
+        "Buildings +10/20/30/40% HP in Dark/Feudal/Castle/Imperial Age",
         "Team: Monks heal +100% faster"
       ],
+      "allBonuses": [
+        "Fire Ships and Dromons attack +25% faster",
+        "Buildings +10/20/30/40% HP in Dark/Feudal/Castle/Imperial Age",
+        "Team: Monks heal +100% faster",
+        "Camel Riders, Skirmishers and Spearman-line cost -25%",
+        "Advancing to Imperial Age costs -33%",
+        "Town Watch, Town Patrol free"
+      ],
       "opponentUniqueUnit": "Cataphract",
+      "opponentUniqueUnitCategories": {
+        "type": "Cavalry",
+        "categories": [
+          "anti-infantry",
+          "anti-spearman",
+          "tanky"
+        ],
+        "counters": [
+          "Archer",
+          "Camel",
+          "Monk"
+        ],
+        "description": "Tramples infantry, resists spear bonus"
+      },
       "opponentStrengths": [
         {
           "unit": "Cataphract",
@@ -633,41 +1055,81 @@
         {
           "use": "Spearman",
           "against": "Cataphract",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Scout Cavalry",
           "against": "Monk",
-          "reason": "Fast, cheap, kills monks quickly"
+          "reason": "Fast, cheap, kills monks quickly",
+          "civBonus": false
         },
         {
           "use": "Monk",
           "against": "Cataphract",
-          "reason": "Convert expensive units"
+          "reason": "Convert expensive units",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with full upgrades",
-        "keyTiming": "Apply pressure in Castle Age"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Imperial Age - Cheap trash units and counter compositions",
+        "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Castle Age cheap Camels",
+          "Imperial Cataphracts vs infantry",
+          "Trash war with cheap Hussars/Skirms/Halbs"
+        ]
       },
-      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
+      "strategy": "Fast attacking infantry kills Monks quickly. Dont let them convert."
     },
     "Celts": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Infantry/Siege",
+        "tags": [
+          "Infantry",
+          "Siege",
+          "Fast Infantry"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Imperial",
+        "timing": "Siege Onagers with Furor Celtica",
+        "warning": "Snipe siege early, dont let them mass Onagers"
+      },
       "keyBonuses": [
-        "Lumberjacks work +15% faster",
-        "Infantry moves +5/10/15/20% faster in Dark/Feudal/ Castle/Imperial Age",
-        "Siege Weapons attack +25% faster"
-      ],
-      "allBonuses": [
-        "Lumberjacks work +15% faster",
-        "Livestock animals within Celt unit line of sight cannot be stolen",
-        "Infantry moves +5/10/15/20% faster in Dark/Feudal/ Castle/Imperial Age",
         "Siege Weapons attack +25% faster",
+        "Infantry moves +5/10/15/20% faster in Dark/Feudal/ Castle/Imperial Age",
         "Team: Siege Workshops work +20% faster"
       ],
+      "allBonuses": [
+        "Siege Weapons attack +25% faster",
+        "Infantry moves +5/10/15/20% faster in Dark/Feudal/ Castle/Imperial Age",
+        "Team: Siege Workshops work +20% faster",
+        "Lumberjacks work +15% faster",
+        "Livestock animals within Celt unit line of sight cannot be stolen"
+      ],
       "opponentUniqueUnit": "Woad Raider",
+      "opponentUniqueUnitCategories": {
+        "type": "Infantry",
+        "categories": [
+          "fast",
+          "raiding",
+          "mobile"
+        ],
+        "counters": [
+          "Archer",
+          "Knight",
+          "Hand Cannoneer"
+        ],
+        "description": "Fastest infantry, great for raids"
+      },
       "opponentStrengths": [
         {
           "unit": "Woad Raider",
@@ -686,55 +1148,98 @@
         {
           "use": "Archer",
           "against": "Woad Raider",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "Mangonel",
-          "reason": "Fast, high damage vs slow siege"
+          "reason": "Fast, high damage vs slow siege",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "Woad Raider",
-          "reason": "High damage, mobility advantage"
+          "reason": "High damage, mobility advantage",
+          "civBonus": false
         },
         {
           "use": "Hand Cannoneer",
           "against": "Woad Raider",
-          "reason": "+10 bonus vs infantry"
+          "reason": "+10 bonus vs infantry",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "Militia",
-          "reason": "High damage, mobility advantage"
+          "reason": "High damage, mobility advantage",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with Champion spam or unique infantry",
-        "keyTiming": "Maintain archer mass and mobility"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle/Imperial Age - Feudal/Castle infantry pressure with 15% faster infantry",
+        "keyTiming": "Apply Castle Age pressure before they peak",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Feudal MAA with speed bonus",
+          "Castle Age Woad Raiders",
+          "Imperial Siege Onagers with Furor Celtica"
+        ]
       },
-      "strategy": "Archers and cavalry destroy infantry. Maintain mobility and range advantage."
+      "strategy": "ADVANTAGE: Your infantry attacks 33% faster. Samurai bonus vs unique units."
     },
     "Chinese": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Archer",
+        "tags": [
+          "Archer",
+          "Tech Discount",
+          "Chu Ko Nu"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Imperial",
+        "timing": "Tech discount compounds into late game",
+        "warning": "They out-upgrade you - pressure early"
+      },
       "keyBonuses": [
-        "Technologies cost -5/10/15% in Feudal/Castle/Imperial Age",
-        "Fire Lancers and Fire Ships move +5/10% faster in Castle/Imperial Age"
+        "Fire Lancers and Fire Ships move +5/10% faster in Castle/Imperial Age",
+        "Technologies cost -5/10/15% in Feudal/Castle/Imperial Age"
       ],
       "allBonuses": [
-        "Start with +3 Villagers, but -50 wood and -200 food",
-        "Technologies cost -5/10/15% in Feudal/Castle/Imperial Age",
-        "Town Centers +7 line of sight and provide +15 population space",
         "Fire Lancers and Fire Ships move +5/10% faster in Castle/Imperial Age",
-        "Team: Farms +10% food"
+        "Team: Farms +10% food",
+        "Town Centers +7 line of sight and provide +15 population space",
+        "Technologies cost -5/10/15% in Feudal/Castle/Imperial Age",
+        "Start with +3 Villagers, but -50 wood and -200 food"
       ],
       "opponentUniqueUnit": "Chu Ko Nu",
+      "opponentUniqueUnitCategories": {
+        "type": "Archer",
+        "categories": [
+          "ranged",
+          "fast-firing",
+          "anti-infantry"
+        ],
+        "counters": [
+          "Skirmisher",
+          "Mangonel",
+          "Huskarl"
+        ],
+        "description": "Rapid-fire archer, high DPS at close range"
+      },
       "opponentStrengths": [
         {
           "unit": "Chu Ko Nu",
@@ -749,51 +1254,94 @@
         {
           "use": "Skirmisher",
           "against": "Chu Ko Nu",
-          "reason": "+3/+4 bonus damage, cheap trash counter"
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Skirmisher",
           "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter"
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Mangonel",
           "against": "Chu Ko Nu",
-          "reason": "Area damage destroys archer masses"
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Chu Ko Nu",
-          "reason": "Fast raiding, forces archer retreat"
+          "reason": "Fast raiding, forces archer retreat",
+          "civBonus": false
         },
         {
           "use": "Mangonel",
           "against": "Archer",
-          "reason": "Area damage destroys archer masses"
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with full upgrades",
-        "keyTiming": "Apply pressure in Castle Age"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle/Imperial Age - Tech discount into Chu Ko Nu mass",
+        "keyTiming": "Apply Castle Age pressure before they peak",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Tech discount compounds over game",
+          "Castle Age Chu Ko Nu",
+          "Imperial Rocketry Scorpions"
+        ]
       },
-      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
+      "strategy": "Close with fast-attacking infantry. Samurai are decent, add siege support."
     },
     "Cumans": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Cavalry",
+        "tags": [
+          "Cavalry",
+          "Feudal TC",
+          "Steppe Lancers",
+          "Fast"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Feudal",
+        "timing": "Feudal 2nd TC",
+        "warning": "Pressure their Feudal TC or they boom hard"
+      },
       "keyBonuses": [
+        "Team: Palisade Walls +33% HP",
         "Mounted Units move +5/10/15% faster in Feudal/ Castle/Imperial Age",
-        "Archery Ranges and Stables cost -75 wood",
-        "Siege Workshop and Battering Ram available in Feudal Age; Capped Ram available in Castle Age"
+        "Archery Ranges and Stables cost -75 wood"
       ],
       "allBonuses": [
-        "One additional Town Center can be built in Feudal Age",
+        "Team: Palisade Walls +33% HP",
         "Mounted Units move +5/10/15% faster in Feudal/ Castle/Imperial Age",
         "Archery Ranges and Stables cost -75 wood",
         "Siege Workshop and Battering Ram available in Feudal Age; Capped Ram available in Castle Age",
-        "Team: Palisade Walls +33% HP"
+        "One additional Town Center can be built in Feudal Age"
       ],
       "opponentUniqueUnit": "Kipchak",
+      "opponentUniqueUnitCategories": {
+        "type": "CavalryArcher",
+        "categories": [
+          "mounted-ranged",
+          "fast-firing",
+          "mobile"
+        ],
+        "counters": [
+          "Skirmisher",
+          "Camel",
+          "Eagle Warrior"
+        ],
+        "description": "Fast-firing cavalry archer"
+      },
       "opponentStrengths": [
         {
           "unit": "Kipchak",
@@ -812,57 +1360,101 @@
         {
           "use": "Skirmisher",
           "against": "Kipchak",
-          "reason": "Bonus vs archers, cheap"
+          "reason": "Bonus vs archers, cheap",
+          "civBonus": false
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Skirmisher",
           "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter"
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Monk",
           "against": "Knight",
-          "reason": "Convert expensive units"
+          "reason": "Convert expensive units",
+          "civBonus": false
         },
         {
           "use": "Mangonel",
           "against": "Archer",
-          "reason": "Area damage destroys archer masses"
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat"
+          "reason": "Fast raiding, forces archer retreat",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Castle Age Knight rush and Imperial Paladin timing",
-        "keyTiming": "Have Spearmen ready by minute 18-20"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Feudal/Castle Age - Feudal TC boom or Steppe Lancer timing",
+        "keyTiming": "Be ready for early aggression, have counters prepared",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Feudal 2nd TC (unique)",
+          "Castle Age Kipchaks/Steppe Lancers",
+          "Imperial Cuman Mercenaries"
+        ]
       },
-      "strategy": "Wall early, have Spearmen ready. Monks are excellent for converting expensive cavalry. Camels if available."
+      "strategy": "33% faster attacking infantry shreds cavalry. Add Pikemen, micro Samurai vs unique cavalry."
     },
     "Dravidians": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Infantry/Navy",
+        "tags": [
+          "Infantry",
+          "Navy",
+          "Urumi",
+          "Wootz Steel"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Imperial",
+        "timing": "Wootz Steel infantry ignores armor",
+        "warning": "Armor doesnt help vs Wootz Steel - use archers"
+      },
       "keyBonuses": [
         "Skirmishers and Elephant Archers attack +25% faster",
-        "Barracks technologies cost -50%",
-        "Siege Weapons cost -33% wood"
+        "Siege Weapons cost -33% wood",
+        "Barracks technologies cost -50%"
       ],
       "allBonuses": [
-        "Fishermen and Fishing Ships carry +15",
-        "Receive +200 wood when advancing to the next Age",
         "Skirmishers and Elephant Archers attack +25% faster",
-        "Barracks technologies cost -50%",
         "Siege Weapons cost -33% wood",
+        "Barracks technologies cost -50%",
+        "Receive +200 wood when advancing to the next Age",
+        "Fishermen and Fishing Ships carry +15",
         "Team: Docks provide +5 population space"
       ],
       "opponentUniqueUnit": "Urumi Swordsman",
+      "opponentUniqueUnitCategories": {
+        "type": "Infantry",
+        "categories": [
+          "area-damage",
+          "charge-attack",
+          "anti-mass"
+        ],
+        "counters": [
+          "Archer",
+          "Knight",
+          "Hand Cannoneer"
+        ],
+        "description": "Charge attack with area damage"
+      },
       "opponentStrengths": [
         {
           "unit": "Urumi Swordsman",
@@ -881,55 +1473,99 @@
         {
           "use": "Archer",
           "against": "Urumi Swordsman",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Skirmisher",
           "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter"
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "Urumi Swordsman",
-          "reason": "High damage, mobility advantage"
+          "reason": "High damage, mobility advantage",
+          "civBonus": false
         },
         {
           "use": "Hand Cannoneer",
           "against": "Urumi Swordsman",
-          "reason": "+10 bonus vs infantry"
+          "reason": "+10 bonus vs infantry",
+          "civBonus": false
         },
         {
           "use": "Mangonel",
           "against": "Archer",
-          "reason": "Area damage destroys archer masses"
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with full upgrades",
-        "keyTiming": "Apply pressure in Castle Age"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Imperial Age - Wood bonus into Urumi and Wootz Steel",
+        "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Wood bonus early economy",
+          "Castle Age Urumi Swordsmen",
+          "Imperial Wootz Steel (ignore armor)"
+        ]
       },
-      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
+      "strategy": "Close with fast-attacking infantry. Samurai are decent, add siege support."
     },
     "Ethiopians": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Archer",
+        "tags": [
+          "Archer",
+          "Free Pikemen",
+          "Fast Firing Archers",
+          "Siege"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "18% faster firing archers + free Pikemen",
+        "warning": "Their archers fire faster - respect the DPS"
+      },
       "keyBonuses": [
         "Foot Archers attack +18% faster",
         "Pikeman upgrade free",
         "Team: Outposts +3 line of sight and cost no stone"
       ],
       "allBonuses": [
-        "Receive +100 gold and +100 food when advancing to the next Age",
         "Foot Archers attack +18% faster",
+        "Receive +100 gold and +100 food when advancing to the next Age",
         "Pikeman upgrade free",
         "Team: Outposts +3 line of sight and cost no stone"
       ],
       "opponentUniqueUnit": "Shotel Warrior",
+      "opponentUniqueUnitCategories": {
+        "type": "Infantry",
+        "categories": [
+          "fast",
+          "glass-cannon",
+          "raiding"
+        ],
+        "counters": [
+          "Archer",
+          "Knight",
+          "Militia"
+        ],
+        "description": "Very fast but fragile"
+      },
       "opponentStrengths": [
         {
           "unit": "Shotel Warrior",
@@ -948,56 +1584,97 @@
         {
           "use": "Archer",
           "against": "Shotel Warrior",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Skirmisher",
           "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter"
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "Mangonel",
-          "reason": "Fast, high damage vs slow siege"
+          "reason": "Fast, high damage vs slow siege",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "Shotel Warrior",
-          "reason": "High damage, mobility advantage"
+          "reason": "High damage, mobility advantage",
+          "civBonus": false
         },
         {
           "use": "Hand Cannoneer",
           "against": "Shotel Warrior",
-          "reason": "+10 bonus vs infantry"
+          "reason": "+10 bonus vs infantry",
+          "civBonus": false
         },
         {
           "use": "Mangonel",
           "against": "Archer",
-          "reason": "Area damage destroys archer masses"
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Castle Age Mangonel timing and Imperial Siege Onagers",
-        "keyTiming": "Split archers vs siege, have cavalry ready to snipe"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle Age - Free Pikemen, fast-firing archers",
+        "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Free Pikemen upgrade",
+          "Castle Age 18% faster firing archers",
+          "Imperial Torsion Engines siege"
+        ]
       },
-      "strategy": "Have mobile units (cavalry) ready to snipe siege. Dont clump units against Mangonels."
+      "strategy": "Close with fast-attacking infantry. Samurai are decent, add siege support."
     },
     "Franks": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Cavalry",
+        "tags": [
+          "Knight Rush",
+          "Castle Age Power"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "Knight rush at minute 17-20 with +20% HP",
+        "warning": "Have Spearmen/Monks ready before minute 17"
+      },
       "keyBonuses": [
         "Foragers work +15% faster",
-        "Mill technologies free",
-        "Mounted Units +20% HP starting in Feudal Age"
+        "Mounted Units +20% HP starting in Feudal Age",
+        "Castles cost -15/25% in Castle/Imperial Age"
       ],
       "allBonuses": [
         "Foragers work +15% faster",
-        "Mill technologies free",
         "Mounted Units +20% HP starting in Feudal Age",
         "Castles cost -15/25% in Castle/Imperial Age",
+        "Mill technologies free",
         "Team: Knight-line +2 line of sight"
       ],
       "opponentUniqueUnit": "Throwing Axeman",
+      "opponentUniqueUnitCategories": {
+        "type": "Infantry",
+        "categories": [
+          "ranged-infantry",
+          "anti-infantry"
+        ],
+        "counters": [
+          "Archer",
+          "Knight",
+          "Skirmisher"
+        ],
+        "description": "Ranged infantry with pass-through damage"
+      },
       "opponentStrengths": [
         {
           "unit": "Throwing Axeman",
@@ -1012,51 +1689,94 @@
         {
           "use": "Archer",
           "against": "Throwing Axeman",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Knight",
           "against": "Throwing Axeman",
-          "reason": "High damage, mobility advantage"
+          "reason": "High damage, mobility advantage",
+          "civBonus": false
         },
         {
           "use": "Hand Cannoneer",
           "against": "Throwing Axeman",
-          "reason": "+10 bonus vs infantry"
+          "reason": "+10 bonus vs infantry",
+          "civBonus": false
         },
         {
           "use": "Monk",
           "against": "Knight",
-          "reason": "Convert expensive units"
+          "reason": "Convert expensive units",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Castle Age Knight rush and Imperial Paladin timing",
-        "keyTiming": "Have Spearmen ready by minute 18-20"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle Age - Castle Age Knight rush with +20% HP bonus",
+        "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Fast Castle into Knights (minute 17-19)",
+          "Castle Age Knight mass",
+          "Imperial Paladin with Bearded Axe"
+        ]
       },
-      "strategy": "Wall early, have Spearmen ready. Monks are excellent for converting expensive cavalry. Camels if available."
+      "strategy": "33% faster attacking infantry shreds cavalry. Add Pikemen, micro Samurai vs unique cavalry."
     },
     "Georgians": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Cavalry",
+        "tags": [
+          "Cavalry",
+          "Defensive",
+          "Monaspa",
+          "Regen"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "Monaspas get stronger in groups",
+        "warning": "Dont let them mass Monaspas"
+      },
       "keyBonuses": [
         "Units and buildings receive -15% damage when located on higher elevation",
-        "Mounted Units regenerate 2/8/14 HP per minute in Feudal/Castle/Imperial Age",
-        "Team: Building repairs cost -25%"
+        "Team: Building repairs cost -25%",
+        "Mounted Units regenerate 2/8/14 HP per minute in Feudal/Castle/Imperial Age"
       ],
       "allBonuses": [
-        "Start with a Mule Cart",
-        "Units and buildings receive -15% damage when located on higher elevation",
-        "Mounted Units regenerate 2/8/14 HP per minute in Feudal/Castle/Imperial Age",
         "Fortified Churches provide Villagers in a 9 tiles radius with +10% work rate",
-        "Team: Building repairs cost -25%"
+        "Units and buildings receive -15% damage when located on higher elevation",
+        "Team: Building repairs cost -25%",
+        "Mounted Units regenerate 2/8/14 HP per minute in Feudal/Castle/Imperial Age",
+        "Start with a Mule Cart"
       ],
       "opponentUniqueUnit": "Monaspa",
+      "opponentUniqueUnitCategories": {
+        "type": "Cavalry",
+        "categories": [
+          "stacking-bonus",
+          "group-fighter",
+          "regeneration"
+        ],
+        "counters": [
+          "Halberdier",
+          "Camel",
+          "Monk"
+        ],
+        "description": "Gets stronger in groups"
+      },
       "opponentStrengths": [
         {
           "unit": "Monaspa",
@@ -1067,37 +1787,76 @@
         {
           "use": "Spearman",
           "against": "Monaspa",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Monk",
           "against": "Monaspa",
-          "reason": "Convert expensive units"
+          "reason": "Convert expensive units",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with full upgrades",
-        "keyTiming": "Apply pressure in Castle Age"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle Age - Defensive bonuses and Monaspa cavalry",
+        "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Fortification bonuses",
+          "Castle Age Monaspas (stronger in groups)",
+          "Imperial regenerating cavalry"
+        ]
       },
-      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
+      "strategy": "Feudal MAA pressure with attack speed. Samurai vs unique units. Yasama towers + Trebs for siege."
     },
     "Goths": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Infantry",
+        "tags": [
+          "Infantry Spam",
+          "Late Game",
+          "Huskarls"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Imperial",
+        "timing": "Post-Imperial Perfusion infantry spam",
+        "warning": "DO NOT let them reach Imperial with economy intact"
+      },
       "keyBonuses": [
-        "Infantry costs -15/20/25/30% in Dark/Feudal/Castle/ Imperial Age",
+        "Team: Barracks work +20% faster",
         "Infantry +1/+2/+3 attack vs. buildings in Feudal/ Castle/Imperial Age",
-        "Team: Barracks work +20% faster"
+        "Infantry costs -15/20/25/30% in Dark/Feudal/Castle/ Imperial Age"
       ],
       "allBonuses": [
-        "Loom is researched instantly",
         "Hunters carry +15; hunted animals last +20% longer",
-        "Infantry costs -15/20/25/30% in Dark/Feudal/Castle/ Imperial Age",
+        "Team: Barracks work +20% faster",
         "Infantry +1/+2/+3 attack vs. buildings in Feudal/ Castle/Imperial Age",
+        "Infantry costs -15/20/25/30% in Dark/Feudal/Castle/ Imperial Age",
         "+10 population space in Imperial Age",
-        "Team: Barracks work +20% faster"
+        "Loom is researched instantly"
       ],
       "opponentUniqueUnit": "Huskarl",
+      "opponentUniqueUnitCategories": {
+        "type": "Infantry",
+        "categories": [
+          "anti-archer",
+          "high-pierce-armor",
+          "raiding"
+        ],
+        "counters": [
+          "Hand Cannoneer",
+          "Champion",
+          "Knight"
+        ],
+        "description": "Immune to archers, building raider"
+      },
       "opponentStrengths": [
         {
           "unit": "Huskarl",
@@ -1110,52 +1869,82 @@
       ],
       "counters": [
         {
-          "use": "Knight",
+          "use": "Militia",
           "against": "Huskarl",
-          "reason": "High melee damage, mobility"
+          "reason": "Infantry vs infantry, cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
-          "use": "Militia",
+          "use": "Knight",
           "against": "Huskarl",
-          "reason": "Infantry vs infantry, cost-efficient"
+          "reason": "High melee damage, mobility",
+          "civBonus": false
         },
         {
           "use": "Hand Cannoneer",
           "against": "Huskarl",
-          "reason": "+10 bonus vs infantry, bypasses pierce armor"
+          "reason": "+10 bonus vs infantry, bypasses pierce armor",
+          "civBonus": false
         },
         {
           "use": "Scorpion",
           "against": "Huskarl",
-          "reason": "Pass-through damage kills groups"
+          "reason": "Pass-through damage kills groups",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with Champion spam or unique infantry",
-        "keyTiming": "Maintain archer mass and mobility"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Imperial Age - Imperial Age instant infantry spam with Perfusion",
+        "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Feudal MAA flood (cheaper)",
+          "Castle Age Huskarl transition",
+          "Post-Imperial Perfusion infantry spam"
+        ]
       },
-      "strategy": "Archers and cavalry destroy infantry. Maintain mobility and range advantage."
+      "strategy": "ADVANTAGE: Your infantry attacks 33% faster. Samurai bonus vs unique units."
     },
     "Gurjaras": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Cavalry",
+        "tags": [
+          "Cavalry",
+          "Camel",
+          "Shrivamsha",
+          "Chakram"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "Shrivamsha Riders dodge arrows",
+        "warning": "Shrivamshas counter archers - use melee units"
+      },
       "keyBonuses": [
-        "Mounted Units deal +20/30/40% bonus damage in Feudal/Castle/Imperial Age",
-        "Team: Camel and Elephant Units train +25% faster"
+        "Team: Camel and Elephant Units train +25% faster",
+        "Mounted Units deal +20/30/40% bonus damage in Feudal/Castle/Imperial Age"
       ],
       "allBonuses": [
+        "Team: Camel and Elephant Units train +25% faster",
+        "Mounted Units deal +20/30/40% bonus damage in Feudal/Castle/Imperial Age",
         "Start with 2 Forage Bushes",
         "Can garrison livestock in Mills to passively produce food",
-        "Mounted Units deal +20/30/40% bonus damage in Feudal/Castle/Imperial Age",
-        "Fishing Ships can garrison in Docks for protection",
-        "Team: Camel and Elephant Units train +25% faster"
+        "Fishing Ships can garrison in Docks for protection"
       ],
       "opponentUniqueUnit": "Chakram Thrower",
+      "opponentUniqueUnitCategories": null,
       "opponentStrengths": [
         {
           "unit": "Chakram Thrower",
@@ -1170,46 +1959,87 @@
         {
           "use": "Knight",
           "against": "Chakram Thrower",
-          "reason": "Fast, high damage vs slow siege"
+          "reason": "Fast, high damage vs slow siege",
+          "civBonus": false
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Scout Cavalry",
           "against": "Chakram Thrower",
-          "reason": "Fast, snipes siege quickly"
+          "reason": "Fast, snipes siege quickly",
+          "civBonus": false
         },
         {
           "use": "Monk",
           "against": "Knight",
-          "reason": "Convert expensive units"
+          "reason": "Convert expensive units",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Castle Age Knight rush and Imperial Paladin timing",
-        "keyTiming": "Have Spearmen ready by minute 18-20"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle Age - Camel and cavalry with bonus damage",
+        "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Mill bonus food",
+          "Castle Age Shrivamsha Riders",
+          "Imperial Chakram Throwers + Camels"
+        ]
       },
-      "strategy": "Wall early, have Spearmen ready. Monks are excellent for converting expensive cavalry. Camels if available."
+      "strategy": "33% faster attacking infantry shreds cavalry. Add Pikemen, micro Samurai vs unique cavalry."
     },
     "Hindustanis": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Camel/Gunpowder",
+        "tags": [
+          "Camel",
+          "Gunpowder",
+          "Imperial Camel"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Imperial",
+        "timing": "Imperial Camels and Shatagni Hand Cannoneers",
+        "warning": "Imperial Camels destroy all cavalry"
+      },
       "keyBonuses": [
-        "Villagers cost -8/13/18/23% in Dark/Feudal/Castle/ Imperial Age",
         "Camel Riders attack +20% faster",
+        "Team: Light Horsemen and Camel Units +2 attack vs. buildings",
         "Gunpowder Units +1 melee/+1 pierce armor"
       ],
       "allBonuses": [
-        "Villagers cost -8/13/18/23% in Dark/Feudal/Castle/ Imperial Age",
         "Camel Riders attack +20% faster",
+        "Team: Light Horsemen and Camel Units +2 attack vs. buildings",
         "Gunpowder Units +1 melee/+1 pierce armor",
-        "Can build Caravanserai in Imperial Age",
-        "Team: Light Horsemen and Camel Units +2 attack vs. buildings"
+        "Villagers cost -8/13/18/23% in Dark/Feudal/Castle/ Imperial Age",
+        "Can build Caravanserai in Imperial Age"
       ],
       "opponentUniqueUnit": "Ghulam",
+      "opponentUniqueUnitCategories": {
+        "type": "Infantry",
+        "categories": [
+          "anti-archer",
+          "anti-ranged",
+          "pass-through"
+        ],
+        "counters": [
+          "Hand Cannoneer",
+          "Champion",
+          "Knight"
+        ],
+        "description": "Bonus vs archers, pass-through damage"
+      },
       "opponentStrengths": [
         {
           "unit": "Ghulam",
@@ -1222,53 +2052,96 @@
       ],
       "counters": [
         {
-          "use": "Knight",
+          "use": "Militia",
           "against": "Ghulam",
-          "reason": "High melee damage, mobility"
+          "reason": "Infantry vs infantry, cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
-          "use": "Militia",
+          "use": "Knight",
           "against": "Ghulam",
-          "reason": "Infantry vs infantry, cost-efficient"
+          "reason": "High melee damage, mobility",
+          "civBonus": false
         },
         {
           "use": "Hand Cannoneer",
           "against": "Ghulam",
-          "reason": "+10 bonus vs infantry, bypasses pierce armor"
+          "reason": "+10 bonus vs infantry, bypasses pierce armor",
+          "civBonus": false
         },
         {
           "use": "Scorpion",
           "against": "Ghulam",
-          "reason": "Pass-through damage kills groups"
+          "reason": "Pass-through damage kills groups",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Castle Age Knight rush and Imperial Paladin timing",
-        "keyTiming": "Have Spearmen ready by minute 18-20"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Imperial Age - Imperial Camels and gunpowder",
+        "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Castle Age cheap Villagers from TC",
+          "Imperial Camel (anti-cavalry)",
+          "Shatagni Hand Cannoneers (+2 range)"
+        ]
       },
-      "strategy": "Wall early, have Spearmen ready. Monks are excellent for converting expensive cavalry. Camels if available."
+      "strategy": "33% faster attacking infantry shreds cavalry. Add Pikemen, micro Samurai vs unique cavalry."
     },
     "Huns": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Cavalry",
+        "tags": [
+          "Cavalry Archer",
+          "No Houses",
+          "Aggression",
+          "Tarkans"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "No houses - fast aggressive CA and Knights",
+        "warning": "Expect early aggression, they have housing advantage"
+      },
       "keyBonuses": [
+        "Team: Stables work +20% faster",
         "Cavalry Archers cost -10/20% in Castle/Imperial Age",
-        "On Nomadic maps, the first Town Center spawns a scouting Horse",
-        "Team: Stables work +20% faster"
+        "On Nomadic maps, the first Town Center spawns a scouting Horse"
       ],
       "allBonuses": [
-        "Do not need houses, but start with -100 wood",
+        "Team: Stables work +20% faster",
         "Cavalry Archers cost -10/20% in Castle/Imperial Age",
-        "Trebuchets fire more accurately at units and small targets",
         "On Nomadic maps, the first Town Center spawns a scouting Horse",
-        "Team: Stables work +20% faster"
+        "Do not need houses, but start with -100 wood",
+        "Trebuchets fire more accurately at units and small targets"
       ],
       "opponentUniqueUnit": "Tarkan",
+      "opponentUniqueUnitCategories": {
+        "type": "Cavalry",
+        "categories": [
+          "anti-building",
+          "raiding",
+          "high-pierce-armor"
+        ],
+        "counters": [
+          "Halberdier",
+          "Camel",
+          "Monk"
+        ],
+        "description": "Building destroyer, high pierce armor"
+      },
       "opponentStrengths": [
         {
           "unit": "Tarkan",
@@ -1283,46 +2156,88 @@
         {
           "use": "Spearman",
           "against": "Tarkan",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Monk",
           "against": "Tarkan",
-          "reason": "Convert expensive units"
+          "reason": "Convert expensive units",
+          "civBonus": false
         },
         {
           "use": "Monk",
           "against": "Knight",
-          "reason": "Convert expensive units"
+          "reason": "Convert expensive units",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Castle Age Knight rush and Imperial Paladin timing",
-        "keyTiming": "Have Spearmen ready by minute 18-20"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle Age - No houses, aggressive Cavalry Archer play",
+        "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "No house advantage early",
+          "Castle Age Cavalry Archers",
+          "Imperial Tarkans for raiding"
+        ]
       },
-      "strategy": "Wall early, have Spearmen ready. Monks are excellent for converting expensive cavalry. Camels if available."
+      "strategy": "33% faster attacking infantry shreds cavalry. Add Pikemen, micro Samurai vs unique cavalry."
     },
     "Incas": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Infantry",
+        "tags": [
+          "Infantry",
+          "Eagles",
+          "Kamayuk",
+          "Villager Bonus"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "Kamayuks + villager bonus",
+        "warning": "Kamayuks destroy cavalry, even Knights"
+      },
       "keyBonuses": [
-        "Buildings cost -15% stone",
         "Military Units cost -10/15/20/25% food in Dark/ Feudal/Castle/Imperial Age",
-        "Villagers affected by Infantry Blacksmith upgrades starting in Castle Age"
-      ],
-      "allBonuses": [
-        "Houses provide +5 population space",
         "Buildings cost -15% stone",
-        "Military Units cost -10/15/20/25% food in Dark/ Feudal/Castle/Imperial Age",
-        "Villagers affected by Infantry Blacksmith upgrades starting in Castle Age",
         "Team: Start with a free Llama"
       ],
+      "allBonuses": [
+        "Military Units cost -10/15/20/25% food in Dark/ Feudal/Castle/Imperial Age",
+        "Buildings cost -15% stone",
+        "Team: Start with a free Llama",
+        "Houses provide +5 population space",
+        "Villagers affected by Infantry Blacksmith upgrades starting in Castle Age"
+      ],
       "opponentUniqueUnit": "Kamayuk",
+      "opponentUniqueUnitCategories": {
+        "type": "Spearman",
+        "categories": [
+          "anti-cavalry",
+          "long-reach",
+          "stacking"
+        ],
+        "counters": [
+          "Archer",
+          "Skirmisher",
+          "Hand Cannoneer"
+        ],
+        "description": "Long reach, attacks from behind"
+      },
       "opponentStrengths": [
         {
           "unit": "Kamayuk",
@@ -1341,57 +2256,88 @@
         {
           "use": "Archer",
           "against": "Kamayuk",
-          "reason": "+3 bonus vs spearman, safe range"
+          "reason": "+3 bonus vs spearman, safe range",
+          "civBonus": false
         },
         {
           "use": "Militia",
           "against": "Eagle Warrior",
-          "reason": "+6 bonus damage vs eagles"
+          "reason": "+6 bonus damage vs eagles (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Skirmisher",
           "against": "Kamayuk",
-          "reason": "Cheap, bonus vs spearman"
+          "reason": "Cheap, bonus vs spearman",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "Kamayuk",
-          "reason": "Despite bonus, can overwhelm with numbers"
+          "reason": "Despite bonus, can overwhelm with numbers",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "Eagle Warrior",
-          "reason": "High damage output"
+          "reason": "High damage output",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age when Eagles are fully upgraded (+4 armor, +60 HP)",
-        "keyTiming": "End game before Imperial or have infantry ready"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle/Imperial Age - Villager bonus and Kamayuk line",
+        "keyTiming": "Apply Castle Age pressure before they peak",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Villager blacksmith upgrades",
+          "Castle Age Kamayuks",
+          "Imperial Eagles + Slingers"
+        ]
       },
-      "strategy": "Eagles are their cavalry. Have anti-infantry ready (Champions, Hand Cannoneers). Win before Imperial or prepare infantry counters."
+      "strategy": "Samurai vs Eagles. Your attack speed wins infantry fights."
     },
     "Italians": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Archer/Navy",
+        "tags": [
+          "Archer",
+          "Gunpowder",
+          "Water Map",
+          "Cheap Age-up"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "Genoese Crossbowmen destroy cavalry",
+        "warning": "Dont rely on pure cavalry vs Italians"
+      },
       "keyBonuses": [
-        "Advancing to the next Age costs -15%",
         "Foot Archers and Condottieri +1 melee/+1 pierce armor",
-        "Dock and University technologies cost -33%"
+        "Advancing to the next Age costs -15%",
+        "Gunpowder Units cost -20%"
       ],
       "allBonuses": [
-        "Advancing to the next Age costs -15%",
         "Foot Archers and Condottieri +1 melee/+1 pierce armor",
-        "Dock and University technologies cost -33%",
+        "Advancing to the next Age costs -15%",
         "Gunpowder Units cost -20%",
+        "Dock and University technologies cost -33%",
         "Fishing Ships cost -15%",
         "Team: Condottiero available at the Barracks in Imperial Age"
       ],
       "opponentUniqueUnit": "Genoese Crossbowman",
+      "opponentUniqueUnitCategories": null,
       "opponentStrengths": [
         {
           "unit": "Genoese Crossbowman",
@@ -1414,62 +2360,106 @@
         {
           "use": "Skirmisher",
           "against": "Genoese Crossbowman",
-          "reason": "+3/+4 bonus damage, cheap trash counter"
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Skirmisher",
           "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter"
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Mangonel",
           "against": "Hand Cannoneer",
-          "reason": "Area damage, outranges hand cannons"
+          "reason": "Area damage, outranges hand cannons",
+          "civBonus": false
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Mangonel",
           "against": "Genoese Crossbowman",
-          "reason": "Area damage destroys archer masses"
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Genoese Crossbowman",
-          "reason": "Fast raiding, forces archer retreat"
+          "reason": "Fast raiding, forces archer retreat",
+          "civBonus": false
         },
         {
           "use": "Mangonel",
           "against": "Archer",
-          "reason": "Area damage destroys archer masses"
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with Hand Cannoneers/Bombard Cannons",
-        "keyTiming": "Pressure early, dont let them boom to Imperial"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle/Imperial Age - Cheap age-up into Genoese Crossbowmen",
+        "keyTiming": "Apply Castle Age pressure before they peak",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Age-up discount timing",
+          "Castle Age Genoese Crossbowmen vs cavalry",
+          "Imperial Condottiero vs gunpowder"
+        ]
       },
-      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
+      "strategy": "Close with fast-attacking infantry. Samurai are decent, add siege support."
     },
     "Jurchens": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Cavalry",
+        "tags": [
+          "Cavalry",
+          "Iron Pagoda",
+          "Siege"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Imperial",
+        "timing": "Iron Pagoda heavy cavalry",
+        "warning": "Iron Pagodas are very tanky"
+      },
       "keyBonuses": [
+        "Siege and Fortification upgrades cost -75% wood and research +100% faster",
         "Mounted Units and Fire Lancers attack +25% faster starting in Feudal Age",
-        "Siege Engineers available in Castle Age",
-        "Siege and Fortification upgrades cost -75% wood and research +100% faster"
+        "Units receive -50% friendly fire damage"
       ],
       "allBonuses": [
-        "Meat of hunted and livestock animals doesn't decay",
-        "Mounted Units and Fire Lancers attack +25% faster starting in Feudal Age",
-        "Siege Engineers available in Castle Age",
         "Siege and Fortification upgrades cost -75% wood and research +100% faster",
+        "Mounted Units and Fire Lancers attack +25% faster starting in Feudal Age",
         "Units receive -50% friendly fire damage",
-        "Team: Gunpowder Units +2 line of sight"
+        "Team: Gunpowder Units +2 line of sight",
+        "Siege Engineers available in Castle Age",
+        "Meat of hunted and livestock animals doesn't decay"
       ],
       "opponentUniqueUnit": "Iron Pagoda",
+      "opponentUniqueUnitCategories": {
+        "type": "Cavalry",
+        "categories": [
+          "tanky",
+          "slow",
+          "heavy-cavalry"
+        ],
+        "counters": [
+          "Halberdier",
+          "Camel",
+          "Monk"
+        ],
+        "description": "Extremely tanky heavy cavalry"
+      },
       "opponentStrengths": [
         {
           "unit": "Iron Pagoda",
@@ -1480,44 +2470,66 @@
         {
           "use": "Spearman",
           "against": "Iron Pagoda",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Monk",
           "against": "Iron Pagoda",
-          "reason": "Convert expensive units"
+          "reason": "Convert expensive units",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with full upgrades",
-        "keyTiming": "Apply pressure in Castle Age"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Imperial Age - Iron Pagoda heavy cavalry",
+        "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Castle Age Iron Pagodas",
+          "Imperial heavy cavalry + siege",
+          "Late game deathball"
+        ]
       },
-      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
+      "strategy": "Feudal MAA pressure with attack speed. Samurai vs unique units. Yasama towers + Trebs for siege."
     },
     "Khitans": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Cavalry Archer",
+        "tags": [
+          "Cavalry Archer",
+          "Raiding",
+          "Economy"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "Cavalry Archer raids",
+        "warning": "Expect CA harassment, protect eco"
+      },
       "keyBonuses": [
-        "Melee attack upgrade effects are doubled",
-        "Skirmishers, Spearman-, and Scout Cavalry-line train and upgrade +25% faster",
-        "Heavy Cavalry Archer upgrade available in Castle Age and costs -50%"
-      ],
-      "allBonuses": [
-        "Pastures replace Farms",
-        "Melee attack upgrade effects are doubled",
         "Skirmishers, Spearman-, and Scout Cavalry-line train and upgrade +25% faster",
         "Heavy Cavalry Archer upgrade available in Castle Age and costs -50%",
         "Team: Infantry +2 attack vs. Ranged Soldiers"
       ],
+      "allBonuses": [
+        "Skirmishers, Spearman-, and Scout Cavalry-line train and upgrade +25% faster",
+        "Heavy Cavalry Archer upgrade available in Castle Age and costs -50%",
+        "Team: Infantry +2 attack vs. Ranged Soldiers",
+        "Melee attack upgrade effects are doubled",
+        "Pastures replace Farms"
+      ],
       "opponentUniqueUnit": "Liao Dao",
+      "opponentUniqueUnitCategories": null,
       "opponentStrengths": [
         {
           "unit": "Liao Dao",
           "reason": "Unique Unit"
-        },
-        {
-          "unit": "Knight",
-          "reason": "Bonus-enhanced"
         },
         {
           "unit": "Militia",
@@ -1528,55 +2540,93 @@
         {
           "use": "Archer",
           "against": "Liao Dao",
-          "reason": "Kites slow infantry easily"
-        },
-        {
-          "use": "Spearman",
-          "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "Liao Dao",
-          "reason": "High damage, mobility advantage"
+          "reason": "High damage, mobility advantage",
+          "civBonus": false
         },
         {
           "use": "Hand Cannoneer",
           "against": "Liao Dao",
-          "reason": "+10 bonus vs infantry"
+          "reason": "+10 bonus vs infantry",
+          "civBonus": false
         },
         {
-          "use": "Monk",
-          "against": "Knight",
-          "reason": "Convert expensive units"
+          "use": "Knight",
+          "against": "Militia",
+          "reason": "High damage, mobility advantage",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with full upgrades",
-        "keyTiming": "Apply pressure in Castle Age"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle Age - Cavalry Archer raiding",
+        "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Economy bonus early",
+          "Castle Age CA raids",
+          "Imperial Cavalry Archer mass"
+        ]
       },
-      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
+      "strategy": "ADVANTAGE: Your infantry attacks 33% faster. Samurai bonus vs unique units."
     },
     "Khmer": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Siege/Elephant",
+        "tags": [
+          "Siege",
+          "Elephant",
+          "No Building Requirements",
+          "Fast Ballista"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "Fast Castle (no building requirements)",
+        "warning": "Expect very fast Castle Age timing"
+      },
       "keyBonuses": [
         "Battle Elephants move +10% faster",
         "Team: Scorpions +1 range"
       ],
       "allBonuses": [
+        "Battle Elephants move +10% faster",
+        "Team: Scorpions +1 range",
         "No buildings required to advance to the next Age or to unlock other buildings",
         "Farmers don't require Mills or Town Centers to drop off food",
-        "Villagers can garrison in Houses",
-        "Battle Elephants move +10% faster",
-        "Team: Scorpions +1 range"
+        "Villagers can garrison in Houses"
       ],
       "opponentUniqueUnit": "Ballista Elephant",
+      "opponentUniqueUnitCategories": {
+        "type": "SiegeWeapon",
+        "categories": [
+          "elephant",
+          "siege",
+          "pass-through"
+        ],
+        "counters": [
+          "Monk",
+          "Halberdier",
+          "Bombard Cannon"
+        ],
+        "description": "Mobile scorpion on elephant"
+      },
       "opponentStrengths": [
         {
           "unit": "Ballista Elephant",
@@ -1591,46 +2641,88 @@
         {
           "use": "Knight",
           "against": "Ballista Elephant",
-          "reason": "Fast, high damage vs slow siege"
+          "reason": "Fast, high damage vs slow siege",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "Mangonel",
-          "reason": "Fast, high damage vs slow siege"
+          "reason": "Fast, high damage vs slow siege",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Ballista Elephant",
-          "reason": "Fast, snipes siege quickly"
+          "reason": "Fast, snipes siege quickly",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Mangonel",
-          "reason": "Fast, snipes siege quickly"
+          "reason": "Fast, snipes siege quickly",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Castle Age Mangonel timing and Imperial Siege Onagers",
-        "keyTiming": "Split archers vs siege, have cavalry ready to snipe"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle/Imperial Age - Fast Castle (no building requirements), Ballista Elephants",
+        "keyTiming": "Apply Castle Age pressure before they peak",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "No building requirement age-up",
+          "Castle Age Ballista Elephants",
+          "Imperial Scorpions with Double Crossbow"
+        ]
       },
-      "strategy": "Have mobile units (cavalry) ready to snipe siege. Dont clump units against Mangonels."
+      "strategy": "Use fast infantry to reach siege. Trebs with Kataparuto pack/unpack fast."
     },
     "Koreans": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Defensive/Siege",
+        "tags": [
+          "Defensive",
+          "Tower Rush",
+          "War Wagons",
+          "Siege"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "War Wagons or tower rush",
+        "warning": "Scout for towers, War Wagons are tanky"
+      },
       "keyBonuses": [
         "Stone miners work +20% faster",
-        "Ranged Soldiers and Infantry cost -50% wood",
-        "Archer armor and tower upgrades free (Bombard Tower requires Chemistry)"
+        "Archer armor and tower upgrades free (Bombard Tower requires Chemistry)",
+        "Ranged Soldiers and Infantry cost -50% wood"
       ],
       "allBonuses": [
         "Stone miners work +20% faster",
-        "Ranged Soldiers and Infantry cost -50% wood",
         "Archer armor and tower upgrades free (Bombard Tower requires Chemistry)",
+        "Ranged Soldiers and Infantry cost -50% wood",
         "Warships cost -20% wood",
         "Team: Villagers +3 line of sight"
       ],
       "opponentUniqueUnit": "War Wagon",
+      "opponentUniqueUnitCategories": {
+        "type": "CavalryArcher",
+        "categories": [
+          "mounted-ranged",
+          "tanky",
+          "high-pierce-armor"
+        ],
+        "counters": [
+          "Halberdier",
+          "Monk",
+          "Camel"
+        ],
+        "description": "Very tanky ranged unit, slow but powerful"
+      },
       "opponentStrengths": [
         {
           "unit": "War Wagon",
@@ -1653,60 +2745,104 @@
         {
           "use": "Skirmisher",
           "against": "War Wagon",
-          "reason": "Bonus vs archers, cheap"
+          "reason": "Bonus vs archers, cheap",
+          "civBonus": false
         },
         {
           "use": "Skirmisher",
           "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter"
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "Mangonel",
-          "reason": "Fast, high damage vs slow siege"
+          "reason": "Fast, high damage vs slow siege",
+          "civBonus": false
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Mangonel",
           "against": "Archer",
-          "reason": "Area damage destroys archer masses"
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat"
+          "reason": "Fast raiding, forces archer retreat",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Mangonel",
-          "reason": "Fast, snipes siege quickly"
+          "reason": "Fast, snipes siege quickly",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Castle Age Mangonel timing and Imperial Siege Onagers",
-        "keyTiming": "Split archers vs siege, have cavalry ready to snipe"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle Age - Tower rush or War Wagon mass",
+        "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Feudal/Castle tower rush",
+          "Castle Age War Wagons",
+          "Imperial Shinkichon Onagers (+1 range)"
+        ]
       },
-      "strategy": "Have mobile units (cavalry) ready to snipe siege. Dont clump units against Mangonels."
+      "strategy": "Close with fast-attacking infantry. Samurai are decent, add siege support."
     },
     "Lithuanians": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Cavalry",
+        "tags": [
+          "Cavalry",
+          "Relic Bonus",
+          "Leitis"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Imperial",
+        "timing": "Leitis with 4+ relics (+4 attack, ignores armor)",
+        "warning": "Deny relics or fight before they collect 4+"
+      },
       "keyBonuses": [
         "Spearman-line and Skirmisher-line move +10% faster",
-        "Each garrisoned Relic provides +1 attack to Knight-line and Leitis (maximum +4)",
-        "Team: Monasteries work +20% faster"
+        "Team: Monasteries work +20% faster",
+        "Each garrisoned Relic provides +1 attack to Knight-line and Leitis (maximum +4)"
       ],
       "allBonuses": [
-        "Each Town Center provides +100 food",
         "Spearman-line and Skirmisher-line move +10% faster",
+        "Team: Monasteries work +20% faster",
         "Each garrisoned Relic provides +1 attack to Knight-line and Leitis (maximum +4)",
-        "Team: Monasteries work +20% faster"
+        "Each Town Center provides +100 food"
       ],
       "opponentUniqueUnit": "Leitis",
+      "opponentUniqueUnitCategories": {
+        "type": "Cavalry",
+        "categories": [
+          "armor-ignoring",
+          "anti-tanky",
+          "glass-cannon"
+        ],
+        "counters": [
+          "Halberdier",
+          "Archer",
+          "Monk"
+        ],
+        "description": "Ignores armor, melts tanky units"
+      },
       "opponentStrengths": [
         {
           "unit": "Leitis",
@@ -1721,45 +2857,86 @@
         {
           "use": "Spearman",
           "against": "Leitis",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Monk",
           "against": "Leitis",
-          "reason": "Convert expensive units"
+          "reason": "Convert expensive units",
+          "civBonus": false
         },
         {
           "use": "Monk",
           "against": "Knight",
-          "reason": "Convert expensive units"
+          "reason": "Convert expensive units",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Castle Age Knight rush and Imperial Paladin timing",
-        "keyTiming": "Have Spearmen ready by minute 18-20"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle/Imperial Age - Relic-boosted Leitis ignoring armor",
+        "keyTiming": "Apply Castle Age pressure before they peak",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Fast Relic collection",
+          "Castle Age Leitis",
+          "Imperial Leitis with 4+ relics (+4 attack)"
+        ]
       },
-      "strategy": "Wall early, have Spearmen ready. Monks are excellent for converting expensive cavalry. Camels if available."
+      "strategy": "33% faster attacking infantry shreds cavalry. Add Pikemen, micro Samurai vs unique cavalry."
     },
     "Magyars": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Cavalry",
+        "tags": [
+          "Cavalry",
+          "Scout Rush",
+          "Cheap Hussars"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Feudal",
+        "timing": "Scout rush with free forging",
+        "warning": "Wall early, expect aggressive Feudal Scouts"
+      },
       "keyBonuses": [
-        "Scout Cavalry-line costs -15%",
+        "Team: Mounted Archers train +25% faster",
         "Melee attack upgrades free",
-        "Team: Mounted Archers train +25% faster"
+        "Scout Cavalry-line costs -15%"
       ],
       "allBonuses": [
-        "Villagers defeat wolves with one strike",
-        "Scout Cavalry-line costs -15%",
+        "Team: Mounted Archers train +25% faster",
         "Melee attack upgrades free",
-        "Team: Mounted Archers train +25% faster"
+        "Scout Cavalry-line costs -15%",
+        "Villagers defeat wolves with one strike"
       ],
       "opponentUniqueUnit": "Magyar Huszar",
+      "opponentUniqueUnitCategories": {
+        "type": "Cavalry",
+        "categories": [
+          "anti-siege",
+          "raiding",
+          "cheap"
+        ],
+        "counters": [
+          "Halberdier",
+          "Camel",
+          "Archer"
+        ],
+        "description": "Bonus vs siege, cheap and fast"
+      },
       "opponentStrengths": [
         {
           "unit": "Magyar Huszar",
@@ -1778,56 +2955,100 @@
         {
           "use": "Spearman",
           "against": "Magyar Huszar",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Skirmisher",
           "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter"
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Monk",
           "against": "Magyar Huszar",
-          "reason": "Convert expensive units"
+          "reason": "Convert expensive units",
+          "civBonus": false
         },
         {
           "use": "Monk",
           "against": "Knight",
-          "reason": "Convert expensive units"
+          "reason": "Convert expensive units",
+          "civBonus": false
         },
         {
           "use": "Mangonel",
           "against": "Archer",
-          "reason": "Area damage destroys archer masses"
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Castle Age Knight rush and Imperial Paladin timing",
-        "keyTiming": "Have Spearmen ready by minute 18-20"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Feudal/Imperial Age - Feudal Scout rush, cheap Hussars in Imperial",
+        "keyTiming": "Apply pressure in Castle Age",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Feudal free forging Scout rush",
+          "Castle Age Magyar Huszar",
+          "Imperial free attack upgrades cavalry"
+        ]
       },
-      "strategy": "Wall early, have Spearmen ready. Monks are excellent for converting expensive cavalry. Camels if available."
+      "strategy": "33% faster attacking infantry shreds cavalry. Add Pikemen, micro Samurai vs unique cavalry."
     },
     "Malay": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Infantry/Navy",
+        "tags": [
+          "Infantry",
+          "Fast Age-up",
+          "Cheap Elephants",
+          "Water Map"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "66% faster age-up into cheap Battle Elephants",
+        "warning": "They reach Castle Age much earlier than expected"
+      },
       "keyBonuses": [
+        "Fish Traps cost -33% and provide +200% food",
         "Advancing to the next Age is +66% faster",
-        "Infantry armor upgrades free",
-        "Battle Elephants cost -25/35% in Castle/Imperial Age"
+        "Infantry armor upgrades free"
       ],
       "allBonuses": [
+        "Fish Traps cost -33% and provide +200% food",
         "Advancing to the next Age is +66% faster",
         "Infantry armor upgrades free",
         "Battle Elephants cost -25/35% in Castle/Imperial Age",
-        "Fish Traps cost -33% and provide +200% food",
         "Team: Docks +6 line of sight"
       ],
       "opponentUniqueUnit": "Karambit Warrior",
+      "opponentUniqueUnitCategories": {
+        "type": "Infantry",
+        "categories": [
+          "cheap",
+          "swarm",
+          "half-pop"
+        ],
+        "counters": [
+          "Archer",
+          "Knight",
+          "Hand Cannoneer"
+        ],
+        "description": "Half population, swarm tactics"
+      },
       "opponentStrengths": [
         {
           "unit": "Karambit Warrior",
@@ -1842,50 +3063,93 @@
         {
           "use": "Archer",
           "against": "Karambit Warrior",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "Karambit Warrior",
-          "reason": "High damage, mobility advantage"
+          "reason": "High damage, mobility advantage",
+          "civBonus": false
         },
         {
           "use": "Hand Cannoneer",
           "against": "Karambit Warrior",
-          "reason": "+10 bonus vs infantry"
+          "reason": "+10 bonus vs infantry",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "Militia",
-          "reason": "High damage, mobility advantage"
+          "reason": "High damage, mobility advantage",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with full upgrades",
-        "keyTiming": "Apply pressure in Castle Age"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle Age - Fast age-up, cheap Battle Elephants",
+        "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "66% faster age-up",
+          "Castle Age cheap Battle Elephants",
+          "Imperial Forced Levy 2HS (no gold)"
+        ]
       },
-      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
+      "strategy": "ADVANTAGE: Your infantry attacks 33% faster. Samurai bonus vs unique units."
     },
     "Malians": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Infantry",
+        "tags": [
+          "Infantry",
+          "Pierce Armor Infantry",
+          "Gbeto",
+          "Gold Bonus"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle/Imperial",
+        "timing": "Pierce armor infantry and Gbetos",
+        "warning": "Their infantry survives arrows - use melee or HC"
+      },
       "keyBonuses": [
-        "Buildings cost -15% wood",
+        "Team: Universities work +80% faster",
         "Barracks Units +1/+2/+3 pierce armor in Feudal/ Castle/Imperial Age",
-        "Team: Universities work +80% faster"
+        "Buildings cost -15% wood"
       ],
       "allBonuses": [
-        "Buildings cost -15% wood",
+        "Team: Universities work +80% faster",
         "Villagers drop off +10% more gold",
         "Barracks Units +1/+2/+3 pierce armor in Feudal/ Castle/Imperial Age",
-        "Team: Universities work +80% faster"
+        "Buildings cost -15% wood"
       ],
       "opponentUniqueUnit": "Gbeto",
+      "opponentUniqueUnitCategories": {
+        "type": "Infantry",
+        "categories": [
+          "ranged-infantry",
+          "fast",
+          "glass-cannon"
+        ],
+        "counters": [
+          "Archer",
+          "Knight",
+          "Skirmisher"
+        ],
+        "description": "Fast ranged infantry"
+      },
       "opponentStrengths": [
         {
           "unit": "Gbeto",
@@ -1900,49 +3164,94 @@
         {
           "use": "Archer",
           "against": "Gbeto",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "Gbeto",
-          "reason": "High damage, mobility advantage"
+          "reason": "High damage, mobility advantage",
+          "civBonus": false
         },
         {
           "use": "Hand Cannoneer",
           "against": "Gbeto",
-          "reason": "+10 bonus vs infantry"
+          "reason": "+10 bonus vs infantry",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "Militia",
-          "reason": "High damage, mobility advantage"
+          "reason": "High damage, mobility advantage",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with Champion spam or unique infantry",
-        "keyTiming": "Maintain archer mass and mobility"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle/Imperial Age - Pierce armor infantry, Gbeto raids",
+        "keyTiming": "Apply Castle Age pressure before they peak",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Wood bonus economy",
+          "Castle Age Gbetos",
+          "Imperial Farimba Cavaliers + pierce armor infantry"
+        ]
       },
-      "strategy": "Archers and cavalry destroy infantry. Maintain mobility and range advantage."
+      "strategy": "ADVANTAGE: Your infantry attacks 33% faster. Samurai bonus vs unique units."
     },
     "Mayans": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Archer",
+        "tags": [
+          "Archer",
+          "Eagles",
+          "Boom",
+          "Plumed Archer",
+          "Longer Lasting Resources"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Imperial",
+        "timing": "El Dorado Eagles (+40 HP)",
+        "warning": "Imperial Eagles have 100 HP - prepare Champions"
+      },
       "keyBonuses": [
         "Foot Archers cost -10/20/30% in Feudal/Castle/Imperial Age",
         "Team: Walls cost -50%"
       ],
       "allBonuses": [
-        "Start with +1 Villager, but -50 food",
         "Resources last +15% longer",
         "Foot Archers cost -10/20/30% in Feudal/Castle/Imperial Age",
-        "Team: Walls cost -50%"
+        "Team: Walls cost -50%",
+        "Start with +1 Villager, but -50 food"
       ],
       "opponentUniqueUnit": "Plumed Archer",
+      "opponentUniqueUnitCategories": {
+        "type": "Archer",
+        "categories": [
+          "ranged",
+          "fast",
+          "anti-infantry",
+          "high-pierce-armor"
+        ],
+        "counters": [
+          "Skirmisher",
+          "Mangonel",
+          "Eagle Warrior"
+        ],
+        "description": "Fast archer with high pierce armor"
+      },
       "opponentStrengths": [
         {
           "unit": "Plumed Archer",
@@ -1961,55 +3270,100 @@
         {
           "use": "Skirmisher",
           "against": "Plumed Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter"
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Militia",
           "against": "Eagle Warrior",
-          "reason": "+6 bonus damage vs eagles"
+          "reason": "+6 bonus damage vs eagles (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Skirmisher",
           "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter"
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Mangonel",
           "against": "Plumed Archer",
-          "reason": "Area damage destroys archer masses"
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Plumed Archer",
-          "reason": "Fast raiding, forces archer retreat"
+          "reason": "Fast raiding, forces archer retreat",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "Eagle Warrior",
-          "reason": "High damage output"
+          "reason": "High damage output",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age when Eagles are fully upgraded (+4 armor, +60 HP)",
-        "keyTiming": "End game before Imperial or have infantry ready"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle/Imperial Age - Longer lasting resources into Plumed Archers",
+        "keyTiming": "Apply Castle Age pressure before they peak",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Resources last 15% longer",
+          "Castle Age Plumed Archers",
+          "Imperial El Dorado Eagles (+40 HP)"
+        ]
       },
-      "strategy": "Eagles are their cavalry. Have anti-infantry ready (Champions, Hand Cannoneers). Win before Imperial or prepare infantry counters."
+      "strategy": "Samurai vs Eagles. Your attack speed wins infantry fights."
     },
     "Mongols": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Cavalry Archer",
+        "tags": [
+          "Cavalry Archer",
+          "Mangudai",
+          "Hunt Bonus",
+          "Siege"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle/Imperial",
+        "timing": "Mangudai hit-and-run and Drill siege",
+        "warning": "Mangudai destroy siege - protect your siege"
+      },
       "keyBonuses": [
-        "Hunters work +40% faster",
-        "Cavalry Archers attack +25% faster",
-        "Light Horsemen +20/30% HP in Castle/Imperial Age"
-      ],
-      "allBonuses": [
-        "Hunters work +40% faster",
         "Cavalry Archers attack +25% faster",
         "Light Horsemen +20/30% HP in Castle/Imperial Age",
+        "Hunters work +40% faster"
+      ],
+      "allBonuses": [
+        "Cavalry Archers attack +25% faster",
+        "Light Horsemen +20/30% HP in Castle/Imperial Age",
+        "Hunters work +40% faster",
         "Team: Scout Cavalry-line +2 line of sight"
       ],
       "opponentUniqueUnit": "Mangudai",
+      "opponentUniqueUnitCategories": {
+        "type": "CavalryArcher",
+        "categories": [
+          "mounted-ranged",
+          "anti-siege",
+          "mobile",
+          "hit-and-run"
+        ],
+        "counters": [
+          "Skirmisher",
+          "Camel",
+          "Eagle Warrior"
+        ],
+        "description": "Best siege killer, extremely mobile"
+      },
       "opponentStrengths": [
         {
           "unit": "Mangudai",
@@ -2028,51 +3382,95 @@
         {
           "use": "Skirmisher",
           "against": "Mangudai",
-          "reason": "Bonus vs archers, cheap"
+          "reason": "Bonus vs archers, cheap",
+          "civBonus": false
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Knight",
           "against": "Mangonel",
-          "reason": "Fast, high damage vs slow siege"
+          "reason": "Fast, high damage vs slow siege",
+          "civBonus": false
         },
         {
           "use": "Monk",
           "against": "Knight",
-          "reason": "Convert expensive units"
+          "reason": "Convert expensive units",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Mangonel",
-          "reason": "Fast, snipes siege quickly"
+          "reason": "Fast, snipes siege quickly",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Castle Age Knight rush and Imperial Paladin timing",
-        "keyTiming": "Have Spearmen ready by minute 18-20"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle/Imperial Age - Castle Age Mangudai raid, Imperial siege",
+        "keyTiming": "Apply Castle Age pressure before they peak",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Hunt bonus for fast Feudal",
+          "Castle Age Mangudai hit-and-run",
+          "Imperial Drill Siege Onagers"
+        ]
       },
-      "strategy": "Wall early, have Spearmen ready. Monks are excellent for converting expensive cavalry. Camels if available."
+      "strategy": "33% faster attacking infantry shreds cavalry. Add Pikemen, micro Samurai vs unique cavalry."
     },
     "Persians": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Cavalry",
+        "tags": [
+          "Cavalry",
+          "War Elephants",
+          "Boom",
+          "TC Bonus"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "Fast Castle Knights with TC bonus",
+        "warning": "Expect fast Castle Knight flood, have Spears ready"
+      },
       "keyBonuses": [
         "Town Centers and Docks +100% HP and work +5/10/15/20% faster in Dark/Feudal/Castle/Imperial Age",
-        "Parthian Tactics available in Castle Age",
-        "Team: Knight-line +2 attack vs. Ranged Soldiers"
+        "Team: Knight-line +2 attack vs. Ranged Soldiers",
+        "Parthian Tactics available in Castle Age"
       ],
       "allBonuses": [
-        "Start with +50 wood and +50 food",
         "Town Centers and Docks +100% HP and work +5/10/15/20% faster in Dark/Feudal/Castle/Imperial Age",
+        "Start with +50 wood and +50 food",
+        "Team: Knight-line +2 attack vs. Ranged Soldiers",
         "Parthian Tactics available in Castle Age",
-        "Can build Caravanserai in Imperial Age",
-        "Team: Knight-line +2 attack vs. Ranged Soldiers"
+        "Can build Caravanserai in Imperial Age"
       ],
       "opponentUniqueUnit": "War Elephant",
+      "opponentUniqueUnitCategories": {
+        "type": "Elephant",
+        "categories": [
+          "tanky",
+          "slow",
+          "area-damage",
+          "expensive"
+        ],
+        "counters": [
+          "Monk",
+          "Halberdier",
+          "Scorpion"
+        ],
+        "description": "Massive HP, trample damage"
+      },
       "opponentStrengths": [
         {
           "unit": "War Elephant",
@@ -2085,53 +3483,95 @@
       ],
       "counters": [
         {
-          "use": "Monk",
+          "use": "Spearman",
           "against": "War Elephant",
-          "reason": "Convert expensive elephants"
+          "reason": "Huge bonus damage vs elephants (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
-          "use": "Spearman",
+          "use": "Monk",
           "against": "War Elephant",
-          "reason": "Huge bonus damage vs elephants"
+          "reason": "Convert expensive elephants",
+          "civBonus": false
         },
         {
           "use": "Scorpion",
           "against": "War Elephant",
-          "reason": "High damage per shot vs slow targets"
+          "reason": "High damage per shot vs slow targets",
+          "civBonus": false
         },
         {
           "use": "Monk",
           "against": "Knight",
-          "reason": "Convert expensive units"
+          "reason": "Convert expensive units",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Castle Age Knight rush and Imperial Paladin timing",
-        "keyTiming": "Have Spearmen ready by minute 18-20"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle Age - Fast Castle into Knights, War Elephants late",
+        "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "TC work rate bonus",
+          "Fast Castle Knights",
+          "Imperial War Elephants with Mahouts"
+        ]
       },
-      "strategy": "Wall early, have Spearmen ready. Monks are excellent for converting expensive cavalry. Camels if available."
+      "strategy": "33% faster attacking infantry shreds cavalry. Add Pikemen, micro Samurai vs unique cavalry."
     },
     "Poles": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Cavalry",
+        "tags": [
+          "Cavalry",
+          "Cheap Knights",
+          "Stone from Gold"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "Cheap Cavalier with stone from gold",
+        "warning": "Expect lots of cavalry, prepare Spearmen"
+      },
       "keyBonuses": [
-        "Villagers regenerate 10/15/20 HP in Feudal/Castle/Imperial Age",
         "Bloodlines and Scout Cavalry-line upgrades cost -50% food",
-        "Team: Scout Cavalry-line +1 attack vs. Ranged Soldiers"
+        "Team: Scout Cavalry-line +1 attack vs. Ranged Soldiers",
+        "Villagers regenerate 10/15/20 HP in Feudal/Castle/Imperial Age"
       ],
       "allBonuses": [
-        "Folwark replaces Mill",
-        "Villagers regenerate 10/15/20 HP in Feudal/Castle/Imperial Age",
-        "Stone Miners generate gold in addition to stone",
         "Bloodlines and Scout Cavalry-line upgrades cost -50% food",
-        "Team: Scout Cavalry-line +1 attack vs. Ranged Soldiers"
+        "Team: Scout Cavalry-line +1 attack vs. Ranged Soldiers",
+        "Villagers regenerate 10/15/20 HP in Feudal/Castle/Imperial Age",
+        "Folwark replaces Mill",
+        "Stone Miners generate gold in addition to stone"
       ],
       "opponentUniqueUnit": "Obuch",
+      "opponentUniqueUnitCategories": {
+        "type": "Infantry",
+        "categories": [
+          "armor-shredding",
+          "support",
+          "anti-tanky"
+        ],
+        "counters": [
+          "Archer",
+          "Knight",
+          "Hand Cannoneer"
+        ],
+        "description": "Strips enemy armor permanently"
+      },
       "opponentStrengths": [
         {
           "unit": "Obuch",
@@ -2146,51 +3586,93 @@
         {
           "use": "Archer",
           "against": "Obuch",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Knight",
           "against": "Obuch",
-          "reason": "High damage, mobility advantage"
+          "reason": "High damage, mobility advantage",
+          "civBonus": false
         },
         {
           "use": "Hand Cannoneer",
           "against": "Obuch",
-          "reason": "+10 bonus vs infantry"
+          "reason": "+10 bonus vs infantry",
+          "civBonus": false
         },
         {
           "use": "Monk",
           "against": "Knight",
-          "reason": "Convert expensive units"
+          "reason": "Convert expensive units",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Castle Age Knight rush and Imperial Paladin timing",
-        "keyTiming": "Have Spearmen ready by minute 18-20"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle/Imperial Age - Cheap Cavaliers with stone from gold",
+        "keyTiming": "Apply Castle Age pressure before they peak",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Folwark farming bonus",
+          "Castle Age cheap Cavalier",
+          "Imperial Winged Hussar + Obuch"
+        ]
       },
-      "strategy": "Wall early, have Spearmen ready. Monks are excellent for converting expensive cavalry. Camels if available."
+      "strategy": "33% faster attacking infantry shreds cavalry. Add Pikemen, micro Samurai vs unique cavalry."
     },
     "Portuguese": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Gunpowder/Navy",
+        "tags": [
+          "Gunpowder",
+          "Water Map",
+          "Feitoria Boom"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Imperial",
+        "timing": "Feitoria infinite resources",
+        "warning": "End game before Feitorias sustain them forever"
+      },
       "keyBonuses": [
-        "All units cost -20% gold",
+        "Team: Technologies research +25% faster",
         "Ships +10% HP",
-        "Team: Technologies research +25% faster"
+        "All units cost -20% gold"
       ],
       "allBonuses": [
-        "Foragers generate wood in addition to food",
-        "All units cost -20% gold",
-        "Can build Feitoria in Imperial Age",
+        "Team: Technologies research +25% faster",
         "Ships +10% HP",
-        "Team: Technologies research +25% faster"
+        "All units cost -20% gold",
+        "Foragers generate wood in addition to food",
+        "Can build Feitoria in Imperial Age"
       ],
       "opponentUniqueUnit": "Organ Gun",
+      "opponentUniqueUnitCategories": {
+        "type": "SiegeWeapon",
+        "categories": [
+          "anti-infantry",
+          "area-damage",
+          "gunpowder"
+        ],
+        "counters": [
+          "Knight",
+          "Bombard Cannon",
+          "Onager"
+        ],
+        "description": "Area damage vs infantry masses"
+      },
       "opponentStrengths": [
         {
           "unit": "Organ Gun",
@@ -2205,51 +3687,94 @@
         {
           "use": "Knight",
           "against": "Organ Gun",
-          "reason": "Fast, high damage vs slow siege"
+          "reason": "Fast, high damage vs slow siege",
+          "civBonus": false
         },
         {
           "use": "Mangonel",
           "against": "Hand Cannoneer",
-          "reason": "Area damage, outranges hand cannons"
+          "reason": "Area damage, outranges hand cannons",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Organ Gun",
-          "reason": "Fast, snipes siege quickly"
+          "reason": "Fast, snipes siege quickly",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Hand Cannoneer",
-          "reason": "Fast closing, dodges shots"
+          "reason": "Fast closing, dodges shots",
+          "civBonus": false
         },
         {
           "use": "Skirmisher",
           "against": "Hand Cannoneer",
-          "reason": "Cheap ranged, high numbers"
+          "reason": "Cheap ranged, high numbers",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with Hand Cannoneers/Bombard Cannons",
-        "keyTiming": "Pressure early, dont let them boom to Imperial"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Imperial Age - Castle Age Organ Guns, Imperial Feitoria boom",
+        "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Gold discount on all units",
+          "Castle Age Organ Guns",
+          "Imperial Feitoria for infinite resources"
+        ]
       },
-      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
+      "strategy": "Close fast with infantry. Use Yasama towers for defense."
     },
     "Romans": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Infantry",
+        "tags": [
+          "Infantry",
+          "Legionary",
+          "Centurion",
+          "Cheap Scorpions"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Imperial",
+        "timing": "Legionaries resist charges, cheap Scorpions",
+        "warning": "Dont charge into Legionaries - use ranged"
+      },
       "keyBonuses": [
         "Villagers gather, build, and repair +5% faster",
-        "Infantry armor upgrade effects are doubled",
-        "Scorpions cost -60% gold"
+        "Scorpions cost -60% gold",
+        "Galley-line and Dromons +1 melee/+1 pierce armor"
       ],
       "allBonuses": [
         "Villagers gather, build, and repair +5% faster",
-        "Infantry armor upgrade effects are doubled",
         "Scorpions cost -60% gold",
         "Galley-line and Dromons +1 melee/+1 pierce armor",
+        "Infantry armor upgrade effects are doubled",
         "Team: Scorpions minimum range reduced"
       ],
       "opponentUniqueUnit": "Centurion",
+      "opponentUniqueUnitCategories": {
+        "type": "Infantry",
+        "categories": [
+          "aura",
+          "support",
+          "tanky"
+        ],
+        "counters": [
+          "Archer",
+          "Knight",
+          "Hand Cannoneer"
+        ],
+        "description": "Buffs nearby infantry"
+      },
       "opponentStrengths": [
         {
           "unit": "Centurion",
@@ -2264,51 +3789,93 @@
         {
           "use": "Archer",
           "against": "Centurion",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "Centurion",
-          "reason": "High damage, mobility advantage"
+          "reason": "High damage, mobility advantage",
+          "civBonus": false
         },
         {
           "use": "Hand Cannoneer",
           "against": "Centurion",
-          "reason": "+10 bonus vs infantry"
+          "reason": "+10 bonus vs infantry",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "Militia",
-          "reason": "High damage, mobility advantage"
+          "reason": "High damage, mobility advantage",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with full upgrades",
-        "keyTiming": "Apply pressure in Castle Age"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Imperial Age - Cheap Scorpions and Legionary line",
+        "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Cheap Scorpions from Castle Age",
+          "Castle Age Centurions",
+          "Imperial Legionary charge resistance"
+        ]
       },
-      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
+      "strategy": "ADVANTAGE: Your infantry attacks 33% faster. Samurai bonus vs unique units."
     },
     "Saracens": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Camel/Archer",
+        "tags": [
+          "Camel",
+          "Archer",
+          "Market Bonus"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Imperial",
+        "timing": "Mameluke mass and siege",
+        "warning": "Mamelukes counter cavalry - use archers instead"
+      },
       "keyBonuses": [
-        "Market trading fee only 5%; Markets cost -100 wood",
+        "Transport Ships +100% HP, +20 carry capacity",
         "Camel Units +25% HP",
         "Galley-line attacks +25% faster"
       ],
       "allBonuses": [
-        "Market trading fee only 5%; Markets cost -100 wood",
+        "Transport Ships +100% HP, +20 carry capacity",
         "Camel Units +25% HP",
         "Galley-line attacks +25% faster",
-        "Transport Ships +100% HP, +20 carry capacity",
-        "Team: Foot Archers and Skirmisher-line +2 attack vs. buildings"
+        "Team: Foot Archers and Skirmisher-line +2 attack vs. buildings",
+        "Market trading fee only 5%; Markets cost -100 wood"
       ],
       "opponentUniqueUnit": "Mameluke",
+      "opponentUniqueUnitCategories": {
+        "type": "Camel",
+        "categories": [
+          "anti-cavalry",
+          "ranged-melee",
+          "mobile"
+        ],
+        "counters": [
+          "Archer",
+          "Halberdier",
+          "Militia"
+        ],
+        "description": "Ranged attack, bonus vs cavalry"
+      },
       "opponentStrengths": [
         {
           "unit": "Mameluke",
@@ -2321,52 +3888,81 @@
       ],
       "counters": [
         {
-          "use": "Archer",
+          "use": "Militia",
           "against": "Mameluke",
-          "reason": "Ranged damage, camels have low pierce armor"
+          "reason": "Infantry takes less bonus damage (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Skirmisher",
           "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter"
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
-          "use": "Militia",
+          "use": "Archer",
           "against": "Mameluke",
-          "reason": "Infantry takes less bonus damage"
+          "reason": "Ranged damage, camels have low pierce armor",
+          "civBonus": false
         },
         {
           "use": "Mangonel",
           "against": "Archer",
-          "reason": "Area damage destroys archer masses"
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat"
+          "reason": "Fast raiding, forces archer retreat",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with full upgrades",
-        "keyTiming": "Apply pressure in Castle Age"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle/Imperial Age - Market abuse into Mameluke mass",
+        "keyTiming": "Apply Castle Age pressure before they peak",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Market bonus for fast age-up",
+          "Castle Age Mamelukes",
+          "Imperial Mameluke + siege"
+        ]
       },
-      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
+      "strategy": "Close with fast-attacking infantry. Samurai are decent, add siege support."
     },
     "Shu": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Infantry",
+        "tags": [
+          "Infantry",
+          "Defensive",
+          "Zhuge Crossbow"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "Defensive bonuses",
+        "warning": "Hard to push, find flanks"
+      },
       "keyBonuses": [
-        "Archery Unit technologies at the Archery Range and Blacksmith cost -25%",
         "Siege Weapons and Siege Warships move +10/15% faster in Castle/Imperial Age",
+        "Archery Unit technologies at the Archery Range and Blacksmith cost -25%",
         "Team: Foot Archers +2 line of sight"
       ],
       "allBonuses": [
-        "Lumberjacks generate food in addition to wood",
-        "Archery Unit technologies at the Archery Range and Blacksmith cost -25%",
         "Siege Weapons and Siege Warships move +10/15% faster in Castle/Imperial Age",
-        "Team: Foot Archers +2 line of sight"
+        "Archery Unit technologies at the Archery Range and Blacksmith cost -25%",
+        "Team: Foot Archers +2 line of sight",
+        "Lumberjacks generate food in addition to wood"
       ],
       "opponentUniqueUnit": "White Feather Guard",
+      "opponentUniqueUnitCategories": null,
       "opponentStrengths": [
         {
           "unit": "White Feather Guard",
@@ -2381,52 +3977,94 @@
         {
           "use": "Archer",
           "against": "White Feather Guard",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Skirmisher",
           "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter"
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "White Feather Guard",
-          "reason": "High damage, mobility advantage"
+          "reason": "High damage, mobility advantage",
+          "civBonus": false
         },
         {
           "use": "Hand Cannoneer",
           "against": "White Feather Guard",
-          "reason": "+10 bonus vs infantry"
+          "reason": "+10 bonus vs infantry",
+          "civBonus": false
         },
         {
           "use": "Mangonel",
           "against": "Archer",
-          "reason": "Area damage destroys archer masses"
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with full upgrades",
-        "keyTiming": "Apply pressure in Castle Age"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle/Imperial Age - Defensive play with repeating crossbow",
+        "keyTiming": "Apply Castle Age pressure before they peak",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Defensive bonuses",
+          "Castle Age unique unit",
+          "Imperial siege support"
+        ]
       },
-      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
+      "strategy": "Close with fast-attacking infantry. Samurai are decent, add siege support."
     },
     "Sicilians": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Cavalry",
+        "tags": [
+          "Cavalry",
+          "Damage Reduction",
+          "Donjon Rush"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "Serjeants + 50% damage reduction",
+        "warning": "Bonus damage is less effective - use raw damage"
+      },
       "keyBonuses": [
-        "Soldiers receive -40% bonus damage",
         "Fortifications built +50% faster; Town Centers built +100% faster",
-        "Team: Transport Ships +5 line of sight and cost -50%"
+        "Team: Transport Ships +5 line of sight and cost -50%",
+        "Farm upgrades provide +125% additional food"
       ],
       "allBonuses": [
-        "Start with +100 stone",
+        "Fortifications built +50% faster; Town Centers built +100% faster",
+        "Team: Transport Ships +5 line of sight and cost -50%",
         "Farm upgrades provide +125% additional food",
         "Soldiers receive -40% bonus damage",
-        "Can build Donjon in Dark Age, replaces Watch Tower-line",
-        "Fortifications built +50% faster; Town Centers built +100% faster",
-        "Team: Transport Ships +5 line of sight and cost -50%"
+        "Start with +100 stone",
+        "Can build Donjon in Dark Age, replaces Watch Tower-line"
       ],
       "opponentUniqueUnit": "Serjeant",
+      "opponentUniqueUnitCategories": {
+        "type": "Infantry",
+        "categories": [
+          "building",
+          "tanky",
+          "versatile"
+        ],
+        "counters": [
+          "Archer",
+          "Knight",
+          "Hand Cannoneer"
+        ],
+        "description": "Can build Donjons"
+      },
       "opponentStrengths": [
         {
           "unit": "Serjeant",
@@ -2437,41 +4075,81 @@
         {
           "use": "Archer",
           "against": "Serjeant",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "Serjeant",
-          "reason": "High damage, mobility advantage"
+          "reason": "High damage, mobility advantage",
+          "civBonus": false
         },
         {
           "use": "Hand Cannoneer",
           "against": "Serjeant",
-          "reason": "+10 bonus vs infantry"
+          "reason": "+10 bonus vs infantry",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with full upgrades",
-        "keyTiming": "Apply pressure in Castle Age"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle Age - Castle Age Serjeants with Donjon forward",
+        "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Feudal Donjon rush",
+          "Castle Age Serjeants + damage reduction",
+          "Imperial Hauberk Cavalier"
+        ]
       },
-      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
+      "strategy": "Feudal MAA pressure with attack speed. Samurai vs unique units. Yasama towers + Trebs for siege."
     },
     "Slavs": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Infantry/Siege",
+        "tags": [
+          "Infantry",
+          "Siege",
+          "Farming Bonus"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Imperial",
+        "timing": "Druzhina Champions with splash damage",
+        "warning": "Avoid infantry blobs vs Slavs"
+      },
       "keyBonuses": [
         "Farmers work +15% faster",
-        "Arson, Gambesons free",
+        "Monks move +20% faster",
         "Siege Workshop Units cost -15%"
       ],
       "allBonuses": [
         "Farmers work +15% faster",
-        "Arson, Gambesons free",
-        "Siege Workshop Units cost -15%",
         "Monks move +20% faster",
+        "Siege Workshop Units cost -15%",
+        "Arson, Gambesons free",
         "Team: Military buildings provide +5 population space"
       ],
       "opponentUniqueUnit": "Boyar",
+      "opponentUniqueUnitCategories": {
+        "type": "Cavalry",
+        "categories": [
+          "tanky",
+          "high-melee-armor",
+          "frontline"
+        ],
+        "counters": [
+          "Halberdier",
+          "Camel",
+          "Monk"
+        ],
+        "description": "Extremely high melee armor"
+      },
       "opponentStrengths": [
         {
           "unit": "Boyar",
@@ -2494,62 +4172,106 @@
         {
           "use": "Spearman",
           "against": "Boyar",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "Mangonel",
-          "reason": "Fast, high damage vs slow siege"
+          "reason": "Fast, high damage vs slow siege",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Monk",
-          "reason": "Fast, cheap, kills monks quickly"
+          "reason": "Fast, cheap, kills monks quickly",
+          "civBonus": false
         },
         {
           "use": "Monk",
           "against": "Boyar",
-          "reason": "Convert expensive units"
+          "reason": "Convert expensive units",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "Militia",
-          "reason": "High damage, mobility advantage"
+          "reason": "High damage, mobility advantage",
+          "civBonus": false
         },
         {
           "use": "Hand Cannoneer",
           "against": "Militia",
-          "reason": "+10 bonus vs infantry"
+          "reason": "+10 bonus vs infantry",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with Champion spam or unique infantry",
-        "keyTiming": "Maintain archer mass and mobility"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Imperial Age - Farming bonus into infantry/siege deathball",
+        "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Faster farming kicks in early",
+          "Castle Age Boyars",
+          "Imperial Druzhina Champions splash damage"
+        ]
       },
-      "strategy": "Archers and cavalry destroy infantry. Maintain mobility and range advantage."
+      "strategy": "ADVANTAGE: Your infantry attacks 33% faster. Samurai bonus vs unique units."
     },
     "Spanish": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Gunpowder",
+        "tags": [
+          "Gunpowder",
+          "Monk",
+          "Conquistadors"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Imperial",
+        "timing": "Fast-firing gunpowder and Missionaries",
+        "warning": "Pressure before Imperial gunpowder arrives"
+      },
       "keyBonuses": [
+        "Gunpowder Units attack +18% faster",
         "Builders work +30% faster",
-        "Blacksmith upgrades cost no gold",
-        "Gunpowder Units attack +18% faster"
+        "Blacksmith upgrades cost no gold"
       ],
       "allBonuses": [
+        "Gunpowder Units attack +18% faster",
         "Builders work +30% faster",
+        "Team: Trade Units generate +25% gold",
         "Receive +20 gold for each technology researched",
         "Blacksmith upgrades cost no gold",
-        "Gunpowder Units attack +18% faster",
-        "Cannon Galleons fire more accurately at moving targets",
-        "Team: Trade Units generate +25% gold"
+        "Cannon Galleons fire more accurately at moving targets"
       ],
       "opponentUniqueUnit": "Conquistador",
+      "opponentUniqueUnitCategories": {
+        "type": "GunpowderUnit",
+        "categories": [
+          "mounted-gunpowder",
+          "mobile",
+          "raiding"
+        ],
+        "counters": [
+          "Halberdier",
+          "Skirmisher",
+          "Camel"
+        ],
+        "description": "Mobile gunpowder unit"
+      },
       "opponentStrengths": [
         {
           "unit": "Conquistador",
@@ -2568,56 +4290,99 @@
         {
           "use": "Mangonel",
           "against": "Conquistador",
-          "reason": "Area damage, outranges hand cannons"
+          "reason": "Area damage, outranges hand cannons",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Monk",
-          "reason": "Fast, cheap, kills monks quickly"
+          "reason": "Fast, cheap, kills monks quickly",
+          "civBonus": false
         },
         {
           "use": "Mangonel",
           "against": "Hand Cannoneer",
-          "reason": "Area damage, outranges hand cannons"
+          "reason": "Area damage, outranges hand cannons",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Conquistador",
-          "reason": "Fast closing, dodges shots"
+          "reason": "Fast closing, dodges shots",
+          "civBonus": false
         },
         {
           "use": "Skirmisher",
           "against": "Conquistador",
-          "reason": "Cheap ranged, high numbers"
+          "reason": "Cheap ranged, high numbers",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Hand Cannoneer",
-          "reason": "Fast closing, dodges shots"
+          "reason": "Fast closing, dodges shots",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with Hand Cannoneers/Bombard Cannons",
-        "keyTiming": "Pressure early, dont let them boom to Imperial"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle/Imperial Age - Castle Age Conquistadors, Imperial gunpowder",
+        "keyTiming": "Apply Castle Age pressure before they peak",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Castle Age Conquistadors",
+          "Imperial faster firing gunpowder",
+          "Missionaries with Inquisition"
+        ]
       },
-      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
+      "strategy": "Close fast with infantry. Use Yasama towers for defense."
     },
     "Tatars": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Cavalry Archer",
+        "tags": [
+          "Cavalry Archer",
+          "Hill Bonus",
+          "Keshik"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "Hill bonus and Keshiks",
+        "warning": "Fight on flat ground, avoid hill disadvantage"
+      },
       "keyBonuses": [
         "Units deal +25% damage when fighting from higher elevation",
-        "New Town Centers spawn 2 Sheep starting in Castle Age",
-        "Thumb Ring, Parthian Tactics free"
-      ],
-      "allBonuses": [
-        "Livestock animals last +50% longer",
-        "Units deal +25% damage when fighting from higher elevation",
-        "New Town Centers spawn 2 Sheep starting in Castle Age",
         "Thumb Ring, Parthian Tactics free",
         "Team: Mounted Archers +2 line of sight"
       ],
+      "allBonuses": [
+        "Units deal +25% damage when fighting from higher elevation",
+        "Livestock animals last +50% longer",
+        "Thumb Ring, Parthian Tactics free",
+        "Team: Mounted Archers +2 line of sight",
+        "New Town Centers spawn 2 Sheep starting in Castle Age"
+      ],
       "opponentUniqueUnit": "Keshik",
+      "opponentUniqueUnitCategories": {
+        "type": "Cavalry",
+        "categories": [
+          "gold-generation",
+          "sustainable",
+          "raiding"
+        ],
+        "counters": [
+          "Halberdier",
+          "Camel",
+          "Monk"
+        ],
+        "description": "Generates gold when attacking"
+      },
       "opponentStrengths": [
         {
           "unit": "Keshik",
@@ -2632,52 +4397,96 @@
         {
           "use": "Spearman",
           "against": "Keshik",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Skirmisher",
           "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter"
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Monk",
           "against": "Keshik",
-          "reason": "Convert expensive units"
+          "reason": "Convert expensive units",
+          "civBonus": false
         },
         {
           "use": "Mangonel",
           "against": "Archer",
-          "reason": "Area damage destroys archer masses"
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat"
+          "reason": "Fast raiding, forces archer retreat",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with full upgrades",
-        "keyTiming": "Apply pressure in Castle Age"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle/Imperial Age - Hill bonus and Keshik gold generation",
+        "keyTiming": "Apply Castle Age pressure before they peak",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Extra sheep for scout rush",
+          "Castle Age Keshiks",
+          "Imperial Silk Armor Cavalry Archers"
+        ]
       },
-      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
+      "strategy": "Close with fast-attacking infantry. Samurai are decent, add siege support."
     },
     "Teutons": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Infantry",
+        "tags": [
+          "Infantry",
+          "Defensive",
+          "Slow Push",
+          "Monk"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Imperial",
+        "timing": "Slow push with Teutonic Knights + siege",
+        "warning": "Avoid melee fights, use archers and mobility"
+      },
       "keyBonuses": [
-        "Farms cost -40%",
+        "Monks +100% healing range",
         "Barracks and Stable Units +1/+2 melee armor in Castle/Imperial Age",
-        "Monks +100% healing range"
+        "Farms cost -40%"
       ],
       "allBonuses": [
+        "Monks +100% healing range",
+        "Barracks and Stable Units +1/+2 melee armor in Castle/Imperial Age",
         "Farms cost -40%",
         "Town Centers +10 garrison capacity; Towers +5 garrison capacity",
-        "Barracks and Stable Units +1/+2 melee armor in Castle/Imperial Age",
-        "Monks +100% healing range",
         "Murder Holes, Herbal Medicine free",
         "Team: Units more resistant to conversion"
       ],
       "opponentUniqueUnit": "Teutonic Knight",
+      "opponentUniqueUnitCategories": {
+        "type": "Infantry",
+        "categories": [
+          "tanky",
+          "slow",
+          "high-armor",
+          "melee-beast"
+        ],
+        "counters": [
+          "Archer",
+          "Scorpion",
+          "Monk"
+        ],
+        "description": "Extremely high armor but very slow"
+      },
       "opponentStrengths": [
         {
           "unit": "Teutonic Knight",
@@ -2700,61 +4509,105 @@
         {
           "use": "Archer",
           "against": "Teutonic Knight",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Monk",
-          "reason": "Fast, cheap, kills monks quickly"
+          "reason": "Fast, cheap, kills monks quickly",
+          "civBonus": false
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Knight",
           "against": "Teutonic Knight",
-          "reason": "High damage, mobility advantage"
+          "reason": "High damage, mobility advantage",
+          "civBonus": false
         },
         {
           "use": "Hand Cannoneer",
           "against": "Teutonic Knight",
-          "reason": "+10 bonus vs infantry"
+          "reason": "+10 bonus vs infantry",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "Militia",
-          "reason": "High damage, mobility advantage"
+          "reason": "High damage, mobility advantage",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with Champion spam or unique infantry",
-        "keyTiming": "Maintain archer mass and mobility"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Imperial Age - Castle/Imperial slow push with melee armor and conversions",
+        "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Castle Age Knights with +2 melee armor",
+          "Imperial Teutonic Knights",
+          "Siege + Teutonic Knight deathball"
+        ]
       },
-      "strategy": "Archers and cavalry destroy infantry. Maintain mobility and range advantage."
+      "strategy": "33% faster attacking infantry shreds cavalry. Add Pikemen, micro Samurai vs unique cavalry."
     },
     "Turks": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Gunpowder",
+        "tags": [
+          "Gunpowder",
+          "Free Chemistry",
+          "Janissaries"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Imperial",
+        "timing": "Free Chemistry Janissaries and Artillery BBCs",
+        "warning": "Pressure before Imperial, they have no trash"
+      },
       "keyBonuses": [
-        "Gold miners work +25% faster",
-        "Scout Cavalry-line +1 pierce armor and upgrades free",
-        "Chemistry free; Gunpowder technologies costs -50%"
-      ],
-      "allBonuses": [
-        "Gold miners work +25% faster",
         "Scout Cavalry-line +1 pierce armor and upgrades free",
         "Chemistry free; Gunpowder technologies costs -50%",
-        "Gunpowder Units +25% HP",
         "Team: Gunpowder Units train +25% faster"
       ],
+      "allBonuses": [
+        "Scout Cavalry-line +1 pierce armor and upgrades free",
+        "Chemistry free; Gunpowder technologies costs -50%",
+        "Team: Gunpowder Units train +25% faster",
+        "Gunpowder Units +25% HP",
+        "Gold miners work +25% faster"
+      ],
       "opponentUniqueUnit": "Janissary",
+      "opponentUniqueUnitCategories": {
+        "type": "GunpowderUnit",
+        "categories": [
+          "anti-infantry",
+          "high-damage",
+          "fragile"
+        ],
+        "counters": [
+          "Archer",
+          "Knight",
+          "Mangonel"
+        ],
+        "description": "High damage gunpowder, no minimum range"
+      },
       "opponentStrengths": [
         {
           "unit": "Janissary",
@@ -2773,56 +4626,100 @@
         {
           "use": "Mangonel",
           "against": "Janissary",
-          "reason": "Area damage, outranges hand cannons"
+          "reason": "Area damage, outranges hand cannons",
+          "civBonus": false
         },
         {
           "use": "Mangonel",
           "against": "Hand Cannoneer",
-          "reason": "Area damage, outranges hand cannons"
+          "reason": "Area damage, outranges hand cannons",
+          "civBonus": false
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Scout Cavalry",
           "against": "Janissary",
-          "reason": "Fast closing, dodges shots"
+          "reason": "Fast closing, dodges shots",
+          "civBonus": false
         },
         {
           "use": "Skirmisher",
           "against": "Janissary",
-          "reason": "Cheap ranged, high numbers"
+          "reason": "Cheap ranged, high numbers",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Hand Cannoneer",
-          "reason": "Fast closing, dodges shots"
+          "reason": "Fast closing, dodges shots",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with Hand Cannoneers/Bombard Cannons",
-        "keyTiming": "Pressure early, dont let them boom to Imperial"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle/Imperial Age - Free Chemistry Janissaries in Castle Age",
+        "keyTiming": "Apply Castle Age pressure before they peak",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Castle Age Janissaries (free Chemistry)",
+          "Imperial Artillery Bombard Cannons",
+          "Sipahi Cavalry Archers"
+        ]
       },
-      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
+      "strategy": "33% faster attacking infantry shreds cavalry. Add Pikemen, micro Samurai vs unique cavalry."
     },
     "Vietnamese": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Archer",
+        "tags": [
+          "Archer",
+          "Elephant Archer",
+          "Reveal Enemy",
+          "Rattan Archer"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle/Imperial",
+        "timing": "Extra HP archers and Rattan Archers",
+        "warning": "Their archers are tankier than normal"
+      },
       "keyBonuses": [
-        "Economic upgrades cost no wood and research +100% faster",
         "Archery Range units and Fire Lancers +20% HP",
+        "Economic upgrades cost no wood and research +100% faster",
         "Conscription free"
       ],
       "allBonuses": [
-        "Enemy Town Centers are revealed at the start of the game",
-        "Economic upgrades cost no wood and research +100% faster",
         "Archery Range units and Fire Lancers +20% HP",
+        "Economic upgrades cost no wood and research +100% faster",
         "Conscription free",
+        "Enemy Town Centers are revealed at the start of the game",
         "Team: Imperial Skirmisher upgrade available in Imperial Age"
       ],
       "opponentUniqueUnit": "Rattan Archer",
+      "opponentUniqueUnitCategories": {
+        "type": "Archer",
+        "categories": [
+          "ranged",
+          "high-pierce-armor",
+          "anti-infantry"
+        ],
+        "counters": [
+          "Mangonel",
+          "Knight",
+          "Hand Cannoneer"
+        ],
+        "description": "Tanky archer, survives arrow fire"
+      },
       "opponentStrengths": [
         {
           "unit": "Rattan Archer",
@@ -2837,50 +4734,92 @@
         {
           "use": "Skirmisher",
           "against": "Rattan Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter"
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Skirmisher",
           "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter"
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Mangonel",
           "against": "Rattan Archer",
-          "reason": "Area damage destroys archer masses"
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Rattan Archer",
-          "reason": "Fast raiding, forces archer retreat"
+          "reason": "Fast raiding, forces archer retreat",
+          "civBonus": false
         },
         {
           "use": "Mangonel",
           "against": "Archer",
-          "reason": "Area damage destroys archer masses"
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with full upgrades",
-        "keyTiming": "Apply pressure in Castle Age"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle/Imperial Age - Archer play with extra HP",
+        "keyTiming": "Apply Castle Age pressure before they peak",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Reveal enemy TC start",
+          "Castle Age Rattan Archers",
+          "Imperial Chatras Battle Elephants"
+        ]
       },
-      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
+      "strategy": "Close with fast-attacking infantry. Samurai are decent, add siege support."
     },
     "Vikings": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Infantry/Navy",
+        "tags": [
+          "Infantry",
+          "Economy",
+          "Water Map"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle/Imperial",
+        "timing": "Economy advantage compounds over time",
+        "warning": "Pressure early before economy lead is too large"
+      },
       "keyBonuses": [
-        "Wheelbarrow, Hand Cart free",
         "Infantry +20% HP starting in Feudal Age",
+        "Wheelbarrow, Hand Cart free",
         "Warships cost -15/15/20% in Feudal/Castle/Imperial Age"
       ],
       "allBonuses": [
-        "Wheelbarrow, Hand Cart free",
         "Infantry +20% HP starting in Feudal Age",
+        "Wheelbarrow, Hand Cart free",
         "Warships cost -15/15/20% in Feudal/Castle/Imperial Age",
         "Team: Docks cost -15%"
       ],
       "opponentUniqueUnit": "Berserk",
+      "opponentUniqueUnitCategories": {
+        "type": "Infantry",
+        "categories": [
+          "regeneration",
+          "sustainable",
+          "attrition"
+        ],
+        "counters": [
+          "Archer",
+          "Knight",
+          "Hand Cannoneer"
+        ],
+        "description": "Regenerates HP over time"
+      },
       "opponentStrengths": [
         {
           "unit": "Berserk",
@@ -2895,50 +4834,91 @@
         {
           "use": "Archer",
           "against": "Berserk",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "Berserk",
-          "reason": "High damage, mobility advantage"
+          "reason": "High damage, mobility advantage",
+          "civBonus": false
         },
         {
           "use": "Hand Cannoneer",
           "against": "Berserk",
-          "reason": "+10 bonus vs infantry"
+          "reason": "+10 bonus vs infantry",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "Militia",
-          "reason": "High damage, mobility advantage"
+          "reason": "High damage, mobility advantage",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with Champion spam or unique infantry",
-        "keyTiming": "Maintain archer mass and mobility"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle/Imperial Age - Castle Age economy lead into infantry flood",
+        "keyTiming": "Apply Castle Age pressure before they peak",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Wheelbarrow/Hand Cart savings kick in",
+          "Castle Age Berserks",
+          "Imperial Chieftains Champions"
+        ]
       },
-      "strategy": "Archers and cavalry destroy infantry. Maintain mobility and range advantage."
+      "strategy": "ADVANTAGE: Your infantry attacks 33% faster. Samurai bonus vs unique units."
     },
     "Wei": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Cavalry",
+        "tags": [
+          "Cavalry",
+          "Tiger Cavalry",
+          "Aggression"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "Tiger Cavalry aggression",
+        "warning": "Expect aggressive cavalry, have Spears"
+      },
       "keyBonuses": [
-        "Receive one free Villager for economy upgrade researched",
         "Hei Guang Cavalry and Xianbei Raider +20/30% HP in Castle/Imperial Age",
+        "Team: Cavalry +2 attack vs. Siege Weapons",
         "Traction Trebuchets and Lou Chuans cost -25%"
       ],
       "allBonuses": [
-        "Receive one free Villager for economy upgrade researched",
         "Hei Guang Cavalry and Xianbei Raider +20/30% HP in Castle/Imperial Age",
+        "Team: Cavalry +2 attack vs. Siege Weapons",
         "Traction Trebuchets and Lou Chuans cost -25%",
-        "Team: Cavalry +2 attack vs. Siege Weapons"
+        "Receive one free Villager for economy upgrade researched"
       ],
       "opponentUniqueUnit": "Tiger Cavalry",
+      "opponentUniqueUnitCategories": {
+        "type": "Cavalry",
+        "categories": [
+          "anti-cavalry",
+          "aggressive"
+        ],
+        "counters": [
+          "Halberdier",
+          "Archer",
+          "Monk"
+        ],
+        "description": "Bonus damage vs cavalry"
+      },
       "opponentStrengths": [
         {
           "unit": "Tiger Cavalry",
@@ -2953,46 +4933,74 @@
         {
           "use": "Spearman",
           "against": "Tiger Cavalry",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Monk",
           "against": "Tiger Cavalry",
-          "reason": "Convert expensive units"
+          "reason": "Convert expensive units",
+          "civBonus": false
         },
         {
           "use": "Monk",
           "against": "Knight",
-          "reason": "Convert expensive units"
+          "reason": "Convert expensive units",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with full upgrades",
-        "keyTiming": "Apply pressure in Castle Age"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle Age - Aggressive Tiger Cavalry",
+        "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Aggression bonus",
+          "Castle Age Tiger Cavalry",
+          "Imperial cavalry anti-cav"
+        ]
       },
-      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
+      "strategy": "33% faster attacking infantry shreds cavalry. Add Pikemen, micro Samurai vs unique cavalry."
     },
     "Wu": {
       "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Navy/Infantry",
+        "tags": [
+          "Navy",
+          "Infantry",
+          "Water Map"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "Naval + infantry",
+        "warning": "Dangerous on hybrid maps"
+      },
       "keyBonuses": [
-        "Military production buildings and Docks provide +65 food",
-        "Infantry regenerates 10/20/30 HP per minute in Feudal/Castle/Imperial Age",
-        "Jian Swordsmen and Hei Guang Cavalry +2 attack in Imperial Age"
+        "Team: Houses built +100% faster",
+        "Jian Swordsmen and Hei Guang Cavalry +2 attack in Imperial Age",
+        "Careening, Dry Dock available one age earlier, cost and research time -75%"
       ],
       "allBonuses": [
-        "Military production buildings and Docks provide +65 food",
-        "Infantry regenerates 10/20/30 HP per minute in Feudal/Castle/Imperial Age",
+        "Team: Houses built +100% faster",
         "Jian Swordsmen and Hei Guang Cavalry +2 attack in Imperial Age",
         "Careening, Dry Dock available one age earlier, cost and research time -75%",
-        "Team: Houses built +100% faster"
+        "Military production buildings and Docks provide +65 food",
+        "Infantry regenerates 10/20/30 HP per minute in Feudal/Castle/Imperial Age"
       ],
       "opponentUniqueUnit": "Fire Archer",
+      "opponentUniqueUnitCategories": null,
       "opponentStrengths": [
         {
           "unit": "Fire Archer",
@@ -3011,40 +5019,56 @@
         {
           "use": "Skirmisher",
           "against": "Fire Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter"
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient"
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily"
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Mangonel",
           "against": "Fire Archer",
-          "reason": "Area damage destroys archer masses"
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Fire Archer",
-          "reason": "Fast raiding, forces archer retreat"
+          "reason": "Fast raiding, forces archer retreat",
+          "civBonus": false
         },
         {
           "use": "Monk",
           "against": "Knight",
-          "reason": "Convert expensive units"
+          "reason": "Convert expensive units",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Feudal Men-at-Arms pressure, Imperial Champion flood",
-        "opponentStrength": "Imperial Age with full upgrades",
-        "keyTiming": "Apply pressure in Castle Age"
+        "yourStrength": "Feudal MAA pressure with 33% faster attack",
+        "opponentStrength": "Castle Age - Naval and infantry combination",
+        "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
+        "yourPowerSpikes": [
+          "Feudal 33% faster attacking infantry",
+          "Castle Age Samurai vs UU",
+          "Imperial Yasama Towers + Trebs"
+        ],
+        "opponentPowerSpikes": [
+          "Naval dominance",
+          "Castle Age infantry",
+          "Land/water hybrid maps"
+        ]
       },
-      "strategy": "Adapt based on opponent army composition. Scout early to identify their strategy."
+      "strategy": "33% faster attacking infantry shreds cavalry. Add Pikemen, micro Samurai vs unique cavalry."
     }
   }
 }

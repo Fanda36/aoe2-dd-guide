@@ -189,18 +189,6 @@
       gap: 0.75rem;
     }
 
-    .difficulty-badge {
-      font-size: 0.75rem;
-      padding: 0.25rem 0.75rem;
-      border-radius: 999px;
-      font-weight: 600;
-      text-transform: uppercase;
-    }
-
-    .difficulty-easy { background: var(--success); color: #000; }
-    .difficulty-even { background: var(--warning); color: #000; }
-    .difficulty-hard { background: var(--danger); color: #000; }
-
     .close-btn {
       background: none;
       border: none;
@@ -216,11 +204,11 @@
     }
 
     .card-body {
-      padding: 1.25rem;
+      padding: 1rem;
     }
 
     .section {
-      margin-bottom: 1.25rem;
+      margin-bottom: 0.75rem;
     }
 
     .section:last-child {
@@ -228,11 +216,11 @@
     }
 
     .section-title {
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       color: var(--accent);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.35rem;
       font-weight: 600;
     }
 
@@ -243,12 +231,16 @@
     /* Bonuses list */
     .bonus-list {
       list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.15rem 1rem;
     }
 
     .bonus-list li {
-      padding: 0.25rem 0;
-      padding-left: 1.25rem;
+      padding: 0.15rem 0;
+      padding-left: 1rem;
       position: relative;
+      font-size: 0.875rem;
     }
 
     .bonus-list li::before {
@@ -260,20 +252,19 @@
 
     /* Strengths */
     .strength-item {
-      display: flex;
-      gap: 0.5rem;
-      padding: 0.375rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .strength-item:last-child {
-      border-bottom: none;
+      display: inline-flex;
+      gap: 0.25rem;
+      padding: 0.2rem 0.5rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      margin-right: 0.4rem;
+      margin-bottom: 0.3rem;
+      font-size: 0.85rem;
     }
 
     .strength-unit {
       font-weight: 600;
       color: var(--text-primary);
-      min-width: 140px;
     }
 
     .strength-reason {
@@ -283,9 +274,9 @@
     /* Counters */
     .counter-item {
       background: var(--bg-secondary);
-      border-radius: 8px;
-      padding: 0.75rem 1rem;
-      margin-bottom: 0.5rem;
+      border-radius: 6px;
+      padding: 0.4rem 0.75rem;
+      margin-bottom: 0.35rem;
     }
 
     .counter-item:last-child {
@@ -295,8 +286,9 @@
     .counter-header {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 0.25rem;
+      gap: 0.4rem;
+      margin-bottom: 0.1rem;
+      font-size: 0.85rem;
     }
 
     .counter-against {
@@ -314,36 +306,37 @@
     }
 
     .counter-reason {
-      font-size: 0.875rem;
+      font-size: 0.8rem;
       color: var(--text-secondary);
     }
 
     /* Timing windows */
     .timing-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.75rem;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: nowrap;
     }
 
     .timing-item {
       background: var(--bg-secondary);
-      border-radius: 8px;
-      padding: 0.75rem;
+      border-radius: 6px;
+      padding: 0.5rem 0.75rem;
+      flex: 1;
     }
 
     .timing-item.full-width {
-      grid-column: 1 / -1;
+      flex: 1.2;
     }
 
     .timing-label {
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       color: var(--text-muted);
       text-transform: uppercase;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.15rem;
     }
 
     .timing-value {
-      font-size: 0.875rem;
+      font-size: 0.8rem;
     }
 
     .timing-value.highlight {
@@ -355,20 +348,21 @@
     .strategy-text {
       background: var(--bg-secondary);
       border-left: 3px solid var(--accent);
-      padding: 0.75rem 1rem;
-      border-radius: 0 8px 8px 0;
+      padding: 0.5rem 0.75rem;
+      border-radius: 0 6px 6px 0;
       font-style: italic;
+      font-size: 0.85rem;
     }
 
     /* Unique unit info */
     .unique-unit {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.4rem;
       background: var(--bg-secondary);
-      padding: 0.375rem 0.75rem;
-      border-radius: 6px;
-      font-size: 0.875rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
     }
 
     .unique-unit-label {
@@ -380,7 +374,117 @@
       color: var(--accent);
     }
 
-    /* Responsive */
+    .unique-unit-description {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      font-style: italic;
+      margin-top: 0.25rem;
+    }
+
+    .unique-unit-categories {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 0.2rem;
+      margin-top: 0.2rem;
+      margin-left: 0.5rem;
+    }
+
+    .unit-category-tag {
+      font-size: 0.7rem;
+      padding: 0.15rem 0.5rem;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--text-secondary);
+    }
+
+    /* Civ type badge */
+    .civ-type-badge {
+      font-size: 0.65rem;
+      padding: 0.2rem 0.5rem;
+      background: var(--bg-primary);
+      border: 1px solid var(--accent);
+      border-radius: 4px;
+      color: var(--accent);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Peak timing warning */
+    .peak-timing-warning {
+      background: rgba(248, 113, 113, 0.15);
+      border: 1px solid var(--danger);
+      border-radius: 6px;
+      padding: 0.5rem 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .peak-timing-header {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .peak-timing-age {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--danger);
+      text-transform: uppercase;
+    }
+
+    .peak-timing-title {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    .peak-timing-text {
+      font-size: 0.8rem;
+      color: var(--text-primary);
+      margin-bottom: 0.15rem;
+    }
+
+    .peak-timing-warning-text {
+      font-size: 0.75rem;
+      color: var(--warning);
+      font-weight: 500;
+    }
+
+    /* Power spikes */
+    .power-spikes {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+      margin-top: 0.2rem;
+    }
+
+    .power-spike-item {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      padding-left: 0.8rem;
+      position: relative;
+    }
+
+    .power-spike-item::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    /* Counter with civ bonus highlight */
+    .counter-item.civ-bonus {
+      border-left: 3px solid var(--success);
+    }
+
+    .civ-bonus-indicator {
+      font-size: 0.7rem;
+      color: var(--success);
+      font-weight: 600;
+    }
+
+    /* Responsive - mobile fallback */
     @media (max-width: 768px) {
       header {
         padding: 1rem;
@@ -412,8 +516,16 @@
         grid-template-columns: 1fr;
       }
 
-      .timing-grid {
+      .bonus-list {
         grid-template-columns: 1fr;
+      }
+
+      .timing-grid {
+        flex-direction: column;
+      }
+
+      .timing-item.full-width {
+        flex: 1;
       }
     }
 
@@ -594,31 +706,52 @@
         `;
       }
 
-      const difficultyClass = `difficulty-${matchup.difficulty.toLowerCase()}`;
+      const civType = matchup.opponentDescription?.type || '';
+      const uuCategories = matchup.opponentUniqueUnitCategories;
+      const peakTiming = matchup.opponentPeakTiming;
 
       return `
         <div class="matchup-card">
           <div class="card-header">
             <h3>
               ${opponentName}
-              <span class="difficulty-badge ${difficultyClass}">${matchup.difficulty}</span>
+              ${civType ? `<span class="civ-type-badge">${civType}</span>` : ''}
             </h3>
             <button class="close-btn" data-civ="${opponentName}">&times;</button>
           </div>
           <div class="card-body">
+            ${peakTiming ? `
+              <div class="peak-timing-warning">
+                <div class="peak-timing-header">
+                  <span class="peak-timing-age">${peakTiming.peakAge} Peak</span>
+                  <span class="peak-timing-title">Their Timing</span>
+                </div>
+                <div class="peak-timing-text">${peakTiming.timing}</div>
+                <div class="peak-timing-warning-text">${peakTiming.warning}</div>
+              </div>
+            ` : ''}
+
             ${matchup.opponentUniqueUnit ? `
               <div class="section">
                 <span class="unique-unit">
                   <span class="unique-unit-label">Unique Unit:</span>
                   <span class="unique-unit-name">${matchup.opponentUniqueUnit}</span>
                 </span>
+                ${uuCategories && uuCategories.description ? `
+                  <div class="unique-unit-description">${uuCategories.description}</div>
+                ` : ''}
+                ${uuCategories && uuCategories.categories ? `
+                  <div class="unique-unit-categories">
+                    ${uuCategories.categories.map(cat => `<span class="unit-category-tag">${cat}</span>`).join('')}
+                  </div>
+                ` : ''}
               </div>
             ` : ''}
 
             <div class="section">
-              <div class="section-title">Key Bonuses</div>
+              <div class="section-title">Bonuses</div>
               <ul class="bonus-list">
-                ${matchup.keyBonuses.map(b => `<li>${b}</li>`).join('')}
+                ${matchup.allBonuses.map(b => `<li>${b}</li>`).join('')}
               </ul>
             </div>
 
@@ -638,11 +771,12 @@
               <div class="section">
                 <div class="section-title">Your Counters</div>
                 ${matchup.counters.slice(0, 5).map(c => `
-                  <div class="counter-item">
+                  <div class="counter-item ${c.civBonus ? 'civ-bonus' : ''}">
                     <div class="counter-header">
                       <span class="counter-against">${c.against}</span>
                       <span class="counter-arrow">←</span>
                       <span class="counter-use">${c.use}</span>
+                      ${c.civBonus ? '<span class="civ-bonus-indicator">CIV BONUS</span>' : ''}
                     </div>
                     <div class="counter-reason">${c.reason}</div>
                   </div>
@@ -657,10 +791,20 @@
                   <div class="timing-item">
                     <div class="timing-label">Your Strength</div>
                     <div class="timing-value">${matchup.timingWindows.yourStrength}</div>
+                    ${matchup.timingWindows.yourPowerSpikes && matchup.timingWindows.yourPowerSpikes.length > 0 ? `
+                      <div class="power-spikes">
+                        ${matchup.timingWindows.yourPowerSpikes.slice(0, 2).map(s => `<div class="power-spike-item">${s}</div>`).join('')}
+                      </div>
+                    ` : ''}
                   </div>
                   <div class="timing-item">
                     <div class="timing-label">Their Strength</div>
                     <div class="timing-value">${matchup.timingWindows.opponentStrength}</div>
+                    ${matchup.timingWindows.opponentPowerSpikes && matchup.timingWindows.opponentPowerSpikes.length > 0 ? `
+                      <div class="power-spikes">
+                        ${matchup.timingWindows.opponentPowerSpikes.slice(0, 2).map(s => `<div class="power-spike-item">${s}</div>`).join('')}
+                      </div>
+                    ` : ''}
                   </div>
                   <div class="timing-item full-width">
                     <div class="timing-label">Key Timing</div>
