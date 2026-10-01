@@ -40,17 +40,26 @@ function downloadJson(url) {
 }
 
 /**
- * Gets the English name for a unit using its LanguageNameId
+ * Collapses in-game line breaks so "Elite<br>\nSkirmisher" becomes "Elite Skirmisher"
+ * @param {string} text
+ * @returns {string}
+ */
+function cleanDisplayName(text) {
+  return String(text).replace(/<br\s*\/?>/gi, ' ').replace(/[\r\n]+/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+/**
+ * Gets the English name for a unit using its LanguageNameId.
+ * Strings may be stored at the id, id + 9000 (units), or id + 10000 (techs).
  * @param {object} unit - The unit object
  * @param {object} strings - The strings lookup object
  * @returns {string} - The English name
  */
 function getEnglishName(unit, strings) {
   const nameId = unit.LanguageNameId;
-  if (nameId && strings[nameId]) {
-    return strings[nameId];
-  }
-  // Fallback to internal name if no translation found
+  if (nameId && strings[nameId]) return cleanDisplayName(strings[nameId]);
+  if (nameId && strings[nameId + 9000]) return cleanDisplayName(strings[nameId + 9000]);
+  if (nameId && strings[nameId + 10000]) return cleanDisplayName(strings[nameId + 10000]);
   return unit.internal_name || `Unknown Unit (${unit.id})`;
 }
 
@@ -60,31 +69,9 @@ function getEnglishName(unit, strings) {
  * @returns {boolean} - True if land unit
  */
 function isLandUnit(unit) {
-  // Ships and water units have specific class IDs
-  // Class 22 = Ships, Class 21 = Fishing Ships
-  // Also check for "Ship" in internal name as fallback
-  const navalClasses = [21, 22];
-  
-  if (navalClasses.includes(unit.Class)) {
-    return false;
-  }
-  
-  // Additional check using internal name
-  const internalName = (unit.internal_name || '').toLowerCase();
-  if (internalName.includes('ship') || 
-      internalName.includes('galley') || 
-      internalName.includes('longboat') ||
-      internalName.includes('caravel') ||
-      internalName.includes('turtle') ||
-      internalName.includes('canoe') ||
-      internalName.includes('fire_') ||
-      internalName.includes('demolition') ||
-      internalName.includes('cannon_galleon') ||
-      internalName.includes('dromon')) {
-    return false;
-  }
-  
-  return true;
+  // Trait 2 is naval (galley line, Longship, Carrack, Hulk, Dromon).
+  // Trait 3 is the transport ship.
+  return unit.Trait !== 2 && unit.Trait !== 3;
 }
 
 /**
@@ -226,12 +213,12 @@ async function main() {
     ]);
     
     console.log('Data downloaded successfully.');
-    console.log(`Total units in data: ${Object.keys(gameData.data.units).length}`);
+    console.log(`Total units in data: ${Object.keys(gameData.data.Unit).length}`);
     
     const landUnits = [];
     
     // Process each unit
-    for (const [unitId, unit] of Object.entries(gameData.data.units)) {
+    for (const [unitId, unit] of Object.entries(gameData.data.Unit)) {
       // Skip if not a land unit
       if (!isLandUnit(unit)) {
         continue;

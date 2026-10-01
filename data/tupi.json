@@ -1,62 +1,61 @@
 {
-  "generatedAt": "2026-10-01T21:23:12.356Z",
-  "civilization": "Chinese",
+  "generatedAt": "2026-10-01T21:23:12.555Z",
+  "civilization": "Tupi",
   "civDescription": {
-    "type": "Archer",
+    "type": "Archer/Infantry",
     "tags": [
       "Archer",
-      "Tech Discount",
-      "Chu Ko Nu"
+      "Infantry",
+      "Blackwood Archer",
+      "Refund"
     ]
   },
   "bonuses": [
-    "Fire Lancers and Fire Ships move +5/10% faster in Castle/Imperial Age",
-    "Team: Farms +10% food",
-    "Town Centers +7 line of sight and provide +15 population space",
-    "Technologies cost -5/10/15% in Feudal/Castle/Imperial Age",
-    "Start with +3 Villagers, but -50 wood and -200 food"
+    "Archery Range and Barracks upgrades cost -50% food",
+    "Fallen units return 15% of their cost",
+    "Start with +25 of each resource",
+    "Team: Towers and Castles provide +10 population space",
+    "Villagers can garrison in Settlements"
   ],
-  "uniqueUnit": "Chu Ko Nu",
+  "uniqueUnit": "Blackwood Archer, Ibirapema Warrior",
   "uniqueUnitCategories": {
     "type": "Archer",
     "categories": [
       "ranged",
-      "fast-firing",
-      "anti-infantry"
+      "anti-infantry",
+      "poison"
     ],
     "counters": [
       "Skirmisher",
       "Mangonel",
-      "Huskarl"
+      "Knight"
     ],
-    "description": "Rapid-fire archer, high DPS at close range"
+    "description": "Foot archer; Curare adds poison damage"
   },
-  "uniqueUnitElite": "Elite Chu Ko Nu",
+  "uniqueUnitElite": "Elite Blackwood Archer, Elite Ibirapema Warrior",
   "uniqueTechs": {
-    "castle": "Great Wall",
-    "imperial": "Rocketry"
+    "castle": "Caciques",
+    "imperial": "Curare"
   },
   "availableUnits": [
     "Archer",
     "Battering Ram",
-    "Cavalry Archer",
-    "Chu Ko Nu",
+    "Blackwood Archer",
+    "Catapult Galleon",
+    "Champi Scout",
     "Demolition Raft",
     "Fire Galley",
-    "Fire Lancer",
     "Fishing Ship",
     "Galley",
     "Hulk",
-    "Knight",
-    "Lou Chuan",
-    "Militia",
+    "Ibirapema Warrior",
+    "Mangonel",
     "Monk",
     "Petard",
-    "Rocket Cart",
     "Scorpion",
-    "Scout Cavalry",
     "Siege Tower",
     "Skirmisher",
+    "Slinger",
     "Spearman",
     "Trade Cart",
     "Trade Cog",
@@ -133,26 +132,20 @@
           "civBonus": true
         },
         {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Composite Bowman",
-          "reason": "Fast raiding, forces archer retreat",
-          "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Militia",
-          "reason": "High damage, mobility advantage",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle Age - Early upgrades and Composite Bowmen",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Earlier infantry upgrades",
@@ -160,7 +153,7 @@
           "Imperial Fereters healing"
         ]
       },
-      "strategy": "Chu Ko Nu destroy infantry. Keep distance and focus fire."
+      "strategy": "Blackwood Archers kite. Ibirapema Warriors in melee."
     },
     "Aztecs": {
       "difficulty": "Even",
@@ -231,50 +224,20 @@
           "civBonus": true
         },
         {
-          "use": "Militia",
-          "against": "Eagle Warrior",
-          "reason": "+6 bonus damage vs eagles",
-          "civBonus": false
-        },
-        {
           "use": "Archer",
           "against": "Militia",
           "reason": "Kites slow infantry easily (civ bonus!)",
           "civBonus": true
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Monk",
-          "reason": "Fast, cheap, kills monks quickly",
-          "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Jaguar Warrior",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Eagle Warrior",
-          "reason": "High damage output",
-          "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Militia",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle/Imperial Age - Relic gold and military creation speed",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Faster military production",
@@ -282,7 +245,7 @@
           "Imperial Garland Wars Eagles (+4 attack)"
         ]
       },
-      "strategy": "Chu Ko Nu beat Eagles early. Add Champions for Imperial Eagle fights."
+      "strategy": "Infantry vs Eagles. Archers before Imperial."
     },
     "Bengalis": {
       "difficulty": "Even",
@@ -347,8 +310,8 @@
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Monk",
@@ -358,13 +321,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle/Imperial Age - Ratha flexibility and elephant resistance",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Castle Age Rathas (ranged/melee switch)",
@@ -372,7 +335,7 @@
           "Imperial Paiks Rathas"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Ibirapema Warriors. Blackwood Archers add damage."
     },
     "Berbers": {
       "difficulty": "Even",
@@ -440,8 +403,8 @@
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Skirmisher",
@@ -456,20 +419,20 @@
           "civBonus": false
         },
         {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle Age - Cheap cavalry and Camel Archers",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Cheap Stable units (15-20% discount)",
@@ -477,7 +440,7 @@
           "Imperial Genitour support"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Ibirapema Warriors. Blackwood Archers add damage."
     },
     "Bohemians": {
       "difficulty": "Even",
@@ -534,38 +497,26 @@
       ],
       "counters": [
         {
-          "use": "Knight",
-          "against": "Hussite Wagon",
-          "reason": "Fast, high damage vs slow siege",
-          "civBonus": false
-        },
-        {
           "use": "Skirmisher",
           "against": "Hand Cannoneer",
           "reason": "Cheap ranged, high numbers (civ bonus!)",
           "civBonus": true
         },
         {
-          "use": "Scout Cavalry",
-          "against": "Hussite Wagon",
-          "reason": "Fast, snipes siege quickly",
-          "civBonus": false
-        },
-        {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Hand Cannoneer",
-          "reason": "Fast closing, dodges shots",
+          "reason": "Area damage, outranges hand cannons",
           "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle/Imperial Age - Castle Age Hussite Wagons, Houfnice in Imperial",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Castle Age Hussite Wagon deathball",
@@ -573,7 +524,7 @@
           "Monk + wagon composition"
         ]
       },
-      "strategy": "Tech discount lets you reach Imperial faster. Rocketry Scorpions are strong late."
+      "strategy": "Cheap upgrades into a Castle Age push before gunpowder."
     },
     "Britons": {
       "difficulty": "Even",
@@ -640,26 +591,26 @@
           "civBonus": true
         },
         {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Longbowman",
-          "reason": "Fast raiding, forces archer retreat",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         },
         {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle Age - Castle Age Crossbow mass with +1/+2 range bonus",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Feudal Archer harass",
@@ -667,7 +618,7 @@
           "Imperial Longbowmen with Yeomen (+1 range)"
         ]
       },
-      "strategy": "Chu Ko Nu high DPS wins archer fights. Add Scorpions for mass archer battles."
+      "strategy": "Blackwood Archers and Skirmishers. Archery upgrades cost half food."
     },
     "Bulgarians": {
       "difficulty": "Even",
@@ -729,14 +680,14 @@
         {
           "use": "Spearman",
           "against": "Konnik",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Archer",
@@ -755,22 +706,16 @@
           "against": "Knight",
           "reason": "Convert expensive units",
           "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Militia",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle Age - Cheap Blacksmith into Konnik spam",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Krepost forward with Konniks",
@@ -778,7 +723,7 @@
           "Imperial Konnik army"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Ibirapema Warriors. Blackwood Archers add damage."
     },
     "Burgundians": {
       "difficulty": "Even",
@@ -836,14 +781,14 @@
         {
           "use": "Spearman",
           "against": "Coustillier",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Monk",
@@ -859,13 +804,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle/Early Imperial Age - Early Cavalier timing with economic upgrades",
         "keyTiming": "Pressure in Castle Age or prepare for early Imperial timing",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Early economic upgrades",
@@ -873,7 +818,7 @@
           "Imperial Coustillier charge"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Ibirapema Warriors. Blackwood Archers add damage."
     },
     "Burmese": {
       "difficulty": "Even",
@@ -921,44 +866,20 @@
       ],
       "counters": [
         {
-          "use": "Knight",
-          "against": "Arambai",
-          "reason": "Fast, high damage vs slow siege",
-          "civBonus": false
-        },
-        {
           "use": "Archer",
           "against": "Militia",
           "reason": "Kites slow infantry easily (civ bonus!)",
           "civBonus": true
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Monk",
-          "reason": "Fast, cheap, kills monks quickly",
-          "civBonus": false
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Arambai",
-          "reason": "Fast, snipes siege quickly",
-          "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Militia",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle Age - Free Lumber Camp upgrades into Arambai",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Free lumber upgrades economy",
@@ -966,7 +887,7 @@
           "Imperial Manipur Cavalry (+6 vs archers)"
         ]
       },
-      "strategy": "Chu Ko Nu destroy infantry. Keep distance and focus fire."
+      "strategy": "Blackwood Archers kite. Ibirapema Warriors in melee."
     },
     "Byzantines": {
       "difficulty": "Even",
@@ -1026,14 +947,8 @@
         {
           "use": "Spearman",
           "against": "Cataphract",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Monk",
-          "reason": "Fast, cheap, kills monks quickly",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Monk",
@@ -1043,13 +958,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Imperial Age - Cheap trash units and counter compositions",
         "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Castle Age cheap Camels",
@@ -1057,7 +972,7 @@
           "Trash war with cheap Hussars/Skirms/Halbs"
         ]
       },
-      "strategy": "Chu Ko Nu kill Monks from range. Keep your distance."
+      "strategy": "Blackwood Archers kill Monks. Losses return part of their cost."
     },
     "Celts": {
       "difficulty": "Even",
@@ -1127,40 +1042,16 @@
           "against": "Militia",
           "reason": "Kites slow infantry easily (civ bonus!)",
           "civBonus": true
-        },
-        {
-          "use": "Knight",
-          "against": "Mangonel",
-          "reason": "Fast, high damage vs slow siege",
-          "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Woad Raider",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Militia",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Mangonel",
-          "reason": "Fast, snipes siege quickly",
-          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle/Imperial Age - Feudal/Castle infantry pressure with 15% faster infantry",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Feudal MAA with speed bonus",
@@ -1168,7 +1059,101 @@
           "Imperial Siege Onagers with Furor Celtica"
         ]
       },
-      "strategy": "Chu Ko Nu destroy infantry. Keep distance and focus fire."
+      "strategy": "Blackwood Archers kite. Ibirapema Warriors in melee."
+    },
+    "Chinese": {
+      "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Archer",
+        "tags": [
+          "Archer",
+          "Tech Discount",
+          "Chu Ko Nu"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Imperial",
+        "timing": "Tech discount compounds into late game",
+        "warning": "They out-upgrade you - pressure early"
+      },
+      "keyBonuses": [
+        "Fire Lancers and Fire Ships move +5/10% faster in Castle/Imperial Age",
+        "Technologies cost -5/10/15% in Feudal/Castle/Imperial Age"
+      ],
+      "allBonuses": [
+        "Fire Lancers and Fire Ships move +5/10% faster in Castle/Imperial Age",
+        "Team: Farms +10% food",
+        "Town Centers +7 line of sight and provide +15 population space",
+        "Technologies cost -5/10/15% in Feudal/Castle/Imperial Age",
+        "Start with +3 Villagers, but -50 wood and -200 food"
+      ],
+      "opponentUniqueUnit": "Chu Ko Nu",
+      "opponentUniqueUnitCategories": {
+        "type": "Archer",
+        "categories": [
+          "ranged",
+          "fast-firing",
+          "anti-infantry"
+        ],
+        "counters": [
+          "Skirmisher",
+          "Mangonel",
+          "Huskarl"
+        ],
+        "description": "Rapid-fire archer, high DPS at close range"
+      },
+      "opponentStrengths": [
+        {
+          "unit": "Chu Ko Nu",
+          "reason": "Unique Unit"
+        },
+        {
+          "unit": "Archer",
+          "reason": "Archer civilization"
+        }
+      ],
+      "counters": [
+        {
+          "use": "Skirmisher",
+          "against": "Chu Ko Nu",
+          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
+          "civBonus": true
+        },
+        {
+          "use": "Skirmisher",
+          "against": "Archer",
+          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
+          "civBonus": true
+        },
+        {
+          "use": "Mangonel",
+          "against": "Chu Ko Nu",
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
+        },
+        {
+          "use": "Mangonel",
+          "against": "Archer",
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
+        }
+      ],
+      "timingWindows": {
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
+        "opponentStrength": "Castle/Imperial Age - Tech discount into Chu Ko Nu mass",
+        "keyTiming": "Apply Castle Age pressure before they peak",
+        "yourPowerSpikes": [
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
+        ],
+        "opponentPowerSpikes": [
+          "Tech discount compounds over game",
+          "Castle Age Chu Ko Nu",
+          "Imperial Rocketry Scorpions"
+        ]
+      },
+      "strategy": "Blackwood Archers and Skirmishers. Archery upgrades cost half food."
     },
     "Cumans": {
       "difficulty": "Even",
@@ -1237,8 +1222,8 @@
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Skirmisher",
@@ -1253,20 +1238,20 @@
           "civBonus": false
         },
         {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Feudal/Castle Age - Feudal TC boom or Steppe Lancer timing",
         "keyTiming": "Be ready for early aggression, have counters prepared",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Feudal 2nd TC (unique)",
@@ -1274,7 +1259,7 @@
           "Imperial Cuman Mercenaries"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Ibirapema Warriors. Blackwood Archers add damage."
     },
     "Danes": {
       "difficulty": "Even",
@@ -1345,40 +1330,16 @@
           "against": "Militia",
           "reason": "Kites slow infantry easily (civ bonus!)",
           "civBonus": true
-        },
-        {
-          "use": "Knight",
-          "against": "Mangonel",
-          "reason": "Fast, high damage vs slow siege",
-          "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Jomsviking",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Militia",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Mangonel",
-          "reason": "Fast, snipes siege quickly",
-          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Imperial Age - Jomsvikings and discounted siege upgrades",
         "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Loot from destroyed buildings",
@@ -1386,7 +1347,7 @@
           "Imperial Hamask and Northmen siege range"
         ]
       },
-      "strategy": "Chu Ko Nu destroy infantry. Keep distance and focus fire."
+      "strategy": "Blackwood Archers kite. Ibirapema Warriors in melee."
     },
     "Dravidians": {
       "difficulty": "Even",
@@ -1466,32 +1427,20 @@
           "civBonus": true
         },
         {
-          "use": "Knight",
-          "against": "Urumi Swordsman",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
-        },
-        {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat",
-          "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Militia",
-          "reason": "High damage, mobility advantage",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Imperial Age - Wood bonus into Urumi and Wootz Steel",
         "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Wood bonus early economy",
@@ -1499,7 +1448,7 @@
           "Imperial Wootz Steel (ignore armor)"
         ]
       },
-      "strategy": "Chu Ko Nu high DPS wins archer fights. Add Scorpions for mass archer battles."
+      "strategy": "Blackwood Archers and Skirmishers. Archery upgrades cost half food."
     },
     "Ethiopians": {
       "difficulty": "Even",
@@ -1571,38 +1520,20 @@
           "civBonus": true
         },
         {
-          "use": "Knight",
-          "against": "Mangonel",
-          "reason": "Fast, high damage vs slow siege",
-          "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Shotel Warrior",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
-        },
-        {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat",
-          "civBonus": false
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Mangonel",
-          "reason": "Fast, snipes siege quickly",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle Age - Free Pikemen, fast-firing archers",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Free Pikemen upgrade",
@@ -1610,7 +1541,7 @@
           "Imperial Torsion Engines siege"
         ]
       },
-      "strategy": "Chu Ko Nu high DPS wins archer fights. Add Scorpions for mass archer battles."
+      "strategy": "Blackwood Archers and Skirmishers. Archery upgrades cost half food."
     },
     "Franks": {
       "difficulty": "Even",
@@ -1672,14 +1603,8 @@
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Throwing Axeman",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Monk",
@@ -1689,13 +1614,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle Age - Castle Age Knight rush with +20% HP bonus",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Fast Castle into Knights (minute 17-19)",
@@ -1703,7 +1628,7 @@
           "Imperial Mounted Crossbowmen with Ordonnance Companies"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Ibirapema Warriors. Blackwood Archers add damage."
     },
     "Georgians": {
       "difficulty": "Even",
@@ -1758,8 +1683,8 @@
         {
           "use": "Spearman",
           "against": "Monaspa",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Monk",
@@ -1769,13 +1694,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle Age - Defensive bonuses and Monaspa cavalry",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Fortification bonuses",
@@ -1783,7 +1708,7 @@
           "Imperial regenerating cavalry"
         ]
       },
-      "strategy": "Tech discount compounds over time. Chu Ko Nu mass in Castle. Rocketry Scorpions late game."
+      "strategy": "Archer and infantry. Cheap Barracks and Archery upgrades. Losses return 15% of their cost."
     },
     "Goths": {
       "difficulty": "Even",
@@ -1840,9 +1765,9 @@
       ],
       "counters": [
         {
-          "use": "Knight",
+          "use": "Scorpion",
           "against": "Huskarl",
-          "reason": "High melee damage, mobility",
+          "reason": "Pass-through damage kills groups",
           "civBonus": false
         },
         {
@@ -1850,34 +1775,16 @@
           "against": "Militia",
           "reason": "Kites slow infantry easily (civ bonus!)",
           "civBonus": true
-        },
-        {
-          "use": "Militia",
-          "against": "Huskarl",
-          "reason": "Infantry vs infantry, cost-efficient",
-          "civBonus": false
-        },
-        {
-          "use": "Scorpion",
-          "against": "Huskarl",
-          "reason": "Pass-through damage kills groups",
-          "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Militia",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Imperial Age - Imperial Age instant infantry spam with Perfusion",
         "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Feudal MAA flood (cheaper)",
@@ -1885,7 +1792,7 @@
           "Post-Imperial Perfusion infantry spam"
         ]
       },
-      "strategy": "Chu Ko Nu destroy infantry. Keep distance and focus fire."
+      "strategy": "Blackwood Archers kite. Ibirapema Warriors in melee."
     },
     "Gurjaras": {
       "difficulty": "Even",
@@ -1927,22 +1834,10 @@
       ],
       "counters": [
         {
-          "use": "Knight",
-          "against": "Chakram Thrower",
-          "reason": "Fast, high damage vs slow siege",
-          "civBonus": false
-        },
-        {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Chakram Thrower",
-          "reason": "Fast, snipes siege quickly",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Monk",
@@ -1952,13 +1847,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle Age - Camel and cavalry with bonus damage",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Mill bonus food",
@@ -1966,7 +1861,7 @@
           "Imperial Chakram Throwers + Camels"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Ibirapema Warriors. Blackwood Archers add damage."
     },
     "Hindustanis": {
       "difficulty": "Even",
@@ -2022,28 +1917,16 @@
       ],
       "counters": [
         {
-          "use": "Knight",
+          "use": "Scorpion",
           "against": "Ghulam",
-          "reason": "High melee damage, mobility",
+          "reason": "Pass-through damage kills groups",
           "civBonus": false
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
-        },
-        {
-          "use": "Militia",
-          "against": "Ghulam",
-          "reason": "Infantry vs infantry, cost-efficient",
-          "civBonus": false
-        },
-        {
-          "use": "Scorpion",
-          "against": "Ghulam",
-          "reason": "Pass-through damage kills groups",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Monk",
@@ -2053,13 +1936,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Imperial Age - Imperial Camels and gunpowder",
         "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Castle Age cheap Villagers from TC",
@@ -2067,7 +1950,7 @@
           "Shatagni Hand Cannoneers (+2 range)"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Ibirapema Warriors. Blackwood Archers add damage."
     },
     "Huns": {
       "difficulty": "Even",
@@ -2126,14 +2009,14 @@
         {
           "use": "Spearman",
           "against": "Tarkan",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Monk",
@@ -2149,13 +2032,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle Age - No houses, aggressive Cavalry Archer play",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "No house advantage early",
@@ -2163,7 +2046,7 @@
           "Imperial Tarkans for raiding"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Ibirapema Warriors. Blackwood Archers add damage."
     },
     "Incas": {
       "difficulty": "Even",
@@ -2230,12 +2113,6 @@
           "civBonus": true
         },
         {
-          "use": "Militia",
-          "against": "Eagle Warrior",
-          "reason": "+6 bonus damage vs eagles",
-          "civBonus": false
-        },
-        {
           "use": "Archer",
           "against": "Militia",
           "reason": "Kites slow infantry easily (civ bonus!)",
@@ -2246,28 +2123,16 @@
           "against": "Kamayuk",
           "reason": "Cheap, bonus vs spearman (civ bonus!)",
           "civBonus": true
-        },
-        {
-          "use": "Knight",
-          "against": "Kamayuk",
-          "reason": "Despite bonus, can overwhelm with numbers",
-          "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Eagle Warrior",
-          "reason": "High damage output",
-          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle/Imperial Age - Villager bonus and Kamayuk line",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Villager blacksmith upgrades",
@@ -2275,7 +2140,7 @@
           "Imperial Eagles + Slingers"
         ]
       },
-      "strategy": "Chu Ko Nu beat Eagles early. Add Champions for Imperial Eagle fights."
+      "strategy": "Infantry vs Eagles. Archers before Imperial."
     },
     "Italians": {
       "difficulty": "Even",
@@ -2352,32 +2217,32 @@
           "civBonus": true
         },
         {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Genoese Crossbowman",
-          "reason": "Fast raiding, forces archer retreat",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         },
         {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         },
         {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Hand Cannoneer",
-          "reason": "Fast closing, dodges shots",
+          "reason": "Area damage, outranges hand cannons",
           "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle/Imperial Age - Cheap age-up into Genoese Crossbowmen",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Age-up discount timing",
@@ -2385,7 +2250,7 @@
           "Imperial Condottiero vs gunpowder"
         ]
       },
-      "strategy": "Chu Ko Nu high DPS wins archer fights. Add Scorpions for mass archer battles."
+      "strategy": "Blackwood Archers and Skirmishers. Archery upgrades cost half food."
     },
     "Japanese": {
       "difficulty": "Even",
@@ -2451,28 +2316,16 @@
           "against": "Militia",
           "reason": "Kites slow infantry easily (civ bonus!)",
           "civBonus": true
-        },
-        {
-          "use": "Knight",
-          "against": "Samurai",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Militia",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Feudal/Castle Age - Feudal MAA pressure with 33% faster attack",
         "keyTiming": "Be ready for early aggression, have counters prepared",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Feudal 33% faster attacking infantry",
@@ -2480,7 +2333,7 @@
           "Imperial Yasama Towers + Trebs"
         ]
       },
-      "strategy": "Chu Ko Nu destroy infantry. Keep distance and focus fire."
+      "strategy": "Blackwood Archers kite. Ibirapema Warriors in melee."
     },
     "Jurchens": {
       "difficulty": "Even",
@@ -2535,8 +2388,8 @@
         {
           "use": "Spearman",
           "against": "Iron Pagoda",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Monk",
@@ -2546,13 +2399,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Imperial Age - Iron Pagoda heavy cavalry",
         "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Castle Age Iron Pagodas",
@@ -2560,7 +2413,7 @@
           "Late game deathball"
         ]
       },
-      "strategy": "Tech discount compounds over time. Chu Ko Nu mass in Castle. Rocketry Scorpions late game."
+      "strategy": "Archer and infantry. Cheap Barracks and Archery upgrades. Losses return 15% of their cost."
     },
     "Khitans": {
       "difficulty": "Even",
@@ -2613,28 +2466,16 @@
           "against": "Militia",
           "reason": "Kites slow infantry easily (civ bonus!)",
           "civBonus": true
-        },
-        {
-          "use": "Knight",
-          "against": "Liao Dao",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Militia",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle Age - Cavalry Archer raiding",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Economy bonus early",
@@ -2642,7 +2483,7 @@
           "Imperial Cavalry Archer mass"
         ]
       },
-      "strategy": "Chu Ko Nu destroy infantry. Keep distance and focus fire."
+      "strategy": "Blackwood Archers kite. Ibirapema Warriors in melee."
     },
     "Khmer": {
       "difficulty": "Even",
@@ -2696,40 +2537,15 @@
           "reason": "Siege civilization"
         }
       ],
-      "counters": [
-        {
-          "use": "Knight",
-          "against": "Ballista Elephant",
-          "reason": "Fast, high damage vs slow siege",
-          "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Mangonel",
-          "reason": "Fast, high damage vs slow siege",
-          "civBonus": false
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Ballista Elephant",
-          "reason": "Fast, snipes siege quickly",
-          "civBonus": false
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Mangonel",
-          "reason": "Fast, snipes siege quickly",
-          "civBonus": false
-        }
-      ],
+      "counters": [],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle/Imperial Age - Fast Castle (no building requirements), Ballista Elephants",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "No building requirement age-up",
@@ -2737,7 +2553,7 @@
           "Imperial Scorpions with Double Crossbow"
         ]
       },
-      "strategy": "Chu Ko Nu are fragile vs siege. Add Light Cav to snipe Mangonels."
+      "strategy": "Ibirapema Warriors and Champi Warriors snipe siege."
     },
     "Koreans": {
       "difficulty": "Even",
@@ -2814,44 +2630,26 @@
           "civBonus": true
         },
         {
-          "use": "Knight",
-          "against": "Mangonel",
-          "reason": "Fast, high damage vs slow siege",
-          "civBonus": false
-        },
-        {
           "use": "Archer",
           "against": "Militia",
           "reason": "Kites slow infantry easily (civ bonus!)",
           "civBonus": true
         },
         {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat",
-          "civBonus": false
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Mangonel",
-          "reason": "Fast, snipes siege quickly",
-          "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Militia",
-          "reason": "High damage, mobility advantage",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle Age - Tower rush or War Wagon mass",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Feudal/Castle tower rush",
@@ -2859,7 +2657,7 @@
           "Imperial Shinkichon Onagers (+1 range)"
         ]
       },
-      "strategy": "Chu Ko Nu high DPS wins archer fights. Add Scorpions for mass archer battles."
+      "strategy": "Blackwood Archers and Skirmishers. Archery upgrades cost half food."
     },
     "Lithuanians": {
       "difficulty": "Even",
@@ -2916,14 +2714,14 @@
         {
           "use": "Spearman",
           "against": "Leitis",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Monk",
@@ -2939,13 +2737,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle/Imperial Age - Relic-boosted Leitis ignoring armor",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Fast Relic collection",
@@ -2953,7 +2751,7 @@
           "Imperial Leitis with 4+ relics (+4 attack)"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Ibirapema Warriors. Blackwood Archers add damage."
     },
     "Magyars": {
       "difficulty": "Even",
@@ -3014,14 +2812,14 @@
         {
           "use": "Spearman",
           "against": "Magyar Huszar",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Skirmisher",
@@ -3042,20 +2840,20 @@
           "civBonus": false
         },
         {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Feudal/Imperial Age - Feudal Scout rush, cheap Hussars in Imperial",
         "keyTiming": "Apply pressure in Castle Age",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Feudal free forging Scout rush",
@@ -3063,7 +2861,7 @@
           "Imperial free attack upgrades cavalry"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Ibirapema Warriors. Blackwood Archers add damage."
     },
     "Malay": {
       "difficulty": "Even",
@@ -3130,28 +2928,16 @@
           "against": "Militia",
           "reason": "Kites slow infantry easily (civ bonus!)",
           "civBonus": true
-        },
-        {
-          "use": "Knight",
-          "against": "Karambit Warrior",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Militia",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle Age - Fast age-up, cheap Battle Elephants",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "66% faster age-up",
@@ -3159,7 +2945,7 @@
           "Imperial Forced Levy 2HS (no gold)"
         ]
       },
-      "strategy": "Chu Ko Nu destroy infantry. Keep distance and focus fire."
+      "strategy": "Blackwood Archers kite. Ibirapema Warriors in melee."
     },
     "Malians": {
       "difficulty": "Even",
@@ -3225,28 +3011,16 @@
           "against": "Militia",
           "reason": "Kites slow infantry easily (civ bonus!)",
           "civBonus": true
-        },
-        {
-          "use": "Knight",
-          "against": "Gbeto",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Militia",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle/Imperial Age - Pierce armor infantry, Gbeto raids",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Wood bonus economy",
@@ -3254,7 +3028,7 @@
           "Imperial Farimba Cavaliers + pierce armor infantry"
         ]
       },
-      "strategy": "Chu Ko Nu destroy infantry. Keep distance and focus fire."
+      "strategy": "Blackwood Archers kite. Ibirapema Warriors in melee."
     },
     "Mapuche": {
       "difficulty": "Even",
@@ -3322,8 +3096,8 @@
         {
           "use": "Spearman",
           "against": "Kona",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Skirmisher",
@@ -3334,8 +3108,8 @@
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Archer",
@@ -3354,22 +3128,16 @@
           "against": "Knight",
           "reason": "Convert expensive units",
           "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Militia",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle Age - Kona cavalry and Bolas Rider mounted archers",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Forager food bonus",
@@ -3377,7 +3145,7 @@
           "Imperial Malon pass-through damage"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Ibirapema Warriors. Blackwood Archers add damage."
     },
     "Mayans": {
       "difficulty": "Even",
@@ -3444,44 +3212,32 @@
           "civBonus": true
         },
         {
-          "use": "Militia",
-          "against": "Eagle Warrior",
-          "reason": "+6 bonus damage vs eagles",
-          "civBonus": false
-        },
-        {
           "use": "Skirmisher",
           "against": "Archer",
           "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
           "civBonus": true
         },
         {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Plumed Archer",
-          "reason": "Fast raiding, forces archer retreat",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         },
         {
-          "use": "Knight",
-          "against": "Eagle Warrior",
-          "reason": "High damage output",
-          "civBonus": false
-        },
-        {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle/Imperial Age - Longer lasting resources into Plumed Archers",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Resources last 15% longer",
@@ -3489,7 +3245,7 @@
           "Imperial Holcans Eagles (+40 HP)"
         ]
       },
-      "strategy": "Chu Ko Nu beat Eagles early. Add Champions for Imperial Eagle fights."
+      "strategy": "Infantry vs Eagles. Archers before Imperial."
     },
     "Mongols": {
       "difficulty": "Even",
@@ -3558,36 +3314,24 @@
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Mangonel",
-          "reason": "Fast, high damage vs slow siege",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Monk",
           "against": "Knight",
           "reason": "Convert expensive units",
           "civBonus": false
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Mangonel",
-          "reason": "Fast, snipes siege quickly",
-          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle/Imperial Age - Castle Age Mangudai raid, Imperial siege",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Hunt bonus for fast Feudal",
@@ -3595,7 +3339,7 @@
           "Imperial Drill Siege Onagers"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Ibirapema Warriors. Blackwood Archers add damage."
     },
     "Muisca": {
       "difficulty": "Even",
@@ -3679,38 +3423,26 @@
           "civBonus": true
         },
         {
-          "use": "Scout Cavalry",
-          "against": "Monk",
-          "reason": "Fast, cheap, kills monks quickly",
-          "civBonus": false
-        },
-        {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Guecha Warrior",
-          "reason": "Fast raiding, forces archer retreat",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         },
         {
-          "use": "Knight",
-          "against": "Temple Guard",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
-        },
-        {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle Age - Cheap age-up into archers, Monks, and Temple Guard",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Age-up costs half gold",
@@ -3718,7 +3450,7 @@
           "Imperial Herbalism speed"
         ]
       },
-      "strategy": "Chu Ko Nu high DPS wins archer fights. Add Scorpions for mass archer battles."
+      "strategy": "Blackwood Archers and Skirmishers. Archery upgrades cost half food."
     },
     "Persians": {
       "difficulty": "Even",
@@ -3776,21 +3508,21 @@
       ],
       "counters": [
         {
-          "use": "Monk",
+          "use": "Spearman",
           "against": "War Elephant",
-          "reason": "Convert expensive elephants",
-          "civBonus": false
+          "reason": "Huge bonus damage vs elephants (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
-          "use": "Spearman",
+          "use": "Monk",
           "against": "War Elephant",
-          "reason": "Huge bonus damage vs elephants",
+          "reason": "Convert expensive elephants",
           "civBonus": false
         },
         {
@@ -3807,13 +3539,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle Age - Fast Castle into Knights, War Elephants late",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "TC work rate bonus",
@@ -3821,7 +3553,7 @@
           "Imperial War Elephants with Mahouts"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Ibirapema Warriors. Blackwood Archers add damage."
     },
     "Poles": {
       "difficulty": "Even",
@@ -3885,14 +3617,8 @@
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Obuch",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Monk",
@@ -3902,13 +3628,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle/Imperial Age - Cheap Cavaliers with stone from gold",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Folwark farming bonus",
@@ -3916,7 +3642,7 @@
           "Imperial Winged Hussar + Obuch"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Ibirapema Warriors. Blackwood Archers add damage."
     },
     "Portuguese": {
       "difficulty": "Even",
@@ -3972,38 +3698,26 @@
       ],
       "counters": [
         {
-          "use": "Knight",
-          "against": "Organ Gun",
-          "reason": "Fast, high damage vs slow siege",
-          "civBonus": false
-        },
-        {
           "use": "Skirmisher",
           "against": "Hand Cannoneer",
           "reason": "Cheap ranged, high numbers (civ bonus!)",
           "civBonus": true
         },
         {
-          "use": "Scout Cavalry",
-          "against": "Organ Gun",
-          "reason": "Fast, snipes siege quickly",
-          "civBonus": false
-        },
-        {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Hand Cannoneer",
-          "reason": "Fast closing, dodges shots",
+          "reason": "Area damage, outranges hand cannons",
           "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Imperial Age - Castle Age Organ Guns, Imperial Feitoria boom",
         "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Gold discount on all units",
@@ -4011,7 +3725,7 @@
           "Imperial Feitoria for infinite resources"
         ]
       },
-      "strategy": "Tech discount lets you reach Imperial faster. Rocketry Scorpions are strong late."
+      "strategy": "Cheap upgrades into a Castle Age push before gunpowder."
     },
     "Romans": {
       "difficulty": "Even",
@@ -4078,28 +3792,16 @@
           "against": "Militia",
           "reason": "Kites slow infantry easily (civ bonus!)",
           "civBonus": true
-        },
-        {
-          "use": "Knight",
-          "against": "Centurion",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Militia",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Imperial Age - Cheap Scorpions and Legionary line",
         "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Cheap Scorpions from Castle Age",
@@ -4107,7 +3809,7 @@
           "Imperial Legionary charge resistance"
         ]
       },
-      "strategy": "Chu Ko Nu destroy infantry. Keep distance and focus fire."
+      "strategy": "Blackwood Archers kite. Ibirapema Warriors in melee."
     },
     "Saracens": {
       "difficulty": "Even",
@@ -4175,26 +3877,20 @@
           "civBonus": true
         },
         {
-          "use": "Militia",
-          "against": "Mameluke",
-          "reason": "Infantry takes less bonus damage",
-          "civBonus": false
-        },
-        {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle/Imperial Age - Market abuse into Mameluke mass",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Market bonus for fast age-up",
@@ -4202,7 +3898,7 @@
           "Imperial Mameluke + siege"
         ]
       },
-      "strategy": "Chu Ko Nu high DPS wins archer fights. Add Scorpions for mass archer battles."
+      "strategy": "Blackwood Archers and Skirmishers. Archery upgrades cost half food."
     },
     "Saxons": {
       "difficulty": "Even",
@@ -4269,28 +3965,16 @@
           "against": "Militia",
           "reason": "Kites slow infantry easily (civ bonus!)",
           "civBonus": true
-        },
-        {
-          "use": "Knight",
-          "against": "Hearth Troop",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Militia",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle Age - Cheaper foot soldiers and extra castle arrows",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Camps grant food and stone",
@@ -4298,7 +3982,7 @@
           "Imperial Shield Wall"
         ]
       },
-      "strategy": "Chu Ko Nu destroy infantry. Keep distance and focus fire."
+      "strategy": "Blackwood Archers kite. Ibirapema Warriors in melee."
     },
     "Shu": {
       "difficulty": "Even",
@@ -4352,26 +4036,20 @@
           "civBonus": true
         },
         {
-          "use": "Knight",
-          "against": "White Feather Guard",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
-        },
-        {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle/Imperial Age - Defensive play with repeating crossbow",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Defensive bonuses",
@@ -4379,7 +4057,7 @@
           "Imperial siege support"
         ]
       },
-      "strategy": "Chu Ko Nu high DPS wins archer fights. Add Scorpions for mass archer battles."
+      "strategy": "Blackwood Archers and Skirmishers. Archery upgrades cost half food."
     },
     "Sicilians": {
       "difficulty": "Even",
@@ -4436,22 +4114,16 @@
           "against": "Serjeant",
           "reason": "Kites slow infantry easily (civ bonus!)",
           "civBonus": true
-        },
-        {
-          "use": "Knight",
-          "against": "Serjeant",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle Age - Castle Age Serjeants with Donjon forward",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Feudal Donjon rush",
@@ -4459,7 +4131,7 @@
           "Imperial Hauberk Cavalier"
         ]
       },
-      "strategy": "Tech discount compounds over time. Chu Ko Nu mass in Castle. Rocketry Scorpions late game."
+      "strategy": "Archer and infantry. Cheap Barracks and Archery upgrades. Losses return 15% of their cost."
     },
     "Slavs": {
       "difficulty": "Even",
@@ -4525,8 +4197,8 @@
         {
           "use": "Spearman",
           "against": "Boyar",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Archer",
@@ -4535,44 +4207,20 @@
           "civBonus": true
         },
         {
-          "use": "Knight",
-          "against": "Mangonel",
-          "reason": "Fast, high damage vs slow siege",
-          "civBonus": false
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Monk",
-          "reason": "Fast, cheap, kills monks quickly",
-          "civBonus": false
-        },
-        {
           "use": "Monk",
           "against": "Boyar",
           "reason": "Convert expensive units",
           "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Militia",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Mangonel",
-          "reason": "Fast, snipes siege quickly",
-          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Imperial Age - Farming bonus into infantry/siege deathball",
         "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Faster farming kicks in early",
@@ -4580,7 +4228,7 @@
           "Imperial Druzhina Champions splash damage"
         ]
       },
-      "strategy": "Chu Ko Nu destroy infantry. Keep distance and focus fire."
+      "strategy": "Blackwood Archers kite. Ibirapema Warriors in melee."
     },
     "Spanish": {
       "difficulty": "Even",
@@ -4647,38 +4295,32 @@
           "civBonus": true
         },
         {
-          "use": "Scout Cavalry",
-          "against": "Monk",
-          "reason": "Fast, cheap, kills monks quickly",
-          "civBonus": false
-        },
-        {
           "use": "Skirmisher",
           "against": "Hand Cannoneer",
           "reason": "Cheap ranged, high numbers (civ bonus!)",
           "civBonus": true
         },
         {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Conquistador",
-          "reason": "Fast closing, dodges shots",
+          "reason": "Area damage, outranges hand cannons",
           "civBonus": false
         },
         {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Hand Cannoneer",
-          "reason": "Fast closing, dodges shots",
+          "reason": "Area damage, outranges hand cannons",
           "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle/Imperial Age - Castle Age Conquistadors, Imperial gunpowder",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Castle Age Conquistadors",
@@ -4686,7 +4328,7 @@
           "Missionaries with Inquisition"
         ]
       },
-      "strategy": "Tech discount lets you reach Imperial faster. Rocketry Scorpions are strong late."
+      "strategy": "Cheap upgrades into a Castle Age push before gunpowder."
     },
     "Tatars": {
       "difficulty": "Even",
@@ -4744,8 +4386,8 @@
         {
           "use": "Spearman",
           "against": "Keshik",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Skirmisher",
@@ -4760,20 +4402,20 @@
           "civBonus": false
         },
         {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle/Imperial Age - Hill bonus and Keshik gold generation",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Extra sheep for scout rush",
@@ -4781,7 +4423,7 @@
           "Imperial Silk Armor Cavalry Archers"
         ]
       },
-      "strategy": "Chu Ko Nu high DPS wins archer fights. Add Scorpions for mass archer battles."
+      "strategy": "Blackwood Archers and Skirmishers. Archery upgrades cost half food."
     },
     "Teutons": {
       "difficulty": "Even",
@@ -4854,34 +4496,16 @@
           "against": "Militia",
           "reason": "Kites slow infantry easily (civ bonus!)",
           "civBonus": true
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Monk",
-          "reason": "Fast, cheap, kills monks quickly",
-          "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Teutonic Knight",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Militia",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Imperial Age - Castle/Imperial slow push with melee armor and conversions",
         "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Castle Age Knights with +2 melee armor",
@@ -4889,129 +4513,7 @@
           "Siege + Teutonic Knight deathball"
         ]
       },
-      "strategy": "Chu Ko Nu destroy infantry. Keep distance and focus fire."
-    },
-    "Tupi": {
-      "difficulty": "Even",
-      "opponentDescription": {
-        "type": "Archer/Infantry",
-        "tags": [
-          "Archer",
-          "Infantry",
-          "Blackwood Archer",
-          "Refund"
-        ]
-      },
-      "opponentPeakTiming": {
-        "peakAge": "Castle",
-        "timing": "Blackwood Archers and Ibirapema Warriors, with refunds on losses",
-        "warning": "Losses return cost. Do not trade evenly into a long fight"
-      },
-      "keyBonuses": [
-        "Archery Range and Barracks upgrades cost -50% food",
-        "Fallen units return 15% of their cost",
-        "Team: Towers and Castles provide +10 population space"
-      ],
-      "allBonuses": [
-        "Archery Range and Barracks upgrades cost -50% food",
-        "Fallen units return 15% of their cost",
-        "Start with +25 of each resource",
-        "Team: Towers and Castles provide +10 population space",
-        "Villagers can garrison in Settlements"
-      ],
-      "opponentUniqueUnit": "Blackwood Archer, Ibirapema Warrior",
-      "opponentUniqueUnitCategories": {
-        "type": "Archer",
-        "categories": [
-          "ranged",
-          "anti-infantry",
-          "poison"
-        ],
-        "counters": [
-          "Skirmisher",
-          "Mangonel",
-          "Knight"
-        ],
-        "description": "Foot archer; Curare adds poison damage"
-      },
-      "opponentStrengths": [
-        {
-          "unit": "Blackwood Archer",
-          "reason": "Unique Unit"
-        },
-        {
-          "unit": "Ibirapema Warrior",
-          "reason": "Unique Unit"
-        },
-        {
-          "unit": "Archer",
-          "reason": "Archer civilization"
-        },
-        {
-          "unit": "Militia",
-          "reason": "Infantry civilization"
-        }
-      ],
-      "counters": [
-        {
-          "use": "Skirmisher",
-          "against": "Blackwood Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
-          "civBonus": true
-        },
-        {
-          "use": "Archer",
-          "against": "Ibirapema Warrior",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
-        },
-        {
-          "use": "Skirmisher",
-          "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
-          "civBonus": true
-        },
-        {
-          "use": "Archer",
-          "against": "Militia",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Blackwood Archer",
-          "reason": "Fast raiding, forces archer retreat",
-          "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Ibirapema Warrior",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat",
-          "civBonus": false
-        }
-      ],
-      "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
-        "opponentStrength": "Castle Age - Blackwood Archers and Ibirapema Warriors with cheap upgrades",
-        "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
-        "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
-        ],
-        "opponentPowerSpikes": [
-          "Start with extra resources",
-          "Castle Age Blackwood Archers",
-          "Imperial Curare poison"
-        ]
-      },
-      "strategy": "Chu Ko Nu high DPS wins archer fights. Add Scorpions for mass archer battles."
+      "strategy": "Blackwood Archers kite. Ibirapema Warriors in melee."
     },
     "Turks": {
       "difficulty": "Even",
@@ -5085,19 +4587,19 @@
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Janissary",
-          "reason": "Fast closing, dodges shots",
+          "reason": "Area damage, outranges hand cannons",
           "civBonus": false
         },
         {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Hand Cannoneer",
-          "reason": "Fast closing, dodges shots",
+          "reason": "Area damage, outranges hand cannons",
           "civBonus": false
         },
         {
@@ -5108,13 +4610,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle/Imperial Age - Free Chemistry Janissaries in Castle Age",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Castle Age Janissaries (free Chemistry)",
@@ -5122,7 +4624,7 @@
           "Sipahi Cavalry Archers"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Ibirapema Warriors. Blackwood Archers add damage."
     },
     "Varangians": {
       "difficulty": "Even",
@@ -5185,14 +4687,14 @@
         {
           "use": "Spearman",
           "against": "Jarl",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Archer",
@@ -5211,22 +4713,16 @@
           "against": "Knight",
           "reason": "Convert expensive units",
           "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Militia",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle Age - Jarls funded by gold from food gathering",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Gold from hunt and fishing",
@@ -5234,7 +4730,7 @@
           "Imperial Vendel Legacy trample"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Ibirapema Warriors. Blackwood Archers add damage."
     },
     "Vietnamese": {
       "difficulty": "Even",
@@ -5303,26 +4799,26 @@
           "civBonus": true
         },
         {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Rattan Archer",
-          "reason": "Fast raiding, forces archer retreat",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         },
         {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle/Imperial Age - Archer play with extra HP",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Reveal enemy TC start",
@@ -5330,7 +4826,7 @@
           "Imperial Chatras Battle Elephants"
         ]
       },
-      "strategy": "Chu Ko Nu high DPS wins archer fights. Add Scorpions for mass archer battles."
+      "strategy": "Blackwood Archers and Skirmishers. Archery upgrades cost half food."
     },
     "Vikings": {
       "difficulty": "Even",
@@ -5395,28 +4891,16 @@
           "against": "Militia",
           "reason": "Kites slow infantry easily (civ bonus!)",
           "civBonus": true
-        },
-        {
-          "use": "Knight",
-          "against": "Berserk",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Militia",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle/Imperial Age - Castle Age economy lead into infantry flood",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Wheelbarrow/Hand Cart savings kick in",
@@ -5424,7 +4908,7 @@
           "Imperial Chieftains infantry and Longships"
         ]
       },
-      "strategy": "Chu Ko Nu destroy infantry. Keep distance and focus fire."
+      "strategy": "Blackwood Archers kite. Ibirapema Warriors in melee."
     },
     "Wei": {
       "difficulty": "Even",
@@ -5480,14 +4964,14 @@
         {
           "use": "Spearman",
           "against": "Tiger Cavalry",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Monk",
@@ -5503,13 +4987,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle Age - Aggressive Tiger Cavalry",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Aggression bonus",
@@ -5517,7 +5001,7 @@
           "Imperial cavalry anti-cav"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Ibirapema Warriors. Blackwood Archers add damage."
     },
     "Wu": {
       "difficulty": "Even",
@@ -5572,8 +5056,8 @@
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Archer",
@@ -5582,9 +5066,9 @@
           "civBonus": true
         },
         {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Fire Archer",
-          "reason": "Fast raiding, forces archer retreat",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         },
         {
@@ -5592,22 +5076,16 @@
           "against": "Knight",
           "reason": "Convert expensive units",
           "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Militia",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "opponentStrength": "Castle Age - Naval and infantry combination",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
         ],
         "opponentPowerSpikes": [
           "Naval dominance",
@@ -5615,7 +5093,7 @@
           "Land/water hybrid maps"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Ibirapema Warriors. Blackwood Archers add damage."
     }
   }
 }

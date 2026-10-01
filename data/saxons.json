@@ -1,58 +1,58 @@
 {
-  "generatedAt": "2026-10-01T21:23:12.356Z",
-  "civilization": "Chinese",
+  "generatedAt": "2026-10-01T21:23:12.520Z",
+  "civilization": "Saxons",
   "civDescription": {
-    "type": "Archer",
+    "type": "Infantry",
     "tags": [
-      "Archer",
-      "Tech Discount",
-      "Chu Ko Nu"
+      "Infantry",
+      "Defensive",
+      "Hearth Troop",
+      "Towers"
     ]
   },
   "bonuses": [
-    "Fire Lancers and Fire Ships move +5/10% faster in Castle/Imperial Age",
-    "Team: Farms +10% food",
-    "Town Centers +7 line of sight and provide +15 population space",
-    "Technologies cost -5/10/15% in Feudal/Castle/Imperial Age",
-    "Start with +3 Villagers, but -50 wood and -200 food"
+    "Longships and Catapult Galleons +20% HP",
+    "Team: Repairers work +25% faster",
+    "Towers and Castles fire +100% base arrows starting in Castle Age",
+    "Mills, Lumber- and Mining Camps provide +35 food and +10 stone when built",
+    "Foot Soldiers cost -5% per Town Center or Castle controlled (maximum -20%)"
   ],
-  "uniqueUnit": "Chu Ko Nu",
+  "uniqueUnit": "Hearth Troop",
   "uniqueUnitCategories": {
-    "type": "Archer",
+    "type": "Infantry",
     "categories": [
-      "ranged",
-      "fast-firing",
-      "anti-infantry"
+      "massed",
+      "armor",
+      "melee"
     ],
     "counters": [
-      "Skirmisher",
-      "Mangonel",
-      "Huskarl"
+      "Archer",
+      "Knight",
+      "Hand Cannoneer"
     ],
-    "description": "Rapid-fire archer, high DPS at close range"
+    "description": "Infantry that gains armor when massed (Shield Wall)"
   },
-  "uniqueUnitElite": "Elite Chu Ko Nu",
+  "uniqueUnitElite": "Elite Hearth Troop",
   "uniqueTechs": {
-    "castle": "Great Wall",
-    "imperial": "Rocketry"
+    "castle": "Clerical Recruitment",
+    "imperial": "Shield Wall"
   },
   "availableUnits": [
     "Archer",
     "Battering Ram",
-    "Cavalry Archer",
-    "Chu Ko Nu",
-    "Demolition Raft",
+    "Catapult Galleon",
     "Fire Galley",
-    "Fire Lancer",
     "Fishing Ship",
     "Galley",
+    "Hearth Troop",
     "Hulk",
     "Knight",
-    "Lou Chuan",
+    "Longship",
+    "Mangonel",
     "Militia",
     "Monk",
+    "Mounted Crossbowman",
     "Petard",
-    "Rocket Cart",
     "Scorpion",
     "Scout Cavalry",
     "Siege Tower",
@@ -62,6 +62,7 @@
     "Trade Cog",
     "Transport Ship",
     "Trebuchet",
+    "Varangian Guard",
     "Villager"
   ],
   "matchups": {
@@ -123,14 +124,20 @@
         {
           "use": "Skirmisher",
           "against": "Composite Bowman",
-          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
-          "civBonus": true
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
+        },
+        {
+          "use": "Mangonel",
+          "against": "Composite Bowman",
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
@@ -146,13 +153,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle Age - Early upgrades and Composite Bowmen",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Earlier infantry upgrades",
@@ -160,7 +167,7 @@
           "Imperial Fereters healing"
         ]
       },
-      "strategy": "Chu Ko Nu destroy infantry. Keep distance and focus fire."
+      "strategy": "Hearth Troops and cheaper foot soldiers. Shield Wall in a ball."
     },
     "Aztecs": {
       "difficulty": "Even",
@@ -227,20 +234,20 @@
         {
           "use": "Archer",
           "against": "Jaguar Warrior",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Militia",
           "against": "Eagle Warrior",
-          "reason": "+6 bonus damage vs eagles",
-          "civBonus": false
+          "reason": "+6 bonus damage vs eagles (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
@@ -268,13 +275,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle/Imperial Age - Relic gold and military creation speed",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Faster military production",
@@ -282,7 +289,7 @@
           "Imperial Garland Wars Eagles (+4 attack)"
         ]
       },
-      "strategy": "Chu Ko Nu beat Eagles early. Add Champions for Imperial Eagle fights."
+      "strategy": "Infantry beats Eagles. Defensive buildings stall."
     },
     "Bengalis": {
       "difficulty": "Even",
@@ -341,14 +348,14 @@
         {
           "use": "Skirmisher",
           "against": "Ratha",
-          "reason": "Bonus vs archers, cheap (civ bonus!)",
-          "civBonus": true
+          "reason": "Bonus vs archers, cheap",
+          "civBonus": false
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Monk",
@@ -358,13 +365,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle/Imperial Age - Ratha flexibility and elephant resistance",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Castle Age Rathas (ranged/melee switch)",
@@ -372,7 +379,7 @@
           "Imperial Paiks Rathas"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Hearth Troops. Shield Wall armor when massed."
     },
     "Berbers": {
       "difficulty": "Even",
@@ -434,25 +441,31 @@
         {
           "use": "Skirmisher",
           "against": "Camel Archer",
-          "reason": "Bonus vs archers, cheap (civ bonus!)",
-          "civBonus": true
+          "reason": "Bonus vs archers, cheap",
+          "civBonus": false
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Skirmisher",
           "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
-          "civBonus": true
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Monk",
           "against": "Knight",
           "reason": "Convert expensive units",
+          "civBonus": false
+        },
+        {
+          "use": "Mangonel",
+          "against": "Archer",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         },
         {
@@ -463,13 +476,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle Age - Cheap cavalry and Camel Archers",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Cheap Stable units (15-20% discount)",
@@ -477,7 +490,7 @@
           "Imperial Genitour support"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Hearth Troops. Shield Wall armor when massed."
     },
     "Bohemians": {
       "difficulty": "Even",
@@ -540,10 +553,10 @@
           "civBonus": false
         },
         {
-          "use": "Skirmisher",
+          "use": "Mangonel",
           "against": "Hand Cannoneer",
-          "reason": "Cheap ranged, high numbers (civ bonus!)",
-          "civBonus": true
+          "reason": "Area damage, outranges hand cannons",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
@@ -556,16 +569,22 @@
           "against": "Hand Cannoneer",
           "reason": "Fast closing, dodges shots",
           "civBonus": false
+        },
+        {
+          "use": "Skirmisher",
+          "against": "Hand Cannoneer",
+          "reason": "Cheap ranged, high numbers",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle/Imperial Age - Castle Age Hussite Wagons, Houfnice in Imperial",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Castle Age Hussite Wagon deathball",
@@ -573,7 +592,7 @@
           "Monk + wagon composition"
         ]
       },
-      "strategy": "Tech discount lets you reach Imperial faster. Rocketry Scorpions are strong late."
+      "strategy": "Defend with towers, then push with cheap infantry."
     },
     "Britons": {
       "difficulty": "Even",
@@ -630,14 +649,20 @@
         {
           "use": "Skirmisher",
           "against": "Longbowman",
-          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
-          "civBonus": true
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Skirmisher",
           "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
-          "civBonus": true
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
+        },
+        {
+          "use": "Mangonel",
+          "against": "Longbowman",
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
@@ -646,20 +671,20 @@
           "civBonus": false
         },
         {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle Age - Castle Age Crossbow mass with +1/+2 range bonus",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Feudal Archer harass",
@@ -667,7 +692,7 @@
           "Imperial Longbowmen with Yeomen (+1 range)"
         ]
       },
-      "strategy": "Chu Ko Nu high DPS wins archer fights. Add Scorpions for mass archer battles."
+      "strategy": "Close with infantry. Towers and Castles fire extra arrows."
     },
     "Bulgarians": {
       "difficulty": "Even",
@@ -729,20 +754,20 @@
         {
           "use": "Spearman",
           "against": "Konnik",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Monk",
@@ -764,13 +789,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle Age - Cheap Blacksmith into Konnik spam",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Krepost forward with Konniks",
@@ -778,7 +803,7 @@
           "Imperial Konnik army"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Hearth Troops. Shield Wall armor when massed."
     },
     "Burgundians": {
       "difficulty": "Even",
@@ -836,14 +861,14 @@
         {
           "use": "Spearman",
           "against": "Coustillier",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Monk",
@@ -859,13 +884,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle/Early Imperial Age - Early Cavalier timing with economic upgrades",
         "keyTiming": "Pressure in Castle Age or prepare for early Imperial timing",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Early economic upgrades",
@@ -873,7 +898,7 @@
           "Imperial Coustillier charge"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Hearth Troops. Shield Wall armor when massed."
     },
     "Burmese": {
       "difficulty": "Even",
@@ -929,8 +954,8 @@
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
@@ -952,13 +977,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle Age - Free Lumber Camp upgrades into Arambai",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Free lumber upgrades economy",
@@ -966,7 +991,7 @@
           "Imperial Manipur Cavalry (+6 vs archers)"
         ]
       },
-      "strategy": "Chu Ko Nu destroy infantry. Keep distance and focus fire."
+      "strategy": "Hearth Troops and cheaper foot soldiers. Shield Wall in a ball."
     },
     "Byzantines": {
       "difficulty": "Even",
@@ -1026,8 +1051,8 @@
         {
           "use": "Spearman",
           "against": "Cataphract",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Scout Cavalry",
@@ -1043,13 +1068,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Imperial Age - Cheap trash units and counter compositions",
         "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Castle Age cheap Camels",
@@ -1057,7 +1082,7 @@
           "Trash war with cheap Hussars/Skirms/Halbs"
         ]
       },
-      "strategy": "Chu Ko Nu kill Monks from range. Keep your distance."
+      "strategy": "Infantry overwhelms Monks. Clerical Recruitment is the monk tech."
     },
     "Celts": {
       "difficulty": "Even",
@@ -1119,14 +1144,14 @@
         {
           "use": "Archer",
           "against": "Woad Raider",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Knight",
@@ -1154,13 +1179,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle/Imperial Age - Feudal/Castle infantry pressure with 15% faster infantry",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Feudal MAA with speed bonus",
@@ -1168,7 +1193,107 @@
           "Imperial Siege Onagers with Furor Celtica"
         ]
       },
-      "strategy": "Chu Ko Nu destroy infantry. Keep distance and focus fire."
+      "strategy": "Hearth Troops and cheaper foot soldiers. Shield Wall in a ball."
+    },
+    "Chinese": {
+      "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Archer",
+        "tags": [
+          "Archer",
+          "Tech Discount",
+          "Chu Ko Nu"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Imperial",
+        "timing": "Tech discount compounds into late game",
+        "warning": "They out-upgrade you - pressure early"
+      },
+      "keyBonuses": [
+        "Fire Lancers and Fire Ships move +5/10% faster in Castle/Imperial Age",
+        "Technologies cost -5/10/15% in Feudal/Castle/Imperial Age"
+      ],
+      "allBonuses": [
+        "Fire Lancers and Fire Ships move +5/10% faster in Castle/Imperial Age",
+        "Team: Farms +10% food",
+        "Town Centers +7 line of sight and provide +15 population space",
+        "Technologies cost -5/10/15% in Feudal/Castle/Imperial Age",
+        "Start with +3 Villagers, but -50 wood and -200 food"
+      ],
+      "opponentUniqueUnit": "Chu Ko Nu",
+      "opponentUniqueUnitCategories": {
+        "type": "Archer",
+        "categories": [
+          "ranged",
+          "fast-firing",
+          "anti-infantry"
+        ],
+        "counters": [
+          "Skirmisher",
+          "Mangonel",
+          "Huskarl"
+        ],
+        "description": "Rapid-fire archer, high DPS at close range"
+      },
+      "opponentStrengths": [
+        {
+          "unit": "Chu Ko Nu",
+          "reason": "Unique Unit"
+        },
+        {
+          "unit": "Archer",
+          "reason": "Archer civilization"
+        }
+      ],
+      "counters": [
+        {
+          "use": "Skirmisher",
+          "against": "Chu Ko Nu",
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
+        },
+        {
+          "use": "Skirmisher",
+          "against": "Archer",
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
+        },
+        {
+          "use": "Mangonel",
+          "against": "Chu Ko Nu",
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
+        },
+        {
+          "use": "Scout Cavalry",
+          "against": "Chu Ko Nu",
+          "reason": "Fast raiding, forces archer retreat",
+          "civBonus": false
+        },
+        {
+          "use": "Mangonel",
+          "against": "Archer",
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
+        }
+      ],
+      "timingWindows": {
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
+        "opponentStrength": "Castle/Imperial Age - Tech discount into Chu Ko Nu mass",
+        "keyTiming": "Apply Castle Age pressure before they peak",
+        "yourPowerSpikes": [
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
+        ],
+        "opponentPowerSpikes": [
+          "Tech discount compounds over game",
+          "Castle Age Chu Ko Nu",
+          "Imperial Rocketry Scorpions"
+        ]
+      },
+      "strategy": "Close with infantry. Towers and Castles fire extra arrows."
     },
     "Cumans": {
       "difficulty": "Even",
@@ -1231,25 +1356,31 @@
         {
           "use": "Skirmisher",
           "against": "Kipchak",
-          "reason": "Bonus vs archers, cheap (civ bonus!)",
-          "civBonus": true
+          "reason": "Bonus vs archers, cheap",
+          "civBonus": false
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Skirmisher",
           "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
-          "civBonus": true
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Monk",
           "against": "Knight",
           "reason": "Convert expensive units",
+          "civBonus": false
+        },
+        {
+          "use": "Mangonel",
+          "against": "Archer",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         },
         {
@@ -1260,13 +1391,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Feudal/Castle Age - Feudal TC boom or Steppe Lancer timing",
         "keyTiming": "Be ready for early aggression, have counters prepared",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Feudal 2nd TC (unique)",
@@ -1274,7 +1405,7 @@
           "Imperial Cuman Mercenaries"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Hearth Troops. Shield Wall armor when massed."
     },
     "Danes": {
       "difficulty": "Even",
@@ -1337,14 +1468,14 @@
         {
           "use": "Archer",
           "against": "Jomsviking",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Knight",
@@ -1372,13 +1503,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Imperial Age - Jomsvikings and discounted siege upgrades",
         "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Loot from destroyed buildings",
@@ -1386,7 +1517,7 @@
           "Imperial Hamask and Northmen siege range"
         ]
       },
-      "strategy": "Chu Ko Nu destroy infantry. Keep distance and focus fire."
+      "strategy": "Hearth Troops and cheaper foot soldiers. Shield Wall in a ball."
     },
     "Dravidians": {
       "difficulty": "Even",
@@ -1450,20 +1581,20 @@
         {
           "use": "Archer",
           "against": "Urumi Swordsman",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Skirmisher",
           "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
-          "civBonus": true
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Knight",
@@ -1472,26 +1603,26 @@
           "civBonus": false
         },
         {
+          "use": "Mangonel",
+          "against": "Archer",
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
+        },
+        {
           "use": "Scout Cavalry",
           "against": "Archer",
           "reason": "Fast raiding, forces archer retreat",
           "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Militia",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Imperial Age - Wood bonus into Urumi and Wootz Steel",
         "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Wood bonus early economy",
@@ -1499,7 +1630,7 @@
           "Imperial Wootz Steel (ignore armor)"
         ]
       },
-      "strategy": "Chu Ko Nu high DPS wins archer fights. Add Scorpions for mass archer battles."
+      "strategy": "Close with infantry. Towers and Castles fire extra arrows."
     },
     "Ethiopians": {
       "difficulty": "Even",
@@ -1561,14 +1692,14 @@
         {
           "use": "Archer",
           "against": "Shotel Warrior",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Skirmisher",
           "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
-          "civBonus": true
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Knight",
@@ -1583,26 +1714,26 @@
           "civBonus": false
         },
         {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         },
         {
           "use": "Scout Cavalry",
-          "against": "Mangonel",
-          "reason": "Fast, snipes siege quickly",
+          "against": "Archer",
+          "reason": "Fast raiding, forces archer retreat",
           "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle Age - Free Pikemen, fast-firing archers",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Free Pikemen upgrade",
@@ -1610,7 +1741,7 @@
           "Imperial Torsion Engines siege"
         ]
       },
-      "strategy": "Chu Ko Nu high DPS wins archer fights. Add Scorpions for mass archer battles."
+      "strategy": "Close with infantry. Towers and Castles fire extra arrows."
     },
     "Franks": {
       "difficulty": "Even",
@@ -1666,14 +1797,14 @@
         {
           "use": "Archer",
           "against": "Throwing Axeman",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Knight",
@@ -1689,13 +1820,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle Age - Castle Age Knight rush with +20% HP bonus",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Fast Castle into Knights (minute 17-19)",
@@ -1703,7 +1834,7 @@
           "Imperial Mounted Crossbowmen with Ordonnance Companies"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Hearth Troops. Shield Wall armor when massed."
     },
     "Georgians": {
       "difficulty": "Even",
@@ -1758,8 +1889,8 @@
         {
           "use": "Spearman",
           "against": "Monaspa",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Monk",
@@ -1769,13 +1900,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle Age - Defensive bonuses and Monaspa cavalry",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Fortification bonuses",
@@ -1783,7 +1914,7 @@
           "Imperial regenerating cavalry"
         ]
       },
-      "strategy": "Tech discount compounds over time. Chu Ko Nu mass in Castle. Rocketry Scorpions late game."
+      "strategy": "Defensive infantry. Foot soldiers get cheaper with more Town Centers. Castles fire extra arrows."
     },
     "Goths": {
       "difficulty": "Even",
@@ -1840,21 +1971,21 @@
       ],
       "counters": [
         {
-          "use": "Knight",
+          "use": "Militia",
           "against": "Huskarl",
-          "reason": "High melee damage, mobility",
-          "civBonus": false
+          "reason": "Infantry vs infantry, cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
-          "use": "Militia",
+          "use": "Knight",
           "against": "Huskarl",
-          "reason": "Infantry vs infantry, cost-efficient",
+          "reason": "High melee damage, mobility",
           "civBonus": false
         },
         {
@@ -1871,13 +2002,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Imperial Age - Imperial Age instant infantry spam with Perfusion",
         "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Feudal MAA flood (cheaper)",
@@ -1885,7 +2016,7 @@
           "Post-Imperial Perfusion infantry spam"
         ]
       },
-      "strategy": "Chu Ko Nu destroy infantry. Keep distance and focus fire."
+      "strategy": "Hearth Troops and cheaper foot soldiers. Shield Wall in a ball."
     },
     "Gurjaras": {
       "difficulty": "Even",
@@ -1935,8 +2066,8 @@
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Scout Cavalry",
@@ -1952,13 +2083,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle Age - Camel and cavalry with bonus damage",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Mill bonus food",
@@ -1966,7 +2097,7 @@
           "Imperial Chakram Throwers + Camels"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Hearth Troops. Shield Wall armor when massed."
     },
     "Hindustanis": {
       "difficulty": "Even",
@@ -2022,21 +2153,21 @@
       ],
       "counters": [
         {
-          "use": "Knight",
+          "use": "Militia",
           "against": "Ghulam",
-          "reason": "High melee damage, mobility",
-          "civBonus": false
+          "reason": "Infantry vs infantry, cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
-          "use": "Militia",
+          "use": "Knight",
           "against": "Ghulam",
-          "reason": "Infantry vs infantry, cost-efficient",
+          "reason": "High melee damage, mobility",
           "civBonus": false
         },
         {
@@ -2053,13 +2184,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Imperial Age - Imperial Camels and gunpowder",
         "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Castle Age cheap Villagers from TC",
@@ -2067,7 +2198,7 @@
           "Shatagni Hand Cannoneers (+2 range)"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Hearth Troops. Shield Wall armor when massed."
     },
     "Huns": {
       "difficulty": "Even",
@@ -2126,14 +2257,14 @@
         {
           "use": "Spearman",
           "against": "Tarkan",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Monk",
@@ -2149,13 +2280,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle Age - No houses, aggressive Cavalry Archer play",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "No house advantage early",
@@ -2163,7 +2294,7 @@
           "Imperial Tarkans for raiding"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Hearth Troops. Shield Wall armor when massed."
     },
     "Incas": {
       "difficulty": "Even",
@@ -2226,26 +2357,26 @@
         {
           "use": "Archer",
           "against": "Kamayuk",
-          "reason": "+3 bonus vs spearman, safe range (civ bonus!)",
-          "civBonus": true
+          "reason": "+3 bonus vs spearman, safe range",
+          "civBonus": false
         },
         {
           "use": "Militia",
           "against": "Eagle Warrior",
-          "reason": "+6 bonus damage vs eagles",
-          "civBonus": false
+          "reason": "+6 bonus damage vs eagles (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Skirmisher",
           "against": "Kamayuk",
-          "reason": "Cheap, bonus vs spearman (civ bonus!)",
-          "civBonus": true
+          "reason": "Cheap, bonus vs spearman",
+          "civBonus": false
         },
         {
           "use": "Knight",
@@ -2261,13 +2392,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle/Imperial Age - Villager bonus and Kamayuk line",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Villager blacksmith upgrades",
@@ -2275,7 +2406,7 @@
           "Imperial Eagles + Slingers"
         ]
       },
-      "strategy": "Chu Ko Nu beat Eagles early. Add Champions for Imperial Eagle fights."
+      "strategy": "Infantry beats Eagles. Defensive buildings stall."
     },
     "Italians": {
       "difficulty": "Even",
@@ -2330,26 +2461,32 @@
         {
           "use": "Skirmisher",
           "against": "Genoese Crossbowman",
-          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
-          "civBonus": true
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Skirmisher",
           "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
-          "civBonus": true
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
-          "use": "Skirmisher",
+          "use": "Mangonel",
           "against": "Hand Cannoneer",
-          "reason": "Cheap ranged, high numbers (civ bonus!)",
-          "civBonus": true
+          "reason": "Area damage, outranges hand cannons",
+          "civBonus": false
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
+        },
+        {
+          "use": "Mangonel",
+          "against": "Genoese Crossbowman",
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
@@ -2358,26 +2495,20 @@
           "civBonus": false
         },
         {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat",
-          "civBonus": false
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Hand Cannoneer",
-          "reason": "Fast closing, dodges shots",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle/Imperial Age - Cheap age-up into Genoese Crossbowmen",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Age-up discount timing",
@@ -2385,7 +2516,7 @@
           "Imperial Condottiero vs gunpowder"
         ]
       },
-      "strategy": "Chu Ko Nu high DPS wins archer fights. Add Scorpions for mass archer battles."
+      "strategy": "Close with infantry. Towers and Castles fire extra arrows."
     },
     "Japanese": {
       "difficulty": "Even",
@@ -2443,14 +2574,14 @@
         {
           "use": "Archer",
           "against": "Samurai",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Knight",
@@ -2466,13 +2597,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Feudal/Castle Age - Feudal MAA pressure with 33% faster attack",
         "keyTiming": "Be ready for early aggression, have counters prepared",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Feudal 33% faster attacking infantry",
@@ -2480,7 +2611,7 @@
           "Imperial Yasama Towers + Trebs"
         ]
       },
-      "strategy": "Chu Ko Nu destroy infantry. Keep distance and focus fire."
+      "strategy": "Hearth Troops and cheaper foot soldiers. Shield Wall in a ball."
     },
     "Jurchens": {
       "difficulty": "Even",
@@ -2535,8 +2666,8 @@
         {
           "use": "Spearman",
           "against": "Iron Pagoda",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Monk",
@@ -2546,13 +2677,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Imperial Age - Iron Pagoda heavy cavalry",
         "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Castle Age Iron Pagodas",
@@ -2560,7 +2691,7 @@
           "Late game deathball"
         ]
       },
-      "strategy": "Tech discount compounds over time. Chu Ko Nu mass in Castle. Rocketry Scorpions late game."
+      "strategy": "Defensive infantry. Foot soldiers get cheaper with more Town Centers. Castles fire extra arrows."
     },
     "Khitans": {
       "difficulty": "Even",
@@ -2605,14 +2736,14 @@
         {
           "use": "Archer",
           "against": "Liao Dao",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Knight",
@@ -2628,13 +2759,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle Age - Cavalry Archer raiding",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Economy bonus early",
@@ -2642,7 +2773,7 @@
           "Imperial Cavalry Archer mass"
         ]
       },
-      "strategy": "Chu Ko Nu destroy infantry. Keep distance and focus fire."
+      "strategy": "Hearth Troops and cheaper foot soldiers. Shield Wall in a ball."
     },
     "Khmer": {
       "difficulty": "Even",
@@ -2723,13 +2854,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle/Imperial Age - Fast Castle (no building requirements), Ballista Elephants",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "No building requirement age-up",
@@ -2737,7 +2868,7 @@
           "Imperial Scorpions with Double Crossbow"
         ]
       },
-      "strategy": "Chu Ko Nu are fragile vs siege. Add Light Cav to snipe Mangonels."
+      "strategy": "Infantry snipes siege. Extra tower arrows defend."
     },
     "Koreans": {
       "difficulty": "Even",
@@ -2804,14 +2935,14 @@
         {
           "use": "Skirmisher",
           "against": "War Wagon",
-          "reason": "Bonus vs archers, cheap (civ bonus!)",
-          "civBonus": true
+          "reason": "Bonus vs archers, cheap",
+          "civBonus": false
         },
         {
           "use": "Skirmisher",
           "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
-          "civBonus": true
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Knight",
@@ -2822,8 +2953,14 @@
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
+        },
+        {
+          "use": "Mangonel",
+          "against": "Archer",
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
@@ -2836,22 +2973,16 @@
           "against": "Mangonel",
           "reason": "Fast, snipes siege quickly",
           "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Militia",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle Age - Tower rush or War Wagon mass",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Feudal/Castle tower rush",
@@ -2859,7 +2990,7 @@
           "Imperial Shinkichon Onagers (+1 range)"
         ]
       },
-      "strategy": "Chu Ko Nu high DPS wins archer fights. Add Scorpions for mass archer battles."
+      "strategy": "Close with infantry. Towers and Castles fire extra arrows."
     },
     "Lithuanians": {
       "difficulty": "Even",
@@ -2916,14 +3047,14 @@
         {
           "use": "Spearman",
           "against": "Leitis",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Monk",
@@ -2939,13 +3070,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle/Imperial Age - Relic-boosted Leitis ignoring armor",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Fast Relic collection",
@@ -2953,7 +3084,7 @@
           "Imperial Leitis with 4+ relics (+4 attack)"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Hearth Troops. Shield Wall armor when massed."
     },
     "Magyars": {
       "difficulty": "Even",
@@ -3014,20 +3145,20 @@
         {
           "use": "Spearman",
           "against": "Magyar Huszar",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Skirmisher",
           "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
-          "civBonus": true
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Monk",
@@ -3042,20 +3173,20 @@
           "civBonus": false
         },
         {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Feudal/Imperial Age - Feudal Scout rush, cheap Hussars in Imperial",
         "keyTiming": "Apply pressure in Castle Age",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Feudal free forging Scout rush",
@@ -3063,7 +3194,7 @@
           "Imperial free attack upgrades cavalry"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Hearth Troops. Shield Wall armor when massed."
     },
     "Malay": {
       "difficulty": "Even",
@@ -3122,14 +3253,14 @@
         {
           "use": "Archer",
           "against": "Karambit Warrior",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Knight",
@@ -3145,13 +3276,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle Age - Fast age-up, cheap Battle Elephants",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "66% faster age-up",
@@ -3159,7 +3290,7 @@
           "Imperial Forced Levy 2HS (no gold)"
         ]
       },
-      "strategy": "Chu Ko Nu destroy infantry. Keep distance and focus fire."
+      "strategy": "Hearth Troops and cheaper foot soldiers. Shield Wall in a ball."
     },
     "Malians": {
       "difficulty": "Even",
@@ -3217,14 +3348,14 @@
         {
           "use": "Archer",
           "against": "Gbeto",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Knight",
@@ -3240,13 +3371,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle/Imperial Age - Pierce armor infantry, Gbeto raids",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Wood bonus economy",
@@ -3254,7 +3385,7 @@
           "Imperial Farimba Cavaliers + pierce armor infantry"
         ]
       },
-      "strategy": "Chu Ko Nu destroy infantry. Keep distance and focus fire."
+      "strategy": "Hearth Troops and cheaper foot soldiers. Shield Wall in a ball."
     },
     "Mapuche": {
       "difficulty": "Even",
@@ -3322,26 +3453,26 @@
         {
           "use": "Spearman",
           "against": "Kona",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Skirmisher",
           "against": "Bolas Rider",
-          "reason": "Bonus vs archers, cheap (civ bonus!)",
-          "civBonus": true
+          "reason": "Bonus vs archers, cheap",
+          "civBonus": false
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Monk",
@@ -3363,13 +3494,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle Age - Kona cavalry and Bolas Rider mounted archers",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Forager food bonus",
@@ -3377,7 +3508,7 @@
           "Imperial Malon pass-through damage"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Hearth Troops. Shield Wall armor when massed."
     },
     "Mayans": {
       "difficulty": "Even",
@@ -3440,20 +3571,26 @@
         {
           "use": "Skirmisher",
           "against": "Plumed Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
-          "civBonus": true
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Militia",
           "against": "Eagle Warrior",
-          "reason": "+6 bonus damage vs eagles",
-          "civBonus": false
+          "reason": "+6 bonus damage vs eagles (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Skirmisher",
           "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
-          "civBonus": true
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
+        },
+        {
+          "use": "Mangonel",
+          "against": "Plumed Archer",
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
@@ -3466,22 +3603,16 @@
           "against": "Eagle Warrior",
           "reason": "High damage output",
           "civBonus": false
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat",
-          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle/Imperial Age - Longer lasting resources into Plumed Archers",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Resources last 15% longer",
@@ -3489,7 +3620,7 @@
           "Imperial Holcans Eagles (+40 HP)"
         ]
       },
-      "strategy": "Chu Ko Nu beat Eagles early. Add Champions for Imperial Eagle fights."
+      "strategy": "Infantry beats Eagles. Defensive buildings stall."
     },
     "Mongols": {
       "difficulty": "Even",
@@ -3552,14 +3683,14 @@
         {
           "use": "Skirmisher",
           "against": "Mangudai",
-          "reason": "Bonus vs archers, cheap (civ bonus!)",
-          "civBonus": true
+          "reason": "Bonus vs archers, cheap",
+          "civBonus": false
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Knight",
@@ -3581,13 +3712,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle/Imperial Age - Castle Age Mangudai raid, Imperial siege",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Hunt bonus for fast Feudal",
@@ -3595,7 +3726,7 @@
           "Imperial Drill Siege Onagers"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Hearth Troops. Shield Wall armor when massed."
     },
     "Muisca": {
       "difficulty": "Even",
@@ -3663,25 +3794,31 @@
         {
           "use": "Skirmisher",
           "against": "Guecha Warrior",
-          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
-          "civBonus": true
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Archer",
           "against": "Temple Guard",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Skirmisher",
           "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
-          "civBonus": true
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Monk",
           "reason": "Fast, cheap, kills monks quickly",
+          "civBonus": false
+        },
+        {
+          "use": "Mangonel",
+          "against": "Guecha Warrior",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         },
         {
@@ -3695,22 +3832,16 @@
           "against": "Temple Guard",
           "reason": "High damage, mobility advantage",
           "civBonus": false
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat",
-          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle Age - Cheap age-up into archers, Monks, and Temple Guard",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Age-up costs half gold",
@@ -3718,7 +3849,7 @@
           "Imperial Herbalism speed"
         ]
       },
-      "strategy": "Chu Ko Nu high DPS wins archer fights. Add Scorpions for mass archer battles."
+      "strategy": "Close with infantry. Towers and Castles fire extra arrows."
     },
     "Persians": {
       "difficulty": "Even",
@@ -3776,21 +3907,21 @@
       ],
       "counters": [
         {
-          "use": "Monk",
+          "use": "Spearman",
           "against": "War Elephant",
-          "reason": "Convert expensive elephants",
-          "civBonus": false
+          "reason": "Huge bonus damage vs elephants (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
-          "use": "Spearman",
+          "use": "Monk",
           "against": "War Elephant",
-          "reason": "Huge bonus damage vs elephants",
+          "reason": "Convert expensive elephants",
           "civBonus": false
         },
         {
@@ -3807,13 +3938,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle Age - Fast Castle into Knights, War Elephants late",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "TC work rate bonus",
@@ -3821,7 +3952,7 @@
           "Imperial War Elephants with Mahouts"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Hearth Troops. Shield Wall armor when massed."
     },
     "Poles": {
       "difficulty": "Even",
@@ -3879,14 +4010,14 @@
         {
           "use": "Archer",
           "against": "Obuch",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Knight",
@@ -3902,13 +4033,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle/Imperial Age - Cheap Cavaliers with stone from gold",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Folwark farming bonus",
@@ -3916,7 +4047,7 @@
           "Imperial Winged Hussar + Obuch"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Hearth Troops. Shield Wall armor when massed."
     },
     "Portuguese": {
       "difficulty": "Even",
@@ -3978,10 +4109,10 @@
           "civBonus": false
         },
         {
-          "use": "Skirmisher",
+          "use": "Mangonel",
           "against": "Hand Cannoneer",
-          "reason": "Cheap ranged, high numbers (civ bonus!)",
-          "civBonus": true
+          "reason": "Area damage, outranges hand cannons",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
@@ -3994,16 +4125,22 @@
           "against": "Hand Cannoneer",
           "reason": "Fast closing, dodges shots",
           "civBonus": false
+        },
+        {
+          "use": "Skirmisher",
+          "against": "Hand Cannoneer",
+          "reason": "Cheap ranged, high numbers",
+          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Imperial Age - Castle Age Organ Guns, Imperial Feitoria boom",
         "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Gold discount on all units",
@@ -4011,7 +4148,7 @@
           "Imperial Feitoria for infinite resources"
         ]
       },
-      "strategy": "Tech discount lets you reach Imperial faster. Rocketry Scorpions are strong late."
+      "strategy": "Defend with towers, then push with cheap infantry."
     },
     "Romans": {
       "difficulty": "Even",
@@ -4070,14 +4207,14 @@
         {
           "use": "Archer",
           "against": "Centurion",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Knight",
@@ -4093,13 +4230,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Imperial Age - Cheap Scorpions and Legionary line",
         "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Cheap Scorpions from Castle Age",
@@ -4107,7 +4244,7 @@
           "Imperial Legionary charge resistance"
         ]
       },
-      "strategy": "Chu Ko Nu destroy infantry. Keep distance and focus fire."
+      "strategy": "Hearth Troops and cheaper foot soldiers. Shield Wall in a ball."
     },
     "Saracens": {
       "difficulty": "Even",
@@ -4163,21 +4300,27 @@
       ],
       "counters": [
         {
-          "use": "Archer",
+          "use": "Militia",
           "against": "Mameluke",
-          "reason": "Ranged damage, camels have low pierce armor (civ bonus!)",
+          "reason": "Infantry takes less bonus damage (civ bonus!)",
           "civBonus": true
         },
         {
           "use": "Skirmisher",
           "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
-          "civBonus": true
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
-          "use": "Militia",
+          "use": "Archer",
           "against": "Mameluke",
-          "reason": "Infantry takes less bonus damage",
+          "reason": "Ranged damage, camels have low pierce armor",
+          "civBonus": false
+        },
+        {
+          "use": "Mangonel",
+          "against": "Archer",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         },
         {
@@ -4188,13 +4331,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle/Imperial Age - Market abuse into Mameluke mass",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Market bonus for fast age-up",
@@ -4202,103 +4345,7 @@
           "Imperial Mameluke + siege"
         ]
       },
-      "strategy": "Chu Ko Nu high DPS wins archer fights. Add Scorpions for mass archer battles."
-    },
-    "Saxons": {
-      "difficulty": "Even",
-      "opponentDescription": {
-        "type": "Infantry",
-        "tags": [
-          "Infantry",
-          "Defensive",
-          "Hearth Troop",
-          "Towers"
-        ]
-      },
-      "opponentPeakTiming": {
-        "peakAge": "Castle",
-        "timing": "Cheaper foot soldiers and doubled castle arrows",
-        "warning": "Infantry gets cheaper as they add Town Centers. Do not dive their castles"
-      },
-      "keyBonuses": [
-        "Longships and Catapult Galleons +20% HP",
-        "Team: Repairers work +25% faster",
-        "Towers and Castles fire +100% base arrows starting in Castle Age"
-      ],
-      "allBonuses": [
-        "Longships and Catapult Galleons +20% HP",
-        "Team: Repairers work +25% faster",
-        "Towers and Castles fire +100% base arrows starting in Castle Age",
-        "Mills, Lumber- and Mining Camps provide +35 food and +10 stone when built",
-        "Foot Soldiers cost -5% per Town Center or Castle controlled (maximum -20%)"
-      ],
-      "opponentUniqueUnit": "Hearth Troop",
-      "opponentUniqueUnitCategories": {
-        "type": "Infantry",
-        "categories": [
-          "massed",
-          "armor",
-          "melee"
-        ],
-        "counters": [
-          "Archer",
-          "Knight",
-          "Hand Cannoneer"
-        ],
-        "description": "Infantry that gains armor when massed (Shield Wall)"
-      },
-      "opponentStrengths": [
-        {
-          "unit": "Hearth Troop",
-          "reason": "Unique Unit"
-        },
-        {
-          "unit": "Militia",
-          "reason": "Infantry civilization"
-        }
-      ],
-      "counters": [
-        {
-          "use": "Archer",
-          "against": "Hearth Troop",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
-        },
-        {
-          "use": "Archer",
-          "against": "Militia",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
-        },
-        {
-          "use": "Knight",
-          "against": "Hearth Troop",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Militia",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
-        }
-      ],
-      "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
-        "opponentStrength": "Castle Age - Cheaper foot soldiers and extra castle arrows",
-        "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
-        "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
-        ],
-        "opponentPowerSpikes": [
-          "Camps grant food and stone",
-          "Castle Age Hearth Troops",
-          "Imperial Shield Wall"
-        ]
-      },
-      "strategy": "Chu Ko Nu destroy infantry. Keep distance and focus fire."
+      "strategy": "Close with infantry. Towers and Castles fire extra arrows."
     },
     "Shu": {
       "difficulty": "Even",
@@ -4342,19 +4389,25 @@
         {
           "use": "Archer",
           "against": "White Feather Guard",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Skirmisher",
           "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
-          "civBonus": true
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Knight",
           "against": "White Feather Guard",
           "reason": "High damage, mobility advantage",
+          "civBonus": false
+        },
+        {
+          "use": "Mangonel",
+          "against": "Archer",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         },
         {
@@ -4365,13 +4418,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle/Imperial Age - Defensive play with repeating crossbow",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Defensive bonuses",
@@ -4379,7 +4432,7 @@
           "Imperial siege support"
         ]
       },
-      "strategy": "Chu Ko Nu high DPS wins archer fights. Add Scorpions for mass archer battles."
+      "strategy": "Close with infantry. Towers and Castles fire extra arrows."
     },
     "Sicilians": {
       "difficulty": "Even",
@@ -4434,8 +4487,8 @@
         {
           "use": "Archer",
           "against": "Serjeant",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Knight",
@@ -4445,13 +4498,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle Age - Castle Age Serjeants with Donjon forward",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Feudal Donjon rush",
@@ -4459,7 +4512,7 @@
           "Imperial Hauberk Cavalier"
         ]
       },
-      "strategy": "Tech discount compounds over time. Chu Ko Nu mass in Castle. Rocketry Scorpions late game."
+      "strategy": "Defensive infantry. Foot soldiers get cheaper with more Town Centers. Castles fire extra arrows."
     },
     "Slavs": {
       "difficulty": "Even",
@@ -4525,14 +4578,14 @@
         {
           "use": "Spearman",
           "against": "Boyar",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Knight",
@@ -4566,13 +4619,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Imperial Age - Farming bonus into infantry/siege deathball",
         "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Faster farming kicks in early",
@@ -4580,7 +4633,7 @@
           "Imperial Druzhina Champions splash damage"
         ]
       },
-      "strategy": "Chu Ko Nu destroy infantry. Keep distance and focus fire."
+      "strategy": "Hearth Troops and cheaper foot soldiers. Shield Wall in a ball."
     },
     "Spanish": {
       "difficulty": "Even",
@@ -4641,10 +4694,10 @@
       ],
       "counters": [
         {
-          "use": "Skirmisher",
+          "use": "Mangonel",
           "against": "Conquistador",
-          "reason": "Cheap ranged, high numbers (civ bonus!)",
-          "civBonus": true
+          "reason": "Area damage, outranges hand cannons",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
@@ -4653,15 +4706,21 @@
           "civBonus": false
         },
         {
-          "use": "Skirmisher",
+          "use": "Mangonel",
           "against": "Hand Cannoneer",
-          "reason": "Cheap ranged, high numbers (civ bonus!)",
-          "civBonus": true
+          "reason": "Area damage, outranges hand cannons",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
           "against": "Conquistador",
           "reason": "Fast closing, dodges shots",
+          "civBonus": false
+        },
+        {
+          "use": "Skirmisher",
+          "against": "Conquistador",
+          "reason": "Cheap ranged, high numbers",
           "civBonus": false
         },
         {
@@ -4672,13 +4731,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle/Imperial Age - Castle Age Conquistadors, Imperial gunpowder",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Castle Age Conquistadors",
@@ -4686,7 +4745,7 @@
           "Missionaries with Inquisition"
         ]
       },
-      "strategy": "Tech discount lets you reach Imperial faster. Rocketry Scorpions are strong late."
+      "strategy": "Defend with towers, then push with cheap infantry."
     },
     "Tatars": {
       "difficulty": "Even",
@@ -4744,19 +4803,25 @@
         {
           "use": "Spearman",
           "against": "Keshik",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Skirmisher",
           "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
-          "civBonus": true
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Monk",
           "against": "Keshik",
           "reason": "Convert expensive units",
+          "civBonus": false
+        },
+        {
+          "use": "Mangonel",
+          "against": "Archer",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         },
         {
@@ -4767,13 +4832,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle/Imperial Age - Hill bonus and Keshik gold generation",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Extra sheep for scout rush",
@@ -4781,7 +4846,7 @@
           "Imperial Silk Armor Cavalry Archers"
         ]
       },
-      "strategy": "Chu Ko Nu high DPS wins archer fights. Add Scorpions for mass archer battles."
+      "strategy": "Close with infantry. Towers and Castles fire extra arrows."
     },
     "Teutons": {
       "difficulty": "Even",
@@ -4846,14 +4911,14 @@
         {
           "use": "Archer",
           "against": "Teutonic Knight",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
@@ -4875,13 +4940,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Imperial Age - Castle/Imperial slow push with melee armor and conversions",
         "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Castle Age Knights with +2 melee armor",
@@ -4889,7 +4954,7 @@
           "Siege + Teutonic Knight deathball"
         ]
       },
-      "strategy": "Chu Ko Nu destroy infantry. Keep distance and focus fire."
+      "strategy": "Hearth Troops and cheaper foot soldiers. Shield Wall in a ball."
     },
     "Tupi": {
       "difficulty": "Even",
@@ -4956,26 +5021,32 @@
         {
           "use": "Skirmisher",
           "against": "Blackwood Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
-          "civBonus": true
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Archer",
           "against": "Ibirapema Warrior",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Skirmisher",
           "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
-          "civBonus": true
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
+        },
+        {
+          "use": "Mangonel",
+          "against": "Blackwood Archer",
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
@@ -4988,22 +5059,16 @@
           "against": "Ibirapema Warrior",
           "reason": "High damage, mobility advantage",
           "civBonus": false
-        },
-        {
-          "use": "Scout Cavalry",
-          "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat",
-          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle Age - Blackwood Archers and Ibirapema Warriors with cheap upgrades",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Start with extra resources",
@@ -5011,7 +5076,7 @@
           "Imperial Curare poison"
         ]
       },
-      "strategy": "Chu Ko Nu high DPS wins archer fights. Add Scorpions for mass archer battles."
+      "strategy": "Close with infantry. Towers and Castles fire extra arrows."
     },
     "Turks": {
       "difficulty": "Even",
@@ -5071,22 +5136,22 @@
       ],
       "counters": [
         {
-          "use": "Skirmisher",
+          "use": "Mangonel",
           "against": "Janissary",
-          "reason": "Cheap ranged, high numbers (civ bonus!)",
-          "civBonus": true
+          "reason": "Area damage, outranges hand cannons",
+          "civBonus": false
         },
         {
-          "use": "Skirmisher",
+          "use": "Mangonel",
           "against": "Hand Cannoneer",
-          "reason": "Cheap ranged, high numbers (civ bonus!)",
-          "civBonus": true
+          "reason": "Area damage, outranges hand cannons",
+          "civBonus": false
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Scout Cavalry",
@@ -5095,26 +5160,26 @@
           "civBonus": false
         },
         {
+          "use": "Skirmisher",
+          "against": "Janissary",
+          "reason": "Cheap ranged, high numbers",
+          "civBonus": false
+        },
+        {
           "use": "Scout Cavalry",
           "against": "Hand Cannoneer",
           "reason": "Fast closing, dodges shots",
           "civBonus": false
-        },
-        {
-          "use": "Monk",
-          "against": "Knight",
-          "reason": "Convert expensive units",
-          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle/Imperial Age - Free Chemistry Janissaries in Castle Age",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Castle Age Janissaries (free Chemistry)",
@@ -5122,7 +5187,7 @@
           "Sipahi Cavalry Archers"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Hearth Troops. Shield Wall armor when massed."
     },
     "Varangians": {
       "difficulty": "Even",
@@ -5185,20 +5250,20 @@
         {
           "use": "Spearman",
           "against": "Jarl",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Monk",
@@ -5220,13 +5285,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle Age - Jarls funded by gold from food gathering",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Gold from hunt and fishing",
@@ -5234,7 +5299,7 @@
           "Imperial Vendel Legacy trample"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Hearth Troops. Shield Wall armor when massed."
     },
     "Vietnamese": {
       "difficulty": "Even",
@@ -5293,14 +5358,20 @@
         {
           "use": "Skirmisher",
           "against": "Rattan Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
-          "civBonus": true
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Skirmisher",
           "against": "Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
-          "civBonus": true
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
+        },
+        {
+          "use": "Mangonel",
+          "against": "Rattan Archer",
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
@@ -5309,20 +5380,20 @@
           "civBonus": false
         },
         {
-          "use": "Scout Cavalry",
+          "use": "Mangonel",
           "against": "Archer",
-          "reason": "Fast raiding, forces archer retreat",
+          "reason": "Area damage destroys archer masses",
           "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle/Imperial Age - Archer play with extra HP",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Reveal enemy TC start",
@@ -5330,7 +5401,7 @@
           "Imperial Chatras Battle Elephants"
         ]
       },
-      "strategy": "Chu Ko Nu high DPS wins archer fights. Add Scorpions for mass archer battles."
+      "strategy": "Close with infantry. Towers and Castles fire extra arrows."
     },
     "Vikings": {
       "difficulty": "Even",
@@ -5387,14 +5458,14 @@
         {
           "use": "Archer",
           "against": "Berserk",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
         },
         {
           "use": "Knight",
@@ -5410,13 +5481,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle/Imperial Age - Castle Age economy lead into infantry flood",
         "keyTiming": "Apply Castle Age pressure before they peak",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Wheelbarrow/Hand Cart savings kick in",
@@ -5424,7 +5495,7 @@
           "Imperial Chieftains infantry and Longships"
         ]
       },
-      "strategy": "Chu Ko Nu destroy infantry. Keep distance and focus fire."
+      "strategy": "Hearth Troops and cheaper foot soldiers. Shield Wall in a ball."
     },
     "Wei": {
       "difficulty": "Even",
@@ -5480,14 +5551,14 @@
         {
           "use": "Spearman",
           "against": "Tiger Cavalry",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Monk",
@@ -5503,13 +5574,13 @@
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle Age - Aggressive Tiger Cavalry",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Aggression bonus",
@@ -5517,7 +5588,7 @@
           "Imperial cavalry anti-cav"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Hearth Troops. Shield Wall armor when massed."
     },
     "Wu": {
       "difficulty": "Even",
@@ -5566,20 +5637,26 @@
         {
           "use": "Skirmisher",
           "against": "Fire Archer",
-          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
-          "civBonus": true
+          "reason": "+3/+4 bonus damage, cheap trash counter",
+          "civBonus": false
         },
         {
           "use": "Spearman",
           "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
+          "reason": "+15 bonus damage, very cost-efficient (civ bonus!)",
+          "civBonus": true
         },
         {
           "use": "Archer",
           "against": "Militia",
-          "reason": "Kites slow infantry easily (civ bonus!)",
-          "civBonus": true
+          "reason": "Kites slow infantry easily",
+          "civBonus": false
+        },
+        {
+          "use": "Mangonel",
+          "against": "Fire Archer",
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
         },
         {
           "use": "Scout Cavalry",
@@ -5592,22 +5669,16 @@
           "against": "Knight",
           "reason": "Convert expensive units",
           "civBonus": false
-        },
-        {
-          "use": "Knight",
-          "against": "Militia",
-          "reason": "High damage, mobility advantage",
-          "civBonus": false
         }
       ],
       "timingWindows": {
-        "yourStrength": "Tech discount into Chu Ko Nu mass",
+        "yourStrength": "Cheaper foot soldiers and extra castle arrows",
         "opponentStrength": "Castle Age - Naval and infantry combination",
         "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
         "yourPowerSpikes": [
-          "Tech discount compounds over game",
-          "Castle Age Chu Ko Nu",
-          "Imperial Rocketry Scorpions"
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
         ],
         "opponentPowerSpikes": [
           "Naval dominance",
@@ -5615,7 +5686,7 @@
           "Land/water hybrid maps"
         ]
       },
-      "strategy": "Chu Ko Nu with Pikemen support. Tech discount helps you upgrade faster."
+      "strategy": "Spearmen and Hearth Troops. Shield Wall armor when massed."
     }
   }
 }

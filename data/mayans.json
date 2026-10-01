@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-01-29T22:28:00.725Z",
+  "generatedAt": "2026-10-01T21:23:12.480Z",
   "civilization": "Mayans",
   "civDescription": {
     "type": "Archer",
@@ -36,16 +36,18 @@
   "uniqueUnitElite": "Elite Plumed Archer",
   "uniqueTechs": {
     "castle": "Hul'che Javelineers",
-    "imperial": "El Dorado"
+    "imperial": "Holcans"
   },
   "availableUnits": [
     "Archer",
     "Battering Ram",
+    "Catapult Galleon",
     "Demolition Raft",
     "Eagle Scout",
     "Fire Galley",
     "Fishing Ship",
     "Galley",
+    "Hulk",
     "Mangonel",
     "Militia",
     "Monk",
@@ -59,8 +61,7 @@
     "Trade Cog",
     "Transport Ship",
     "Trebuchet",
-    "Villager",
-    "Xolotl Warrior"
+    "Villager"
   ],
   "matchups": {
     "Armenians": {
@@ -85,7 +86,7 @@
         "Team: Infantry +2 line of sight"
       ],
       "allBonuses": [
-        "Mule Cart technologies are +40% more effective",
+        "Mule Cart technology effects +40%",
         "Mule Carts cost -25%",
         "First Fortified Church receives a free Relic",
         "Team: Infantry +2 line of sight",
@@ -144,7 +145,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Earlier infantry upgrades",
@@ -242,7 +243,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Faster military production",
@@ -332,7 +333,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Castle Age Rathas (ranged/melee switch)",
@@ -437,7 +438,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Cheap Stable units (15-20% discount)",
@@ -521,7 +522,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Castle Age Hussite Wagon deathball",
@@ -615,7 +616,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Feudal Archer harass",
@@ -623,7 +624,7 @@
           "Imperial Longbowmen with Yeomen (+1 range)"
         ]
       },
-      "strategy": "Plumed Archers have high pierce armor - win archer fights. Obsidian Arrows helps."
+      "strategy": "Plumed Archers have high pierce armor - win archer fights. Hul'che Javelineers add a Skirmisher projectile."
     },
     "Bulgarians": {
       "difficulty": "Even",
@@ -720,7 +721,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Krepost forward with Konniks",
@@ -748,12 +749,12 @@
       "keyBonuses": [
         "Gunpowder Units +25% attack",
         "Stable technologies cost -50%",
-        "Economic upgrades available one age earlier and cost -33% food"
+        "Economic upgrades available one age earlier and cost -40% food"
       ],
       "allBonuses": [
         "Gunpowder Units +25% attack",
         "Stable technologies cost -50%",
-        "Economic upgrades available one age earlier and cost -33% food",
+        "Economic upgrades available one age earlier and cost -40% food",
         "Cavalier upgrade available in Castle Age",
         "Team: Relics generate food in addition to gold"
       ],
@@ -815,7 +816,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Early economic upgrades",
@@ -884,7 +885,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Free lumber upgrades economy",
@@ -912,12 +913,12 @@
       },
       "keyBonuses": [
         "Fire Ships and Dromons attack +25% faster",
-        "Buildings +10/20/30/40% HP in Dark/Feudal/Castle/Imperial Age",
+        "Buildings +10/20/30/40% HP in Dark/Feudal/ Castle/Imperial Age",
         "Team: Monks heal +100% faster"
       ],
       "allBonuses": [
         "Fire Ships and Dromons attack +25% faster",
-        "Buildings +10/20/30/40% HP in Dark/Feudal/Castle/Imperial Age",
+        "Buildings +10/20/30/40% HP in Dark/Feudal/ Castle/Imperial Age",
         "Team: Monks heal +100% faster",
         "Camel Riders, Skirmishers and Spearman-line cost -25%",
         "Advancing to Imperial Age costs -33%",
@@ -969,7 +970,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Castle Age cheap Camels",
@@ -1056,7 +1057,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Feudal MAA with speed bonus",
@@ -1150,7 +1151,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Tech discount compounds over game",
@@ -1158,7 +1159,7 @@
           "Imperial Rocketry Scorpions"
         ]
       },
-      "strategy": "Plumed Archers have high pierce armor - win archer fights. Obsidian Arrows helps."
+      "strategy": "Plumed Archers have high pierce armor - win archer fights. Hul'che Javelineers add a Skirmisher projectile."
     },
     "Cumans": {
       "difficulty": "Even",
@@ -1256,7 +1257,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Feudal 2nd TC (unique)",
@@ -1265,6 +1266,94 @@
         ]
       },
       "strategy": "Plumed Archers kite cavalry. Add cheap Eagles or Pikemen."
+    },
+    "Danes": {
+      "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Infantry/Siege",
+        "tags": [
+          "Infantry",
+          "Siege",
+          "Jomsviking",
+          "Building Loot"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Imperial",
+        "timing": "Jomsvikings with Hamask and cheaper siege upgrades",
+        "warning": "Infantry hits harder at low HP. Snipe Mangonels before the range tech"
+      },
+      "keyBonuses": [
+        "Varangian Guards and Longships move +10% faster",
+        "Barracks and Siege Workshop upgrades cost -66% gold",
+        "Loot 25% of the resource cost of each destroyed building"
+      ],
+      "allBonuses": [
+        "Varangian Guards and Longships move +10% faster",
+        "Barracks and Siege Workshop upgrades cost -66% gold",
+        "Loot 25% of the resource cost of each destroyed building",
+        "Fishing Ships and Villagers drop off +5% food",
+        "Team: Siege Weapons +2 line of sight"
+      ],
+      "opponentUniqueUnit": "Jomsviking",
+      "opponentUniqueUnitCategories": {
+        "type": "Infantry",
+        "categories": [
+          "attrition",
+          "anti-cavalry",
+          "melee"
+        ],
+        "counters": [
+          "Archer",
+          "Knight",
+          "Hand Cannoneer"
+        ],
+        "description": "Hits harder as it loses HP (Hamask)"
+      },
+      "opponentStrengths": [
+        {
+          "unit": "Jomsviking",
+          "reason": "Unique Unit"
+        },
+        {
+          "unit": "Militia",
+          "reason": "Infantry civilization"
+        },
+        {
+          "unit": "Mangonel",
+          "reason": "Siege civilization"
+        }
+      ],
+      "counters": [
+        {
+          "use": "Archer",
+          "against": "Jomsviking",
+          "reason": "Kites slow infantry easily (civ bonus!)",
+          "civBonus": true
+        },
+        {
+          "use": "Archer",
+          "against": "Militia",
+          "reason": "Kites slow infantry easily (civ bonus!)",
+          "civBonus": true
+        }
+      ],
+      "timingWindows": {
+        "yourStrength": "Longer lasting resources into Plumed Archers",
+        "opponentStrength": "Imperial Age - Jomsvikings and discounted siege upgrades",
+        "keyTiming": "DO NOT let them reach Imperial without damage - pressure early",
+        "yourPowerSpikes": [
+          "Resources last 15% longer",
+          "Castle Age Plumed Archers",
+          "Imperial Holcans Eagles (+40 HP)"
+        ],
+        "opponentPowerSpikes": [
+          "Loot from destroyed buildings",
+          "Castle Age Jomsvikings",
+          "Imperial Hamask and Northmen siege range"
+        ]
+      },
+      "strategy": "Archers destroy infantry. Plumed Archers kite safely."
     },
     "Dravidians": {
       "difficulty": "Even",
@@ -1357,7 +1446,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Wood bonus early economy",
@@ -1365,7 +1454,7 @@
           "Imperial Wootz Steel (ignore armor)"
         ]
       },
-      "strategy": "Plumed Archers have high pierce armor - win archer fights. Obsidian Arrows helps."
+      "strategy": "Plumed Archers have high pierce armor - win archer fights. Hul'che Javelineers add a Skirmisher projectile."
     },
     "Ethiopians": {
       "difficulty": "Even",
@@ -1450,7 +1539,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Free Pikemen upgrade",
@@ -1458,7 +1547,7 @@
           "Imperial Torsion Engines siege"
         ]
       },
-      "strategy": "Plumed Archers have high pierce armor - win archer fights. Obsidian Arrows helps."
+      "strategy": "Plumed Archers have high pierce armor - win archer fights. Hul'che Javelineers add a Skirmisher projectile."
     },
     "Franks": {
       "difficulty": "Even",
@@ -1537,12 +1626,12 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Fast Castle into Knights (minute 17-19)",
           "Castle Age Knight mass",
-          "Imperial Paladin with Bearded Axe"
+          "Imperial Mounted Crossbowmen with Ordonnance Companies"
         ]
       },
       "strategy": "Plumed Archers kite cavalry. Add cheap Eagles or Pikemen."
@@ -1617,7 +1706,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Fortification bonuses",
@@ -1625,7 +1714,7 @@
           "Imperial regenerating cavalry"
         ]
       },
-      "strategy": "Resources last longer - boom hard. Plumed Archers + El Dorado Eagles (+40 HP)."
+      "strategy": "Resources last longer - boom hard. Plumed Archers + Holcans Eagles (+40 HP)."
     },
     "Goths": {
       "difficulty": "Even",
@@ -1707,7 +1796,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Feudal MAA flood (cheaper)",
@@ -1741,8 +1830,7 @@
         "Team: Camel and Elephant Units train +25% faster",
         "Mounted Units deal +20/30/40% bonus damage in Feudal/Castle/Imperial Age",
         "Start with 2 Forage Bushes",
-        "Can garrison livestock in Mills to passively produce food",
-        "Fishing Ships can garrison in Docks for protection"
+        "Can garrison livestock in Mills to passively produce food"
       ],
       "opponentUniqueUnit": "Chakram Thrower",
       "opponentUniqueUnitCategories": null,
@@ -1777,7 +1865,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Mill bonus food",
@@ -1804,12 +1892,12 @@
       },
       "keyBonuses": [
         "Camel Riders attack +20% faster",
-        "Team: Light Horsemen and Camel Units +2 attack vs. buildings",
+        "Team: Scout Cavalry-line and Camel Units +2 attack vs. buildings",
         "Gunpowder Units +1 melee/+1 pierce armor"
       ],
       "allBonuses": [
         "Camel Riders attack +20% faster",
-        "Team: Light Horsemen and Camel Units +2 attack vs. buildings",
+        "Team: Scout Cavalry-line and Camel Units +2 attack vs. buildings",
         "Gunpowder Units +1 melee/+1 pierce armor",
         "Villagers cost -8/13/18/23% in Dark/Feudal/Castle/ Imperial Age",
         "Can build Caravanserai in Imperial Age"
@@ -1872,7 +1960,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Castle Age cheap Villagers from TC",
@@ -1968,7 +2056,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "No house advantage early",
@@ -1995,15 +2083,15 @@
         "warning": "Kamayuks destroy cavalry, even Knights"
       },
       "keyBonuses": [
-        "Military Units cost -10/15/20/25% food in Dark/ Feudal/Castle/Imperial Age",
+        "Military Units cost -15/20/25/30% food in Dark/Feudal/Castle/Imperial Age",
         "Buildings cost -15% stone",
         "Team: Start with a free Llama"
       ],
       "allBonuses": [
-        "Military Units cost -10/15/20/25% food in Dark/ Feudal/Castle/Imperial Age",
+        "Military Units cost -15/20/25/30% food in Dark/Feudal/Castle/Imperial Age",
         "Buildings cost -15% stone",
         "Team: Start with a free Llama",
-        "Houses provide +5 population space",
+        "Houses and Settlements provide +5 population space",
         "Villagers affected by Infantry Blacksmith upgrades starting in Castle Age"
       ],
       "opponentUniqueUnit": "Kamayuk",
@@ -2068,7 +2156,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Villager blacksmith upgrades",
@@ -2103,7 +2191,7 @@
         "Foot Archers and Condottieri +1 melee/+1 pierce armor",
         "Advancing to the next Age costs -15%",
         "Gunpowder Units cost -20%",
-        "Dock and University technologies cost -33%",
+        "Dock and University technologies cost -25%",
         "Fishing Ships cost -15%",
         "Team: Condottiero available at the Barracks in Imperial Age"
       ],
@@ -2178,7 +2266,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Age-up discount timing",
@@ -2186,7 +2274,7 @@
           "Imperial Condottiero vs gunpowder"
         ]
       },
-      "strategy": "Plumed Archers have high pierce armor - win archer fights. Obsidian Arrows helps."
+      "strategy": "Plumed Archers have high pierce armor - win archer fights. Hul'che Javelineers add a Skirmisher projectile."
     },
     "Japanese": {
       "difficulty": "Even",
@@ -2204,12 +2292,12 @@
         "warning": "Expect aggressive Feudal infantry, wall early"
       },
       "keyBonuses": [
-        "Fishing Ships work +5/10/15/20% faster in Dark/Feudal/Castle/Imperial Age; +100% HP and +2 pierce armor",
+        "Fishing Ships work +5/10/15/20% faster in Dark/Feudal/Castle/Imperial Age; +100% HP",
         "Infantry attacks +33% faster starting in Feudal Age",
         "Cavalry Archers +2 attack vs. Ranged Soldiers (except Skirmishers)"
       ],
       "allBonuses": [
-        "Fishing Ships work +5/10/15/20% faster in Dark/Feudal/Castle/Imperial Age; +100% HP and +2 pierce armor",
+        "Fishing Ships work +5/10/15/20% faster in Dark/Feudal/Castle/Imperial Age; +100% HP",
         "Infantry attacks +33% faster starting in Feudal Age",
         "Cavalry Archers +2 attack vs. Ranged Soldiers (except Skirmishers)",
         "Mills, Lumber- and Mining Camps cost -50%",
@@ -2261,7 +2349,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Feudal 33% faster attacking infantry",
@@ -2341,7 +2429,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Castle Age Iron Pagodas",
@@ -2349,7 +2437,7 @@
           "Late game deathball"
         ]
       },
-      "strategy": "Resources last longer - boom hard. Plumed Archers + El Dorado Eagles (+40 HP)."
+      "strategy": "Resources last longer - boom hard. Plumed Archers + Holcans Eagles (+40 HP)."
     },
     "Khitans": {
       "difficulty": "Even",
@@ -2367,12 +2455,12 @@
         "warning": "Expect CA harassment, protect eco"
       },
       "keyBonuses": [
-        "Skirmishers, Spearman-, and Scout Cavalry-line train and upgrade +25% faster",
+        "Skirmishers, Spearman-, and Scout Cavalry-line train and upgrade +15% faster",
         "Heavy Cavalry Archer upgrade available in Castle Age and costs -50%",
         "Team: Infantry +2 attack vs. Ranged Soldiers"
       ],
       "allBonuses": [
-        "Skirmishers, Spearman-, and Scout Cavalry-line train and upgrade +25% faster",
+        "Skirmishers, Spearman-, and Scout Cavalry-line train and upgrade +15% faster",
         "Heavy Cavalry Archer upgrade available in Castle Age and costs -50%",
         "Team: Infantry +2 attack vs. Ranged Soldiers",
         "Melee attack upgrade effects are doubled",
@@ -2411,7 +2499,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Economy bonus early",
@@ -2481,7 +2569,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "No building requirement age-up",
@@ -2585,7 +2673,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Feudal/Castle tower rush",
@@ -2593,7 +2681,7 @@
           "Imperial Shinkichon Onagers (+1 range)"
         ]
       },
-      "strategy": "Plumed Archers have high pierce armor - win archer fights. Obsidian Arrows helps."
+      "strategy": "Plumed Archers have high pierce armor - win archer fights. Hul'che Javelineers add a Skirmisher projectile."
     },
     "Lithuanians": {
       "difficulty": "Even",
@@ -2679,7 +2767,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Fast Relic collection",
@@ -2789,7 +2877,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Feudal free forging Scout rush",
@@ -2873,7 +2961,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "66% faster age-up",
@@ -2956,7 +3044,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Wood bonus economy",
@@ -2965,6 +3053,123 @@
         ]
       },
       "strategy": "Archers destroy infantry. Plumed Archers kite safely."
+    },
+    "Mapuche": {
+      "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Cavalry",
+        "tags": [
+          "Cavalry",
+          "Counter Units",
+          "Kona",
+          "Bolas Rider"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "Kona and Bolas Riders, with gold from mounted kills",
+        "warning": "Settlements train Spearmen and Skirmishers. Expect cavalry plus ranged counters"
+      },
+      "keyBonuses": [
+        "Infantry, Slingers and Skirmishers +5/10/15 HP in Feudal/Castle/Imperial Age",
+        "Team: Spearman-line and Skirmishers +2 line of sight",
+        "Mounted Units generate +3 gold when defeating military units"
+      ],
+      "allBonuses": [
+        "Foragers drop off +25% food",
+        "Infantry, Slingers and Skirmishers +5/10/15 HP in Feudal/Castle/Imperial Age",
+        "Team: Spearman-line and Skirmishers +2 line of sight",
+        "Mounted Units generate +3 gold when defeating military units",
+        "Settlements can train Spearman-line and Skirmishers",
+        "Enemy Castles are revealed on the map"
+      ],
+      "opponentUniqueUnit": "Kona, Bolas Rider",
+      "opponentUniqueUnitCategories": {
+        "type": "Cavalry",
+        "categories": [
+          "raiding",
+          "gold-on-kill",
+          "cavalry"
+        ],
+        "counters": [
+          "Halberdier",
+          "Camel",
+          "Monk"
+        ],
+        "description": "Cavalry that generates gold for each kill"
+      },
+      "opponentStrengths": [
+        {
+          "unit": "Kona",
+          "reason": "Unique Unit"
+        },
+        {
+          "unit": "Bolas Rider",
+          "reason": "Unique Unit"
+        },
+        {
+          "unit": "Knight",
+          "reason": "Cavalry civilization"
+        },
+        {
+          "unit": "Militia",
+          "reason": "Bonus-enhanced"
+        }
+      ],
+      "counters": [
+        {
+          "use": "Spearman",
+          "against": "Kona",
+          "reason": "+15 bonus damage, very cost-efficient",
+          "civBonus": false
+        },
+        {
+          "use": "Skirmisher",
+          "against": "Bolas Rider",
+          "reason": "Bonus vs archers, cheap (civ bonus!)",
+          "civBonus": true
+        },
+        {
+          "use": "Spearman",
+          "against": "Knight",
+          "reason": "+15 bonus damage, very cost-efficient",
+          "civBonus": false
+        },
+        {
+          "use": "Archer",
+          "against": "Militia",
+          "reason": "Kites slow infantry easily (civ bonus!)",
+          "civBonus": true
+        },
+        {
+          "use": "Monk",
+          "against": "Kona",
+          "reason": "Convert expensive units",
+          "civBonus": false
+        },
+        {
+          "use": "Monk",
+          "against": "Knight",
+          "reason": "Convert expensive units",
+          "civBonus": false
+        }
+      ],
+      "timingWindows": {
+        "yourStrength": "Longer lasting resources into Plumed Archers",
+        "opponentStrength": "Castle Age - Kona cavalry and Bolas Rider mounted archers",
+        "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
+        "yourPowerSpikes": [
+          "Resources last 15% longer",
+          "Castle Age Plumed Archers",
+          "Imperial Holcans Eagles (+40 HP)"
+        ],
+        "opponentPowerSpikes": [
+          "Forager food bonus",
+          "Castle Age Kona and Bolas Riders",
+          "Imperial Malon pass-through damage"
+        ]
+      },
+      "strategy": "Plumed Archers kite cavalry. Add cheap Eagles or Pikemen."
     },
     "Mongols": {
       "difficulty": "Even",
@@ -2984,12 +3189,12 @@
       },
       "keyBonuses": [
         "Cavalry Archers attack +25% faster",
-        "Light Horsemen +20/30% HP in Castle/Imperial Age",
+        "Scout Cavalry-line and Steppe Lancers +20/30% HP in Castle/Imperial Age",
         "Hunters work +40% faster"
       ],
       "allBonuses": [
         "Cavalry Archers attack +25% faster",
-        "Light Horsemen +20/30% HP in Castle/Imperial Age",
+        "Scout Cavalry-line and Steppe Lancers +20/30% HP in Castle/Imperial Age",
         "Hunters work +40% faster",
         "Team: Scout Cavalry-line +2 line of sight"
       ],
@@ -3050,7 +3255,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Hunt bonus for fast Feudal",
@@ -3059,6 +3264,117 @@
         ]
       },
       "strategy": "Plumed Archers kite cavalry. Add cheap Eagles or Pikemen."
+    },
+    "Muisca": {
+      "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Archer/Monk",
+        "tags": [
+          "Archer",
+          "Monk",
+          "Guecha Warrior",
+          "Temple Guard"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "Cheap age-up into armored archers and fast-faith Monks",
+        "warning": "They reach the next age for less gold. Monks recover faith quickly"
+      },
+      "keyBonuses": [
+        "Monks regain faith +50% faster",
+        "Champi Warriors and Archery Range Units +1/2/3 melee armor in Feudal/Castle/Imperial Age",
+        "Advancing to the next Age costs -50% gold"
+      ],
+      "allBonuses": [
+        "Monks regain faith +50% faster",
+        "Champi Warriors and Archery Range Units +1/2/3 melee armor in Feudal/Castle/Imperial Age",
+        "Team: Natural gold sources last +15% longer",
+        "Advancing to the next Age costs -50% gold",
+        "Settlements cost -33% and heal nearby units",
+        "Caravan, Guilds free"
+      ],
+      "opponentUniqueUnit": "Guecha Warrior, Temple Guard",
+      "opponentUniqueUnitCategories": {
+        "type": "Archer",
+        "categories": [
+          "anti-archer",
+          "trash",
+          "ranged"
+        ],
+        "counters": [
+          "Archer",
+          "Knight",
+          "Mangonel"
+        ],
+        "description": "Skirmisher unique unit"
+      },
+      "opponentStrengths": [
+        {
+          "unit": "Guecha Warrior",
+          "reason": "Unique Unit"
+        },
+        {
+          "unit": "Temple Guard",
+          "reason": "Unique Unit"
+        },
+        {
+          "unit": "Archer",
+          "reason": "Archer civilization"
+        },
+        {
+          "unit": "Monk",
+          "reason": "Strong monastery"
+        }
+      ],
+      "counters": [
+        {
+          "use": "Skirmisher",
+          "against": "Guecha Warrior",
+          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
+          "civBonus": true
+        },
+        {
+          "use": "Archer",
+          "against": "Temple Guard",
+          "reason": "Kites slow infantry easily (civ bonus!)",
+          "civBonus": true
+        },
+        {
+          "use": "Skirmisher",
+          "against": "Archer",
+          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
+          "civBonus": true
+        },
+        {
+          "use": "Mangonel",
+          "against": "Guecha Warrior",
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
+        },
+        {
+          "use": "Mangonel",
+          "against": "Archer",
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
+        }
+      ],
+      "timingWindows": {
+        "yourStrength": "Longer lasting resources into Plumed Archers",
+        "opponentStrength": "Castle Age - Cheap age-up into archers, Monks, and Temple Guard",
+        "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
+        "yourPowerSpikes": [
+          "Resources last 15% longer",
+          "Castle Age Plumed Archers",
+          "Imperial Holcans Eagles (+40 HP)"
+        ],
+        "opponentPowerSpikes": [
+          "Age-up costs half gold",
+          "Castle Age Guecha Warriors and Monks",
+          "Imperial Herbalism speed"
+        ]
+      },
+      "strategy": "Plumed Archers have high pierce armor - win archer fights. Hul'che Javelineers add a Skirmisher projectile."
     },
     "Persians": {
       "difficulty": "Even",
@@ -3153,7 +3469,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "TC work rate bonus",
@@ -3242,7 +3558,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Folwark farming bonus",
@@ -3268,13 +3584,13 @@
         "warning": "End game before Feitorias sustain them forever"
       },
       "keyBonuses": [
+        "Ships +10/15/20% HP in Feudal/Castle/Imperial Age",
         "Team: Technologies research +25% faster",
-        "Ships +10% HP",
         "All units cost -20% gold"
       ],
       "allBonuses": [
+        "Ships +10/15/20% HP in Feudal/Castle/Imperial Age",
         "Team: Technologies research +25% faster",
-        "Ships +10% HP",
         "All units cost -20% gold",
         "Foragers generate wood in addition to food",
         "Can build Feitoria in Imperial Age"
@@ -3325,7 +3641,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Gold discount on all units",
@@ -3353,12 +3669,12 @@
       },
       "keyBonuses": [
         "Villagers gather, build, and repair +5% faster",
-        "Scorpions cost -60% gold",
+        "Scorpions cost -50% gold",
         "Galley-line and Dromons +1 melee/+1 pierce armor"
       ],
       "allBonuses": [
         "Villagers gather, build, and repair +5% faster",
-        "Scorpions cost -60% gold",
+        "Scorpions cost -50% gold",
         "Galley-line and Dromons +1 melee/+1 pierce armor",
         "Infantry armor upgrade effects are doubled",
         "Team: Scorpions minimum range reduced"
@@ -3409,7 +3725,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Cheap Scorpions from Castle Age",
@@ -3443,7 +3759,7 @@
         "Transport Ships +100% HP, +20 carry capacity",
         "Camel Units +25% HP",
         "Galley-line attacks +25% faster",
-        "Team: Foot Archers and Skirmisher-line +2 attack vs. buildings",
+        "Team: Foot Archers and Skirmishers +2 attack vs. buildings",
         "Market trading fee only 5%; Markets cost -100 wood"
       ],
       "opponentUniqueUnit": "Mameluke",
@@ -3504,7 +3820,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Market bonus for fast age-up",
@@ -3512,7 +3828,91 @@
           "Imperial Mameluke + siege"
         ]
       },
-      "strategy": "Plumed Archers have high pierce armor - win archer fights. Obsidian Arrows helps."
+      "strategy": "Plumed Archers have high pierce armor - win archer fights. Hul'che Javelineers add a Skirmisher projectile."
+    },
+    "Saxons": {
+      "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Infantry",
+        "tags": [
+          "Infantry",
+          "Defensive",
+          "Hearth Troop",
+          "Towers"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "Cheaper foot soldiers and doubled castle arrows",
+        "warning": "Infantry gets cheaper as they add Town Centers. Do not dive their castles"
+      },
+      "keyBonuses": [
+        "Longships and Catapult Galleons +20% HP",
+        "Team: Repairers work +25% faster",
+        "Towers and Castles fire +100% base arrows starting in Castle Age"
+      ],
+      "allBonuses": [
+        "Longships and Catapult Galleons +20% HP",
+        "Team: Repairers work +25% faster",
+        "Towers and Castles fire +100% base arrows starting in Castle Age",
+        "Mills, Lumber- and Mining Camps provide +35 food and +10 stone when built",
+        "Foot Soldiers cost -5% per Town Center or Castle controlled (maximum -20%)"
+      ],
+      "opponentUniqueUnit": "Hearth Troop",
+      "opponentUniqueUnitCategories": {
+        "type": "Infantry",
+        "categories": [
+          "massed",
+          "armor",
+          "melee"
+        ],
+        "counters": [
+          "Archer",
+          "Knight",
+          "Hand Cannoneer"
+        ],
+        "description": "Infantry that gains armor when massed (Shield Wall)"
+      },
+      "opponentStrengths": [
+        {
+          "unit": "Hearth Troop",
+          "reason": "Unique Unit"
+        },
+        {
+          "unit": "Militia",
+          "reason": "Infantry civilization"
+        }
+      ],
+      "counters": [
+        {
+          "use": "Archer",
+          "against": "Hearth Troop",
+          "reason": "Kites slow infantry easily (civ bonus!)",
+          "civBonus": true
+        },
+        {
+          "use": "Archer",
+          "against": "Militia",
+          "reason": "Kites slow infantry easily (civ bonus!)",
+          "civBonus": true
+        }
+      ],
+      "timingWindows": {
+        "yourStrength": "Longer lasting resources into Plumed Archers",
+        "opponentStrength": "Castle Age - Cheaper foot soldiers and extra castle arrows",
+        "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
+        "yourPowerSpikes": [
+          "Resources last 15% longer",
+          "Castle Age Plumed Archers",
+          "Imperial Holcans Eagles (+40 HP)"
+        ],
+        "opponentPowerSpikes": [
+          "Camps grant food and stone",
+          "Castle Age Hearth Troops",
+          "Imperial Shield Wall"
+        ]
+      },
+      "strategy": "Archers destroy infantry. Plumed Archers kite safely."
     },
     "Shu": {
       "difficulty": "Even",
@@ -3579,7 +3979,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Defensive bonuses",
@@ -3587,7 +3987,7 @@
           "Imperial siege support"
         ]
       },
-      "strategy": "Plumed Archers have high pierce armor - win archer fights. Obsidian Arrows helps."
+      "strategy": "Plumed Archers have high pierce armor - win archer fights. Hul'che Javelineers add a Skirmisher projectile."
     },
     "Sicilians": {
       "difficulty": "Even",
@@ -3653,7 +4053,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Feudal Donjon rush",
@@ -3661,7 +4061,7 @@
           "Imperial Hauberk Cavalier"
         ]
       },
-      "strategy": "Resources last longer - boom hard. Plumed Archers + El Dorado Eagles (+40 HP)."
+      "strategy": "Resources last longer - boom hard. Plumed Archers + Holcans Eagles (+40 HP)."
     },
     "Slavs": {
       "difficulty": "Even",
@@ -3688,7 +4088,7 @@
         "Monks move +20% faster",
         "Siege Workshop Units cost -15%",
         "Arson, Gambesons free",
-        "Team: Military buildings provide +5 population space"
+        "Team: Military buildings (except Castles) provide +5 population space"
       ],
       "opponentUniqueUnit": "Boyar",
       "opponentUniqueUnitCategories": {
@@ -3750,7 +4150,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Faster farming kicks in early",
@@ -3850,7 +4250,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Castle Age Conquistadors",
@@ -3945,7 +4345,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Extra sheep for scout rush",
@@ -3953,7 +4353,7 @@
           "Imperial Silk Armor Cavalry Archers"
         ]
       },
-      "strategy": "Plumed Archers have high pierce armor - win archer fights. Obsidian Arrows helps."
+      "strategy": "Plumed Archers have high pierce armor - win archer fights. Hul'che Javelineers add a Skirmisher projectile."
     },
     "Teutons": {
       "difficulty": "Even",
@@ -3973,12 +4373,12 @@
       },
       "keyBonuses": [
         "Monks +100% healing range",
-        "Barracks and Stable Units +1/+2 melee armor in Castle/Imperial Age",
+        "Infantry and Mounted Units +1/+2 melee armor in Castle/Imperial Age",
         "Farms cost -40%"
       ],
       "allBonuses": [
         "Monks +100% healing range",
-        "Barracks and Stable Units +1/+2 melee armor in Castle/Imperial Age",
+        "Infantry and Mounted Units +1/+2 melee armor in Castle/Imperial Age",
         "Farms cost -40%",
         "Town Centers +10 garrison capacity; Towers +5 garrison capacity",
         "Murder Holes, Herbal Medicine free",
@@ -4012,10 +4412,6 @@
         {
           "unit": "Monk",
           "reason": "Strong monastery"
-        },
-        {
-          "unit": "Knight",
-          "reason": "Bonus-enhanced"
         }
       ],
       "counters": [
@@ -4030,18 +4426,6 @@
           "against": "Militia",
           "reason": "Kites slow infantry easily (civ bonus!)",
           "civBonus": true
-        },
-        {
-          "use": "Spearman",
-          "against": "Knight",
-          "reason": "+15 bonus damage, very cost-efficient",
-          "civBonus": false
-        },
-        {
-          "use": "Monk",
-          "against": "Knight",
-          "reason": "Convert expensive units",
-          "civBonus": false
         }
       ],
       "timingWindows": {
@@ -4051,7 +4435,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Castle Age Knights with +2 melee armor",
@@ -4059,7 +4443,123 @@
           "Siege + Teutonic Knight deathball"
         ]
       },
-      "strategy": "Plumed Archers kite cavalry. Add cheap Eagles or Pikemen."
+      "strategy": "Archers destroy infantry. Plumed Archers kite safely."
+    },
+    "Tupi": {
+      "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Archer/Infantry",
+        "tags": [
+          "Archer",
+          "Infantry",
+          "Blackwood Archer",
+          "Refund"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "Blackwood Archers and Ibirapema Warriors, with refunds on losses",
+        "warning": "Losses return cost. Do not trade evenly into a long fight"
+      },
+      "keyBonuses": [
+        "Archery Range and Barracks upgrades cost -50% food",
+        "Fallen units return 15% of their cost",
+        "Team: Towers and Castles provide +10 population space"
+      ],
+      "allBonuses": [
+        "Archery Range and Barracks upgrades cost -50% food",
+        "Fallen units return 15% of their cost",
+        "Start with +25 of each resource",
+        "Team: Towers and Castles provide +10 population space",
+        "Villagers can garrison in Settlements"
+      ],
+      "opponentUniqueUnit": "Blackwood Archer, Ibirapema Warrior",
+      "opponentUniqueUnitCategories": {
+        "type": "Archer",
+        "categories": [
+          "ranged",
+          "anti-infantry",
+          "poison"
+        ],
+        "counters": [
+          "Skirmisher",
+          "Mangonel",
+          "Knight"
+        ],
+        "description": "Foot archer; Curare adds poison damage"
+      },
+      "opponentStrengths": [
+        {
+          "unit": "Blackwood Archer",
+          "reason": "Unique Unit"
+        },
+        {
+          "unit": "Ibirapema Warrior",
+          "reason": "Unique Unit"
+        },
+        {
+          "unit": "Archer",
+          "reason": "Archer civilization"
+        },
+        {
+          "unit": "Militia",
+          "reason": "Infantry civilization"
+        }
+      ],
+      "counters": [
+        {
+          "use": "Skirmisher",
+          "against": "Blackwood Archer",
+          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
+          "civBonus": true
+        },
+        {
+          "use": "Archer",
+          "against": "Ibirapema Warrior",
+          "reason": "Kites slow infantry easily (civ bonus!)",
+          "civBonus": true
+        },
+        {
+          "use": "Skirmisher",
+          "against": "Archer",
+          "reason": "+3/+4 bonus damage, cheap trash counter (civ bonus!)",
+          "civBonus": true
+        },
+        {
+          "use": "Archer",
+          "against": "Militia",
+          "reason": "Kites slow infantry easily (civ bonus!)",
+          "civBonus": true
+        },
+        {
+          "use": "Mangonel",
+          "against": "Blackwood Archer",
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
+        },
+        {
+          "use": "Mangonel",
+          "against": "Archer",
+          "reason": "Area damage destroys archer masses",
+          "civBonus": false
+        }
+      ],
+      "timingWindows": {
+        "yourStrength": "Longer lasting resources into Plumed Archers",
+        "opponentStrength": "Castle Age - Blackwood Archers and Ibirapema Warriors with cheap upgrades",
+        "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
+        "yourPowerSpikes": [
+          "Resources last 15% longer",
+          "Castle Age Plumed Archers",
+          "Imperial Holcans Eagles (+40 HP)"
+        ],
+        "opponentPowerSpikes": [
+          "Start with extra resources",
+          "Castle Age Blackwood Archers",
+          "Imperial Curare poison"
+        ]
+      },
+      "strategy": "Plumed Archers have high pierce armor - win archer fights. Hul'che Javelineers add a Skirmisher projectile."
     },
     "Turks": {
       "difficulty": "Even",
@@ -4162,12 +4662,118 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Castle Age Janissaries (free Chemistry)",
           "Imperial Artillery Bombard Cannons",
           "Sipahi Cavalry Archers"
+        ]
+      },
+      "strategy": "Plumed Archers kite cavalry. Add cheap Eagles or Pikemen."
+    },
+    "Varangians": {
+      "difficulty": "Even",
+      "opponentDescription": {
+        "type": "Cavalry",
+        "tags": [
+          "Cavalry",
+          "Jarl",
+          "Gold from Hunt",
+          "Naval"
+        ]
+      },
+      "opponentPeakTiming": {
+        "peakAge": "Castle",
+        "timing": "Jarls and faster Varangian Guards, funded by food gathering",
+        "warning": "Hunt and fishing also make gold. Have Spearmen ready"
+      },
+      "keyBonuses": [
+        "Varangian Guards attack +25% faster and generate +50% gold",
+        "Longships and Catapult Galleons attack +15% faster",
+        "Team: Knight-line +1 attack vs. Infantry"
+      ],
+      "allBonuses": [
+        "Varangian Guards attack +25% faster and generate +50% gold",
+        "Longships and Catapult Galleons attack +15% faster",
+        "Bloodlines and Caravan effects +50%",
+        "Team: Knight-line +1 attack vs. Infantry",
+        "Shepherding, fishing, and hunting also generate gold"
+      ],
+      "opponentUniqueUnit": "Jarl",
+      "opponentUniqueUnitCategories": {
+        "type": "Cavalry",
+        "categories": [
+          "heavy-cavalry",
+          "raiding",
+          "frontline"
+        ],
+        "counters": [
+          "Halberdier",
+          "Camel",
+          "Monk"
+        ],
+        "description": "Heavy cavalry unique unit"
+      },
+      "opponentStrengths": [
+        {
+          "unit": "Jarl",
+          "reason": "Unique Unit"
+        },
+        {
+          "unit": "Knight",
+          "reason": "Cavalry civilization"
+        },
+        {
+          "unit": "Militia",
+          "reason": "Bonus-enhanced"
+        }
+      ],
+      "counters": [
+        {
+          "use": "Spearman",
+          "against": "Jarl",
+          "reason": "+15 bonus damage, very cost-efficient",
+          "civBonus": false
+        },
+        {
+          "use": "Spearman",
+          "against": "Knight",
+          "reason": "+15 bonus damage, very cost-efficient",
+          "civBonus": false
+        },
+        {
+          "use": "Archer",
+          "against": "Militia",
+          "reason": "Kites slow infantry easily (civ bonus!)",
+          "civBonus": true
+        },
+        {
+          "use": "Monk",
+          "against": "Jarl",
+          "reason": "Convert expensive units",
+          "civBonus": false
+        },
+        {
+          "use": "Monk",
+          "against": "Knight",
+          "reason": "Convert expensive units",
+          "civBonus": false
+        }
+      ],
+      "timingWindows": {
+        "yourStrength": "Longer lasting resources into Plumed Archers",
+        "opponentStrength": "Castle Age - Jarls funded by gold from food gathering",
+        "keyTiming": "Match their Castle Age timing or apply Feudal pressure",
+        "yourPowerSpikes": [
+          "Resources last 15% longer",
+          "Castle Age Plumed Archers",
+          "Imperial Holcans Eagles (+40 HP)"
+        ],
+        "opponentPowerSpikes": [
+          "Gold from hunt and fishing",
+          "Castle Age Jarls",
+          "Imperial Vendel Legacy trample"
         ]
       },
       "strategy": "Plumed Archers kite cavalry. Add cheap Eagles or Pikemen."
@@ -4189,13 +4795,13 @@
         "warning": "Their archers are tankier than normal"
       },
       "keyBonuses": [
-        "Archery Range units and Fire Lancers +20% HP",
         "Economic upgrades cost no wood and research +100% faster",
+        "Foot Archers and Skirmishers +20% HP",
         "Conscription free"
       ],
       "allBonuses": [
-        "Archery Range units and Fire Lancers +20% HP",
         "Economic upgrades cost no wood and research +100% faster",
+        "Foot Archers and Skirmishers +20% HP",
         "Conscription free",
         "Enemy Town Centers are revealed at the start of the game",
         "Team: Imperial Skirmisher upgrade available in Imperial Age"
@@ -4258,7 +4864,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Reveal enemy TC start",
@@ -4266,7 +4872,7 @@
           "Imperial Chatras Battle Elephants"
         ]
       },
-      "strategy": "Plumed Archers have high pierce armor - win archer fights. Obsidian Arrows helps."
+      "strategy": "Plumed Archers have high pierce armor - win archer fights. Hul'che Javelineers add a Skirmisher projectile."
     },
     "Vikings": {
       "difficulty": "Even",
@@ -4280,18 +4886,18 @@
       },
       "opponentPeakTiming": {
         "peakAge": "Castle/Imperial",
-        "timing": "Economy advantage compounds over time",
-        "warning": "Pressure early before economy lead is too large"
+        "timing": "Berserks with free eco upgrades; Longships on water",
+        "warning": "Pressure early before Berserks and the economy lead take over"
       },
       "keyBonuses": [
         "Infantry +20% HP starting in Feudal Age",
         "Wheelbarrow, Hand Cart free",
-        "Warships cost -15/15/20% in Feudal/Castle/Imperial Age"
+        "Warships cost -10/15/20% in Feudal/Castle/Imperial Age"
       ],
       "allBonuses": [
         "Infantry +20% HP starting in Feudal Age",
         "Wheelbarrow, Hand Cart free",
-        "Warships cost -15/15/20% in Feudal/Castle/Imperial Age",
+        "Warships cost -10/15/20% in Feudal/Castle/Imperial Age",
         "Team: Docks cost -15%"
       ],
       "opponentUniqueUnit": "Berserk",
@@ -4340,12 +4946,12 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Wheelbarrow/Hand Cart savings kick in",
           "Castle Age Berserks",
-          "Imperial Chieftains Champions"
+          "Imperial Chieftains infantry and Longships"
         ]
       },
       "strategy": "Archers destroy infantry. Plumed Archers kite safely."
@@ -4374,7 +4980,7 @@
         "Hei Guang Cavalry and Xianbei Raider +20/30% HP in Castle/Imperial Age",
         "Team: Cavalry +2 attack vs. Siege Weapons",
         "Traction Trebuchets and Lou Chuans cost -25%",
-        "Receive one free Villager for economy upgrade researched"
+        "Receive one free Villager for each economic upgrade researched"
       ],
       "opponentUniqueUnit": "Tiger Cavalry",
       "opponentUniqueUnitCategories": {
@@ -4433,7 +5039,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Aggression bonus",
@@ -4461,14 +5067,14 @@
       "keyBonuses": [
         "Team: Houses built +100% faster",
         "Jian Swordsmen and Hei Guang Cavalry +2 attack in Imperial Age",
-        "Careening, Dry Dock available one age earlier, cost and research time -75%"
+        "Careening, Dry Dock free"
       ],
       "allBonuses": [
         "Team: Houses built +100% faster",
         "Jian Swordsmen and Hei Guang Cavalry +2 attack in Imperial Age",
-        "Careening, Dry Dock available one age earlier, cost and research time -75%",
-        "Military production buildings and Docks provide +65 food",
-        "Infantry regenerates 10/20/30 HP per minute in Feudal/Castle/Imperial Age"
+        "Careening, Dry Dock free",
+        "Military production buildings and Docks provide +55 food when built",
+        "Infantry regenerates 10/15/30 HP per minute in Feudal/Castle/Imperial Age"
       ],
       "opponentUniqueUnit": "Fire Archer",
       "opponentUniqueUnitCategories": null,
@@ -4525,7 +5131,7 @@
         "yourPowerSpikes": [
           "Resources last 15% longer",
           "Castle Age Plumed Archers",
-          "Imperial El Dorado Eagles (+40 HP)"
+          "Imperial Holcans Eagles (+40 HP)"
         ],
         "opponentPowerSpikes": [
           "Naval dominance",

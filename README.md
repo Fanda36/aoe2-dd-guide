@@ -45,7 +45,7 @@ This runs three scripts in order:
 | Script | Command | Description |
 |--------|---------|-------------|
 | extract | `npm run extract` | Downloads tech tree data, extracts land units → `land-units.json` |
-| matchups | `npm run matchups` | Generates matchup data for all 50 civs → `data/*.json` |
+| matchups | `npm run matchups` | Generates matchup data for all 56 civs → `data/*.json` |
 | bundle | `npm run bundle` | Bundles civ data for web app → `civs-data.js` |
 
 ## Deploying to GitHub Pages
@@ -71,7 +71,7 @@ This runs three scripts in order:
 └── data/                # Per-civilization matchup files
     ├── britons.json
     ├── franks.json
-    └── ... (50 civilizations)
+    └── ... (56 civilizations)
 ```
 
 ## License

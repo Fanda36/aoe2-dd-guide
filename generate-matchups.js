@@ -108,6 +108,29 @@ function getFirstTierName(unitId, upgradedSet, units, strings) {
 }
 
 /**
+ * Collapses in-game line breaks so "Elite<br>\nSkirmisher" becomes "Elite Skirmisher"
+ * @param {string} text
+ * @returns {string}
+ */
+function cleanDisplayName(text) {
+  return String(text).replace(/<br\s*\/?>/gi, ' ').replace(/[\r\n]+/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+/**
+ * Resolves a LanguageNameId. Strings may live at the id, id + 9000, or id + 10000.
+ * @param {object} strings
+ * @param {number} nameId
+ * @returns {string|null}
+ */
+function lookupString(strings, nameId) {
+  if (!nameId) return null;
+  if (strings[nameId]) return cleanDisplayName(strings[nameId]);
+  if (strings[nameId + 9000]) return cleanDisplayName(strings[nameId + 9000]);
+  if (strings[nameId + 10000]) return cleanDisplayName(strings[nameId + 10000]);
+  return null;
+}
+
+/**
  * Gets unit name from ID using strings lookup
  * @param {number} unitId - The unit ID
  * @param {object} units - The units data
@@ -117,30 +140,21 @@ function getFirstTierName(unitId, upgradedSet, units, strings) {
 function getUnitName(unitId, units, strings) {
   const unit = units[unitId];
   if (!unit) return `Unknown (${unitId})`;
-  
-  const nameId = unit.LanguageNameId;
-  if (nameId && strings[nameId]) {
-    return strings[nameId];
-  }
-  return unit.internal_name || `Unknown (${unitId})`;
+  return lookupString(strings, unit.LanguageNameId) || unit.internal_name || `Unknown (${unitId})`;
 }
 
 /**
- * Gets tech name from ID using strings lookup
- * @param {number} techId - The tech ID
- * @param {object} techs - The techs data
- * @param {object} strings - The strings lookup
- * @returns {string} - Tech name
+ * Display names of every unit, used to see whether "Elite X" exists
+ * @param {object} units
+ * @param {object} strings
+ * @returns {Set<string>}
  */
-function getTechName(techId, techs, strings) {
-  const tech = techs[techId];
-  if (!tech) return `Unknown Tech (${techId})`;
-  
-  const nameId = tech.LanguageNameId;
-  if (nameId && strings[nameId]) {
-    return strings[nameId];
+function collectUnitNames(units, strings) {
+  const names = new Set();
+  for (const unitId of Object.keys(units)) {
+    names.add(getUnitName(unitId, units, strings));
   }
-  return tech.internal_name || `Unknown Tech (${techId})`;
+  return names;
 }
 
 // ============================================================================
@@ -166,41 +180,102 @@ function isIncompleteLine(line) {
 }
 
 /**
+ * Splits help text into lines, joining wrapped bonus lines
+ * @param {string} helpText
+ * @returns {string[]}
+ */
+function parseHelpLines(helpText) {
+  let normalized = helpText.replace(/<br\s*\/?>/gi, '|||');
+  normalized = normalized.replace(/<[^>]+>/g, '');
+  const parts = normalized.split('|||').map(l => l.trim()).filter(l => l);
+  const joinedLines = [];
+  for (const part of parts) {
+    if (joinedLines.length > 0 && isIncompleteLine(joinedLines[joinedLines.length - 1])) {
+      joinedLines[joinedLines.length - 1] += ' ' + part;
+    } else {
+      joinedLines.push(part);
+    }
+  }
+  return joinedLines;
+}
+
+/**
+ * Name before the parenthetical role, e.g. "Kona (Cavalry)" -> "Kona"
+ * @param {string} chunk
+ * @returns {string}
+ */
+function nameBeforeParen(chunk) {
+  return chunk.replace(/\(.*$/, '').replace(/^[•\-\*\s]+/, '').trim();
+}
+
+const DUAL_UNIQUE_CIVS = new Set(['Mapuche', 'Muisca', 'Tupi']);
+
+/**
+ * Unique units and unique techs from the help sections the bonus parser skips.
+ * Mapuche, Muisca, and Tupi list two castle unique units. Every other civ's
+ * later names are imperial or regional units (Houfnice, Genitour, Turtle Ship).
+ * @param {string} helpText
+ * @param {Set<string>} unitNames
+ * @param {string} civName
+ * @returns {{castle: string|null, imperial: string|null, list: string[], techs: {castle: string|null, imperial: string|null}}}
+ */
+function parseUniqueFromHelp(helpText, unitNames, civName) {
+  const empty = { castle: null, imperial: null, list: [], techs: { castle: null, imperial: null } };
+  if (!helpText) return empty;
+
+  /** @type {string[]} */
+  const unitLabels = [];
+  /** @type {string[]} */
+  const techLabels = [];
+  let section = '';
+
+  for (const line of parseHelpLines(helpText)) {
+    const lower = line.toLowerCase();
+    if (/^unique units?\b/.test(lower)) { section = 'unit'; continue; }
+    if (/^unique techs?\b/.test(lower)) { section = 'tech'; continue; }
+    if (/^team bonus\b/.test(lower)) { section = ''; continue; }
+    if (section === 'unit') {
+      for (const chunk of line.split(',')) {
+        const name = nameBeforeParen(chunk);
+        if (name) unitLabels.push(name);
+      }
+    } else if (section === 'tech') {
+      const name = nameBeforeParen(line);
+      if (name) techLabels.push(name);
+    }
+  }
+
+  const castleUnits = unitLabels.filter((name, index) => {
+    if (index === 0) return true;
+    return DUAL_UNIQUE_CIVS.has(civName) && unitNames.has(`Elite ${name}`);
+  });
+  const elites = castleUnits
+    .map((name) => (unitNames.has(`Elite ${name}`) ? `Elite ${name}` : null))
+    .filter(Boolean);
+
+  return {
+    castle: castleUnits.length ? castleUnits.join(', ') : null,
+    imperial: elites.length ? elites.join(', ') : null,
+    list: castleUnits,
+    techs: { castle: techLabels[0] || null, imperial: techLabels[1] || null }
+  };
+}
+
+/**
  * Extracts civilization bonuses from civ help text
  * @param {string} civName - The civilization name
- * @param {object} civHelps - The civ_helptexts mapping (civ name -> help text ID)
+ * @param {object} civHelps - Civ name -> help text string id
  * @param {object} strings - The strings lookup
  * @returns {string[]} - Array of bonus descriptions
  */
 function extractCivBonuses(civName, civHelps, strings) {
-  // Try to find help text ID for this civ
   const helpId = civHelps[civName];
   if (!helpId) return [];
   
   const helpText = strings[helpId];
   if (!helpText) return [];
   
-  // First, normalize the text - replace <br> with a special marker
-  let normalized = helpText.replace(/<br\s*\/?>/gi, '|||');
-  
-  // Remove HTML tags
-  normalized = normalized.replace(/<[^>]+>/g, '');
-  
-  // Split into parts
-  const parts = normalized.split('|||').map(l => l.trim()).filter(l => l);
-  
-  // Join lines that are continuations (previous ends with /, -, etc.)
-  const joinedLines = [];
-  for (let i = 0; i < parts.length; i++) {
-    const part = parts[i];
-    
-    if (joinedLines.length > 0 && isIncompleteLine(joinedLines[joinedLines.length - 1])) {
-      // Previous line was incomplete, append this one
-      joinedLines[joinedLines.length - 1] += ' ' + part;
-    } else {
-      joinedLines.push(part);
-    }
-  }
+  const joinedLines = parseHelpLines(helpText);
   
   const bonuses = [];
   let collectingBonuses = true;
@@ -246,113 +321,53 @@ function extractCivBonuses(civName, civHelps, strings) {
 }
 
 /**
- * Builds civilization help text ID mapping
+ * Builds civilization help text ID mapping from each civ's help_string_id
  * @param {object} gameData - The full game data
- * @param {object} strings - The strings lookup
  * @returns {object} - Mapping of civ name -> help text ID
  */
-function buildCivHelpMapping(gameData, strings) {
-  // Use civ_helptexts if available (preferred)
-  if (gameData.civ_helptexts) {
-    return gameData.civ_helptexts;
-  }
-  
-  // Fallback: try to derive from civ_names
+function buildCivHelpMapping(gameData) {
   const mapping = {};
-  const civNames = gameData.civ_names;
-  
-  for (const [civName, nameId] of Object.entries(civNames)) {
-    const helpId = parseInt(nameId) + 1;
-    if (strings[helpId] && strings[helpId].length > 50) {
-      mapping[civName] = helpId;
-    }
+  for (const [civName, civ] of Object.entries(gameData.civs)) {
+    if (civ.help_string_id) mapping[civName] = civ.help_string_id;
   }
-  
   return mapping;
 }
 
 /**
  * Gets available units for a civilization (first-tier only)
  * @param {string} civName - The civilization name
- * @param {object} techtrees - The techtrees data
+ * @param {object} civs - Civ records (each has a Unit id list)
  * @param {Set<number>} upgradedSet - Set of upgraded unit IDs
  * @param {object} units - Units data
  * @param {object} strings - Strings lookup
  * @returns {string[]} - Array of first-tier unit names available to this civ
  */
-function getCivAvailableUnits(civName, techtrees, upgradedSet, units, strings) {
-  const civTree = techtrees[civName];
-  if (!civTree) return [];
+function getCivAvailableUnits(civName, civs, upgradedSet, units, strings) {
+  const civ = civs[civName];
+  if (!civ) return [];
   
   const availableUnits = new Set();
-  
-  for (const unitEntry of civTree.units) {
-    const unitId = unitEntry.id;
-    
-    // Only include if it's a first-tier unit (not in upgraded set)
+  for (const unitId of civ.Unit) {
     const name = getFirstTierName(unitId, upgradedSet, units, strings);
-    if (name) {
-      availableUnits.add(name);
-    }
+    if (name) availableUnits.add(name);
   }
-  
-  // Also add unique units (they're always "first tier" of their line)
-  if (civTree.unique) {
-    if (civTree.unique.castleAgeUniqueUnit) {
-      const name = getUnitName(civTree.unique.castleAgeUniqueUnit, units, strings);
-      if (name) availableUnits.add(name);
-    }
-  }
-  
   return Array.from(availableUnits);
 }
 
 /**
- * Gets unique unit for a civilization
- * @param {string} civName - The civilization name
- * @param {object} techtrees - The techtrees data
- * @param {object} units - Units data
- * @param {object} strings - Strings lookup
- * @returns {{castle: string|null, imperial: string|null}} - Unique unit names
+ * Unique units and unique techs for a civilization, from its help text
+ * @param {string} civName
+ * @param {object} civs
+ * @param {object} strings
+ * @param {Set<string>} unitNames
+ * @returns {{castle: string|null, imperial: string|null, list: string[], techs: {castle: string|null, imperial: string|null}}}
  */
-function getCivUniqueUnits(civName, techtrees, units, strings) {
-  const civTree = techtrees[civName];
-  if (!civTree || !civTree.unique) return { castle: null, imperial: null };
-  
-  const result = { castle: null, imperial: null };
-  
-  if (civTree.unique.castleAgeUniqueUnit) {
-    result.castle = getUnitName(civTree.unique.castleAgeUniqueUnit, units, strings);
+function getCivUniques(civName, civs, strings, unitNames) {
+  const civ = civs[civName];
+  if (!civ) {
+    return { castle: null, imperial: null, list: [], techs: { castle: null, imperial: null } };
   }
-  if (civTree.unique.imperialAgeUniqueUnit) {
-    result.imperial = getUnitName(civTree.unique.imperialAgeUniqueUnit, units, strings);
-  }
-  
-  return result;
-}
-
-/**
- * Gets unique techs for a civilization
- * @param {string} civName - The civilization name
- * @param {object} techtrees - The techtrees data
- * @param {object} techs - Techs data
- * @param {object} strings - Strings lookup
- * @returns {{castle: string|null, imperial: string|null}} - Unique tech names
- */
-function getCivUniqueTechs(civName, techtrees, techs, strings) {
-  const civTree = techtrees[civName];
-  if (!civTree || !civTree.unique) return { castle: null, imperial: null };
-  
-  const result = { castle: null, imperial: null };
-  
-  if (civTree.unique.castleAgeUniqueTech) {
-    result.castle = getTechName(civTree.unique.castleAgeUniqueTech, techs, strings);
-  }
-  if (civTree.unique.imperialAgeUniqueTech) {
-    result.imperial = getTechName(civTree.unique.imperialAgeUniqueTech, techs, strings);
-  }
-  
-  return result;
+  return parseUniqueFromHelp(strings[civ.help_string_id], unitNames, civName);
 }
 
 // ============================================================================
@@ -527,6 +542,19 @@ const UNIQUE_UNIT_CLASSES = {
   'janissary': 'GunpowderUnit',
   'conquistador': 'GunpowderUnit',
   'hand cannoneer': 'GunpowderUnit',
+
+  // The Last Chieftains
+  'kona': 'Cavalry',
+  'bolas rider': 'CavalryArcher',
+  'guecha warrior': 'Archer',
+  'temple guard': 'Infantry',
+  'blackwood archer': 'Archer',
+  'ibirapema warrior': 'Infantry',
+
+  // The Viking Sagas
+  'jomsviking': 'Infantry',
+  'hearth troop': 'Infantry',
+  'jarl': 'Cavalry',
 };
 
 /**
@@ -852,6 +880,64 @@ const UNIQUE_UNIT_CATEGORIES = {
     counters: ['Halberdier', 'Skirmisher', 'Camel'],
     description: 'Mobile gunpowder unit'
   },
+
+  // The Last Chieftains
+  'kona': {
+    type: 'Cavalry',
+    categories: ['raiding', 'gold-on-kill', 'cavalry'],
+    counters: ['Halberdier', 'Camel', 'Monk'],
+    description: 'Cavalry that generates gold for each kill'
+  },
+  'bolas rider': {
+    type: 'CavalryArcher',
+    categories: ['mounted-ranged', 'anti-mass', 'mobile'],
+    counters: ['Skirmisher', 'Camel', 'Eagle Warrior'],
+    description: 'Mounted archer; Malon adds pass-through damage'
+  },
+  'guecha warrior': {
+    type: 'Archer',
+    categories: ['anti-archer', 'trash', 'ranged'],
+    counters: ['Archer', 'Knight', 'Mangonel'],
+    description: 'Skirmisher unique unit'
+  },
+  'temple guard': {
+    type: 'Infantry',
+    categories: ['melee', 'frontline', 'anti-cavalry'],
+    counters: ['Archer', 'Knight', 'Hand Cannoneer'],
+    description: 'Infantry that holds the line for archers and monks'
+  },
+  'blackwood archer': {
+    type: 'Archer',
+    categories: ['ranged', 'anti-infantry', 'poison'],
+    counters: ['Skirmisher', 'Mangonel', 'Knight'],
+    description: 'Foot archer; Curare adds poison damage'
+  },
+  'ibirapema warrior': {
+    type: 'Infantry',
+    categories: ['melee', 'anti-cavalry', 'frontline'],
+    counters: ['Archer', 'Knight', 'Hand Cannoneer'],
+    description: 'Barracks infantry unique unit'
+  },
+
+  // The Viking Sagas
+  'jomsviking': {
+    type: 'Infantry',
+    categories: ['attrition', 'anti-cavalry', 'melee'],
+    counters: ['Archer', 'Knight', 'Hand Cannoneer'],
+    description: 'Hits harder as it loses HP (Hamask)'
+  },
+  'hearth troop': {
+    type: 'Infantry',
+    categories: ['massed', 'armor', 'melee'],
+    counters: ['Archer', 'Knight', 'Hand Cannoneer'],
+    description: 'Infantry that gains armor when massed (Shield Wall)'
+  },
+  'jarl': {
+    type: 'Cavalry',
+    categories: ['heavy-cavalry', 'raiding', 'frontline'],
+    counters: ['Halberdier', 'Camel', 'Monk'],
+    description: 'Heavy cavalry unique unit'
+  },
 };
 
 /**
@@ -882,11 +968,12 @@ function getUnitArmorClass(unitName) {
   if (name.includes('eagle')) return 'EagleWarrior';
   if (name.includes('camel') && !name.includes('archer')) return 'Camel';
   if (name.includes('elephant')) return 'Elephant';
-  if (name.includes('cavalry archer')) return 'CavalryArcher';
+  if (name.includes('cavalry archer') || name.includes('mounted crossbow')) return 'CavalryArcher';
   if (name.includes('spear') || name.includes('pike') || name.includes('halberd')) return 'Spearman';
   if (name.includes('archer') || name.includes('crossbow') || name.includes('arbalest') || name.includes('longbow')) return 'Archer';
   if (name.includes('skirmisher')) return 'Archer';
   if (name.includes('knight') || name.includes('cavalier') || name.includes('paladin')) return 'Cavalry';
+  if (name.includes('champi')) return 'Infantry';
   if (name.includes('scout') || name.includes('hussar') || name.includes('light cavalry')) return 'Cavalry';
   if (name.includes('militia') || name.includes('man-at-arms') || name.includes('swordsman') || name.includes('champion')) return 'Infantry';
   if (name.includes('ram') || name.includes('mangonel') || name.includes('onager') || name.includes('scorpion') || name.includes('trebuchet')) return 'SiegeWeapon';
@@ -1049,27 +1136,27 @@ const MESO_CIVS = ['Aztecs', 'Mayans', 'Incas'];
 /**
  * Cavalry-focused civilizations
  */
-const CAVALRY_CIVS = ['Franks', 'Huns', 'Mongols', 'Persians', 'Magyars', 'Berbers', 'Cumans', 'Lithuanians', 'Bulgarians', 'Burgundians', 'Poles', 'Hindustanis', 'Gurjaras'];
+const CAVALRY_CIVS = ['Franks', 'Huns', 'Mongols', 'Persians', 'Magyars', 'Berbers', 'Cumans', 'Lithuanians', 'Bulgarians', 'Burgundians', 'Poles', 'Hindustanis', 'Gurjaras', 'Mapuche', 'Varangians'];
 
 /**
  * Archer-focused civilizations  
  */
-const ARCHER_CIVS = ['Britons', 'Mayans', 'Vietnamese', 'Ethiopians', 'Chinese', 'Koreans', 'Italians', 'Dravidians'];
+const ARCHER_CIVS = ['Britons', 'Mayans', 'Vietnamese', 'Ethiopians', 'Chinese', 'Koreans', 'Italians', 'Dravidians', 'Muisca', 'Tupi'];
 
 /**
  * Infantry-focused civilizations
  */
-const INFANTRY_CIVS = ['Goths', 'Japanese', 'Vikings', 'Aztecs', 'Burmese', 'Malians', 'Slavs', 'Celts', 'Teutons'];
+const INFANTRY_CIVS = ['Goths', 'Japanese', 'Vikings', 'Aztecs', 'Burmese', 'Malians', 'Slavs', 'Celts', 'Teutons', 'Tupi', 'Danes', 'Saxons'];
 
 /**
  * Siege-focused civilizations
  */
-const SIEGE_CIVS = ['Celts', 'Slavs', 'Mongols', 'Ethiopians', 'Koreans', 'Khmer'];
+const SIEGE_CIVS = ['Celts', 'Slavs', 'Mongols', 'Ethiopians', 'Koreans', 'Khmer', 'Danes'];
 
 /**
  * Monk/defensive civilizations
  */
-const MONK_CIVS = ['Aztecs', 'Spanish', 'Burmese', 'Slavs', 'Teutons', 'Byzantines'];
+const MONK_CIVS = ['Aztecs', 'Spanish', 'Burmese', 'Slavs', 'Teutons', 'Byzantines', 'Muisca'];
 
 /**
  * Gunpowder civilizations
@@ -1150,6 +1237,16 @@ const CIV_DESCRIPTIONS = {
   'Shu': { type: 'Infantry', tags: ['Infantry', 'Defensive', 'Zhuge Crossbow'] },
   'Wei': { type: 'Cavalry', tags: ['Cavalry', 'Tiger Cavalry', 'Aggression'] },
   'Wu': { type: 'Navy/Infantry', tags: ['Navy', 'Infantry', 'Water Map'] },
+
+  // The Last Chieftains
+  'Mapuche': { type: 'Cavalry', tags: ['Cavalry', 'Counter Units', 'Kona', 'Bolas Rider'] },
+  'Muisca': { type: 'Archer/Monk', tags: ['Archer', 'Monk', 'Guecha Warrior', 'Temple Guard'] },
+  'Tupi': { type: 'Archer/Infantry', tags: ['Archer', 'Infantry', 'Blackwood Archer', 'Refund'] },
+
+  // The Viking Sagas
+  'Danes': { type: 'Infantry/Siege', tags: ['Infantry', 'Siege', 'Jomsviking', 'Building Loot'] },
+  'Saxons': { type: 'Infantry', tags: ['Infantry', 'Defensive', 'Hearth Troop', 'Towers'] },
+  'Varangians': { type: 'Cavalry', tags: ['Cavalry', 'Jarl', 'Gold from Hunt', 'Naval'] },
 };
 
 /**
@@ -1203,7 +1300,7 @@ const CIV_PEAK_TIMINGS = {
   'Franks': { peakAge: 'Castle', timing: 'Knight rush at minute 17-20 with +20% HP', warning: 'Have Spearmen/Monks ready before minute 17' },
   'Celts': { peakAge: 'Imperial', timing: 'Siege Onagers with Furor Celtica', warning: 'Snipe siege early, dont let them mass Onagers' },
   'Teutons': { peakAge: 'Imperial', timing: 'Slow push with Teutonic Knights + siege', warning: 'Avoid melee fights, use archers and mobility' },
-  'Vikings': { peakAge: 'Castle/Imperial', timing: 'Economy advantage compounds over time', warning: 'Pressure early before economy lead is too large' },
+  'Vikings': { peakAge: 'Castle/Imperial', timing: 'Berserks with free eco upgrades; Longships on water', warning: 'Pressure early before Berserks and the economy lead take over' },
   'Spanish': { peakAge: 'Imperial', timing: 'Fast-firing gunpowder and Missionaries', warning: 'Pressure before Imperial gunpowder arrives' },
   'Portuguese': { peakAge: 'Imperial', timing: 'Feitoria infinite resources', warning: 'End game before Feitorias sustain them forever' },
   'Italians': { peakAge: 'Castle', timing: 'Genoese Crossbowmen destroy cavalry', warning: 'Dont rely on pure cavalry vs Italians' },
@@ -1251,7 +1348,7 @@ const CIV_PEAK_TIMINGS = {
 
   // American
   'Aztecs': { peakAge: 'Imperial', timing: 'Garland Wars Eagles (+4 attack) + fast production', warning: 'Imperial Eagles are devastating vs archers' },
-  'Mayans': { peakAge: 'Imperial', timing: 'El Dorado Eagles (+40 HP)', warning: 'Imperial Eagles have 100 HP - prepare Champions' },
+  'Mayans': { peakAge: 'Imperial', timing: 'Holcans Eagles (+40 HP)', warning: 'Imperial Eagles have 100 HP - prepare Champions' },
   'Incas': { peakAge: 'Castle', timing: 'Kamayuks + villager bonus', warning: 'Kamayuks destroy cavalry, even Knights' },
 
   // Caucasus
@@ -1267,6 +1364,16 @@ const CIV_PEAK_TIMINGS = {
   'Shu': { peakAge: 'Castle', timing: 'Defensive bonuses', warning: 'Hard to push, find flanks' },
   'Wei': { peakAge: 'Castle', timing: 'Tiger Cavalry aggression', warning: 'Expect aggressive cavalry, have Spears' },
   'Wu': { peakAge: 'Castle', timing: 'Naval + infantry', warning: 'Dangerous on hybrid maps' },
+
+  // The Last Chieftains
+  'Mapuche': { peakAge: 'Castle', timing: 'Kona and Bolas Riders, with gold from mounted kills', warning: 'Settlements train Spearmen and Skirmishers. Expect cavalry plus ranged counters' },
+  'Muisca': { peakAge: 'Castle', timing: 'Cheap age-up into armored archers and fast-faith Monks', warning: 'They reach the next age for less gold. Monks recover faith quickly' },
+  'Tupi': { peakAge: 'Castle', timing: 'Blackwood Archers and Ibirapema Warriors, with refunds on losses', warning: 'Losses return cost. Do not trade evenly into a long fight' },
+
+  // The Viking Sagas
+  'Danes': { peakAge: 'Imperial', timing: 'Jomsvikings with Hamask and cheaper siege upgrades', warning: 'Infantry hits harder at low HP. Snipe Mangonels before the range tech' },
+  'Saxons': { peakAge: 'Castle', timing: 'Cheaper foot soldiers and doubled castle arrows', warning: 'Infantry gets cheaper as they add Town Centers. Do not dive their castles' },
+  'Varangians': { peakAge: 'Castle', timing: 'Jarls and faster Varangian Guards, funded by food gathering', warning: 'Hunt and fishing also make gold. Have Spearmen ready' },
 };
 
 /**
@@ -1283,7 +1390,7 @@ const CIV_TIMING_WINDOWS = {
   'Franks': {
     yourStrength: 'Castle Age Knight rush with +20% HP bonus',
     peakAge: 'Castle',
-    powerSpikes: ['Fast Castle into Knights (minute 17-19)', 'Castle Age Knight mass', 'Imperial Paladin with Bearded Axe']
+    powerSpikes: ['Fast Castle into Knights (minute 17-19)', 'Castle Age Knight mass', 'Imperial Mounted Crossbowmen with Ordonnance Companies']
   },
   'Celts': {
     yourStrength: 'Feudal/Castle infantry pressure with 15% faster infantry',
@@ -1298,7 +1405,7 @@ const CIV_TIMING_WINDOWS = {
   'Vikings': {
     yourStrength: 'Castle Age economy lead into infantry flood',
     peakAge: 'Castle/Imperial',
-    powerSpikes: ['Wheelbarrow/Hand Cart savings kick in', 'Castle Age Berserks', 'Imperial Chieftains Champions']
+    powerSpikes: ['Wheelbarrow/Hand Cart savings kick in', 'Castle Age Berserks', 'Imperial Chieftains infantry and Longships']
   },
   'Spanish': {
     yourStrength: 'Castle Age Conquistadors, Imperial gunpowder',
@@ -1490,7 +1597,7 @@ const CIV_TIMING_WINDOWS = {
   'Mayans': {
     yourStrength: 'Longer lasting resources into Plumed Archers',
     peakAge: 'Castle/Imperial',
-    powerSpikes: ['Resources last 15% longer', 'Castle Age Plumed Archers', 'Imperial El Dorado Eagles (+40 HP)']
+    powerSpikes: ['Resources last 15% longer', 'Castle Age Plumed Archers', 'Imperial Holcans Eagles (+40 HP)']
   },
   'Incas': {
     yourStrength: 'Villager bonus and Kamayuk line',
@@ -1542,6 +1649,40 @@ const CIV_TIMING_WINDOWS = {
     yourStrength: 'Naval and infantry combination',
     peakAge: 'Castle',
     powerSpikes: ['Naval dominance', 'Castle Age infantry', 'Land/water hybrid maps']
+  },
+
+  // The Last Chieftains
+  'Mapuche': {
+    yourStrength: 'Kona cavalry and Bolas Rider mounted archers',
+    peakAge: 'Castle',
+    powerSpikes: ['Forager food bonus', 'Castle Age Kona and Bolas Riders', 'Imperial Malon pass-through damage']
+  },
+  'Muisca': {
+    yourStrength: 'Cheap age-up into archers, Monks, and Temple Guard',
+    peakAge: 'Castle',
+    powerSpikes: ['Age-up costs half gold', 'Castle Age Guecha Warriors and Monks', 'Imperial Herbalism speed']
+  },
+  'Tupi': {
+    yourStrength: 'Blackwood Archers and Ibirapema Warriors with cheap upgrades',
+    peakAge: 'Castle',
+    powerSpikes: ['Start with extra resources', 'Castle Age Blackwood Archers', 'Imperial Curare poison']
+  },
+
+  // The Viking Sagas
+  'Danes': {
+    yourStrength: 'Jomsvikings and discounted siege upgrades',
+    peakAge: 'Imperial',
+    powerSpikes: ['Loot from destroyed buildings', 'Castle Age Jomsvikings', 'Imperial Hamask and Northmen siege range']
+  },
+  'Saxons': {
+    yourStrength: 'Cheaper foot soldiers and extra castle arrows',
+    peakAge: 'Castle',
+    powerSpikes: ['Camps grant food and stone', 'Castle Age Hearth Troops', 'Imperial Shield Wall']
+  },
+  'Varangians': {
+    yourStrength: 'Jarls funded by gold from food gathering',
+    peakAge: 'Castle',
+    powerSpikes: ['Gold from hunt and fishing', 'Castle Age Jarls', 'Imperial Vendel Legacy trample']
   },
 };
 
@@ -1761,16 +1902,10 @@ function extractKeyMilitaryBonuses(bonuses) {
  * @param {object} civHelps - Civ help text mapping
  * @returns {object} - Matchup data
  */
-function generateMatchup(userCiv, opponentCiv, gameData, strings, userAvailableUnits, civHelps) {
-  const { techtrees } = gameData;
-  const units = gameData.data.units;
-  const techs = gameData.data.techs;
-  const unitUpgrades = gameData.data.unit_upgrades;
-  
+function generateMatchup(userCiv, opponentCiv, gameData, strings, userAvailableUnits, civHelps, unitNames) {
   // Get opponent data
   const opponentBonuses = extractCivBonuses(opponentCiv, civHelps, strings);
-  const opponentUniqueUnits = getCivUniqueUnits(opponentCiv, techtrees, units, strings);
-  const opponentUniqueTechs = getCivUniqueTechs(opponentCiv, techtrees, techs, strings);
+  const opponentUnique = getCivUniques(opponentCiv, gameData.civs, strings, unitNames);
   
   // Extract key military bonuses (emphasized)
   const keyMilitaryBonuses = extractKeyMilitaryBonuses(opponentBonuses);
@@ -1778,10 +1913,10 @@ function generateMatchup(userCiv, opponentCiv, gameData, strings, userAvailableU
   // Determine opponent's strong units based on their bonuses, civ type, and unique units
   const opponentStrengths = [];
   
-  // Add unique unit as a strength
-  if (opponentUniqueUnits.castle) {
+  // Add each castle unique unit as a strength (Mapuche, Muisca, and Tupi have two)
+  for (const uniqueName of opponentUnique.list) {
     opponentStrengths.push({
-      unit: opponentUniqueUnits.castle,
+      unit: uniqueName,
       type: 'UniqueUnit',
       reason: 'Unique Unit'
     });
@@ -1923,8 +2058,8 @@ function generateMatchup(userCiv, opponentCiv, gameData, strings, userAvailableU
     opponentPeakTiming: CIV_PEAK_TIMINGS[opponentCiv] || null,
     keyBonuses: keyMilitaryBonuses.slice(0, 3), // Top 3 KEY military bonuses (emphasized)
     allBonuses: sortBonusesByStrength(opponentBonuses), // Full bonus list sorted by strength
-    opponentUniqueUnit: opponentUniqueUnits.castle,
-    opponentUniqueUnitCategories: getUniqueUnitCategories(opponentUniqueUnits.castle),
+    opponentUniqueUnit: opponentUnique.castle,
+    opponentUniqueUnitCategories: getUniqueUnitCategories(opponentUnique.list[0]),
     opponentStrengths: opponentStrengths.map(s => ({
       unit: s.unit,
       reason: s.reason
@@ -2041,14 +2176,14 @@ const CIV_STRATEGIES = {
   },
   'Mayans': {
     vs_cavalry: 'Plumed Archers kite cavalry. Add cheap Eagles or Pikemen.',
-    vs_archer: 'Plumed Archers have high pierce armor - win archer fights. Obsidian Arrows helps.',
+    vs_archer: "Plumed Archers have high pierce armor - win archer fights. Hul'che Javelineers add a Skirmisher projectile.",
     vs_infantry: 'Archers destroy infantry. Plumed Archers kite safely.',
     vs_siege: 'Plumed Archers are mobile but fragile vs siege. Add Eagles to snipe.',
     vs_meso: 'Plumed Archers + Eagles. Your longer lasting resources give economy edge.',
     vs_gunpowder: 'Pressure before Imperial. Plumed Archers + Eagles to overwhelm.',
     vs_monk: 'Plumed Archers kill Monks from range. Eagles are cheap to replace if converted.',
-    vs_spearman: 'Plumed Archers destroy Spearmen. El Dorado Eagles can fight through pikes if needed.',
-    default: 'Resources last longer - boom hard. Plumed Archers + El Dorado Eagles (+40 HP).'
+    vs_spearman: 'Plumed Archers destroy Spearmen. Holcans Eagles can fight through pikes if needed.',
+    default: 'Resources last longer - boom hard. Plumed Archers + Holcans Eagles (+40 HP).'
   },
   'Turks': {
     vs_cavalry: 'Janissaries + Spearmen. Free Chemistry helps gunpowder early.',
@@ -2500,6 +2635,72 @@ const CIV_STRATEGIES = {
     vs_spearman: 'Archers or Champions beat Spearmen.',
     default: 'Naval + infantry civilization. Dominates hybrid maps. Water control priority.'
   },
+  'Mapuche': {
+    vs_cavalry: 'Kona fights cavalry. Add Spearmen from Settlements. Bolas Riders kite.',
+    vs_archer: 'Bolas Riders and Skirmishers trade with archers. Kona raids.',
+    vs_infantry: 'Kona runs down infantry. Bolas Riders add ranged damage.',
+    vs_siege: 'Kona snipes siege. Stay mobile.',
+    vs_meso: 'Kona beats Eagles. Bolas Riders kite.',
+    vs_gunpowder: 'Raid in Castle Age before gunpowder mass. Kona closes the gap.',
+    vs_monk: 'Bolas Riders kill Monks from range. Do not feed them Kona.',
+    vs_spearman: 'Bolas Riders and Skirmishers kite Spearmen. Do not fight pikes with Kona alone.',
+    default: 'Cavalry and counter-units. Kona plus Bolas Riders. Settlements train Spearmen and Skirmishers.'
+  },
+  'Muisca': {
+    vs_cavalry: 'Guecha Warriors and Spearmen. Temple Guard holds. Monks convert Knights.',
+    vs_archer: 'Guecha Warriors trade as Skirmishers. Archers have extra melee armor.',
+    vs_infantry: 'Armored archers kite infantry. Herbalism adds move speed.',
+    vs_siege: 'Champi Warriors snipe Mangonels. Monks convert expensive siege.',
+    vs_meso: 'Temple Guard and Monks. Archers before Imperial Eagles.',
+    vs_gunpowder: 'Cheap age-up. Pressure before Hand Cannoneers.',
+    vs_monk: 'Faith recovers faster in a Monk fight. Guecha Warriors snipe their Monks.',
+    vs_spearman: 'Archers and Guecha Warriors shred Spearmen.',
+    default: 'Cheap age-up into archers and Monks. Guecha Warriors and Temple Guard.'
+  },
+  'Tupi': {
+    vs_cavalry: 'Spearmen and Ibirapema Warriors. Blackwood Archers add damage.',
+    vs_archer: 'Blackwood Archers and Skirmishers. Archery upgrades cost half food.',
+    vs_infantry: 'Blackwood Archers kite. Ibirapema Warriors in melee.',
+    vs_siege: 'Ibirapema Warriors and Champi Warriors snipe siege.',
+    vs_meso: 'Infantry vs Eagles. Archers before Imperial.',
+    vs_gunpowder: 'Cheap upgrades into a Castle Age push before gunpowder.',
+    vs_monk: 'Blackwood Archers kill Monks. Losses return part of their cost.',
+    vs_spearman: 'Blackwood Archers destroy Spearmen.',
+    default: 'Archer and infantry. Cheap Barracks and Archery upgrades. Losses return 15% of their cost.'
+  },
+  'Danes': {
+    vs_cavalry: 'Spearmen and Jomsvikings. Hamask rewards staying in the fight.',
+    vs_archer: 'Close with Jomsvikings and Varangian Guards. Add Skirmishers.',
+    vs_infantry: 'Jomsvikings win attrition as they get hurt. Barracks upgrades cost less gold.',
+    vs_siege: 'Siege upgrades cost less gold. Infantry snipes their siege.',
+    vs_meso: 'Infantry vs Eagles. Siege behind the line.',
+    vs_gunpowder: 'Push before Imperial. Cheap siege upgrades.',
+    vs_monk: 'Infantry flood is hard to convert. Loot buildings you knock down.',
+    vs_spearman: 'Archers and Mangonels. Jomsvikings can fight pikes with support.',
+    default: 'Infantry and siege. Jomsvikings get stronger at low HP. Siege upgrades cost less gold.'
+  },
+  'Saxons': {
+    vs_cavalry: 'Spearmen and Hearth Troops. Shield Wall armor when massed.',
+    vs_archer: 'Close with infantry. Towers and Castles fire extra arrows.',
+    vs_infantry: 'Hearth Troops and cheaper foot soldiers. Shield Wall in a ball.',
+    vs_siege: 'Infantry snipes siege. Extra tower arrows defend.',
+    vs_meso: 'Infantry beats Eagles. Defensive buildings stall.',
+    vs_gunpowder: 'Defend with towers, then push with cheap infantry.',
+    vs_monk: 'Infantry overwhelms Monks. Clerical Recruitment is the monk tech.',
+    vs_spearman: 'Archers and Champions beat Spearmen.',
+    default: 'Defensive infantry. Foot soldiers get cheaper with more Town Centers. Castles fire extra arrows.'
+  },
+  'Varangians': {
+    vs_cavalry: 'Jarls and Knights. Bloodlines is stronger. Add Spearmen vs Camels.',
+    vs_archer: 'Jarls close the gap. Gold from hunt funds the push.',
+    vs_infantry: 'Vendel Legacy Knights trample infantry. Jarls in front.',
+    vs_siege: 'Jarls snipe siege. Stay mobile.',
+    vs_meso: 'Jarls beat Eagles. Pressure before Imperial.',
+    vs_gunpowder: 'Castle Age cavalry before gunpowder. Hunt gold keeps production up.',
+    vs_monk: 'Snipe Monks. Varangian Guard is the cheaper infantry to lose.',
+    vs_spearman: 'Do not charge pikes. Use archers or Mounted Crossbowmen, then Jarls.',
+    default: 'Cavalry funded by food gathering. Jarls in Castle. Longships on water.'
+  },
 };
 
 /**
@@ -2578,25 +2779,23 @@ function generateStrategy(userCiv, opponentCiv, opponentStrengths) {
  * @param {object} civHelps - Civ help text mapping
  */
 function generateCivMatchups(civName, gameData, strings, civHelps) {
-  const { techtrees } = gameData;
-  const units = gameData.data.units;
-  const techs = gameData.data.techs;
+  const units = gameData.data.Unit;
   const unitUpgrades = gameData.data.unit_upgrades;
   
   console.log(`Generating matchups for ${civName}...`);
   
   // Build upgraded unit set (units that are NOT first-tier)
   const upgradedSet = buildUpgradedUnitSet(unitUpgrades);
+  const unitNames = collectUnitNames(units, strings);
   
   // Get user civ data
   const userBonuses = extractCivBonuses(civName, civHelps, strings);
-  const userUniqueUnits = getCivUniqueUnits(civName, techtrees, units, strings);
-  const userUniqueTechs = getCivUniqueTechs(civName, techtrees, techs, strings);
-  const userAvailableUnits = getCivAvailableUnits(civName, techtrees, upgradedSet, units, strings);
+  const userUnique = getCivUniques(civName, gameData.civs, strings, unitNames);
+  const userAvailableUnits = getCivAvailableUnits(civName, gameData.civs, upgradedSet, units, strings);
   
   // Generate matchups against all other civs
   const matchups = {};
-  const allCivs = Object.keys(techtrees);
+  const allCivs = Object.keys(gameData.civs);
   
   for (const opponentCiv of allCivs) {
     if (opponentCiv === civName) continue; // Skip self
@@ -2607,7 +2806,8 @@ function generateCivMatchups(civName, gameData, strings, civHelps) {
       gameData,
       strings,
       userAvailableUnits,
-      civHelps
+      civHelps,
+      unitNames
     );
   }
   
@@ -2617,10 +2817,10 @@ function generateCivMatchups(civName, gameData, strings, civHelps) {
     civilization: civName,
     civDescription: getCivDescription(civName),
     bonuses: sortBonusesByStrength(userBonuses),
-    uniqueUnit: userUniqueUnits.castle,
-    uniqueUnitCategories: getUniqueUnitCategories(userUniqueUnits.castle),
-    uniqueUnitElite: userUniqueUnits.imperial,
-    uniqueTechs: userUniqueTechs,
+    uniqueUnit: userUnique.castle,
+    uniqueUnitCategories: getUniqueUnitCategories(userUnique.list[0]),
+    uniqueUnitElite: userUnique.imperial,
+    uniqueTechs: userUnique.techs,
     availableUnits: userAvailableUnits.sort(),
     matchups
   };
@@ -2659,7 +2859,7 @@ async function main() {
     console.log('Data downloaded successfully.\n');
     
     // Build civ help text mapping
-    const civHelps = buildCivHelpMapping(gameData, strings);
+    const civHelps = buildCivHelpMapping(gameData);
     console.log(`Built help text mapping for ${Object.keys(civHelps).length} civilizations.\n`);
     
     // Load local land units (for future enhanced counter logic)
@@ -2676,7 +2876,7 @@ async function main() {
     
     // Handle "all" option to generate for all civilizations
     if (targetCiv.toLowerCase() === 'all') {
-      const allCivs = Object.keys(gameData.techtrees).sort();
+      const allCivs = Object.keys(gameData.civs).sort();
       console.log(`Generating matchups for all ${allCivs.length} civilizations...\n`);
       
       const startTime = Date.now();
@@ -2690,10 +2890,10 @@ async function main() {
       console.log(`\nGenerated ${allCivs.length} civilization files in ${elapsed}s`);
     } else {
       // Single civ mode
-      if (!gameData.techtrees[targetCiv]) {
+      if (!gameData.civs[targetCiv]) {
         console.error(`Error: Civilization "${targetCiv}" not found.`);
         console.log('Available civilizations:');
-        console.log(Object.keys(gameData.techtrees).sort().join(', '));
+        console.log(Object.keys(gameData.civs).sort().join(', '));
         console.log('\nUse "all" to generate for all civilizations.');
         process.exit(1);
       }

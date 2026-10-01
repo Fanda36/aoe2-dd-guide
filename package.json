@@ -4,7 +4,7 @@
   "description": "AoE2 Definitive Edition matchup knowledge base for players",
   "scripts": {
     "extract": "node extract-land-units.js",
-    "matchups": "node generate-matchups.js",
+    "matchups": "node generate-matchups.js all",
     "bundle": "node build-data.js",
     "build": "npm run extract && npm run matchups && npm run bundle",
     "serve": "npx serve ."

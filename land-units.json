@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-01-29T22:02:47.595Z",
-  "totalUnits": 220,
+  "generatedAt": "2026-10-01T21:13:02.215Z",
+  "totalUnits": 227,
   "units": [
     {
       "id": 1126,
@@ -130,7 +130,7 @@
         "Range": 0,
         "MinRange": 0,
         "Speed": 0.6,
-        "LineOfSight": 4,
+        "LineOfSight": 6,
         "ReloadTime": 3,
         "AccuracyPercent": 100,
         "FrameDelay": 0,
@@ -185,7 +185,6 @@
           "Tree": 100,
           "AllBuildings": 2,
           "ShipsCamelsSaboteur": 8,
-          "Mameluke": 8,
           "Scout": 0,
           "Unused": -3,
           "AntiLeitisBonus": 0
@@ -218,7 +217,7 @@
         "Range": 0,
         "MinRange": 0,
         "Speed": 0.6,
-        "LineOfSight": 3,
+        "LineOfSight": 5,
         "ReloadTime": 5,
         "AccuracyPercent": 100,
         "FrameDelay": 0,
@@ -324,6 +323,88 @@
       }
     },
     {
+      "id": 2579,
+      "name": "Blackwood Archer",
+      "internalName": "BLCKWOOD",
+      "statistics": {
+        "HP": 20,
+        "Attack": 4,
+        "MeleeArmor": 0,
+        "PierceArmor": 0,
+        "Range": 5,
+        "MinRange": 0,
+        "Speed": 1.1,
+        "LineOfSight": 6,
+        "ReloadTime": 1.5,
+        "AccuracyPercent": 80,
+        "FrameDelay": 15,
+        "TrainTime": 18,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "Spearman": 2,
+          "StandardBuilding": 0,
+          "Infantry": 0,
+          "BasePierce": 4,
+          "Ram": 0
+        },
+        "Armours": {
+          "BaseMelee": 0,
+          "Archer": 0,
+          "BasePierce": 0,
+          "UniqueUnit": 0,
+          "AntiLeitisBonus": 0
+        }
+      },
+      "cost": {
+        "Wood": 40,
+        "Gold": 45
+      }
+    },
+    {
+      "id": 2569,
+      "name": "Bolas Rider",
+      "internalName": "BOLASR",
+      "statistics": {
+        "HP": 55,
+        "Attack": 5,
+        "MeleeArmor": 0,
+        "PierceArmor": 1,
+        "Range": 4,
+        "MinRange": 0,
+        "Speed": 1.5,
+        "LineOfSight": 7,
+        "ReloadTime": 2,
+        "AccuracyPercent": 90,
+        "FrameDelay": 19,
+        "TrainTime": 34,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "AllBuildings": 0,
+          "BasePierce": 5,
+          "Ram": 2,
+          "Infantry": 0,
+          "Spearman": 0,
+          "StandardBuilding": 0,
+          "Unused": -3,
+          "Cavalry": 2,
+          "Camel": 2
+        },
+        "Armours": {
+          "BaseMelee": 0,
+          "BasePierce": 1,
+          "UniqueUnit": 0,
+          "CavalryArcher": 0,
+          "Archer": 0,
+          "Cavalry": 0,
+          "AntiLeitisBonus": 0
+        }
+      },
+      "cost": {
+        "Wood": 50,
+        "Gold": 55
+      }
+    },
+    {
       "id": 36,
       "name": "Bombard Cannon",
       "internalName": "BCANN",
@@ -347,7 +428,6 @@
           "BaseMelee": 40,
           "SiegeWeapon": 20,
           "StoneDefense": 40,
-          "Mameluke": 40,
           "Charge": 40
         },
         "Armours": {
@@ -475,7 +555,6 @@
           "AllBuildings": 0,
           "Camel": 5,
           "StandardBuilding": 0,
-          "Mameluke": 5,
           "Scout": 0,
           "Unused": -3,
           "SiegeWeapon": 0,
@@ -519,7 +598,6 @@
           "AllBuildings": 0,
           "Camel": 0,
           "StandardBuilding": 0,
-          "Mameluke": 0,
           "Scout": 0,
           "Unused": -3,
           "SiegeWeapon": 0,
@@ -536,43 +614,6 @@
       "cost": {
         "Food": 55,
         "Gold": 60
-      }
-    },
-    {
-      "id": 420,
-      "name": "Cannon Galleon",
-      "internalName": "CANGA",
-      "statistics": {
-        "HP": 120,
-        "Attack": 50,
-        "MeleeArmor": 0,
-        "PierceArmor": 6,
-        "Range": 13,
-        "MinRange": 3,
-        "Speed": 1.1,
-        "LineOfSight": 15,
-        "ReloadTime": 10,
-        "AccuracyPercent": 100,
-        "FrameDelay": 0,
-        "TrainTime": 46,
-        "GarrisonCapacity": 0,
-        "AttackBonuses": {
-          "AllBuildings": 200,
-          "BaseMelee": 50,
-          "SiegeWeapon": 25
-        },
-        "Armours": {
-          "ShipsCamelsSaboteur": 0,
-          "BaseMelee": 0,
-          "BasePierce": 6,
-          "GunpowderUnit": 0,
-          "AntiLeitisBonus": 0,
-          "Class60": 0
-        }
-      },
-      "cost": {
-        "Wood": 200,
-        "Gold": 150
       }
     },
     {
@@ -627,7 +668,7 @@
         "Range": 0,
         "MinRange": 0,
         "Speed": 0.6,
-        "LineOfSight": 3,
+        "LineOfSight": 5,
         "ReloadTime": 5,
         "AccuracyPercent": 100,
         "FrameDelay": 0,
@@ -652,45 +693,6 @@
       }
     },
     {
-      "id": 1004,
-      "name": "Caravel",
-      "internalName": "CARAV",
-      "statistics": {
-        "HP": 130,
-        "Attack": 6,
-        "MeleeArmor": 0,
-        "PierceArmor": 8,
-        "Range": 6,
-        "MinRange": 0,
-        "Speed": 1.43,
-        "LineOfSight": 9,
-        "ReloadTime": 3,
-        "AccuracyPercent": 100,
-        "FrameDelay": 0,
-        "TrainTime": 25,
-        "GarrisonCapacity": 0,
-        "AttackBonuses": {
-          "AllBuildings": 8,
-          "ShipsCamelsSaboteur": 6,
-          "BasePierce": 6,
-          "Ram": 4,
-          "Mameluke": 6
-        },
-        "Armours": {
-          "ShipsCamelsSaboteur": 0,
-          "BaseMelee": 0,
-          "BasePierce": 8,
-          "UniqueUnit": 0,
-          "AntiLeitisBonus": 0,
-          "Class60": 0
-        }
-      },
-      "cost": {
-        "Wood": 90,
-        "Gold": 43
-      }
-    },
-    {
       "id": 40,
       "name": "Cataphract",
       "internalName": "CATAP",
@@ -709,7 +711,7 @@
         "TrainTime": 20,
         "GarrisonCapacity": 0,
         "AttackBonuses": {
-          "Infantry": 9,
+          "Infantry": 13,
           "BaseMelee": 9,
           "Archer": 0,
           "AllBuildings": 0,
@@ -894,6 +896,123 @@
       }
     },
     {
+      "id": 2588,
+      "name": "Champi Runner",
+      "internalName": "CHAMPIS",
+      "statistics": {
+        "HP": 40,
+        "Attack": 5,
+        "MeleeArmor": 0,
+        "PierceArmor": 2,
+        "Range": 0,
+        "MinRange": 0,
+        "Speed": 1.1,
+        "LineOfSight": 5,
+        "ReloadTime": 2,
+        "AccuracyPercent": 100,
+        "FrameDelay": 0,
+        "TrainTime": 34,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "EagleWarrior": 1,
+          "StandardBuilding": 0,
+          "BaseMelee": 5,
+          "Cavalry": 0,
+          "Camel": 0,
+          "Archer": 0,
+          "SiegeWeapon": 2
+        },
+        "Armours": {
+          "Infantry": 0,
+          "BaseMelee": 0,
+          "BasePierce": 2,
+          "AntiLeitisBonus": 0
+        }
+      },
+      "cost": {
+        "Food": 50,
+        "Gold": 25
+      }
+    },
+    {
+      "id": 2550,
+      "name": "Champi Scout",
+      "internalName": "CHAMPIR",
+      "statistics": {
+        "HP": 35,
+        "Attack": 3,
+        "MeleeArmor": 0,
+        "PierceArmor": 2,
+        "Range": 0,
+        "MinRange": 0,
+        "Speed": 1,
+        "LineOfSight": 5,
+        "ReloadTime": 2,
+        "AccuracyPercent": 100,
+        "FrameDelay": 0,
+        "TrainTime": 42,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "EagleWarrior": 3,
+          "StandardBuilding": 0,
+          "BaseMelee": 3,
+          "Cavalry": 1,
+          "Camel": 1,
+          "Archer": 0,
+          "SiegeWeapon": 2
+        },
+        "Armours": {
+          "Infantry": 0,
+          "BaseMelee": 0,
+          "BasePierce": 2,
+          "AntiLeitisBonus": 0
+        }
+      },
+      "cost": {
+        "Food": 50,
+        "Gold": 25
+      }
+    },
+    {
+      "id": 2552,
+      "name": "Champi Warrior",
+      "internalName": "CHAMPIW",
+      "statistics": {
+        "HP": 55,
+        "Attack": 9,
+        "MeleeArmor": 0,
+        "PierceArmor": 3,
+        "Range": 0,
+        "MinRange": 0,
+        "Speed": 1.1,
+        "LineOfSight": 6,
+        "ReloadTime": 2,
+        "AccuracyPercent": 100,
+        "FrameDelay": 0,
+        "TrainTime": 26,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "EagleWarrior": 1,
+          "StandardBuilding": 2,
+          "BaseMelee": 9,
+          "Cavalry": 0,
+          "Camel": 0,
+          "Archer": 0,
+          "SiegeWeapon": 3
+        },
+        "Armours": {
+          "Infantry": 0,
+          "BaseMelee": 0,
+          "BasePierce": 3,
+          "AntiLeitisBonus": 0
+        }
+      },
+      "cost": {
+        "Food": 50,
+        "Gold": 25
+      }
+    },
+    {
       "id": 567,
       "name": "Champion",
       "internalName": "HEROI",
@@ -912,7 +1031,7 @@
         "TrainTime": 21,
         "GarrisonCapacity": 0,
         "AttackBonuses": {
-          "EagleWarrior": 8,
+          "EagleWarrior": 9,
           "StandardBuilding": 4,
           "BaseMelee": 14,
           "Cavalry": 0,
@@ -1063,7 +1182,7 @@
         "ReloadTime": 2.9,
         "AccuracyPercent": 65,
         "FrameDelay": 13,
-        "TrainTime": 24,
+        "TrainTime": 26,
         "GarrisonCapacity": 0,
         "AttackBonuses": {
           "AllBuildings": 0,
@@ -1083,7 +1202,7 @@
         }
       },
       "cost": {
-        "Food": 70,
+        "Food": 75,
         "Gold": 60
       }
     },
@@ -1166,108 +1285,119 @@
       }
     },
     {
-      "id": 1104,
-      "name": "Demolition Raft",
-      "internalName": "SDGAL",
+      "id": 1802,
+      "name": "E. Composite Bowman",
+      "internalName": "ECOMPBOW",
       "statistics": {
-        "HP": 45,
-        "Attack": 90,
-        "MeleeArmor": 0,
-        "PierceArmor": 2,
-        "Range": 0,
+        "HP": 50,
+        "Attack": 4,
+        "MeleeArmor": 2,
+        "PierceArmor": 0,
+        "Range": 4,
         "MinRange": 0,
-        "Speed": 1.5,
-        "LineOfSight": 6,
-        "ReloadTime": 0,
+        "Speed": 0.96,
+        "LineOfSight": 7,
+        "ReloadTime": 2,
         "AccuracyPercent": 100,
-        "FrameDelay": 0,
-        "TrainTime": 45,
+        "FrameDelay": 12,
+        "TrainTime": 10,
         "GarrisonCapacity": 0,
         "AttackBonuses": {
-          "AllBuildings": 180,
-          "BaseMelee": 90
+          "Spearman": 2,
+          "StandardBuilding": 0,
+          "BasePierce": 4,
+          "Ram": 0
         },
         "Armours": {
-          "ShipsCamelsSaboteur": 1,
-          "BaseMelee": 0,
-          "BasePierce": 2,
+          "BaseMelee": 2,
+          "Archer": 0,
+          "BasePierce": 0,
+          "UniqueUnit": 0,
           "AntiLeitisBonus": 0
         }
       },
       "cost": {
-        "Wood": 70,
-        "Gold": 50
+        "Wood": 35,
+        "Gold": 45
       }
     },
     {
-      "id": 527,
-      "name": "Demolition Ship",
-      "internalName": "RMSHP",
+      "id": 1753,
+      "name": "E. Shrivamsha Rider",
+      "internalName": "ESHRIVAMSHA",
       "statistics": {
-        "HP": 60,
-        "Attack": 110,
+        "HP": 70,
+        "Attack": 11,
         "MeleeArmor": 0,
-        "PierceArmor": 3,
+        "PierceArmor": 1,
         "Range": 0,
         "MinRange": 0,
         "Speed": 1.6,
         "LineOfSight": 6,
-        "ReloadTime": 0,
+        "ReloadTime": 1.9,
         "AccuracyPercent": 100,
         "FrameDelay": 0,
-        "TrainTime": 31,
+        "TrainTime": 20,
         "GarrisonCapacity": 0,
         "AttackBonuses": {
-          "AllBuildings": 220,
-          "BaseMelee": 110
+          "BaseMelee": 11,
+          "Archer": 0,
+          "AllBuildings": 0,
+          "StandardBuilding": 0,
+          "Scout": 0,
+          "Unused": -3,
+          "SiegeWeapon": 0,
+          "AntiLeitisBonus": 0
         },
         "Armours": {
-          "ShipsCamelsSaboteur": 3,
           "BaseMelee": 0,
-          "BasePierce": 3,
+          "BasePierce": 1,
+          "Cavalry": 0,
+          "UniqueUnit": 0,
           "AntiLeitisBonus": 0
         }
       },
       "cost": {
-        "Wood": 70,
-        "Gold": 50
+        "Food": 70,
+        "Gold": 30
       }
     },
     {
-      "id": 1302,
-      "name": "Dragon Ship",
-      "internalName": "DRAGS",
+      "id": 2704,
+      "name": "E. Varangian Guard",
+      "internalName": "Elite Varangian Guard",
       "statistics": {
-        "HP": 150,
-        "Attack": 4,
+        "HP": 80,
+        "Attack": 17,
         "MeleeArmor": 2,
-        "PierceArmor": 8,
-        "Range": 3,
+        "PierceArmor": 2,
+        "Range": 0,
         "MinRange": 0,
-        "Speed": 1.4,
+        "Speed": 1.05,
         "LineOfSight": 6,
-        "ReloadTime": 0.25,
-        "AccuracyPercent": 0,
+        "ReloadTime": 2,
+        "AccuracyPercent": 100,
         "FrameDelay": 0,
-        "TrainTime": 36,
+        "TrainTime": 30,
         "GarrisonCapacity": 0,
         "AttackBonuses": {
-          "AllBuildings": 4,
-          "ShipsCamelsSaboteur": 4,
-          "TurtleShip": 4,
-          "BaseMelee": 1,
-          "BasePierce": 4,
-          "Mameluke": 4
+          "BaseMelee": 17,
+          "Archer": 0,
+          "Cavalry": 0,
+          "WarElephant": 0,
+          "Camel": 0,
+          "StandardBuilding": 0
         },
         "Armours": {
-          "ShipsCamelsSaboteur": 9,
+          "Infantry": 0,
           "BaseMelee": 2,
-          "BasePierce": 8,
-          "AntiLeitisBonus": 0
+          "BasePierce": 2,
+          "AntiLeitisBonus": 0,
+          "EagleWarrior": 0
         }
       },
       "cost": {
-        "Wood": 75,
+        "Food": 65,
         "Gold": 45
       }
     },
@@ -1287,7 +1417,7 @@
         "ReloadTime": 2,
         "AccuracyPercent": 100,
         "FrameDelay": 0,
-        "TrainTime": 50,
+        "TrainTime": 46,
         "GarrisonCapacity": 0,
         "AttackBonuses": {
           "Monk": 8,
@@ -1297,7 +1427,6 @@
           "StandardBuilding": 0,
           "ShipsCamelsSaboteur": 0,
           "Camel": 0,
-          "Mameluke": 0,
           "Archer": 0
         },
         "Armours": {
@@ -1339,7 +1468,6 @@
           "ShipsCamelsSaboteur": 1,
           "StandardBuilding": 0,
           "Camel": 2,
-          "Mameluke": 1,
           "Archer": 0
         },
         "Armours": {
@@ -1464,7 +1592,6 @@
           "Tree": 100,
           "AllBuildings": 4,
           "ShipsCamelsSaboteur": 8,
-          "Mameluke": 8,
           "Scout": 0,
           "Unused": -3,
           "AntiLeitisBonus": 0
@@ -1567,6 +1694,88 @@
       }
     },
     {
+      "id": 2581,
+      "name": "Elite Blackwood Archer",
+      "internalName": "EBLCKWOOD",
+      "statistics": {
+        "HP": 25,
+        "Attack": 4,
+        "MeleeArmor": 0,
+        "PierceArmor": 0,
+        "Range": 5,
+        "MinRange": 0,
+        "Speed": 1.1,
+        "LineOfSight": 6,
+        "ReloadTime": 1.5,
+        "AccuracyPercent": 90,
+        "FrameDelay": 15,
+        "TrainTime": 14,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "Spearman": 2,
+          "StandardBuilding": 0,
+          "Infantry": 0,
+          "BasePierce": 4,
+          "Ram": 0
+        },
+        "Armours": {
+          "BaseMelee": 0,
+          "Archer": 0,
+          "BasePierce": 0,
+          "UniqueUnit": 0,
+          "AntiLeitisBonus": 0
+        }
+      },
+      "cost": {
+        "Wood": 40,
+        "Gold": 45
+      }
+    },
+    {
+      "id": 2571,
+      "name": "Elite Bolas Rider",
+      "internalName": "EBOLASR",
+      "statistics": {
+        "HP": 65,
+        "Attack": 6,
+        "MeleeArmor": 0,
+        "PierceArmor": 2,
+        "Range": 5,
+        "MinRange": 0,
+        "Speed": 1.5,
+        "LineOfSight": 7,
+        "ReloadTime": 2,
+        "AccuracyPercent": 95,
+        "FrameDelay": 19,
+        "TrainTime": 28,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "AllBuildings": 0,
+          "BasePierce": 6,
+          "Ram": 2,
+          "Infantry": 0,
+          "Spearman": 0,
+          "StandardBuilding": 0,
+          "Unused": -3,
+          "Cavalry": 3,
+          "Camel": 3
+        },
+        "Armours": {
+          "BaseMelee": 0,
+          "BasePierce": 2,
+          "UniqueUnit": 0,
+          "CavalryArcher": 0,
+          "Archer": 0,
+          "Cavalry": 0,
+          "AntiLeitisBonus": 0
+        }
+      },
+      "cost": {
+        "Wood": 50,
+        "Gold": 55
+      }
+    },
+    {
       "id": 878,
       "name": "Elite Boyar",
       "internalName": "EBOYA",
@@ -1654,82 +1863,6 @@
       }
     },
     {
-      "id": 691,
-      "name": "Elite Cannon Galleon",
-      "internalName": "CNGAU",
-      "statistics": {
-        "HP": 150,
-        "Attack": 60,
-        "MeleeArmor": 0,
-        "PierceArmor": 8,
-        "Range": 15,
-        "MinRange": 3,
-        "Speed": 1.1,
-        "LineOfSight": 17,
-        "ReloadTime": 10,
-        "AccuracyPercent": 100,
-        "FrameDelay": 0,
-        "TrainTime": 46,
-        "GarrisonCapacity": 0,
-        "AttackBonuses": {
-          "AllBuildings": 275,
-          "BaseMelee": 60,
-          "SiegeWeapon": 25
-        },
-        "Armours": {
-          "ShipsCamelsSaboteur": 0,
-          "BaseMelee": 0,
-          "BasePierce": 8,
-          "GunpowderUnit": 0,
-          "AntiLeitisBonus": 0,
-          "Class60": 0
-        }
-      },
-      "cost": {
-        "Wood": 200,
-        "Gold": 150
-      }
-    },
-    {
-      "id": 1006,
-      "name": "Elite Caravel",
-      "internalName": "CARAV",
-      "statistics": {
-        "HP": 150,
-        "Attack": 8,
-        "MeleeArmor": 0,
-        "PierceArmor": 8,
-        "Range": 7,
-        "MinRange": 0,
-        "Speed": 1.43,
-        "LineOfSight": 9,
-        "ReloadTime": 3,
-        "AccuracyPercent": 100,
-        "FrameDelay": 0,
-        "TrainTime": 25,
-        "GarrisonCapacity": 0,
-        "AttackBonuses": {
-          "AllBuildings": 9,
-          "ShipsCamelsSaboteur": 7,
-          "BasePierce": 8,
-          "Ram": 4,
-          "Mameluke": 7
-        },
-        "Armours": {
-          "ShipsCamelsSaboteur": 0,
-          "BaseMelee": 0,
-          "BasePierce": 8,
-          "UniqueUnit": 0,
-          "AntiLeitisBonus": 0,
-          "Class60": 0
-        }
-      },
-      "cost": {
-        "Wood": 90,
-        "Gold": 43
-      }
-    },
-    {
       "id": 553,
       "name": "Elite Cataphract",
       "internalName": "UCATA",
@@ -1748,7 +1881,7 @@
         "TrainTime": 20,
         "GarrisonCapacity": 0,
         "AttackBonuses": {
-          "Infantry": 12,
+          "Infantry": 18,
           "BaseMelee": 12,
           "Archer": 0,
           "AllBuildings": 0,
@@ -1852,6 +1985,45 @@
       }
     },
     {
+      "id": 2554,
+      "name": "Elite Champi Warrior",
+      "internalName": "ECHAMPIW",
+      "statistics": {
+        "HP": 65,
+        "Attack": 11,
+        "MeleeArmor": 0,
+        "PierceArmor": 4,
+        "Range": 0,
+        "MinRange": 0,
+        "Speed": 1.1,
+        "LineOfSight": 6,
+        "ReloadTime": 2,
+        "AccuracyPercent": 100,
+        "FrameDelay": 0,
+        "TrainTime": 21,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "EagleWarrior": 1,
+          "StandardBuilding": 3,
+          "BaseMelee": 11,
+          "Cavalry": 0,
+          "Camel": 0,
+          "Archer": 0,
+          "SiegeWeapon": 3
+        },
+        "Armours": {
+          "Infantry": 0,
+          "BaseMelee": 0,
+          "BasePierce": 4,
+          "AntiLeitisBonus": 0
+        }
+      },
+      "cost": {
+        "Food": 50,
+        "Gold": 25
+      }
+    },
+    {
       "id": 559,
       "name": "Elite Chu Ko Nu",
       "internalName": "UCHUK",
@@ -1891,43 +2063,6 @@
       }
     },
     {
-      "id": 1802,
-      "name": "Elite Composite Bowman",
-      "internalName": "ECOMPBOW",
-      "statistics": {
-        "HP": 45,
-        "Attack": 4,
-        "MeleeArmor": 2,
-        "PierceArmor": 0,
-        "Range": 4,
-        "MinRange": 0,
-        "Speed": 0.96,
-        "LineOfSight": 7,
-        "ReloadTime": 2,
-        "AccuracyPercent": 100,
-        "FrameDelay": 12,
-        "TrainTime": 10,
-        "GarrisonCapacity": 0,
-        "AttackBonuses": {
-          "Spearman": 2,
-          "StandardBuilding": 0,
-          "BasePierce": 4,
-          "Ram": 0
-        },
-        "Armours": {
-          "BaseMelee": 2,
-          "Archer": 0,
-          "BasePierce": 0,
-          "UniqueUnit": 0,
-          "AntiLeitisBonus": 0
-        }
-      },
-      "cost": {
-        "Wood": 35,
-        "Gold": 45
-      }
-    },
-    {
       "id": 773,
       "name": "Elite Conquistador",
       "internalName": "UCONQ",
@@ -1963,7 +2098,7 @@
         }
       },
       "cost": {
-        "Food": 70,
+        "Food": 75,
         "Gold": 60
       }
     },
@@ -2034,7 +2169,6 @@
           "SiegeWeapon": 5,
           "StandardBuilding": 0,
           "Camel": 3,
-          "Mameluke": 2,
           "Archer": 0
         },
         "Armours": {
@@ -2097,7 +2231,7 @@
       "internalName": "EFIREARCHER",
       "statistics": {
         "HP": 40,
-        "Attack": 5,
+        "Attack": 6,
         "MeleeArmor": 0,
         "PierceArmor": 0,
         "Range": 6,
@@ -2112,11 +2246,10 @@
         "AttackBonuses": {
           "Spearman": 2,
           "StandardBuilding": 4,
-          "BasePierce": 5,
+          "BasePierce": 6,
           "Ram": 0,
-          "SiegeWeapon": 0,
-          "ShipsCamelsSaboteur": 4,
-          "Mameluke": 4
+          "SiegeWeapon": 1,
+          "ShipsCamelsSaboteur": 4
         },
         "Armours": {
           "BaseMelee": 0,
@@ -2155,7 +2288,6 @@
           "Cavalry": 15,
           "ShipsCamelsSaboteur": 12,
           "Camel": 12,
-          "Mameluke": 12,
           "Archer": 0,
           "GunpowderUnit": 0,
           "WarElephant": 15
@@ -2170,7 +2302,7 @@
         }
       },
       "cost": {
-        "Wood": 40,
+        "Wood": 45,
         "Gold": 45
       }
     },
@@ -2239,7 +2371,8 @@
           "CavalryArcher": 2,
           "Spearman": 3,
           "Unused": -3,
-          "Scout": 0
+          "Scout": 0,
+          "HeroArmor": 2
         },
         "Armours": {
           "BaseMelee": 0,
@@ -2281,8 +2414,7 @@
           "ShipsCamelsSaboteur": 5,
           "WarElephant": 7,
           "StandardBuilding": 0,
-          "Camel": 6,
-          "Mameluke": 5
+          "Camel": 6
         },
         "Armours": {
           "BaseMelee": 1,
@@ -2337,9 +2469,128 @@
       }
     },
     {
+      "id": 2564,
+      "name": "Elite Guecha Warrior",
+      "internalName": "EGUECHA",
+      "statistics": {
+        "HP": 60,
+        "Attack": 8,
+        "MeleeArmor": 0,
+        "PierceArmor": 5,
+        "Range": 4,
+        "MinRange": 1,
+        "Speed": 1.15,
+        "LineOfSight": 5,
+        "ReloadTime": 3,
+        "AccuracyPercent": 90,
+        "FrameDelay": 25,
+        "TrainTime": 17,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "CavalryArcher": 2,
+          "Spearman": 2,
+          "StandardBuilding": 0,
+          "Archer": 4,
+          "BasePierce": 8,
+          "Ram": 0,
+          "Infantry": 0
+        },
+        "Armours": {
+          "BaseMelee": 0,
+          "Archer": 0,
+          "BasePierce": 5,
+          "AntiLeitisBonus": 0,
+          "Scout": 0,
+          "UniqueUnit": 0
+        }
+      },
+      "cost": {
+        "Wood": 50,
+        "Gold": 60
+      }
+    },
+    {
+      "id": 2706,
+      "name": "Elite Hearth Troop",
+      "internalName": "Elite Hearth Troop",
+      "statistics": {
+        "HP": 85,
+        "Attack": 12,
+        "MeleeArmor": 1,
+        "PierceArmor": 4,
+        "Range": 0,
+        "MinRange": 0,
+        "Speed": 0.9,
+        "LineOfSight": 8,
+        "ReloadTime": 2,
+        "AccuracyPercent": 100,
+        "FrameDelay": 23,
+        "TrainTime": 14,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "EagleWarrior": 1,
+          "StandardBuilding": 2,
+          "BaseMelee": 12,
+          "Cavalry": 0,
+          "Camel": 0,
+          "Archer": 0
+        },
+        "Armours": {
+          "Infantry": 0,
+          "BaseMelee": 1,
+          "BasePierce": 4,
+          "UniqueUnit": 0,
+          "AntiLeitisBonus": 0
+        }
+      },
+      "cost": {
+        "Wood": 80,
+        "Gold": 35
+      }
+    },
+    {
       "id": 555,
       "name": "Elite Huskarl",
       "internalName": "UGBRS",
+      "statistics": {
+        "HP": 70,
+        "Attack": 12,
+        "MeleeArmor": 0,
+        "PierceArmor": 8,
+        "Range": 0,
+        "MinRange": 0,
+        "Speed": 1.05,
+        "LineOfSight": 5,
+        "ReloadTime": 2,
+        "AccuracyPercent": 100,
+        "FrameDelay": 0,
+        "TrainTime": 13,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "EagleWarrior": 3,
+          "StandardBuilding": 3,
+          "BaseMelee": 12,
+          "Archer": 10,
+          "Cavalry": 0,
+          "Camel": 0
+        },
+        "Armours": {
+          "Infantry": 0,
+          "BaseMelee": 0,
+          "BasePierce": 8,
+          "UniqueUnit": 0,
+          "AntiLeitisBonus": 0
+        }
+      },
+      "cost": {
+        "Food": 75,
+        "Gold": 35
+      }
+    },
+    {
+      "id": 761,
+      "name": "Elite Huskarl",
+      "internalName": "BHUSKX",
       "statistics": {
         "HP": 70,
         "Attack": 12,
@@ -2410,7 +2661,45 @@
       },
       "cost": {
         "Wood": 110,
-        "Gold": 70
+        "Gold": 80
+      }
+    },
+    {
+      "id": 2584,
+      "name": "Elite Ibirapema Warrior",
+      "internalName": "EIBIRAP",
+      "statistics": {
+        "HP": 90,
+        "Attack": 11,
+        "MeleeArmor": 2,
+        "PierceArmor": 1,
+        "Range": 0,
+        "MinRange": 0,
+        "Speed": 1,
+        "LineOfSight": 5,
+        "ReloadTime": 2,
+        "AccuracyPercent": 100,
+        "FrameDelay": 0,
+        "TrainTime": 24,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "BaseMelee": 11,
+          "EagleWarrior": 3,
+          "StandardBuilding": 2,
+          "Cavalry": 0,
+          "Camel": 0
+        },
+        "Armours": {
+          "Infantry": 0,
+          "BaseMelee": 2,
+          "BasePierce": 1,
+          "UniqueUnit": 0,
+          "AntiLeitisBonus": 0
+        }
+      },
+      "cost": {
+        "Food": 30,
+        "Gold": 60
       }
     },
     {
@@ -2426,7 +2715,7 @@
         "MinRange": 0,
         "Speed": 1.4,
         "LineOfSight": 5,
-        "ReloadTime": 2.16,
+        "ReloadTime": 2.15,
         "AccuracyPercent": 100,
         "FrameDelay": 0,
         "TrainTime": 14,
@@ -2532,6 +2821,88 @@
       }
     },
     {
+      "id": 2709,
+      "name": "Elite Jarl",
+      "internalName": "Elite Jarl",
+      "statistics": {
+        "HP": 75,
+        "Attack": 10,
+        "MeleeArmor": 2,
+        "PierceArmor": 1,
+        "Range": 5,
+        "MinRange": 0,
+        "Speed": 1.35,
+        "LineOfSight": 7,
+        "ReloadTime": 2,
+        "AccuracyPercent": 100,
+        "FrameDelay": 17,
+        "TrainTime": 23,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "BaseMelee": 10,
+          "Archer": 0,
+          "StandardBuilding": 0,
+          "Scout": 0,
+          "SiegeWeapon": 0,
+          "Infantry": 4,
+          "Unused": -3
+        },
+        "Armours": {
+          "BaseMelee": 2,
+          "Cavalry": 0,
+          "BasePierce": 1,
+          "UniqueUnit": 0,
+          "AntiLeitisBonus": 0,
+          "Hussite": 0
+        }
+      },
+      "cost": {
+        "Food": 75,
+        "Gold": 55
+      }
+    },
+    {
+      "id": 2712,
+      "name": "Elite Jomsviking",
+      "internalName": "Elite Jomsviking",
+      "statistics": {
+        "HP": 75,
+        "Attack": 9,
+        "MeleeArmor": 2,
+        "PierceArmor": 2,
+        "Range": 0,
+        "MinRange": 0,
+        "Speed": 0.96,
+        "LineOfSight": 5,
+        "ReloadTime": 1.8,
+        "AccuracyPercent": 100,
+        "FrameDelay": 25,
+        "TrainTime": 10,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "BaseMelee": 9,
+          "Cavalry": 15,
+          "Camel": 12,
+          "WarElephant": 15,
+          "StandardBuilding": 9,
+          "EagleWarrior": 2,
+          "Archer": 0,
+          "SiegeWeapon": 0
+        },
+        "Armours": {
+          "UniqueUnit": 0,
+          "Infantry": 0,
+          "BaseMelee": 2,
+          "BasePierce": 2,
+          "AntiLeitisBonus": 0
+        }
+      },
+      "cost": {
+        "Food": 65,
+        "Gold": 15
+      }
+    },
+    {
       "id": 881,
       "name": "Elite Kamayuk",
       "internalName": "EKAMA",
@@ -2539,7 +2910,7 @@
         "HP": 80,
         "Attack": 8,
         "MeleeArmor": 1,
-        "PierceArmor": 0,
+        "PierceArmor": 1,
         "Range": 1,
         "MinRange": 0,
         "Speed": 1,
@@ -2560,13 +2931,13 @@
         "Armours": {
           "Infantry": 0,
           "BaseMelee": 1,
-          "BasePierce": 0,
+          "BasePierce": 1,
           "UniqueUnit": 0,
           "AntiLeitisBonus": 0
         }
       },
       "cost": {
-        "Food": 60,
+        "Food": 70,
         "Gold": 30
       }
     },
@@ -2689,6 +3060,83 @@
       "cost": {
         "Wood": 60,
         "Gold": 35
+      }
+    },
+    {
+      "id": 1260,
+      "name": "Elite Kipchak",
+      "internalName": "MKIPCHAK",
+      "statistics": {
+        "HP": 45,
+        "Attack": 5,
+        "MeleeArmor": 0,
+        "PierceArmor": 0,
+        "Range": 4,
+        "MinRange": 0,
+        "Speed": 1.4,
+        "LineOfSight": 6,
+        "ReloadTime": 2.2,
+        "AccuracyPercent": 90,
+        "FrameDelay": 21,
+        "TrainTime": 12,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "Spearman": 1,
+          "StandardBuilding": 0,
+          "BasePierce": 5,
+          "Unused": -3,
+          "Archer": 0,
+          "Scout": 0
+        },
+        "Armours": {
+          "CavalryArcher": 0,
+          "BaseMelee": 0,
+          "Archer": 0,
+          "Cavalry": 0,
+          "BasePierce": 0,
+          "UniqueUnit": 0,
+          "AntiLeitisBonus": 0
+        }
+      }
+    },
+    {
+      "id": 2568,
+      "name": "Elite Kona",
+      "internalName": "EKONA",
+      "statistics": {
+        "HP": 145,
+        "Attack": 11,
+        "MeleeArmor": 0,
+        "PierceArmor": 5,
+        "Range": 0,
+        "MinRange": 0,
+        "Speed": 1.55,
+        "LineOfSight": 6,
+        "ReloadTime": 2,
+        "AccuracyPercent": 100,
+        "FrameDelay": 0,
+        "TrainTime": 14,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "BaseMelee": 11,
+          "SiegeWeapon": 0,
+          "AllBuildings": 0,
+          "StandardBuilding": 0,
+          "Scout": 0,
+          "Unused": -3,
+          "GunpowderUnit": 5
+        },
+        "Armours": {
+          "BaseMelee": 0,
+          "BasePierce": 5,
+          "Cavalry": 0,
+          "UniqueUnit": 0,
+          "AntiLeitisBonus": 0
+        }
+      },
+      "cost": {
+        "Food": 65,
+        "Gold": 40
       }
     },
     {
@@ -2886,45 +3334,6 @@
       "cost": {
         "Food": 40,
         "Gold": 40
-      }
-    },
-    {
-      "id": 533,
-      "name": "Elite Longboat",
-      "internalName": "ULNGB",
-      "statistics": {
-        "HP": 160,
-        "Attack": 8,
-        "MeleeArmor": 0,
-        "PierceArmor": 8,
-        "Range": 7,
-        "MinRange": 0,
-        "Speed": 1.54,
-        "LineOfSight": 9,
-        "ReloadTime": 3,
-        "AccuracyPercent": 100,
-        "FrameDelay": 0,
-        "TrainTime": 25,
-        "GarrisonCapacity": 0,
-        "AttackBonuses": {
-          "AllBuildings": 7,
-          "ShipsCamelsSaboteur": 10,
-          "BasePierce": 8,
-          "Ram": 4,
-          "Mameluke": 10
-        },
-        "Armours": {
-          "ShipsCamelsSaboteur": 0,
-          "BaseMelee": 0,
-          "BasePierce": 8,
-          "UniqueUnit": 0,
-          "AntiLeitisBonus": 0,
-          "Class60": 0
-        }
-      },
-      "cost": {
-        "Wood": 100,
-        "Gold": 50
       }
     },
     {
@@ -3250,48 +3659,6 @@
       }
     },
     {
-      "id": 1761,
-      "name": "Elite Ratha",
-      "internalName": "ERATHA2",
-      "statistics": {
-        "HP": 115,
-        "Attack": 6,
-        "MeleeArmor": 3,
-        "PierceArmor": 3,
-        "Range": 4,
-        "MinRange": 0,
-        "Speed": 1.3,
-        "LineOfSight": 6,
-        "ReloadTime": 2,
-        "AccuracyPercent": 90,
-        "FrameDelay": 14,
-        "TrainTime": 18,
-        "GarrisonCapacity": 0,
-        "AttackBonuses": {
-          "BasePierce": 6,
-          "Archer": 0,
-          "AllBuildings": 0,
-          "StandardBuilding": 0,
-          "Spearman": 2,
-          "Unused": -3,
-          "Scout": 0
-        },
-        "Armours": {
-          "BaseMelee": 3,
-          "Cavalry": 0,
-          "BasePierce": 3,
-          "Archer": 0,
-          "UniqueUnit": 0,
-          "CavalryArcher": 1,
-          "AntiLeitisBonus": 0
-        }
-      },
-      "cost": {
-        "Wood": 60,
-        "Gold": 60
-      }
-    },
-    {
       "id": 1740,
       "name": "Elite Ratha (Melee)",
       "internalName": "ERATHA",
@@ -3326,7 +3693,49 @@
           "BasePierce": 3,
           "Archer": 0,
           "UniqueUnit": 0,
-          "CavalryArcher": 1,
+          "CavalryArcher": 0,
+          "AntiLeitisBonus": 0
+        }
+      },
+      "cost": {
+        "Wood": 60,
+        "Gold": 60
+      }
+    },
+    {
+      "id": 1761,
+      "name": "Elite Ratha (Ranged)",
+      "internalName": "ERATHA2",
+      "statistics": {
+        "HP": 115,
+        "Attack": 6,
+        "MeleeArmor": 3,
+        "PierceArmor": 3,
+        "Range": 4,
+        "MinRange": 0,
+        "Speed": 1.3,
+        "LineOfSight": 6,
+        "ReloadTime": 2,
+        "AccuracyPercent": 90,
+        "FrameDelay": 14,
+        "TrainTime": 18,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "BasePierce": 6,
+          "Archer": 0,
+          "AllBuildings": 0,
+          "StandardBuilding": 0,
+          "Spearman": 2,
+          "Unused": -3,
+          "Scout": 0
+        },
+        "Armours": {
+          "BaseMelee": 3,
+          "Cavalry": 0,
+          "BasePierce": 3,
+          "Archer": 0,
+          "UniqueUnit": 0,
+          "CavalryArcher": 0,
           "AntiLeitisBonus": 0
         }
       },
@@ -3340,7 +3749,7 @@
       "name": "Elite Rattan Archer",
       "internalName": "ERATAN",
       "statistics": {
-        "HP": 45,
+        "HP": 40,
         "Attack": 7,
         "MeleeArmor": 0,
         "PierceArmor": 6,
@@ -3532,47 +3941,6 @@
       }
     },
     {
-      "id": 1753,
-      "name": "Elite Shrivamsha Rider",
-      "internalName": "ESHRIVAMSHA",
-      "statistics": {
-        "HP": 70,
-        "Attack": 11,
-        "MeleeArmor": 0,
-        "PierceArmor": 1,
-        "Range": 0,
-        "MinRange": 0,
-        "Speed": 1.6,
-        "LineOfSight": 6,
-        "ReloadTime": 1.9,
-        "AccuracyPercent": 100,
-        "FrameDelay": 0,
-        "TrainTime": 20,
-        "GarrisonCapacity": 0,
-        "AttackBonuses": {
-          "BaseMelee": 11,
-          "Archer": 0,
-          "AllBuildings": 0,
-          "StandardBuilding": 0,
-          "Scout": 0,
-          "Unused": -3,
-          "SiegeWeapon": 0,
-          "AntiLeitisBonus": 0
-        },
-        "Armours": {
-          "BaseMelee": 0,
-          "BasePierce": 1,
-          "Cavalry": 0,
-          "UniqueUnit": 0,
-          "AntiLeitisBonus": 0
-        }
-      },
-      "cost": {
-        "Food": 70,
-        "Gold": 30
-      }
-    },
-    {
       "id": 6,
       "name": "Elite Skirmisher",
       "internalName": "HXBOW",
@@ -3596,7 +3964,8 @@
           "StandardBuilding": 0,
           "Archer": 4,
           "BasePierce": 3,
-          "Ram": 0
+          "Ram": 0,
+          "HeroArmor": 2
         },
         "Armours": {
           "BaseMelee": 0,
@@ -3695,13 +4064,97 @@
       }
     },
     {
+      "id": 887,
+      "name": "Elite Tarkan",
+      "internalName": "UTARK",
+      "statistics": {
+        "HP": 150,
+        "Attack": 11,
+        "MeleeArmor": 1,
+        "PierceArmor": 4,
+        "Range": 0,
+        "MinRange": 0,
+        "Speed": 1.4,
+        "LineOfSight": 7,
+        "ReloadTime": 1.9,
+        "AccuracyPercent": 100,
+        "FrameDelay": 0,
+        "TrainTime": 14,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "Castle": 10,
+          "AllBuildings": 10,
+          "BaseMelee": 11,
+          "Archer": 0,
+          "StoneDefense": 12,
+          "WallsGates": 10,
+          "StandardBuilding": 0,
+          "Scout": 0,
+          "Unused": -3,
+          "SiegeWeapon": 0,
+          "AntiLeitisBonus": 0
+        },
+        "Armours": {
+          "BaseMelee": 1,
+          "Cavalry": 0,
+          "BasePierce": 4,
+          "UniqueUnit": 0,
+          "AntiLeitisBonus": 0
+        }
+      },
+      "cost": {
+        "Food": 60,
+        "Gold": 60
+      }
+    },
+    {
+      "id": 2587,
+      "name": "Elite Temple Guard",
+      "internalName": "Elite Temple Guard",
+      "statistics": {
+        "HP": 115,
+        "Attack": 14,
+        "MeleeArmor": 2,
+        "PierceArmor": 2,
+        "Range": 0,
+        "MinRange": 0,
+        "Speed": 0.95,
+        "LineOfSight": 6,
+        "ReloadTime": 2,
+        "AccuracyPercent": 100,
+        "FrameDelay": 0,
+        "TrainTime": 24,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "BaseMelee": 14,
+          "Cavalry": 8,
+          "Camel": 6,
+          "WarElephant": 8,
+          "ShipsCamelsSaboteur": 6,
+          "StandardBuilding": 2
+        },
+        "Armours": {
+          "Infantry": 0,
+          "BaseMelee": 2,
+          "BasePierce": 2,
+          "UniqueUnit": 0,
+          "AntiLeitisBonus": 0,
+          "EagleWarrior": 0
+        }
+      },
+      "cost": {
+        "Food": 70,
+        "Gold": 45
+      }
+    },
+    {
       "id": 554,
       "name": "Elite Teutonic Knight",
       "internalName": "UTKNI",
       "statistics": {
         "HP": 110,
         "Attack": 17,
-        "MeleeArmor": 10,
+        "MeleeArmor": 8,
         "PierceArmor": 2,
         "Range": 0,
         "MinRange": 0,
@@ -3722,7 +4175,7 @@
         },
         "Armours": {
           "Infantry": 0,
-          "BaseMelee": 10,
+          "BaseMelee": 8,
           "BasePierce": 2,
           "UniqueUnit": 0,
           "AntiLeitisBonus": 0
@@ -3742,10 +4195,10 @@
         "Attack": 8,
         "MeleeArmor": 1,
         "PierceArmor": 0,
-        "Range": 4,
+        "Range": 6,
         "MinRange": 0,
         "Speed": 1,
-        "LineOfSight": 6,
+        "LineOfSight": 9,
         "ReloadTime": 2,
         "AccuracyPercent": 100,
         "FrameDelay": 28,
@@ -3777,7 +4230,7 @@
       "name": "Elite Tiger Cavalry",
       "internalName": "ETIGERCAV",
       "statistics": {
-        "HP": 130,
+        "HP": 125,
         "Attack": 13,
         "MeleeArmor": 0,
         "PierceArmor": 5,
@@ -3788,7 +4241,7 @@
         "ReloadTime": 1.9,
         "AccuracyPercent": 100,
         "FrameDelay": 0,
-        "TrainTime": 15,
+        "TrainTime": 18,
         "GarrisonCapacity": 0,
         "AttackBonuses": {
           "BaseMelee": 13,
@@ -3811,50 +4264,6 @@
       "cost": {
         "Food": 60,
         "Gold": 80
-      }
-    },
-    {
-      "id": 832,
-      "name": "Elite Turtle Ship",
-      "internalName": "UTURT",
-      "statistics": {
-        "HP": 300,
-        "Attack": 4,
-        "MeleeArmor": 8,
-        "PierceArmor": 8,
-        "Range": 7,
-        "MinRange": 0,
-        "Speed": 1.05,
-        "LineOfSight": 9,
-        "ReloadTime": 2,
-        "AccuracyPercent": 100,
-        "FrameDelay": 1,
-        "TrainTime": 50,
-        "GarrisonCapacity": 0,
-        "AttackBonuses": {
-          "AllBuildings": 7,
-          "BaseMelee": 4,
-          "SiegeWeapon": 0,
-          "Charge": 0,
-          "Castle": 7,
-          "WallsGates": 6,
-          "ShipsCamelsSaboteur": 1,
-          "Mameluke": 1
-        },
-        "Armours": {
-          "ShipsCamelsSaboteur": 10,
-          "TurtleShip": 0,
-          "BaseMelee": 8,
-          "BasePierce": 8,
-          "GunpowderUnit": 0,
-          "UniqueUnit": 0,
-          "AntiLeitisBonus": 0,
-          "Class60": 0
-        }
-      },
-      "cost": {
-        "Wood": 190,
-        "Gold": 180
       }
     },
     {
@@ -4060,50 +4469,12 @@
       }
     },
     {
-      "id": 532,
-      "name": "Fast Fire Ship",
-      "internalName": "HFGAL",
-      "statistics": {
-        "HP": 140,
-        "Attack": 3,
-        "MeleeArmor": 0,
-        "PierceArmor": 8,
-        "Range": 2.5,
-        "MinRange": 0,
-        "Speed": 1.43,
-        "LineOfSight": 6,
-        "ReloadTime": 0.25,
-        "AccuracyPercent": 0,
-        "FrameDelay": 0,
-        "TrainTime": 36,
-        "GarrisonCapacity": 0,
-        "AttackBonuses": {
-          "AllBuildings": 3,
-          "ShipsCamelsSaboteur": 4,
-          "TurtleShip": 3,
-          "BaseMelee": 1,
-          "BasePierce": 3,
-          "Mameluke": 4
-        },
-        "Armours": {
-          "ShipsCamelsSaboteur": 9,
-          "BaseMelee": 0,
-          "BasePierce": 8,
-          "AntiLeitisBonus": 0
-        }
-      },
-      "cost": {
-        "Wood": 75,
-        "Gold": 45
-      }
-    },
-    {
       "id": 1968,
       "name": "Fire Archer",
       "internalName": "FIREARCHER",
       "statistics": {
         "HP": 35,
-        "Attack": 4,
+        "Attack": 5,
         "MeleeArmor": 0,
         "PierceArmor": 0,
         "Range": 5,
@@ -4118,11 +4489,10 @@
         "AttackBonuses": {
           "Spearman": 2,
           "StandardBuilding": 4,
-          "BasePierce": 4,
+          "BasePierce": 5,
           "Ram": 0,
-          "SiegeWeapon": 0,
-          "ShipsCamelsSaboteur": 3,
-          "Mameluke": 3
+          "SiegeWeapon": 1,
+          "ShipsCamelsSaboteur": 3
         },
         "Armours": {
           "BaseMelee": 0,
@@ -4134,44 +4504,6 @@
       },
       "cost": {
         "Wood": 45,
-        "Gold": 45
-      }
-    },
-    {
-      "id": 1103,
-      "name": "Fire Galley",
-      "internalName": "SFRGAL",
-      "statistics": {
-        "HP": 100,
-        "Attack": 1,
-        "MeleeArmor": 0,
-        "PierceArmor": 4,
-        "Range": 2.5,
-        "MinRange": 0,
-        "Speed": 1.3,
-        "LineOfSight": 5,
-        "ReloadTime": 0.25,
-        "AccuracyPercent": 0,
-        "FrameDelay": 0,
-        "TrainTime": 65,
-        "GarrisonCapacity": 0,
-        "AttackBonuses": {
-          "AllBuildings": 1,
-          "ShipsCamelsSaboteur": 3,
-          "TurtleShip": 1,
-          "BaseMelee": 0,
-          "BasePierce": 1,
-          "Mameluke": 1
-        },
-        "Armours": {
-          "ShipsCamelsSaboteur": 6,
-          "BaseMelee": 0,
-          "BasePierce": 4,
-          "AntiLeitisBonus": 0
-        }
-      },
-      "cost": {
-        "Wood": 75,
         "Gold": 45
       }
     },
@@ -4191,7 +4523,7 @@
         "ReloadTime": 2,
         "AccuracyPercent": 100,
         "FrameDelay": 10,
-        "TrainTime": 32,
+        "TrainTime": 35,
         "GarrisonCapacity": 0,
         "AttackBonuses": {
           "StandardBuilding": 1,
@@ -4199,7 +4531,6 @@
           "Cavalry": 5,
           "ShipsCamelsSaboteur": 4,
           "Camel": 4,
-          "Mameluke": 4,
           "Archer": 0,
           "GunpowderUnit": 0,
           "WarElephant": 5
@@ -4214,75 +4545,8 @@
         }
       },
       "cost": {
-        "Wood": 40,
+        "Wood": 45,
         "Gold": 45
-      }
-    },
-    {
-      "id": 529,
-      "name": "Fire Ship",
-      "internalName": "FRGAL",
-      "statistics": {
-        "HP": 120,
-        "Attack": 2,
-        "MeleeArmor": 0,
-        "PierceArmor": 6,
-        "Range": 2.5,
-        "MinRange": 0,
-        "Speed": 1.35,
-        "LineOfSight": 5,
-        "ReloadTime": 0.25,
-        "AccuracyPercent": 0,
-        "FrameDelay": 0,
-        "TrainTime": 36,
-        "GarrisonCapacity": 0,
-        "AttackBonuses": {
-          "AllBuildings": 2,
-          "ShipsCamelsSaboteur": 3,
-          "TurtleShip": 2,
-          "BaseMelee": 1,
-          "BasePierce": 2,
-          "Mameluke": 3
-        },
-        "Armours": {
-          "ShipsCamelsSaboteur": 6,
-          "BaseMelee": 0,
-          "BasePierce": 6,
-          "AntiLeitisBonus": 0
-        }
-      },
-      "cost": {
-        "Wood": 75,
-        "Gold": 45
-      }
-    },
-    {
-      "id": 13,
-      "name": "Fishing Ship",
-      "internalName": "FSHSP",
-      "statistics": {
-        "HP": 60,
-        "Attack": 0,
-        "MeleeArmor": 0,
-        "PierceArmor": 4,
-        "Range": 0,
-        "MinRange": 0,
-        "Speed": 1.26,
-        "LineOfSight": 5,
-        "ReloadTime": 0,
-        "AccuracyPercent": 0,
-        "FrameDelay": 0,
-        "TrainTime": 40,
-        "GarrisonCapacity": 0,
-        "Armours": {
-          "Mameluke": 0,
-          "BaseMelee": 0,
-          "BasePierce": 4,
-          "AntiLeitisBonus": 0
-        }
-      },
-      "cost": {
-        "Wood": 75
       }
     },
     {
@@ -4331,7 +4595,7 @@
       "name": "Flemish Militia",
       "internalName": "FLEMISHPIKEMAN2",
       "statistics": {
-        "HP": 45,
+        "HP": 40,
         "Attack": 5,
         "MeleeArmor": 1,
         "PierceArmor": 1,
@@ -4342,7 +4606,7 @@
         "ReloadTime": 2,
         "AccuracyPercent": 100,
         "FrameDelay": 0,
-        "TrainTime": 14,
+        "TrainTime": 16,
         "GarrisonCapacity": 0,
         "AttackBonuses": {
           "EagleWarrior": 2,
@@ -4352,7 +4616,6 @@
           "ShipsCamelsSaboteur": 4,
           "Camel": 4,
           "WarElephant": 6,
-          "Mameluke": 4,
           "Archer": 0
         },
         "Armours": {
@@ -4364,84 +4627,8 @@
         }
       },
       "cost": {
-        "Food": 30,
+        "Food": 35,
         "Gold": 25
-      }
-    },
-    {
-      "id": 442,
-      "name": "Galleon",
-      "internalName": "WARGA",
-      "statistics": {
-        "HP": 165,
-        "Attack": 8,
-        "MeleeArmor": 0,
-        "PierceArmor": 8,
-        "Range": 7,
-        "MinRange": 0,
-        "Speed": 1.43,
-        "LineOfSight": 9,
-        "ReloadTime": 3,
-        "AccuracyPercent": 100,
-        "FrameDelay": 0,
-        "TrainTime": 36,
-        "GarrisonCapacity": 0,
-        "AttackBonuses": {
-          "AllBuildings": 8,
-          "ShipsCamelsSaboteur": 11,
-          "BasePierce": 8,
-          "Ram": 4,
-          "Mameluke": 11
-        },
-        "Armours": {
-          "ShipsCamelsSaboteur": 0,
-          "BaseMelee": 0,
-          "BasePierce": 8,
-          "AntiLeitisBonus": 0,
-          "Class60": 0
-        }
-      },
-      "cost": {
-        "Wood": 90,
-        "Gold": 30
-      }
-    },
-    {
-      "id": 539,
-      "name": "Galley",
-      "internalName": "SGALY",
-      "statistics": {
-        "HP": 120,
-        "Attack": 6,
-        "MeleeArmor": 0,
-        "PierceArmor": 6,
-        "Range": 5,
-        "MinRange": 0,
-        "Speed": 1.43,
-        "LineOfSight": 7,
-        "ReloadTime": 3,
-        "AccuracyPercent": 100,
-        "FrameDelay": 0,
-        "TrainTime": 60,
-        "GarrisonCapacity": 0,
-        "AttackBonuses": {
-          "AllBuildings": 6,
-          "ShipsCamelsSaboteur": 8,
-          "BasePierce": 6,
-          "Ram": 3,
-          "Mameluke": 8
-        },
-        "Armours": {
-          "ShipsCamelsSaboteur": 0,
-          "BaseMelee": 0,
-          "BasePierce": 6,
-          "AntiLeitisBonus": 0,
-          "Class60": 0
-        }
-      },
-      "cost": {
-        "Wood": 90,
-        "Gold": 30
       }
     },
     {
@@ -4509,7 +4696,8 @@
           "CavalryArcher": 0,
           "Spearman": 3,
           "Unused": -3,
-          "Scout": 0
+          "Scout": 0,
+          "HeroArmor": 2
         },
         "Armours": {
           "BaseMelee": 0,
@@ -4551,8 +4739,7 @@
           "ShipsCamelsSaboteur": 4,
           "WarElephant": 5,
           "StandardBuilding": 0,
-          "Camel": 4,
-          "Mameluke": 4
+          "Camel": 4
         },
         "Armours": {
           "BaseMelee": 1,
@@ -4642,7 +4829,90 @@
         }
       },
       "cost": {
-        "Food": 35,
+        "Food": 55,
+        "Gold": 50
+      }
+    },
+    {
+      "id": 2562,
+      "name": "Guecha Warrior",
+      "internalName": "GUECHA",
+      "statistics": {
+        "HP": 55,
+        "Attack": 6,
+        "MeleeArmor": 0,
+        "PierceArmor": 3,
+        "Range": 3,
+        "MinRange": 1,
+        "Speed": 1.15,
+        "LineOfSight": 4,
+        "ReloadTime": 3,
+        "AccuracyPercent": 90,
+        "FrameDelay": 25,
+        "TrainTime": 17,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "CavalryArcher": 2,
+          "Spearman": 2,
+          "StandardBuilding": 0,
+          "Archer": 3,
+          "BasePierce": 6,
+          "Ram": 0,
+          "Infantry": 0
+        },
+        "Armours": {
+          "BaseMelee": 0,
+          "Archer": 0,
+          "BasePierce": 3,
+          "AntiLeitisBonus": 0,
+          "Scout": 0,
+          "UniqueUnit": 0
+        }
+      },
+      "cost": {
+        "Wood": 50,
+        "Gold": 60
+      }
+    },
+    {
+      "id": 2701,
+      "name": "H. Mounted Crossbowman",
+      "internalName": "Heavy Mounted Crossbowman",
+      "statistics": {
+        "HP": 55,
+        "Attack": 8,
+        "MeleeArmor": 2,
+        "PierceArmor": 0,
+        "Range": 4,
+        "MinRange": 0,
+        "Speed": 1.25,
+        "LineOfSight": 6,
+        "ReloadTime": 2.5,
+        "AccuracyPercent": 80,
+        "FrameDelay": 23,
+        "TrainTime": 30,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "BasePierce": 8,
+          "StandardBuilding": 0,
+          "Ram": 0,
+          "Unused": -3,
+          "Archer": 0,
+          "Scout": 0,
+          "Spearman": 1,
+          "Infantry": 0
+        },
+        "Armours": {
+          "BasePierce": 0,
+          "BaseMelee": 2,
+          "Archer": 0,
+          "Cavalry": 0,
+          "AntiLeitisBonus": 0,
+          "CavalryArcher": 0
+        }
+      },
+      "cost": {
+        "Wood": 40,
         "Gold": 65
       }
     },
@@ -4673,7 +4943,6 @@
           "ShipsCamelsSaboteur": 17,
           "Camel": 26,
           "HeroArmor": 7,
-          "Mameluke": 17,
           "Archer": 0
         },
         "Armours": {
@@ -4716,7 +4985,6 @@
           "ShipsCamelsSaboteur": 17,
           "Camel": 26,
           "HeroArmor": 7,
-          "Mameluke": 17,
           "Archer": 0
         },
         "Armours": {
@@ -4772,6 +5040,45 @@
       }
     },
     {
+      "id": 2705,
+      "name": "Hearth Troop",
+      "internalName": "Hearth Troop",
+      "statistics": {
+        "HP": 75,
+        "Attack": 9,
+        "MeleeArmor": 1,
+        "PierceArmor": 4,
+        "Range": 0,
+        "MinRange": 0,
+        "Speed": 0.9,
+        "LineOfSight": 7,
+        "ReloadTime": 2,
+        "AccuracyPercent": 100,
+        "FrameDelay": 23,
+        "TrainTime": 16,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "EagleWarrior": 1,
+          "StandardBuilding": 1,
+          "BaseMelee": 9,
+          "Cavalry": 0,
+          "Camel": 0,
+          "Archer": 0
+        },
+        "Armours": {
+          "Infantry": 0,
+          "BaseMelee": 1,
+          "BasePierce": 4,
+          "UniqueUnit": 0,
+          "AntiLeitisBonus": 0
+        }
+      },
+      "cost": {
+        "Wood": 80,
+        "Gold": 35
+      }
+    },
+    {
       "id": 330,
       "name": "Heavy Camel Rider",
       "internalName": "HCLRY",
@@ -4797,7 +5104,6 @@
           "Camel": 9,
           "StandardBuilding": 0,
           "HeroArmor": 7,
-          "Mameluke": 9,
           "Scout": 0,
           "Unused": -3,
           "SiegeWeapon": 0,
@@ -4855,40 +5161,6 @@
       "cost": {
         "Wood": 40,
         "Gold": 60
-      }
-    },
-    {
-      "id": 528,
-      "name": "Heavy Demolition Ship",
-      "internalName": "CRMSH",
-      "statistics": {
-        "HP": 70,
-        "Attack": 140,
-        "MeleeArmor": 0,
-        "PierceArmor": 5,
-        "Range": 0,
-        "MinRange": 0,
-        "Speed": 1.6,
-        "LineOfSight": 6,
-        "ReloadTime": 0,
-        "AccuracyPercent": 100,
-        "FrameDelay": 0,
-        "TrainTime": 31,
-        "GarrisonCapacity": 0,
-        "AttackBonuses": {
-          "AllBuildings": 280,
-          "BaseMelee": 140
-        },
-        "Armours": {
-          "ShipsCamelsSaboteur": 5,
-          "BaseMelee": 0,
-          "BasePierce": 5,
-          "AntiLeitisBonus": 0
-        }
-      },
-      "cost": {
-        "Wood": 70,
-        "Gold": 50
       }
     },
     {
@@ -4967,7 +5239,7 @@
         }
       },
       "cost": {
-        "Wood": 130,
+        "Wood": 135,
         "Gold": 155
       }
     },
@@ -5074,7 +5346,6 @@
           "BaseMelee": 50,
           "SiegeWeapon": 20,
           "StoneDefense": 50,
-          "Mameluke": 50,
           "Charge": 50
         },
         "Armours": {
@@ -5113,6 +5384,45 @@
           "StandardBuilding": 2,
           "BaseMelee": 10,
           "Archer": 0,
+          "Cavalry": 0,
+          "Camel": 0
+        },
+        "Armours": {
+          "Infantry": 0,
+          "BaseMelee": 0,
+          "BasePierce": 6,
+          "UniqueUnit": 0,
+          "AntiLeitisBonus": 0
+        }
+      },
+      "cost": {
+        "Food": 75,
+        "Gold": 35
+      }
+    },
+    {
+      "id": 759,
+      "name": "Huskarl",
+      "internalName": "BHUSK",
+      "statistics": {
+        "HP": 60,
+        "Attack": 10,
+        "MeleeArmor": 0,
+        "PierceArmor": 6,
+        "Range": 0,
+        "MinRange": 0,
+        "Speed": 1.05,
+        "LineOfSight": 3,
+        "ReloadTime": 2,
+        "AccuracyPercent": 100,
+        "FrameDelay": 0,
+        "TrainTime": 13,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "EagleWarrior": 2,
+          "StandardBuilding": 2,
+          "BaseMelee": 10,
+          "Archer": 6,
           "Cavalry": 0,
           "Camel": 0
         },
@@ -5204,7 +5514,45 @@
       },
       "cost": {
         "Wood": 110,
-        "Gold": 70
+        "Gold": 80
+      }
+    },
+    {
+      "id": 2582,
+      "name": "Ibirapema Warrior",
+      "internalName": "IBIRAP",
+      "statistics": {
+        "HP": 80,
+        "Attack": 8,
+        "MeleeArmor": 2,
+        "PierceArmor": 1,
+        "Range": 0,
+        "MinRange": 0,
+        "Speed": 1,
+        "LineOfSight": 5,
+        "ReloadTime": 2,
+        "AccuracyPercent": 100,
+        "FrameDelay": 0,
+        "TrainTime": 24,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "BaseMelee": 8,
+          "EagleWarrior": 2,
+          "StandardBuilding": 1,
+          "Cavalry": 0,
+          "Camel": 0
+        },
+        "Armours": {
+          "Infantry": 0,
+          "BaseMelee": 2,
+          "BasePierce": 1,
+          "UniqueUnit": 0,
+          "AntiLeitisBonus": 0
+        }
+      },
+      "cost": {
+        "Food": 30,
+        "Gold": 60
       }
     },
     {
@@ -5233,7 +5581,6 @@
           "Camel": 9,
           "StandardBuilding": 0,
           "HeroArmor": 7,
-          "Mameluke": 9,
           "Scout": 0,
           "Unused": -3,
           "SiegeWeapon": 0,
@@ -5276,7 +5623,8 @@
           "StandardBuilding": 0,
           "Archer": 5,
           "BasePierce": 4,
-          "Ram": 0
+          "Ram": 0,
+          "HeroArmor": 3
         },
         "Armours": {
           "BaseMelee": 0,
@@ -5304,7 +5652,7 @@
         "MinRange": 0,
         "Speed": 1.4,
         "LineOfSight": 5,
-        "ReloadTime": 2.16,
+        "ReloadTime": 2.15,
         "AccuracyPercent": 100,
         "FrameDelay": 0,
         "TrainTime": 14,
@@ -5410,13 +5758,54 @@
       }
     },
     {
+      "id": 2708,
+      "name": "Jarl",
+      "internalName": "Jarl",
+      "statistics": {
+        "HP": 65,
+        "Attack": 9,
+        "MeleeArmor": 2,
+        "PierceArmor": 1,
+        "Range": 4,
+        "MinRange": 0,
+        "Speed": 1.35,
+        "LineOfSight": 7,
+        "ReloadTime": 2,
+        "AccuracyPercent": 100,
+        "FrameDelay": 17,
+        "TrainTime": 23,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "BaseMelee": 9,
+          "Archer": 0,
+          "StandardBuilding": 0,
+          "Scout": 0,
+          "SiegeWeapon": 0,
+          "Infantry": 3,
+          "Unused": -3
+        },
+        "Armours": {
+          "BaseMelee": 2,
+          "Cavalry": 0,
+          "BasePierce": 1,
+          "UniqueUnit": 0,
+          "AntiLeitisBonus": 0,
+          "Hussite": 0
+        }
+      },
+      "cost": {
+        "Food": 75,
+        "Gold": 55
+      }
+    },
+    {
       "id": 1974,
       "name": "Jian Swordsman",
       "internalName": "JIANSWDS",
       "statistics": {
         "HP": 70,
         "Attack": 8,
-        "MeleeArmor": 2,
+        "MeleeArmor": 0,
         "PierceArmor": 5,
         "Range": 0,
         "MinRange": 0,
@@ -5436,7 +5825,7 @@
         },
         "Armours": {
           "Infantry": 0,
-          "BaseMelee": 2,
+          "BaseMelee": 0,
           "BasePierce": 5,
           "AntiLeitisBonus": 0,
           "EagleWarrior": 0,
@@ -5446,6 +5835,47 @@
       "cost": {
         "Food": 45,
         "Gold": 50
+      }
+    },
+    {
+      "id": 2711,
+      "name": "Jomsviking",
+      "internalName": "Jomsviking",
+      "statistics": {
+        "HP": 70,
+        "Attack": 8,
+        "MeleeArmor": 2,
+        "PierceArmor": 2,
+        "Range": 0,
+        "MinRange": 0,
+        "Speed": 0.96,
+        "LineOfSight": 5,
+        "ReloadTime": 1.8,
+        "AccuracyPercent": 100,
+        "FrameDelay": 25,
+        "TrainTime": 10,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "BaseMelee": 8,
+          "Cavalry": 10,
+          "Camel": 8,
+          "WarElephant": 10,
+          "StandardBuilding": 6,
+          "EagleWarrior": 2,
+          "Archer": 0,
+          "SiegeWeapon": 0
+        },
+        "Armours": {
+          "UniqueUnit": 0,
+          "Infantry": 0,
+          "BaseMelee": 2,
+          "BasePierce": 2,
+          "AntiLeitisBonus": 0
+        }
+      },
+      "cost": {
+        "Food": 65,
+        "Gold": 15
       }
     },
     {
@@ -5483,7 +5913,7 @@
         }
       },
       "cost": {
-        "Food": 60,
+        "Food": 70,
         "Gold": 30
       }
     },
@@ -5649,6 +6079,46 @@
       }
     },
     {
+      "id": 2566,
+      "name": "Kona",
+      "internalName": "KONA",
+      "statistics": {
+        "HP": 125,
+        "Attack": 9,
+        "MeleeArmor": 0,
+        "PierceArmor": 3,
+        "Range": 0,
+        "MinRange": 0,
+        "Speed": 1.55,
+        "LineOfSight": 5,
+        "ReloadTime": 2,
+        "AccuracyPercent": 100,
+        "FrameDelay": 0,
+        "TrainTime": 14,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "BaseMelee": 9,
+          "SiegeWeapon": 0,
+          "AllBuildings": 0,
+          "StandardBuilding": 0,
+          "Scout": 0,
+          "Unused": -3,
+          "GunpowderUnit": 5
+        },
+        "Armours": {
+          "BaseMelee": 0,
+          "BasePierce": 3,
+          "UniqueUnit": 0,
+          "Cavalry": 0,
+          "AntiLeitisBonus": 0
+        }
+      },
+      "cost": {
+        "Food": 65,
+        "Gold": 40
+      }
+    },
+    {
       "id": 1225,
       "name": "Konnik",
       "internalName": "KONNIK",
@@ -5784,7 +6254,7 @@
         "TrainTime": 21,
         "GarrisonCapacity": 0,
         "AttackBonuses": {
-          "EagleWarrior": 8,
+          "EagleWarrior": 9,
           "StandardBuilding": 4,
           "Infantry": 4,
           "BaseMelee": 12,
@@ -5983,7 +6453,7 @@
         "TrainTime": 21,
         "GarrisonCapacity": 0,
         "AttackBonuses": {
-          "EagleWarrior": 6,
+          "EagleWarrior": 8,
           "StandardBuilding": 3,
           "BaseMelee": 9,
           "Cavalry": 0,
@@ -6000,45 +6470,6 @@
       "cost": {
         "Food": 50,
         "Gold": 20
-      }
-    },
-    {
-      "id": 250,
-      "name": "Longboat",
-      "internalName": "LNGBT",
-      "statistics": {
-        "HP": 130,
-        "Attack": 7,
-        "MeleeArmor": 0,
-        "PierceArmor": 6,
-        "Range": 6,
-        "MinRange": 0,
-        "Speed": 1.54,
-        "LineOfSight": 8,
-        "ReloadTime": 3,
-        "AccuracyPercent": 100,
-        "FrameDelay": 0,
-        "TrainTime": 25,
-        "GarrisonCapacity": 0,
-        "AttackBonuses": {
-          "AllBuildings": 7,
-          "ShipsCamelsSaboteur": 9,
-          "BasePierce": 7,
-          "Ram": 4,
-          "Mameluke": 9
-        },
-        "Armours": {
-          "ShipsCamelsSaboteur": 0,
-          "BaseMelee": 0,
-          "BasePierce": 6,
-          "UniqueUnit": 0,
-          "AntiLeitisBonus": 0,
-          "Class60": 0
-        }
-      },
-      "cost": {
-        "Wood": 100,
-        "Gold": 50
       }
     },
     {
@@ -6079,42 +6510,6 @@
       }
     },
     {
-      "id": 1948,
-      "name": "Lou Chuan",
-      "internalName": "LOUCHUAN",
-      "statistics": {
-        "HP": 175,
-        "Attack": 25,
-        "MeleeArmor": 0,
-        "PierceArmor": 9,
-        "Range": 10,
-        "MinRange": 3,
-        "Speed": 1.15,
-        "LineOfSight": 15,
-        "ReloadTime": 5,
-        "AccuracyPercent": 100,
-        "FrameDelay": 18,
-        "TrainTime": 60,
-        "GarrisonCapacity": 0,
-        "AttackBonuses": {
-          "BaseMelee": 25,
-          "AllBuildings": 230,
-          "SiegeWeapon": 10
-        },
-        "Armours": {
-          "ShipsCamelsSaboteur": 0,
-          "BaseMelee": 0,
-          "BasePierce": 9,
-          "AntiLeitisBonus": 0,
-          "Class60": 0
-        }
-      },
-      "cost": {
-        "Wood": 250,
-        "Gold": 225
-      }
-    },
-    {
       "id": 869,
       "name": "Magyar Huszar",
       "internalName": "UMAGYX",
@@ -6130,7 +6525,7 @@
         "ReloadTime": 1.8,
         "AccuracyPercent": 100,
         "FrameDelay": 0,
-        "TrainTime": 12,
+        "TrainTime": 18,
         "GarrisonCapacity": 0,
         "AttackBonuses": {
           "BaseMelee": 10,
@@ -6217,7 +6612,7 @@
         "TrainTime": 21,
         "GarrisonCapacity": 0,
         "AttackBonuses": {
-          "EagleWarrior": 2,
+          "EagleWarrior": 3,
           "StandardBuilding": 2,
           "BaseMelee": 6,
           "Cavalry": 0,
@@ -6382,6 +6777,7 @@
         }
       },
       "cost": {
+        "Food": 30,
         "Gold": 100
       }
     },
@@ -6453,6 +6849,48 @@
       },
       "cost": {
         "Gold": 100
+      }
+    },
+    {
+      "id": 2700,
+      "name": "Mounted Crossbowman",
+      "internalName": "Mounted Crossbowman",
+      "statistics": {
+        "HP": 45,
+        "Attack": 7,
+        "MeleeArmor": 2,
+        "PierceArmor": 0,
+        "Range": 4,
+        "MinRange": 0,
+        "Speed": 1.25,
+        "LineOfSight": 6,
+        "ReloadTime": 2.5,
+        "AccuracyPercent": 80,
+        "FrameDelay": 21,
+        "TrainTime": 40,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "BasePierce": 7,
+          "StandardBuilding": 0,
+          "Ram": 0,
+          "Unused": -3,
+          "Archer": 0,
+          "Scout": 0,
+          "Spearman": 1,
+          "Infantry": 0
+        },
+        "Armours": {
+          "BasePierce": 0,
+          "BaseMelee": 2,
+          "Archer": 0,
+          "Cavalry": 0,
+          "AntiLeitisBonus": 0,
+          "CavalryArcher": 0
+        }
+      },
+      "cost": {
+        "Wood": 40,
+        "Gold": 65
       }
     },
     {
@@ -6541,9 +6979,9 @@
       "internalName": "ONAGR",
       "statistics": {
         "HP": 60,
-        "Attack": 50,
+        "Attack": 55,
         "MeleeArmor": 0,
-        "PierceArmor": 7,
+        "PierceArmor": 8,
         "Range": 8,
         "MinRange": 3,
         "Speed": 0.6,
@@ -6555,13 +6993,13 @@
         "GarrisonCapacity": 0,
         "AttackBonuses": {
           "AllBuildings": 45,
-          "BaseMelee": 50,
+          "BaseMelee": 55,
           "SiegeWeapon": 12,
           "Charge": 50
         },
         "Armours": {
           "BaseMelee": 0,
-          "BasePierce": 7,
+          "BasePierce": 8,
           "SiegeWeapon": 0,
           "AntiLeitisBonus": 0
         }
@@ -6587,7 +7025,7 @@
         "ReloadTime": 3.45,
         "AccuracyPercent": 0,
         "FrameDelay": 12,
-        "TrainTime": 25,
+        "TrainTime": 28,
         "GarrisonCapacity": 0,
         "AttackBonuses": {
           "Infantry": 2,
@@ -6688,42 +7126,6 @@
       }
     },
     {
-      "id": 999440,
-      "name": "Petard",
-      "internalName": "PETARD",
-      "statistics": {
-        "HP": 50,
-        "Attack": 25,
-        "MeleeArmor": 0,
-        "PierceArmor": 2,
-        "Range": 0,
-        "MinRange": 0,
-        "Speed": 0.8,
-        "LineOfSight": 4,
-        "ReloadTime": 0,
-        "AccuracyPercent": 100,
-        "FrameDelay": 0,
-        "TrainTime": 25,
-        "GarrisonCapacity": 0,
-        "AttackBonuses": {
-          "Castle": 100,
-          "AllBuildings": 500,
-          "BaseMelee": 25,
-          "SiegeWeapon": 60,
-          "WallsGates": 900
-        },
-        "Armours": {
-          "BaseMelee": 0,
-          "BasePierce": 2,
-          "AntiLeitisBonus": 0
-        }
-      },
-      "cost": {
-        "Food": 65,
-        "Gold": 20
-      }
-    },
-    {
       "id": 358,
       "name": "Pikeman",
       "internalName": "ISPKM",
@@ -6750,7 +7152,6 @@
           "ShipsCamelsSaboteur": 16,
           "Camel": 18,
           "HeroArmor": 7,
-          "Mameluke": 16,
           "Archer": 0
         },
         "Armours": {
@@ -6793,7 +7194,6 @@
           "ShipsCamelsSaboteur": 16,
           "Camel": 18,
           "HeroArmor": 7,
-          "Mameluke": 16,
           "Archer": 0
         },
         "Armours": {
@@ -6848,48 +7248,6 @@
       }
     },
     {
-      "id": 1759,
-      "name": "Ratha",
-      "internalName": "RATHA2",
-      "statistics": {
-        "HP": 100,
-        "Attack": 5,
-        "MeleeArmor": 3,
-        "PierceArmor": 2,
-        "Range": 4,
-        "MinRange": 0,
-        "Speed": 1.3,
-        "LineOfSight": 6,
-        "ReloadTime": 2,
-        "AccuracyPercent": 80,
-        "FrameDelay": 14,
-        "TrainTime": 20,
-        "GarrisonCapacity": 0,
-        "AttackBonuses": {
-          "BasePierce": 5,
-          "Archer": 0,
-          "AllBuildings": 0,
-          "StandardBuilding": 0,
-          "Spearman": 1,
-          "Unused": -3,
-          "Scout": 0
-        },
-        "Armours": {
-          "BaseMelee": 3,
-          "Cavalry": 0,
-          "BasePierce": 2,
-          "Archer": 0,
-          "UniqueUnit": 0,
-          "CavalryArcher": 1,
-          "AntiLeitisBonus": 0
-        }
-      },
-      "cost": {
-        "Wood": 60,
-        "Gold": 60
-      }
-    },
-    {
       "id": 1738,
       "name": "Ratha (Melee)",
       "internalName": "RATHA",
@@ -6897,7 +7255,7 @@
         "HP": 100,
         "Attack": 10,
         "MeleeArmor": 3,
-        "PierceArmor": 2,
+        "PierceArmor": 1,
         "Range": 0,
         "MinRange": 0,
         "Speed": 1.3,
@@ -6905,7 +7263,7 @@
         "ReloadTime": 2,
         "AccuracyPercent": 100,
         "FrameDelay": 0,
-        "TrainTime": 20,
+        "TrainTime": 24,
         "GarrisonCapacity": 0,
         "AttackBonuses": {
           "BaseMelee": 10,
@@ -6921,10 +7279,52 @@
         "Armours": {
           "BaseMelee": 3,
           "Cavalry": 0,
-          "BasePierce": 2,
+          "BasePierce": 1,
           "Archer": 0,
           "UniqueUnit": 0,
-          "CavalryArcher": 1,
+          "CavalryArcher": 0,
+          "AntiLeitisBonus": 0
+        }
+      },
+      "cost": {
+        "Wood": 60,
+        "Gold": 60
+      }
+    },
+    {
+      "id": 1759,
+      "name": "Ratha (Ranged)",
+      "internalName": "RATHA2",
+      "statistics": {
+        "HP": 100,
+        "Attack": 5,
+        "MeleeArmor": 3,
+        "PierceArmor": 1,
+        "Range": 4,
+        "MinRange": 0,
+        "Speed": 1.3,
+        "LineOfSight": 6,
+        "ReloadTime": 2,
+        "AccuracyPercent": 80,
+        "FrameDelay": 14,
+        "TrainTime": 24,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "BasePierce": 5,
+          "Archer": 0,
+          "AllBuildings": 0,
+          "StandardBuilding": 0,
+          "Spearman": 1,
+          "Unused": -3,
+          "Scout": 0
+        },
+        "Armours": {
+          "BaseMelee": 3,
+          "Cavalry": 0,
+          "BasePierce": 1,
+          "Archer": 0,
+          "UniqueUnit": 0,
+          "CavalryArcher": 0,
           "AntiLeitisBonus": 0
         }
       },
@@ -6938,7 +7338,7 @@
       "name": "Rattan Archer",
       "internalName": "RATAN",
       "statistics": {
-        "HP": 40,
+        "HP": 35,
         "Attack": 6,
         "MeleeArmor": 0,
         "PierceArmor": 4,
@@ -7006,7 +7406,7 @@
         }
       },
       "cost": {
-        "Wood": 130,
+        "Wood": 135,
         "Gold": 155
       }
     },
@@ -7338,7 +7738,7 @@
         "Range": 0,
         "MinRange": 0,
         "Speed": 0.6,
-        "LineOfSight": 4,
+        "LineOfSight": 6,
         "ReloadTime": 3,
         "AccuracyPercent": 100,
         "FrameDelay": 0,
@@ -7415,7 +7815,7 @@
         "Range": 0,
         "MinRange": 0,
         "Speed": 0.6,
-        "LineOfSight": 3,
+        "LineOfSight": 5,
         "ReloadTime": 5,
         "AccuracyPercent": 100,
         "FrameDelay": 0,
@@ -7444,14 +7844,14 @@
       "name": "Siege Tower",
       "internalName": "SIEGTWR",
       "statistics": {
-        "HP": 220,
+        "HP": 175,
         "Attack": 0,
         "MeleeArmor": -2,
         "PierceArmor": 100,
         "Range": 0,
         "MinRange": 0,
-        "Speed": 0.8,
-        "LineOfSight": 8,
+        "Speed": 0.96,
+        "LineOfSight": 6,
         "ReloadTime": 0,
         "AccuracyPercent": 0,
         "FrameDelay": 0,
@@ -7494,7 +7894,8 @@
           "StandardBuilding": 0,
           "Archer": 3,
           "BasePierce": 2,
-          "Ram": 0
+          "Ram": 0,
+          "HeroArmor": 2
         },
         "Armours": {
           "BaseMelee": 0,
@@ -7514,7 +7915,7 @@
       "name": "Slinger",
       "internalName": "SLINGR",
       "statistics": {
-        "HP": 40,
+        "HP": 35,
         "Attack": 4,
         "MeleeArmor": 0,
         "PierceArmor": 0,
@@ -7528,23 +7929,24 @@
         "TrainTime": 25,
         "GarrisonCapacity": 0,
         "AttackBonuses": {
-          "Spearman": 1,
-          "StandardBuilding": 0,
           "BasePierce": 4,
-          "Ram": 3,
-          "Infantry": 10
+          "Infantry": 4,
+          "Spearman": 1,
+          "Monk": 4,
+          "SiegeWeapon": 3,
+          "StandardBuilding": 0
         },
         "Armours": {
           "BaseMelee": 0,
           "Archer": 0,
           "BasePierce": 0,
-          "UniqueUnit": 0,
-          "AntiLeitisBonus": 0
+          "AntiLeitisBonus": 0,
+          "Scout": 0
         }
       },
       "cost": {
-        "Food": 40,
-        "Gold": 40
+        "Food": 50,
+        "Wood": 25
       }
     },
     {
@@ -7574,7 +7976,6 @@
           "ShipsCamelsSaboteur": 9,
           "Camel": 12,
           "HeroArmor": 0,
-          "Mameluke": 9,
           "Archer": 0
         },
         "Armours": {
@@ -7617,7 +8018,6 @@
           "ShipsCamelsSaboteur": 9,
           "Camel": 12,
           "HeroArmor": 0,
-          "Mameluke": 9,
           "Archer": 0
         },
         "Armours": {
@@ -7757,6 +8157,90 @@
       }
     },
     {
+      "id": 886,
+      "name": "Tarkan",
+      "internalName": "TARKAN",
+      "statistics": {
+        "HP": 100,
+        "Attack": 8,
+        "MeleeArmor": 1,
+        "PierceArmor": 3,
+        "Range": 0,
+        "MinRange": 0,
+        "Speed": 1.4,
+        "LineOfSight": 5,
+        "ReloadTime": 1.9,
+        "AccuracyPercent": 100,
+        "FrameDelay": 0,
+        "TrainTime": 14,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "Castle": 10,
+          "AllBuildings": 8,
+          "BaseMelee": 8,
+          "Archer": 0,
+          "StoneDefense": 12,
+          "WallsGates": 8,
+          "StandardBuilding": 0,
+          "Scout": 0,
+          "Unused": -3,
+          "SiegeWeapon": 0,
+          "AntiLeitisBonus": 0
+        },
+        "Armours": {
+          "BaseMelee": 1,
+          "Cavalry": 0,
+          "BasePierce": 3,
+          "UniqueUnit": 0,
+          "AntiLeitisBonus": 0
+        }
+      },
+      "cost": {
+        "Food": 60,
+        "Gold": 60
+      }
+    },
+    {
+      "id": 2586,
+      "name": "Temple Guard",
+      "internalName": "Temple Guard",
+      "statistics": {
+        "HP": 100,
+        "Attack": 11,
+        "MeleeArmor": 1,
+        "PierceArmor": 1,
+        "Range": 0,
+        "MinRange": 0,
+        "Speed": 0.95,
+        "LineOfSight": 5,
+        "ReloadTime": 2,
+        "AccuracyPercent": 100,
+        "FrameDelay": 0,
+        "TrainTime": 28,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "BaseMelee": 11,
+          "Cavalry": 5,
+          "Camel": 4,
+          "WarElephant": 5,
+          "ShipsCamelsSaboteur": 4,
+          "StandardBuilding": 0
+        },
+        "Armours": {
+          "Infantry": 0,
+          "BaseMelee": 1,
+          "BasePierce": 1,
+          "UniqueUnit": 0,
+          "AntiLeitisBonus": 0,
+          "EagleWarrior": 0
+        }
+      },
+      "cost": {
+        "Food": 70,
+        "Gold": 45
+      }
+    },
+    {
       "id": 25,
       "name": "Teutonic Knight",
       "internalName": "TKNIT",
@@ -7796,46 +8280,6 @@
       }
     },
     {
-      "id": 1750,
-      "name": "Thirisadai",
-      "internalName": "THIRISADAI",
-      "statistics": {
-        "HP": 250,
-        "Attack": 9,
-        "MeleeArmor": 2,
-        "PierceArmor": 10,
-        "Range": 7,
-        "MinRange": 0,
-        "Speed": 1.3,
-        "LineOfSight": 9,
-        "ReloadTime": 3.45,
-        "AccuracyPercent": 100,
-        "FrameDelay": 0,
-        "TrainTime": 40,
-        "GarrisonCapacity": 0,
-        "AttackBonuses": {
-          "AllBuildings": 9,
-          "ShipsCamelsSaboteur": 9,
-          "BasePierce": 9,
-          "Ram": 4,
-          "Mameluke": 9
-        },
-        "Armours": {
-          "ShipsCamelsSaboteur": 8,
-          "TurtleShip": 0,
-          "BaseMelee": 2,
-          "BasePierce": 10,
-          "UniqueUnit": 0,
-          "AntiLeitisBonus": 0,
-          "Class60": 0
-        }
-      },
-      "cost": {
-        "Wood": 180,
-        "Gold": 60
-      }
-    },
-    {
       "id": 281,
       "name": "Throwing Axeman",
       "internalName": "TAXEM",
@@ -7844,10 +8288,10 @@
         "Attack": 7,
         "MeleeArmor": 0,
         "PierceArmor": 0,
-        "Range": 3,
+        "Range": 5,
         "MinRange": 0,
         "Speed": 1,
-        "LineOfSight": 5,
+        "LineOfSight": 7,
         "ReloadTime": 2,
         "AccuracyPercent": 100,
         "FrameDelay": 28,
@@ -7879,7 +8323,7 @@
       "name": "Tiger Cavalry",
       "internalName": "TIGERCAV",
       "statistics": {
-        "HP": 115,
+        "HP": 110,
         "Attack": 11,
         "MeleeArmor": 0,
         "PierceArmor": 4,
@@ -7890,7 +8334,7 @@
         "ReloadTime": 1.9,
         "AccuracyPercent": 100,
         "FrameDelay": 0,
-        "TrainTime": 15,
+        "TrainTime": 18,
         "GarrisonCapacity": 0,
         "AttackBonuses": {
           "BaseMelee": 11,
@@ -7982,65 +8426,6 @@
       }
     },
     {
-      "id": 17,
-      "name": "Trade Cog",
-      "internalName": "COGXX",
-      "statistics": {
-        "HP": 80,
-        "Attack": 0,
-        "MeleeArmor": 0,
-        "PierceArmor": 6,
-        "Range": 0,
-        "MinRange": 0,
-        "Speed": 1.65,
-        "LineOfSight": 6,
-        "ReloadTime": 0,
-        "AccuracyPercent": 0,
-        "FrameDelay": 0,
-        "TrainTime": 36,
-        "GarrisonCapacity": 0,
-        "Armours": {
-          "ShipsCamelsSaboteur": 0,
-          "BaseMelee": 0,
-          "BasePierce": 6,
-          "AntiLeitisBonus": 0
-        }
-      },
-      "cost": {
-        "Wood": 100,
-        "Gold": 50
-      }
-    },
-    {
-      "id": 545,
-      "name": "Transport Ship",
-      "internalName": "XPORT",
-      "statistics": {
-        "HP": 100,
-        "Attack": 0,
-        "MeleeArmor": 4,
-        "PierceArmor": 8,
-        "Range": 0,
-        "MinRange": 0,
-        "Speed": 1.45,
-        "LineOfSight": 5,
-        "ReloadTime": 0,
-        "AccuracyPercent": 0,
-        "FrameDelay": 0,
-        "TrainTime": 46,
-        "GarrisonCapacity": 20,
-        "Armours": {
-          "ShipsCamelsSaboteur": 0,
-          "BaseMelee": 4,
-          "BasePierce": 8,
-          "AntiLeitisBonus": 0
-        }
-      },
-      "cost": {
-        "Wood": 125
-      }
-    },
-    {
       "id": 42,
       "name": "Trebuchet",
       "internalName": "TREBU",
@@ -8110,50 +8495,6 @@
       }
     },
     {
-      "id": 831,
-      "name": "Turtle Ship",
-      "internalName": "TURTL",
-      "statistics": {
-        "HP": 200,
-        "Attack": 4,
-        "MeleeArmor": 6,
-        "PierceArmor": 7,
-        "Range": 6,
-        "MinRange": 0,
-        "Speed": 1.05,
-        "LineOfSight": 8,
-        "ReloadTime": 2,
-        "AccuracyPercent": 100,
-        "FrameDelay": 1,
-        "TrainTime": 50,
-        "GarrisonCapacity": 0,
-        "AttackBonuses": {
-          "AllBuildings": 7,
-          "BaseMelee": 4,
-          "SiegeWeapon": 0,
-          "Charge": 0,
-          "Castle": 7,
-          "WallsGates": 6,
-          "ShipsCamelsSaboteur": 0,
-          "Mameluke": 0
-        },
-        "Armours": {
-          "ShipsCamelsSaboteur": 8,
-          "TurtleShip": 0,
-          "BaseMelee": 6,
-          "BasePierce": 7,
-          "GunpowderUnit": 0,
-          "UniqueUnit": 0,
-          "AntiLeitisBonus": 0,
-          "Class60": 0
-        }
-      },
-      "cost": {
-        "Wood": 190,
-        "Gold": 180
-      }
-    },
-    {
       "id": 473,
       "name": "Two-Handed Swordsman",
       "internalName": "HTHSW",
@@ -8172,7 +8513,7 @@
         "TrainTime": 21,
         "GarrisonCapacity": 0,
         "AttackBonuses": {
-          "EagleWarrior": 8,
+          "EagleWarrior": 9,
           "StandardBuilding": 4,
           "BaseMelee": 12,
           "Cavalry": 0,
@@ -8228,6 +8569,45 @@
       "cost": {
         "Food": 65,
         "Gold": 20
+      }
+    },
+    {
+      "id": 2703,
+      "name": "Varangian Guard",
+      "internalName": "Varangian Guard",
+      "statistics": {
+        "HP": 70,
+        "Attack": 13,
+        "MeleeArmor": 2,
+        "PierceArmor": 1,
+        "Range": 0,
+        "MinRange": 0,
+        "Speed": 1.05,
+        "LineOfSight": 5,
+        "ReloadTime": 2,
+        "AccuracyPercent": 100,
+        "FrameDelay": 0,
+        "TrainTime": 30,
+        "GarrisonCapacity": 0,
+        "AttackBonuses": {
+          "BaseMelee": 13,
+          "Archer": 0,
+          "Cavalry": 0,
+          "WarElephant": 0,
+          "Camel": 0,
+          "StandardBuilding": 0
+        },
+        "Armours": {
+          "Infantry": 0,
+          "BaseMelee": 2,
+          "BasePierce": 1,
+          "AntiLeitisBonus": 0,
+          "EagleWarrior": 0
+        }
+      },
+      "cost": {
+        "Food": 65,
+        "Gold": 45
       }
     },
     {
@@ -8303,7 +8683,7 @@
         }
       },
       "cost": {
-        "Food": 65,
+        "Food": 75,
         "Gold": 90
       }
     },
@@ -8323,7 +8703,7 @@
         "ReloadTime": 6.5,
         "AccuracyPercent": 100,
         "FrameDelay": 3,
-        "TrainTime": 28,
+        "TrainTime": 32,
         "GarrisonCapacity": 0,
         "AttackBonuses": {
           "BasePierce": 8,
@@ -8344,7 +8724,7 @@
         }
       },
       "cost": {
-        "Food": 65,
+        "Food": 75,
         "Gold": 90
       }
     },
@@ -8392,44 +8772,6 @@
       }
     },
     {
-      "id": 21,
-      "name": "War Galley",
-      "internalName": "GALLY",
-      "statistics": {
-        "HP": 135,
-        "Attack": 7,
-        "MeleeArmor": 0,
-        "PierceArmor": 6,
-        "Range": 6,
-        "MinRange": 0,
-        "Speed": 1.43,
-        "LineOfSight": 8,
-        "ReloadTime": 3,
-        "AccuracyPercent": 100,
-        "FrameDelay": 0,
-        "TrainTime": 36,
-        "GarrisonCapacity": 0,
-        "AttackBonuses": {
-          "AllBuildings": 7,
-          "ShipsCamelsSaboteur": 9,
-          "BasePierce": 7,
-          "Ram": 4,
-          "Mameluke": 9
-        },
-        "Armours": {
-          "ShipsCamelsSaboteur": 0,
-          "BaseMelee": 0,
-          "BasePierce": 6,
-          "AntiLeitisBonus": 0,
-          "Class60": 0
-        }
-      },
-      "cost": {
-        "Wood": 90,
-        "Gold": 30
-      }
-    },
-    {
       "id": 827,
       "name": "War Wagon",
       "internalName": "WAGON",
@@ -8437,7 +8779,7 @@
         "HP": 150,
         "Attack": 9,
         "MeleeArmor": 0,
-        "PierceArmor": 3,
+        "PierceArmor": 2,
         "Range": 4,
         "MinRange": 0,
         "Speed": 1.2,
@@ -8459,7 +8801,7 @@
           "BaseMelee": 0,
           "Archer": 0,
           "Cavalry": 0,
-          "BasePierce": 3,
+          "BasePierce": 2,
           "UniqueUnit": 0,
           "CavalryArcher": -1,
           "AntiLeitisBonus": 0
@@ -8506,7 +8848,7 @@
         }
       },
       "cost": {
-        "Food": 30,
+        "Food": 40,
         "Gold": 50
       }
     },
@@ -8646,7 +8988,7 @@
         "ReloadTime": 1.8,
         "AccuracyPercent": 80,
         "FrameDelay": 35,
-        "TrainTime": 26,
+        "TrainTime": 29,
         "GarrisonCapacity": 0,
         "AttackBonuses": {
           "Spearman": 3,
@@ -8668,8 +9010,8 @@
         }
       },
       "cost": {
-        "Wood": 60,
-        "Gold": 25
+        "Wood": 65,
+        "Gold": 35
       }
     },
     {
